@@ -84,6 +84,22 @@ namespace PBR_Rent_a_car
             }
         }
 
+        public void atualizarEstado()
+        {
+            using (var ctx = new DadosContainer())
+            {
+                foreach (var v in ctx.VeículoSet)
+                {
+                    if (v.Id == this.Id)
+                    {
+                        v.Estado = SerializarEstado();
+                        break;
+                    }
+                }
+                ctx.SaveChanges();
+            }
+        }
+
         private bool adequado(Veículo v, Modelo m, string cor, int ano, string cat, int km)
         {
             if (v.Modelo == m && v.cor == cor && v.ano == ano && v.categoria == cat && v.quilometragem == km) return true;
