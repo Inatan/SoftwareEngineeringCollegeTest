@@ -1121,6 +1121,11 @@ namespace PBR_Rent_a_car
 
         #endregion
 
+
+        public Funcionário()
+        {
+            // TODO: Complete member initialization
+        }
     }
     
     /// <summary>
@@ -1302,6 +1307,11 @@ namespace PBR_Rent_a_car
 
         #endregion
 
+
+        public Histórico()
+        {
+            // TODO: Complete member initialization
+        }
     }
     
     /// <summary>
@@ -1529,6 +1539,11 @@ namespace PBR_Rent_a_car
 
         #endregion
 
+
+        public Locação()
+        {
+            // TODO: Complete member initialization
+        }
     }
     
     /// <summary>
@@ -1744,6 +1759,11 @@ namespace PBR_Rent_a_car
 
         #endregion
 
+
+        public Manutenção()
+        {
+            // TODO: Complete member initialization
+        }
     }
     
     /// <summary>
@@ -2005,6 +2025,11 @@ namespace PBR_Rent_a_car
 
         #endregion
 
+
+        public Relatório()
+        {
+            // TODO: Complete member initialization
+        }
     }
     
     /// <summary>

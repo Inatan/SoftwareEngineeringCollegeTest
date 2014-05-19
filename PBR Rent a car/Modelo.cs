@@ -7,23 +7,13 @@ namespace PBR_Rent_a_car
 {
     partial class Modelo
     {
-        private string nome;
-        private string fornecedor;
+        public string nome { get; private set; }
+        public string fornecedor { get; private set; }
 
         Modelo(string nome, string fornecedor)
         {
             this.nome = nome;
             this.fornecedor = fornecedor;
-        }
-
-        public string getnome()
-        {
-            return this.nome;
-        }
-
-        public string getfornecedor()
-        {
-            return this.fornecedor;
         }
 
     }

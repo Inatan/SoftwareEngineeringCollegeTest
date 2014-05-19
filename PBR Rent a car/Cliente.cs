@@ -7,11 +7,11 @@ namespace PBR_Rent_a_car
 {
     partial class Cliente
     {
-        private string nome;
-        private string cpfcnpj;
-        private List<string> telefones;
-        private Endereço endereço;
-        private string notificação;
+        public string nome { get; private set; }
+        public string cpfcnpj { get; private set; }
+        public List<string> telefones { get; private set; }
+        public Endereço endereço { get; private set; }
+        public string notificação { get; private set; }
 
         public Cliente(string nome, string cpfcnpj, List<string> telefones, Endereço endereço, string notificação)
         {

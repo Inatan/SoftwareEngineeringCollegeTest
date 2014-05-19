@@ -7,11 +7,11 @@ namespace PBR_Rent_a_car
 {
     partial class Veículo
     {
-        private string cor;
-        private int ano;
-        private string categoria;
-        private int quilometragem;
-        private Modelo modelo;
+        public string cor { get; private set; }
+        public int ano { get; private set; }
+        public string categoria { get; private set; }
+        public int quilometragem { get; private set; }
+        public Modelo modelo { get; private set; }
         private enum estado
         {
             Locado,
