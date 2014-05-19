@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApplication1
+﻿namespace PBR_Rent_a_car
 {
     partial class Interface
     {

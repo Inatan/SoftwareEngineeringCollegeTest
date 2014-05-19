@@ -19,24 +19,24 @@ using System.Xml.Serialization;
 [assembly: EdmSchemaAttribute()]
 #region EDM Relationship Metadata
 
-[assembly: EdmRelationshipAttribute("Model1", "VeículoHistórico", "Veículo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WindowsFormsApplication1.Veículo), "Histórico", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WindowsFormsApplication1.Histórico))]
-[assembly: EdmRelationshipAttribute("Model1", "ReservaVeículo", "Reserva", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WindowsFormsApplication1.Reserva), "Veículo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WindowsFormsApplication1.Veículo))]
-[assembly: EdmRelationshipAttribute("Model1", "HistóricoRelatório", "Histórico", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WindowsFormsApplication1.Histórico), "Relatório", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WindowsFormsApplication1.Relatório))]
-[assembly: EdmRelationshipAttribute("Model1", "VeículoModelo", "Veículo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WindowsFormsApplication1.Veículo), "Modelo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WindowsFormsApplication1.Modelo))]
-[assembly: EdmRelationshipAttribute("Model1", "FuncionárioRelatório", "Funcionário", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WindowsFormsApplication1.Funcionário), "Relatório", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WindowsFormsApplication1.Relatório))]
-[assembly: EdmRelationshipAttribute("Model1", "FuncionárioVeículo", "Funcionário", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WindowsFormsApplication1.Funcionário), "Veículo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WindowsFormsApplication1.Veículo))]
-[assembly: EdmRelationshipAttribute("Model1", "HistóricoManutenção", "Histórico", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WindowsFormsApplication1.Histórico), "Manutenção", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WindowsFormsApplication1.Manutenção))]
-[assembly: EdmRelationshipAttribute("Model1", "FuncionárioManutenção", "Funcionário", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WindowsFormsApplication1.Funcionário), "Manutenção", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WindowsFormsApplication1.Manutenção))]
-[assembly: EdmRelationshipAttribute("Model1", "FuncionárioReserva", "Funcionário", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WindowsFormsApplication1.Funcionário), "Reserva", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WindowsFormsApplication1.Reserva))]
-[assembly: EdmRelationshipAttribute("Model1", "HistóricoLocação", "Histórico", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WindowsFormsApplication1.Histórico), "Locação", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WindowsFormsApplication1.Locação))]
-[assembly: EdmRelationshipAttribute("Model1", "FuncionárioLocação", "Funcionário", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WindowsFormsApplication1.Funcionário), "Locação", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WindowsFormsApplication1.Locação))]
-[assembly: EdmRelationshipAttribute("Model1", "ClienteLocação", "Cliente", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WindowsFormsApplication1.Cliente), "Locação", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WindowsFormsApplication1.Locação))]
-[assembly: EdmRelationshipAttribute("Model1", "ClienteReserva", "Cliente", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WindowsFormsApplication1.Cliente), "Reserva", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WindowsFormsApplication1.Reserva))]
-[assembly: EdmRelationshipAttribute("Model1", "ClienteEndereço", "Cliente", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WindowsFormsApplication1.Cliente), "Endereço", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WindowsFormsApplication1.Endereço))]
+[assembly: EdmRelationshipAttribute("Model1", "VeículoHistórico", "Veículo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Veículo), "Histórico", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Histórico))]
+[assembly: EdmRelationshipAttribute("Model1", "ReservaVeículo", "Reserva", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PBR_Rent_a_car.Reserva), "Veículo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Veículo))]
+[assembly: EdmRelationshipAttribute("Model1", "HistóricoRelatório", "Histórico", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PBR_Rent_a_car.Histórico), "Relatório", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Relatório))]
+[assembly: EdmRelationshipAttribute("Model1", "VeículoModelo", "Veículo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PBR_Rent_a_car.Veículo), "Modelo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Modelo))]
+[assembly: EdmRelationshipAttribute("Model1", "FuncionárioRelatório", "Funcionário", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Funcionário), "Relatório", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PBR_Rent_a_car.Relatório))]
+[assembly: EdmRelationshipAttribute("Model1", "FuncionárioVeículo", "Funcionário", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Funcionário), "Veículo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PBR_Rent_a_car.Veículo))]
+[assembly: EdmRelationshipAttribute("Model1", "HistóricoManutenção", "Histórico", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Histórico), "Manutenção", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PBR_Rent_a_car.Manutenção))]
+[assembly: EdmRelationshipAttribute("Model1", "FuncionárioManutenção", "Funcionário", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Funcionário), "Manutenção", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PBR_Rent_a_car.Manutenção))]
+[assembly: EdmRelationshipAttribute("Model1", "FuncionárioReserva", "Funcionário", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Funcionário), "Reserva", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PBR_Rent_a_car.Reserva))]
+[assembly: EdmRelationshipAttribute("Model1", "HistóricoLocação", "Histórico", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Histórico), "Locação", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PBR_Rent_a_car.Locação))]
+[assembly: EdmRelationshipAttribute("Model1", "FuncionárioLocação", "Funcionário", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Funcionário), "Locação", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PBR_Rent_a_car.Locação))]
+[assembly: EdmRelationshipAttribute("Model1", "ClienteLocação", "Cliente", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Cliente), "Locação", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PBR_Rent_a_car.Locação))]
+[assembly: EdmRelationshipAttribute("Model1", "ClienteReserva", "Cliente", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Cliente), "Reserva", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PBR_Rent_a_car.Reserva))]
+[assembly: EdmRelationshipAttribute("Model1", "ClienteEndereço", "Cliente", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Cliente), "Endereço", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Endereço))]
 
 #endregion
 
-namespace WindowsFormsApplication1
+namespace PBR_Rent_a_car
 {
     #region Contexts
     
@@ -581,6 +581,11 @@ namespace WindowsFormsApplication1
 
         #endregion
 
+
+        public Cliente()
+        {
+            // TODO: Complete member initialization
+        }
     }
     
     /// <summary>
@@ -836,6 +841,11 @@ namespace WindowsFormsApplication1
 
         #endregion
 
+
+        public Endereço()
+        {
+            // TODO: Complete member initialization
+        }
     }
     
     /// <summary>
@@ -1869,6 +1879,11 @@ namespace WindowsFormsApplication1
 
         #endregion
 
+
+        public Modelo()
+        {
+            // TODO: Complete member initialization
+        }
     }
     
     /// <summary>
@@ -2191,6 +2206,11 @@ namespace WindowsFormsApplication1
 
         #endregion
 
+
+        public Reserva()
+        {
+            // TODO: Complete member initialization
+        }
     }
     
     /// <summary>
@@ -2518,6 +2538,11 @@ namespace WindowsFormsApplication1
 
         #endregion
 
+
+        public Veículo()
+        {
+            // TODO: Complete member initialization
+        }
     }
 
     #endregion

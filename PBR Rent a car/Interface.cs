@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace WindowsFormsApplication1
+namespace PBR_Rent_a_car
 {
     public partial class Interface : Form
     {
