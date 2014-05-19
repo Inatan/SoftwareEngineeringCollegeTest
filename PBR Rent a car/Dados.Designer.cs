@@ -2212,7 +2212,8 @@ namespace PBR_Rent_a_car
         /// <param name="categoria">Initial value of the Categoria property.</param>
         /// <param name="quilometragem">Initial value of the Quilometragem property.</param>
         /// <param name="estado">Initial value of the Estado property.</param>
-        public static Veículo CreateVeículo(global::System.Int32 id, global::System.String cor, global::System.Int32 ano, global::System.String categoria, global::System.Int32 quilometragem, global::System.Byte estado)
+        /// <param name="idModelo">Initial value of the IdModelo property.</param>
+        public static Veículo CreateVeículo(global::System.Int32 id, global::System.String cor, global::System.Int32 ano, global::System.String categoria, global::System.Int32 quilometragem, global::System.Byte estado, global::System.Int32 idModelo)
         {
             Veículo veículo = new Veículo();
             veículo.Id = id;
@@ -2221,6 +2222,7 @@ namespace PBR_Rent_a_car
             veículo.Categoria = categoria;
             veículo.Quilometragem = quilometragem;
             veículo.Estado = estado;
+            veículo.IdModelo = idModelo;
             return veículo;
         }
 
@@ -2374,6 +2376,30 @@ namespace PBR_Rent_a_car
         private global::System.Byte _Estado;
         partial void OnEstadoChanging(global::System.Byte value);
         partial void OnEstadoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 IdModelo
+        {
+            get
+            {
+                return _IdModelo;
+            }
+            set
+            {
+                OnIdModeloChanging(value);
+                ReportPropertyChanging("IdModelo");
+                _IdModelo = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdModelo");
+                OnIdModeloChanged();
+            }
+        }
+        private global::System.Int32 _IdModelo;
+        partial void OnIdModeloChanging(global::System.Int32 value);
+        partial void OnIdModeloChanged();
 
         #endregion
 

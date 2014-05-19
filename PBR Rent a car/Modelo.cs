@@ -16,5 +16,14 @@ namespace PBR_Rent_a_car
             this.fornecedor = fornecedor;
         }
 
+        //Métodos responsáveis pela interação com o BD
+        public void gravar()
+        {
+            using (var ctx = new DadosContainer())
+            {
+                ctx.AddToModeloSet(this);
+                ctx.SaveChanges();
+            }
+        }
     }
 }

@@ -23,15 +23,19 @@ namespace PBR_Rent_a_car
         public void setLocado()
         {
             this.status = estado.Locado;
+            this.Estado = SerializarEstado();
         }
 
         public void setDisponivel()
         {
             this.status = estado.Disponivel;
+            this.Estado = SerializarEstado();
         }
+
         public void setManutenção()
         {
             this.status = estado.Manutenção;
+            this.Estado = SerializarEstado();
         }
 
         public Veículo(string cor, int ano, string categoria,int quilometragem, Modelo modelo)
@@ -42,9 +46,8 @@ namespace PBR_Rent_a_car
             this.quilometragem = quilometragem;
             this.modelo = modelo;
             this.status = estado.Disponivel;
-            //Integração com BD
-            CreateVeículo(_Id, cor, ano, categoria, quilometragem, SerializarEstado());
-            Modelo = modelo;
+            this.Estado = SerializarEstado();
+            this.IdModelo = modelo.Id;
         }
 
         private byte SerializarEstado() //Transforma status em formato armazenável pelo BD
@@ -52,29 +55,7 @@ namespace PBR_Rent_a_car
             return (byte)status;
         }
 
-        public List<Veículo> pesquisar(Modelo modelo, string cor, int ano, string categoria, int quilometragem)
-        {
-            List<Veículo> encontrados = new List<Veículo>();
-            using (var ctx = new DadosContainer())
-            {
-                foreach (var v in ctx.VeículoSet)
-                {
-                    if (adequado(v, modelo, cor, ano, categoria, quilometragem)) encontrados.Add(v);
-                }
-            }
-            return encontrados;
-        }
-
-        public List<Veículo> todosOsVeículos()
-        {
-            List<Veículo> todos = new List<Veículo>();
-            using (var ctx = new DadosContainer())
-            {
-                foreach (var v in ctx.VeículoSet) todos.Add(v);
-            }
-            return todos;
-        }
-
+        //Métodos responsáveis pela interação com o BD
         public void gravar()
         {
             using (var ctx = new DadosContainer())
@@ -100,9 +81,33 @@ namespace PBR_Rent_a_car
             }
         }
 
-        private bool adequado(Veículo v, Modelo m, string cor, int ano, string cat, int km)
+        //Métodos responsáveis principalmente pela implementação do caso de uso Pesquisar Veículo
+        public static List<Veículo> pesquisar(Modelo modelo, string cor, int ano, string categoria, int quilometragem)
         {
-            if (v.Modelo == m && v.cor == cor && v.ano == ano && v.categoria == cat && v.quilometragem == km) return true;
+            List<Veículo> encontrados = new List<Veículo>();
+            using (var ctx = new DadosContainer())
+            {
+                foreach (var v in ctx.VeículoSet)
+                {
+                    if (adequado(v, modelo, cor, ano, categoria, quilometragem)) encontrados.Add(v);
+                }
+            }
+            return encontrados;
+        }
+
+        public static List<Veículo> todosOsVeículos()
+        {
+            List<Veículo> todos = new List<Veículo>();
+            using (var ctx = new DadosContainer())
+            {
+                foreach (var v in ctx.VeículoSet) todos.Add(v);
+            }
+            return todos;
+        }
+
+        private static bool adequado(Veículo v, Modelo m, string cor, int ano, string cat, int km)
+        {
+            if (v.  Modelo == m && v.cor == cor && v.ano == ano && v.categoria == cat && v.quilometragem == km) return true;
             return false;
         }
     }
