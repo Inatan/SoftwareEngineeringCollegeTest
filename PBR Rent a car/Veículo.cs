@@ -42,9 +42,15 @@ namespace PBR_Rent_a_car
             this.categoria = categoria;
             this.quilometragem = quilometragem;
             this.modelo = modelo;
-            this.status =estado.Disponivel;
+            this.status = estado.Disponivel;
+            //Integração com BD
+            CreateVeículo(_Id, cor, ano, categoria, quilometragem, SerializarEstado());
+            Modelo = modelo;
+        }
+
+        private byte SerializarEstado() //Transforma status em formato armazenável pelo BD
+        {
+            return (byte)status;
         }
     }
-    
-    
 }
