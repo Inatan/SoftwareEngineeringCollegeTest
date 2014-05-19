@@ -34,7 +34,6 @@ namespace PBR_Rent_a_car
             this.status = estado.Manutenção;
         }
 
-
         public Veículo(string cor, int ano, string categoria,int quilometragem, Modelo modelo)
         {
             this.cor = cor;

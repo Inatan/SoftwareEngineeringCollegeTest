@@ -4,78 +4,412 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl" Namespace="Model1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005">
-        <EntityContainer Name="Model1TargetContainer" >
-        </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+    <Schema Namespace="Dados.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="DadosStoreContainer">
+    <EntitySet Name="VeículoSet" EntityType="Dados.Store.VeículoSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HistóricoSet" EntityType="Dados.Store.HistóricoSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RelatórioSet" EntityType="Dados.Store.RelatórioSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ModeloSet" EntityType="Dados.Store.ModeloSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FuncionárioSet" EntityType="Dados.Store.FuncionárioSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LocaçãoSet" EntityType="Dados.Store.LocaçãoSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ReservaSet" EntityType="Dados.Store.ReservaSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ManutençãoSet" EntityType="Dados.Store.ManutençãoSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ClienteSet" EntityType="Dados.Store.ClienteSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EndereçoSet" EntityType="Dados.Store.EndereçoSet" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="VeículoHistórico" Association="Dados.Store.VeículoHistórico">
+      <End Role="Veículo" EntitySet="VeículoSet" />
+      <End Role="Histórico" EntitySet="HistóricoSet" />
+    </AssociationSet>
+    <AssociationSet Name="ReservaVeículo" Association="Dados.Store.ReservaVeículo">
+      <End Role="Reserva" EntitySet="ReservaSet" />
+      <End Role="Veículo" EntitySet="VeículoSet" />
+    </AssociationSet>
+    <AssociationSet Name="HistóricoRelatório" Association="Dados.Store.HistóricoRelatório">
+      <End Role="Histórico" EntitySet="HistóricoSet" />
+      <End Role="Relatório" EntitySet="RelatórioSet" />
+    </AssociationSet>
+    <AssociationSet Name="VeículoModelo" Association="Dados.Store.VeículoModelo">
+      <End Role="Veículo" EntitySet="VeículoSet" />
+      <End Role="Modelo" EntitySet="ModeloSet" />
+    </AssociationSet>
+    <AssociationSet Name="FuncionárioRelatório" Association="Dados.Store.FuncionárioRelatório">
+      <End Role="Funcionário" EntitySet="FuncionárioSet" />
+      <End Role="Relatório" EntitySet="RelatórioSet" />
+    </AssociationSet>
+    <AssociationSet Name="FuncionárioVeículo" Association="Dados.Store.FuncionárioVeículo">
+      <End Role="Funcionário" EntitySet="FuncionárioSet" />
+      <End Role="Veículo" EntitySet="VeículoSet" />
+    </AssociationSet>
+    <AssociationSet Name="HistóricoManutenção" Association="Dados.Store.HistóricoManutenção">
+      <End Role="Histórico" EntitySet="HistóricoSet" />
+      <End Role="Manutenção" EntitySet="ManutençãoSet" />
+    </AssociationSet>
+    <AssociationSet Name="FuncionárioManutenção" Association="Dados.Store.FuncionárioManutenção">
+      <End Role="Funcionário" EntitySet="FuncionárioSet" />
+      <End Role="Manutenção" EntitySet="ManutençãoSet" />
+    </AssociationSet>
+    <AssociationSet Name="FuncionárioReserva" Association="Dados.Store.FuncionárioReserva">
+      <End Role="Funcionário" EntitySet="FuncionárioSet" />
+      <End Role="Reserva" EntitySet="ReservaSet" />
+    </AssociationSet>
+    <AssociationSet Name="HistóricoLocação" Association="Dados.Store.HistóricoLocação">
+      <End Role="Histórico" EntitySet="HistóricoSet" />
+      <End Role="Locação" EntitySet="LocaçãoSet" />
+    </AssociationSet>
+    <AssociationSet Name="FuncionárioLocação" Association="Dados.Store.FuncionárioLocação">
+      <End Role="Funcionário" EntitySet="FuncionárioSet" />
+      <End Role="Locação" EntitySet="LocaçãoSet" />
+    </AssociationSet>
+    <AssociationSet Name="ClienteLocação" Association="Dados.Store.ClienteLocação">
+      <End Role="Cliente" EntitySet="ClienteSet" />
+      <End Role="Locação" EntitySet="LocaçãoSet" />
+    </AssociationSet>
+    <AssociationSet Name="ClienteReserva" Association="Dados.Store.ClienteReserva">
+      <End Role="Cliente" EntitySet="ClienteSet" />
+      <End Role="Reserva" EntitySet="ReservaSet" />
+    </AssociationSet>
+    <AssociationSet Name="ClienteEndereço" Association="Dados.Store.ClienteEndereço">
+      <End Role="Cliente" EntitySet="ClienteSet" />
+      <End Role="Endereço" EntitySet="EndereçoSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="VeículoSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Cor" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Ano" Type="int" Nullable="false" />
+    <Property Name="Categoria" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Quilometragem" Type="int" Nullable="false" />
+    <Property Name="Estado" Type="tinyint" Nullable="false" />
+    <Property Name="Histórico_Id" Type="int" Nullable="false" />
+    <Property Name="Modelo_Id" Type="int" Nullable="false" />
+    <Property Name="Funcionário_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HistóricoSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Relatório_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RelatórioSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Funcionário_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ModeloSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Fornecedor" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FuncionárioSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CarteiraDeTrabalho" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Salário" Type="float" Nullable="false" />
+    <Property Name="Função" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LocaçãoSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Inicio" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Fim" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Histórico_Id" Type="int" Nullable="false" />
+    <Property Name="Funcionário_Id" Type="int" Nullable="false" />
+    <Property Name="Cliente_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ReservaSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Data" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Veículo_Id" Type="int" Nullable="false" />
+    <Property Name="Funcionário_Id" Type="int" Nullable="false" />
+    <Property Name="Cliente_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ManutençãoSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Inicio" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Fim" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Motivo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Histórico_Id" Type="int" Nullable="false" />
+    <Property Name="Funcionário_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ClienteSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CPF" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Telefones" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Notificação" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Endereço_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EndereçoSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UF" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Cidade" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Bairro" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Rua" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Número" Type="int" Nullable="false" />
+    <Property Name="CEP" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="VeículoHistórico">
+    <End Role="Veículo" Type="Dados.Store.VeículoSet" Multiplicity="*" />
+    <End Role="Histórico" Type="Dados.Store.HistóricoSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Histórico">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Veículo">
+        <PropertyRef Name="Histórico_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ReservaVeículo">
+    <End Role="Reserva" Type="Dados.Store.ReservaSet" Multiplicity="*" />
+    <End Role="Veículo" Type="Dados.Store.VeículoSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Veículo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Reserva">
+        <PropertyRef Name="Veículo_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HistóricoRelatório">
+    <End Role="Histórico" Type="Dados.Store.HistóricoSet" Multiplicity="*" />
+    <End Role="Relatório" Type="Dados.Store.RelatórioSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Relatório">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Histórico">
+        <PropertyRef Name="Relatório_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="VeículoModelo">
+    <End Role="Veículo" Type="Dados.Store.VeículoSet" Multiplicity="*" />
+    <End Role="Modelo" Type="Dados.Store.ModeloSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Modelo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Veículo">
+        <PropertyRef Name="Modelo_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FuncionárioRelatório">
+    <End Role="Funcionário" Type="Dados.Store.FuncionárioSet" Multiplicity="1" />
+    <End Role="Relatório" Type="Dados.Store.RelatórioSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Funcionário">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Relatório">
+        <PropertyRef Name="Funcionário_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FuncionárioVeículo">
+    <End Role="Funcionário" Type="Dados.Store.FuncionárioSet" Multiplicity="1" />
+    <End Role="Veículo" Type="Dados.Store.VeículoSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Funcionário">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Veículo">
+        <PropertyRef Name="Funcionário_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HistóricoManutenção">
+    <End Role="Histórico" Type="Dados.Store.HistóricoSet" Multiplicity="1" />
+    <End Role="Manutenção" Type="Dados.Store.ManutençãoSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Histórico">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Manutenção">
+        <PropertyRef Name="Histórico_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FuncionárioManutenção">
+    <End Role="Funcionário" Type="Dados.Store.FuncionárioSet" Multiplicity="1" />
+    <End Role="Manutenção" Type="Dados.Store.ManutençãoSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Funcionário">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Manutenção">
+        <PropertyRef Name="Funcionário_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FuncionárioReserva">
+    <End Role="Funcionário" Type="Dados.Store.FuncionárioSet" Multiplicity="1" />
+    <End Role="Reserva" Type="Dados.Store.ReservaSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Funcionário">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Reserva">
+        <PropertyRef Name="Funcionário_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HistóricoLocação">
+    <End Role="Histórico" Type="Dados.Store.HistóricoSet" Multiplicity="1" />
+    <End Role="Locação" Type="Dados.Store.LocaçãoSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Histórico">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Locação">
+        <PropertyRef Name="Histórico_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FuncionárioLocação">
+    <End Role="Funcionário" Type="Dados.Store.FuncionárioSet" Multiplicity="1" />
+    <End Role="Locação" Type="Dados.Store.LocaçãoSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Funcionário">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Locação">
+        <PropertyRef Name="Funcionário_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ClienteLocação">
+    <End Role="Cliente" Type="Dados.Store.ClienteSet" Multiplicity="1" />
+    <End Role="Locação" Type="Dados.Store.LocaçãoSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Locação">
+        <PropertyRef Name="Cliente_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ClienteReserva">
+    <End Role="Cliente" Type="Dados.Store.ClienteSet" Multiplicity="1" />
+    <End Role="Reserva" Type="Dados.Store.ReservaSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Reserva">
+        <PropertyRef Name="Cliente_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ClienteEndereço">
+    <End Role="Cliente" Type="Dados.Store.ClienteSet" Multiplicity="*" />
+    <End Role="Endereço" Type="Dados.Store.EndereçoSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Endereço">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="Endereço_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
-        <EntityContainer Name="Model1Container" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="VeículoSet" EntityType="Model1.Veículo" />
-          <EntitySet Name="HistóricoSet" EntityType="Model1.Histórico" />
-          <EntitySet Name="RelatórioSet" EntityType="Model1.Relatório" />
-          <EntitySet Name="ModeloSet" EntityType="Model1.Modelo" />
-          <EntitySet Name="FuncionárioSet" EntityType="Model1.Funcionário" />
-          <EntitySet Name="LocaçãoSet" EntityType="Model1.Locação" />
-          <EntitySet Name="ReservaSet" EntityType="Model1.Reserva" />
-          <EntitySet Name="ManutençãoSet" EntityType="Model1.Manutenção" />
-          <EntitySet Name="ClienteSet" EntityType="Model1.Cliente" />
-          <EntitySet Name="EndereçoSet" EntityType="Model1.Endereço" />
-          <AssociationSet Name="VeículoHistórico" Association="Model1.VeículoHistórico">
+      <Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Dados" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntityContainer Name="DadosContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="VeículoSet" EntityType="Dados.Veículo" />
+          <EntitySet Name="HistóricoSet" EntityType="Dados.Histórico" />
+          <EntitySet Name="RelatórioSet" EntityType="Dados.Relatório" />
+          <EntitySet Name="ModeloSet" EntityType="Dados.Modelo" />
+          <EntitySet Name="FuncionárioSet" EntityType="Dados.Funcionário" />
+          <EntitySet Name="LocaçãoSet" EntityType="Dados.Locação" />
+          <EntitySet Name="ReservaSet" EntityType="Dados.Reserva" />
+          <EntitySet Name="ManutençãoSet" EntityType="Dados.Manutenção" />
+          <EntitySet Name="ClienteSet" EntityType="Dados.Cliente" />
+          <EntitySet Name="EndereçoSet" EntityType="Dados.Endereço" />
+          <AssociationSet Name="VeículoHistórico" Association="Dados.VeículoHistórico">
             <End Role="Veículo" EntitySet="VeículoSet" />
             <End Role="Histórico" EntitySet="HistóricoSet" />
           </AssociationSet>
-          <AssociationSet Name="ReservaVeículo" Association="Model1.ReservaVeículo">
+          <AssociationSet Name="ReservaVeículo" Association="Dados.ReservaVeículo">
             <End Role="Reserva" EntitySet="ReservaSet" />
             <End Role="Veículo" EntitySet="VeículoSet" />
           </AssociationSet>
-          <AssociationSet Name="HistóricoRelatório" Association="Model1.HistóricoRelatório">
+          <AssociationSet Name="HistóricoRelatório" Association="Dados.HistóricoRelatório">
             <End Role="Histórico" EntitySet="HistóricoSet" />
             <End Role="Relatório" EntitySet="RelatórioSet" />
           </AssociationSet>
-          <AssociationSet Name="VeículoModelo" Association="Model1.VeículoModelo">
+          <AssociationSet Name="VeículoModelo" Association="Dados.VeículoModelo">
             <End Role="Veículo" EntitySet="VeículoSet" />
             <End Role="Modelo" EntitySet="ModeloSet" />
           </AssociationSet>
-          <AssociationSet Name="FuncionárioRelatório" Association="Model1.FuncionárioRelatório">
+          <AssociationSet Name="FuncionárioRelatório" Association="Dados.FuncionárioRelatório">
             <End Role="Funcionário" EntitySet="FuncionárioSet" />
             <End Role="Relatório" EntitySet="RelatórioSet" />
           </AssociationSet>
-          <AssociationSet Name="FuncionárioVeículo" Association="Model1.FuncionárioVeículo">
+          <AssociationSet Name="FuncionárioVeículo" Association="Dados.FuncionárioVeículo">
             <End Role="Funcionário" EntitySet="FuncionárioSet" />
             <End Role="Veículo" EntitySet="VeículoSet" />
           </AssociationSet>
-          <AssociationSet Name="HistóricoManutenção" Association="Model1.HistóricoManutenção">
+          <AssociationSet Name="HistóricoManutenção" Association="Dados.HistóricoManutenção">
             <End Role="Histórico" EntitySet="HistóricoSet" />
             <End Role="Manutenção" EntitySet="ManutençãoSet" />
           </AssociationSet>
-          <AssociationSet Name="FuncionárioManutenção" Association="Model1.FuncionárioManutenção">
+          <AssociationSet Name="FuncionárioManutenção" Association="Dados.FuncionárioManutenção">
             <End Role="Funcionário" EntitySet="FuncionárioSet" />
             <End Role="Manutenção" EntitySet="ManutençãoSet" />
           </AssociationSet>
-          <AssociationSet Name="FuncionárioReserva" Association="Model1.FuncionárioReserva">
+          <AssociationSet Name="FuncionárioReserva" Association="Dados.FuncionárioReserva">
             <End Role="Funcionário" EntitySet="FuncionárioSet" />
             <End Role="Reserva" EntitySet="ReservaSet" />
           </AssociationSet>
-          <AssociationSet Name="HistóricoLocação" Association="Model1.HistóricoLocação">
+          <AssociationSet Name="HistóricoLocação" Association="Dados.HistóricoLocação">
             <End Role="Histórico" EntitySet="HistóricoSet" />
             <End Role="Locação" EntitySet="LocaçãoSet" />
           </AssociationSet>
-          <AssociationSet Name="FuncionárioLocação" Association="Model1.FuncionárioLocação">
+          <AssociationSet Name="FuncionárioLocação" Association="Dados.FuncionárioLocação">
             <End Role="Funcionário" EntitySet="FuncionárioSet" />
             <End Role="Locação" EntitySet="LocaçãoSet" />
           </AssociationSet>
-          <AssociationSet Name="ClienteLocação" Association="Model1.ClienteLocação">
+          <AssociationSet Name="ClienteLocação" Association="Dados.ClienteLocação">
             <End Role="Cliente" EntitySet="ClienteSet" />
             <End Role="Locação" EntitySet="LocaçãoSet" />
           </AssociationSet>
-          <AssociationSet Name="ClienteReserva" Association="Model1.ClienteReserva">
+          <AssociationSet Name="ClienteReserva" Association="Dados.ClienteReserva">
             <End Role="Cliente" EntitySet="ClienteSet" />
             <End Role="Reserva" EntitySet="ReservaSet" />
           </AssociationSet>
-          <AssociationSet Name="ClienteEndereço" Association="Model1.ClienteEndereço">
+          <AssociationSet Name="ClienteEndereço" Association="Dados.ClienteEndereço">
             <End Role="Cliente" EntitySet="ClienteSet" />
             <End Role="Endereço" EntitySet="EndereçoSet" />
           </AssociationSet>
@@ -85,10 +419,10 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="Histórico" Relationship="Model1.VeículoHistórico" FromRole="Veículo" ToRole="Histórico" />
-          <NavigationProperty Name="Reserva" Relationship="Model1.ReservaVeículo" FromRole="Veículo" ToRole="Reserva" />
-          <NavigationProperty Name="Modelo" Relationship="Model1.VeículoModelo" FromRole="Veículo" ToRole="Modelo" />
-          <NavigationProperty Name="Funcionário" Relationship="Model1.FuncionárioVeículo" FromRole="Veículo" ToRole="Funcionário" />
+          <NavigationProperty Name="Histórico" Relationship="Dados.VeículoHistórico" FromRole="Veículo" ToRole="Histórico" />
+          <NavigationProperty Name="Reserva" Relationship="Dados.ReservaVeículo" FromRole="Veículo" ToRole="Reserva" />
+          <NavigationProperty Name="Modelo" Relationship="Dados.VeículoModelo" FromRole="Veículo" ToRole="Modelo" />
+          <NavigationProperty Name="Funcionário" Relationship="Dados.FuncionárioVeículo" FromRole="Veículo" ToRole="Funcionário" />
           <Property Type="String" Name="Cor" Nullable="false" />
           <Property Type="Int32" Name="Ano" Nullable="false" />
           <Property Type="String" Name="Categoria" Nullable="false" />
@@ -104,25 +438,25 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="Veículo" Relationship="Model1.VeículoHistórico" FromRole="Histórico" ToRole="Veículo" />
-          <NavigationProperty Name="Relatório" Relationship="Model1.HistóricoRelatório" FromRole="Histórico" ToRole="Relatório" />
-          <NavigationProperty Name="Manutenção" Relationship="Model1.HistóricoManutenção" FromRole="Histórico" ToRole="Manutenção" />
-          <NavigationProperty Name="Locação" Relationship="Model1.HistóricoLocação" FromRole="Histórico" ToRole="Locação" />
+          <NavigationProperty Name="Veículo" Relationship="Dados.VeículoHistórico" FromRole="Histórico" ToRole="Veículo" />
+          <NavigationProperty Name="Relatório" Relationship="Dados.HistóricoRelatório" FromRole="Histórico" ToRole="Relatório" />
+          <NavigationProperty Name="Manutenção" Relationship="Dados.HistóricoManutenção" FromRole="Histórico" ToRole="Manutenção" />
+          <NavigationProperty Name="Locação" Relationship="Dados.HistóricoLocação" FromRole="Histórico" ToRole="Locação" />
         </EntityType>
         <EntityType Name="Relatório">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="Histórico" Relationship="Model1.HistóricoRelatório" FromRole="Relatório" ToRole="Histórico" />
-          <NavigationProperty Name="Funcionário" Relationship="Model1.FuncionárioRelatório" FromRole="Relatório" ToRole="Funcionário" />
+          <NavigationProperty Name="Histórico" Relationship="Dados.HistóricoRelatório" FromRole="Relatório" ToRole="Histórico" />
+          <NavigationProperty Name="Funcionário" Relationship="Dados.FuncionárioRelatório" FromRole="Relatório" ToRole="Funcionário" />
         </EntityType>
         <EntityType Name="Modelo">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="Veículo" Relationship="Model1.VeículoModelo" FromRole="Modelo" ToRole="Veículo" />
+          <NavigationProperty Name="Veículo" Relationship="Dados.VeículoModelo" FromRole="Modelo" ToRole="Veículo" />
           <Property Type="String" Name="Nome" Nullable="false" />
           <Property Type="String" Name="Fornecedor" Nullable="false" />
         </EntityType>
@@ -131,11 +465,11 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="Relatório" Relationship="Model1.FuncionárioRelatório" FromRole="Funcionário" ToRole="Relatório" />
-          <NavigationProperty Name="Veículo" Relationship="Model1.FuncionárioVeículo" FromRole="Funcionário" ToRole="Veículo" />
-          <NavigationProperty Name="Manutenção" Relationship="Model1.FuncionárioManutenção" FromRole="Funcionário" ToRole="Manutenção" />
-          <NavigationProperty Name="Reserva" Relationship="Model1.FuncionárioReserva" FromRole="Funcionário" ToRole="Reserva" />
-          <NavigationProperty Name="Locação" Relationship="Model1.FuncionárioLocação" FromRole="Funcionário" ToRole="Locação" />
+          <NavigationProperty Name="Relatório" Relationship="Dados.FuncionárioRelatório" FromRole="Funcionário" ToRole="Relatório" />
+          <NavigationProperty Name="Veículo" Relationship="Dados.FuncionárioVeículo" FromRole="Funcionário" ToRole="Veículo" />
+          <NavigationProperty Name="Manutenção" Relationship="Dados.FuncionárioManutenção" FromRole="Funcionário" ToRole="Manutenção" />
+          <NavigationProperty Name="Reserva" Relationship="Dados.FuncionárioReserva" FromRole="Funcionário" ToRole="Reserva" />
+          <NavigationProperty Name="Locação" Relationship="Dados.FuncionárioLocação" FromRole="Funcionário" ToRole="Locação" />
           <Property Type="String" Name="Nome" Nullable="false" />
           <Property Type="String" Name="CarteiraDeTrabalho" Nullable="false" />
           <Property Type="Double" Name="Salário" Nullable="false" />
@@ -146,9 +480,9 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="Histórico" Relationship="Model1.HistóricoLocação" FromRole="Locação" ToRole="Histórico" />
-          <NavigationProperty Name="Funcionário" Relationship="Model1.FuncionárioLocação" FromRole="Locação" ToRole="Funcionário" />
-          <NavigationProperty Name="Cliente" Relationship="Model1.ClienteLocação" FromRole="Locação" ToRole="Cliente" />
+          <NavigationProperty Name="Histórico" Relationship="Dados.HistóricoLocação" FromRole="Locação" ToRole="Histórico" />
+          <NavigationProperty Name="Funcionário" Relationship="Dados.FuncionárioLocação" FromRole="Locação" ToRole="Funcionário" />
+          <NavigationProperty Name="Cliente" Relationship="Dados.ClienteLocação" FromRole="Locação" ToRole="Cliente" />
           <Property Type="String" Name="Inicio" Nullable="false" >
             <Documentation>
               <Summary>Inicio é uma data. Fazer conversão na classe</Summary>
@@ -165,9 +499,9 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="Veículo" Relationship="Model1.ReservaVeículo" FromRole="Reserva" ToRole="Veículo" />
-          <NavigationProperty Name="Funcionário" Relationship="Model1.FuncionárioReserva" FromRole="Reserva" ToRole="Funcionário" />
-          <NavigationProperty Name="Cliente" Relationship="Model1.ClienteReserva" FromRole="Reserva" ToRole="Cliente" />
+          <NavigationProperty Name="Veículo" Relationship="Dados.ReservaVeículo" FromRole="Reserva" ToRole="Veículo" />
+          <NavigationProperty Name="Funcionário" Relationship="Dados.FuncionárioReserva" FromRole="Reserva" ToRole="Funcionário" />
+          <NavigationProperty Name="Cliente" Relationship="Dados.ClienteReserva" FromRole="Reserva" ToRole="Cliente" />
           <Property Type="String" Name="Data" Nullable="false" >
             <Documentation>
               <Summary>Representação de Data como string. Fazer conversão na classe para algo mais alto nível (DateTime, por exemplo)</Summary>
@@ -179,8 +513,8 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="Histórico" Relationship="Model1.HistóricoManutenção" FromRole="Manutenção" ToRole="Histórico" />
-          <NavigationProperty Name="Funcionário" Relationship="Model1.FuncionárioManutenção" FromRole="Manutenção" ToRole="Funcionário" />
+          <NavigationProperty Name="Histórico" Relationship="Dados.HistóricoManutenção" FromRole="Manutenção" ToRole="Histórico" />
+          <NavigationProperty Name="Funcionário" Relationship="Dados.FuncionárioManutenção" FromRole="Manutenção" ToRole="Funcionário" />
           <Property Type="String" Name="Inicio" Nullable="false" >
             <Documentation>
               <Summary>Inicio é uma data. Usar conversão na classe</Summary>
@@ -198,9 +532,9 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="Locação" Relationship="Model1.ClienteLocação" FromRole="Cliente" ToRole="Locação" />
-          <NavigationProperty Name="Reserva" Relationship="Model1.ClienteReserva" FromRole="Cliente" ToRole="Reserva" />
-          <NavigationProperty Name="Endereço" Relationship="Model1.ClienteEndereço" FromRole="Cliente" ToRole="Endereço" />
+          <NavigationProperty Name="Locação" Relationship="Dados.ClienteLocação" FromRole="Cliente" ToRole="Locação" />
+          <NavigationProperty Name="Reserva" Relationship="Dados.ClienteReserva" FromRole="Cliente" ToRole="Reserva" />
+          <NavigationProperty Name="Endereço" Relationship="Dados.ClienteEndereço" FromRole="Cliente" ToRole="Endereço" />
           <Property Type="String" Name="Nome" Nullable="false" />
           <Property Type="String" Name="CPF" Nullable="false" />
           <Property Type="String" Name="Telefones" Nullable="false" />
@@ -211,7 +545,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="Cliente" Relationship="Model1.ClienteEndereço" FromRole="Endereço" ToRole="Cliente" />
+          <NavigationProperty Name="Cliente" Relationship="Dados.ClienteEndereço" FromRole="Endereço" ToRole="Cliente" />
           <Property Type="String" Name="UF" Nullable="false" />
           <Property Type="String" Name="Cidade" Nullable="false" />
           <Property Type="String" Name="Bairro" Nullable="false" />
@@ -220,72 +554,278 @@
           <Property Type="Int32" Name="CEP" Nullable="false" />
         </EntityType>
         <Association Name="VeículoHistórico">
-          <End Type="Model1.Veículo" Role="Veículo" Multiplicity="1" />
-          <End Type="Model1.Histórico" Role="Histórico" Multiplicity="1" />
+          <End Type="Dados.Veículo" Role="Veículo" Multiplicity="1" />
+          <End Type="Dados.Histórico" Role="Histórico" Multiplicity="1" />
         </Association>
         <Association Name="ReservaVeículo">
-          <End Type="Model1.Reserva" Role="Reserva" Multiplicity="*" />
-          <End Type="Model1.Veículo" Role="Veículo" Multiplicity="1" />
+          <End Type="Dados.Reserva" Role="Reserva" Multiplicity="*" />
+          <End Type="Dados.Veículo" Role="Veículo" Multiplicity="1" />
         </Association>
         <Association Name="HistóricoRelatório">
-          <End Type="Model1.Histórico" Role="Histórico" Multiplicity="*" />
-          <End Type="Model1.Relatório" Role="Relatório" Multiplicity="1" />
+          <End Type="Dados.Histórico" Role="Histórico" Multiplicity="*" />
+          <End Type="Dados.Relatório" Role="Relatório" Multiplicity="1" />
         </Association>
         <Association Name="VeículoModelo">
-          <End Type="Model1.Veículo" Role="Veículo" Multiplicity="*" />
-          <End Type="Model1.Modelo" Role="Modelo" Multiplicity="1" />
+          <End Type="Dados.Veículo" Role="Veículo" Multiplicity="*" />
+          <End Type="Dados.Modelo" Role="Modelo" Multiplicity="1" />
         </Association>
         <Association Name="FuncionárioRelatório">
-          <End Type="Model1.Funcionário" Role="Funcionário" Multiplicity="1" />
-          <End Type="Model1.Relatório" Role="Relatório" Multiplicity="*" />
+          <End Type="Dados.Funcionário" Role="Funcionário" Multiplicity="1" />
+          <End Type="Dados.Relatório" Role="Relatório" Multiplicity="*" />
         </Association>
         <Association Name="FuncionárioVeículo">
-          <End Type="Model1.Funcionário" Role="Funcionário" Multiplicity="1" />
-          <End Type="Model1.Veículo" Role="Veículo" Multiplicity="*" />
+          <End Type="Dados.Funcionário" Role="Funcionário" Multiplicity="1" />
+          <End Type="Dados.Veículo" Role="Veículo" Multiplicity="*" />
         </Association>
         <Association Name="HistóricoManutenção">
-          <End Type="Model1.Histórico" Role="Histórico" Multiplicity="1" />
-          <End Type="Model1.Manutenção" Role="Manutenção" Multiplicity="*" />
+          <End Type="Dados.Histórico" Role="Histórico" Multiplicity="1" />
+          <End Type="Dados.Manutenção" Role="Manutenção" Multiplicity="*" />
         </Association>
         <Association Name="FuncionárioManutenção">
-          <End Type="Model1.Funcionário" Role="Funcionário" Multiplicity="1" />
-          <End Type="Model1.Manutenção" Role="Manutenção" Multiplicity="*" />
+          <End Type="Dados.Funcionário" Role="Funcionário" Multiplicity="1" />
+          <End Type="Dados.Manutenção" Role="Manutenção" Multiplicity="*" />
         </Association>
         <Association Name="FuncionárioReserva">
-          <End Type="Model1.Funcionário" Role="Funcionário" Multiplicity="1" />
-          <End Type="Model1.Reserva" Role="Reserva" Multiplicity="*" />
+          <End Type="Dados.Funcionário" Role="Funcionário" Multiplicity="1" />
+          <End Type="Dados.Reserva" Role="Reserva" Multiplicity="*" />
         </Association>
         <Association Name="HistóricoLocação">
-          <End Type="Model1.Histórico" Role="Histórico" Multiplicity="1" />
-          <End Type="Model1.Locação" Role="Locação" Multiplicity="*" />
+          <End Type="Dados.Histórico" Role="Histórico" Multiplicity="1" />
+          <End Type="Dados.Locação" Role="Locação" Multiplicity="*" />
         </Association>
         <Association Name="FuncionárioLocação">
-          <End Type="Model1.Funcionário" Role="Funcionário" Multiplicity="1" />
-          <End Type="Model1.Locação" Role="Locação" Multiplicity="*" />
+          <End Type="Dados.Funcionário" Role="Funcionário" Multiplicity="1" />
+          <End Type="Dados.Locação" Role="Locação" Multiplicity="*" />
         </Association>
         <Association Name="ClienteLocação">
-          <End Type="Model1.Cliente" Role="Cliente" Multiplicity="1" />
-          <End Type="Model1.Locação" Role="Locação" Multiplicity="*" />
+          <End Type="Dados.Cliente" Role="Cliente" Multiplicity="1" />
+          <End Type="Dados.Locação" Role="Locação" Multiplicity="*" />
         </Association>
         <Association Name="ClienteReserva">
-          <End Type="Model1.Cliente" Role="Cliente" Multiplicity="1" />
-          <End Type="Model1.Reserva" Role="Reserva" Multiplicity="*" />
+          <End Type="Dados.Cliente" Role="Cliente" Multiplicity="1" />
+          <End Type="Dados.Reserva" Role="Reserva" Multiplicity="*" />
         </Association>
         <Association Name="ClienteEndereço">
-          <End Type="Model1.Cliente" Role="Cliente" Multiplicity="1" />
-          <End Type="Model1.Endereço" Role="Endereço" Multiplicity="1" />
+          <End Type="Dados.Cliente" Role="Cliente" Multiplicity="1" />
+          <End Type="Dados.Endereço" Role="Endereço" Multiplicity="1" />
         </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
-      <Mapping xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs" Space="C-S">
-        <Alias Key="Model" Value="Model1" />
-        <Alias Key="Target" Value="Model1.Store" />
-        <EntityContainerMapping CdmEntityContainer="Model1Container" StorageEntityContainer="Model1TargetContainer">
-        </EntityContainerMapping>
-      </Mapping>
-    </edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DadosStoreContainer" CdmEntityContainer="DadosContainer">
+    <EntitySetMapping Name="VeículoSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Dados.Veículo)">
+        <MappingFragment StoreEntitySet="VeículoSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Cor" ColumnName="Cor" />
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
+          <ScalarProperty Name="Categoria" ColumnName="Categoria" />
+          <ScalarProperty Name="Quilometragem" ColumnName="Quilometragem" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HistóricoSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Dados.Histórico)">
+        <MappingFragment StoreEntitySet="HistóricoSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RelatórioSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Dados.Relatório)">
+        <MappingFragment StoreEntitySet="RelatórioSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ModeloSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Dados.Modelo)">
+        <MappingFragment StoreEntitySet="ModeloSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Fornecedor" ColumnName="Fornecedor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FuncionárioSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Dados.Funcionário)">
+        <MappingFragment StoreEntitySet="FuncionárioSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="CarteiraDeTrabalho" ColumnName="CarteiraDeTrabalho" />
+          <ScalarProperty Name="Salário" ColumnName="Salário" />
+          <ScalarProperty Name="Função" ColumnName="Função" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LocaçãoSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Dados.Locação)">
+        <MappingFragment StoreEntitySet="LocaçãoSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Inicio" ColumnName="Inicio" />
+          <ScalarProperty Name="Fim" ColumnName="Fim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReservaSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Dados.Reserva)">
+        <MappingFragment StoreEntitySet="ReservaSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ManutençãoSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Dados.Manutenção)">
+        <MappingFragment StoreEntitySet="ManutençãoSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Inicio" ColumnName="Inicio" />
+          <ScalarProperty Name="Fim" ColumnName="Fim" />
+          <ScalarProperty Name="Motivo" ColumnName="Motivo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClienteSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Dados.Cliente)">
+        <MappingFragment StoreEntitySet="ClienteSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="CPF" ColumnName="CPF" />
+          <ScalarProperty Name="Telefones" ColumnName="Telefones" />
+          <ScalarProperty Name="Notificação" ColumnName="Notificação" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EndereçoSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Dados.Endereço)">
+        <MappingFragment StoreEntitySet="EndereçoSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UF" ColumnName="UF" />
+          <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+          <ScalarProperty Name="Bairro" ColumnName="Bairro" />
+          <ScalarProperty Name="Rua" ColumnName="Rua" />
+          <ScalarProperty Name="Número" ColumnName="Número" />
+          <ScalarProperty Name="CEP" ColumnName="CEP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="VeículoHistórico" TypeName="Dados.VeículoHistórico" StoreEntitySet="VeículoSet">
+      <EndProperty Name="Histórico">
+        <ScalarProperty Name="Id" ColumnName="Histórico_Id" />
+      </EndProperty>
+      <EndProperty Name="Veículo">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ReservaVeículo" TypeName="Dados.ReservaVeículo" StoreEntitySet="ReservaSet">
+      <EndProperty Name="Veículo">
+        <ScalarProperty Name="Id" ColumnName="Veículo_Id" />
+      </EndProperty>
+      <EndProperty Name="Reserva">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="HistóricoRelatório" TypeName="Dados.HistóricoRelatório" StoreEntitySet="HistóricoSet">
+      <EndProperty Name="Relatório">
+        <ScalarProperty Name="Id" ColumnName="Relatório_Id" />
+      </EndProperty>
+      <EndProperty Name="Histórico">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="VeículoModelo" TypeName="Dados.VeículoModelo" StoreEntitySet="VeículoSet">
+      <EndProperty Name="Modelo">
+        <ScalarProperty Name="Id" ColumnName="Modelo_Id" />
+      </EndProperty>
+      <EndProperty Name="Veículo">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FuncionárioRelatório" TypeName="Dados.FuncionárioRelatório" StoreEntitySet="RelatórioSet">
+      <EndProperty Name="Funcionário">
+        <ScalarProperty Name="Id" ColumnName="Funcionário_Id" />
+      </EndProperty>
+      <EndProperty Name="Relatório">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FuncionárioVeículo" TypeName="Dados.FuncionárioVeículo" StoreEntitySet="VeículoSet">
+      <EndProperty Name="Funcionário">
+        <ScalarProperty Name="Id" ColumnName="Funcionário_Id" />
+      </EndProperty>
+      <EndProperty Name="Veículo">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="HistóricoManutenção" TypeName="Dados.HistóricoManutenção" StoreEntitySet="ManutençãoSet">
+      <EndProperty Name="Histórico">
+        <ScalarProperty Name="Id" ColumnName="Histórico_Id" />
+      </EndProperty>
+      <EndProperty Name="Manutenção">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FuncionárioManutenção" TypeName="Dados.FuncionárioManutenção" StoreEntitySet="ManutençãoSet">
+      <EndProperty Name="Funcionário">
+        <ScalarProperty Name="Id" ColumnName="Funcionário_Id" />
+      </EndProperty>
+      <EndProperty Name="Manutenção">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FuncionárioReserva" TypeName="Dados.FuncionárioReserva" StoreEntitySet="ReservaSet">
+      <EndProperty Name="Funcionário">
+        <ScalarProperty Name="Id" ColumnName="Funcionário_Id" />
+      </EndProperty>
+      <EndProperty Name="Reserva">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="HistóricoLocação" TypeName="Dados.HistóricoLocação" StoreEntitySet="LocaçãoSet">
+      <EndProperty Name="Histórico">
+        <ScalarProperty Name="Id" ColumnName="Histórico_Id" />
+      </EndProperty>
+      <EndProperty Name="Locação">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FuncionárioLocação" TypeName="Dados.FuncionárioLocação" StoreEntitySet="LocaçãoSet">
+      <EndProperty Name="Funcionário">
+        <ScalarProperty Name="Id" ColumnName="Funcionário_Id" />
+      </EndProperty>
+      <EndProperty Name="Locação">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ClienteLocação" TypeName="Dados.ClienteLocação" StoreEntitySet="LocaçãoSet">
+      <EndProperty Name="Cliente">
+        <ScalarProperty Name="Id" ColumnName="Cliente_Id" />
+      </EndProperty>
+      <EndProperty Name="Locação">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ClienteReserva" TypeName="Dados.ClienteReserva" StoreEntitySet="ReservaSet">
+      <EndProperty Name="Cliente">
+        <ScalarProperty Name="Id" ColumnName="Cliente_Id" />
+      </EndProperty>
+      <EndProperty Name="Reserva">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ClienteEndereço" TypeName="Dados.ClienteEndereço" StoreEntitySet="ClienteSet">
+      <EndProperty Name="Endereço">
+        <ScalarProperty Name="Id" ColumnName="Endereço_Id" />
+      </EndProperty>
+      <EndProperty Name="Cliente">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
@@ -303,66 +843,66 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram Name="Model1" >
-        <EntityTypeShape EntityType="Model1.Veículo" Width="1.5" PointX="0.5" PointY="0.5" Height="2.941793619791667" />
-        <EntityTypeShape EntityType="Model1.Histórico" Width="1.5" PointX="0.5" PointY="4.125" Height="1.9802864583333335" />
-        <EntityTypeShape EntityType="Model1.Relatório" Width="1.5" PointX="3.125" PointY="5.625" Height="1.5956835937499996" />
-        <EntityTypeShape EntityType="Model1.Modelo" Width="1.5" PointX="2.875" PointY="0.75" Height="1.787985026041667" />
-        <EntityTypeShape EntityType="Model1.Funcionário" Width="1.875" PointX="6" PointY="4" Height="2.9417936197916656" />
-        <EntityTypeShape EntityType="Model1.Locação" Width="1.5" PointX="0.5" PointY="7" Height="2.1725878906249996" />
-        <EntityTypeShape EntityType="Model1.Reserva" Width="1.5" PointX="4.75" PointY="0.5" Height="1.9802864583333331" />
-        <EntityTypeShape EntityType="Model1.Manutenção" Width="1.5" PointX="3.125" PointY="3.25" Height="2.1725878906249996" />
-        <EntityTypeShape EntityType="Model1.Cliente" Width="1.5" PointX="8.5" PointY="3.25" Height="2.5571907552083326" />
-        <EntityTypeShape EntityType="Model1.Endereço" Width="1.5" PointX="8.5" PointY="6.75" Height="2.5571907552083317" />
-        <AssociationConnector Association="Model1.VeículoHistórico">
+        <EntityTypeShape EntityType="Dados.Veículo" Width="1.5" PointX="0.5" PointY="0.5" Height="2.941793619791667" />
+        <EntityTypeShape EntityType="Dados.Histórico" Width="1.5" PointX="0.5" PointY="4.125" Height="1.9802864583333335" />
+        <EntityTypeShape EntityType="Dados.Relatório" Width="1.5" PointX="3.125" PointY="5.625" Height="1.5956835937499996" />
+        <EntityTypeShape EntityType="Dados.Modelo" Width="1.5" PointX="2.875" PointY="0.75" Height="1.787985026041667" />
+        <EntityTypeShape EntityType="Dados.Funcionário" Width="1.875" PointX="6" PointY="4" Height="2.9417936197916656" />
+        <EntityTypeShape EntityType="Dados.Locação" Width="1.5" PointX="0.5" PointY="7" Height="2.1725878906249996" />
+        <EntityTypeShape EntityType="Dados.Reserva" Width="1.5" PointX="4.75" PointY="0.5" Height="1.9802864583333331" />
+        <EntityTypeShape EntityType="Dados.Manutenção" Width="1.5" PointX="3.125" PointY="3.25" Height="2.1725878906249996" />
+        <EntityTypeShape EntityType="Dados.Cliente" Width="1.5" PointX="8.5" PointY="3.25" Height="2.5571907552083326" />
+        <EntityTypeShape EntityType="Dados.Endereço" Width="1.5" PointX="8.5" PointY="6.75" Height="2.5571907552083317" />
+        <AssociationConnector Association="Dados.VeículoHistórico">
           <ConnectorPoint PointX="1.25" PointY="3.441793619791667" />
           <ConnectorPoint PointX="1.25" PointY="4.125" />
         </AssociationConnector>
-        <AssociationConnector Association="Model1.ReservaVeículo">
+        <AssociationConnector Association="Dados.ReservaVeículo">
           <ConnectorPoint PointX="4.75" PointY="0.59375" />
           <ConnectorPoint PointX="2" PointY="0.59375" />
         </AssociationConnector>
-        <AssociationConnector Association="Model1.HistóricoRelatório">
+        <AssociationConnector Association="Dados.HistóricoRelatório">
           <ConnectorPoint PointX="2" PointY="5.8651432291666667" />
           <ConnectorPoint PointX="3.125" PointY="5.8651432291666667" />
         </AssociationConnector>
-        <AssociationConnector Association="Model1.VeículoModelo">
+        <AssociationConnector Association="Dados.VeículoModelo">
           <ConnectorPoint PointX="2" PointY="1.6439925130208335" />
           <ConnectorPoint PointX="2.875" PointY="1.6439925130208335" />
         </AssociationConnector>
-        <AssociationConnector Association="Model1.FuncionárioRelatório">
+        <AssociationConnector Association="Dados.FuncionárioRelatório">
           <ConnectorPoint PointX="6" PointY="6.2833968098958328" />
           <ConnectorPoint PointX="4.625" PointY="6.2833968098958328" />
         </AssociationConnector>
-        <AssociationConnector Association="Model1.FuncionárioVeículo">
+        <AssociationConnector Association="Dados.FuncionárioVeículo">
           <ConnectorPoint PointX="7.371684285888672" PointY="4" />
           <ConnectorPoint PointX="7.371684285888672" PointY="2.8939925130208337" />
           <ConnectorPoint PointX="6.8941754762776695" PointY="2.8939925130208333" />
           <ConnectorPoint PointX="6.7275088096110034" PointY="2.8939925130208337" />
           <ConnectorPoint PointX="2" PointY="2.8939925130208337" />
         </AssociationConnector>
-        <AssociationConnector Association="Model1.HistóricoManutenção">
+        <AssociationConnector Association="Dados.HistóricoManutenção">
           <ConnectorPoint PointX="2" PointY="4.7737939453125" />
           <ConnectorPoint PointX="3.125" PointY="4.7737939453125" />
         </AssociationConnector>
-        <AssociationConnector Association="Model1.FuncionárioManutenção">
+        <AssociationConnector Association="Dados.FuncionárioManutenção">
           <ConnectorPoint PointX="6" PointY="4.7112939453125" />
           <ConnectorPoint PointX="4.625" PointY="4.7112939453125" />
         </AssociationConnector>
-        <AssociationConnector Association="Model1.FuncionárioReserva">
+        <AssociationConnector Association="Dados.FuncionárioReserva">
           <ConnectorPoint PointX="6.8108421429443364" PointY="4" />
           <ConnectorPoint PointX="6.8108421429443364" PointY="1.1509755232747396" />
           <ConnectorPoint PointX="6.25" PointY="1.1509755232747396" />
         </AssociationConnector>
-        <AssociationConnector Association="Model1.HistóricoLocação">
+        <AssociationConnector Association="Dados.HistóricoLocação">
           <ConnectorPoint PointX="1.25" PointY="6.1052864583333335" />
           <ConnectorPoint PointX="1.25" PointY="7" />
         </AssociationConnector>
-        <AssociationConnector Association="Model1.FuncionárioLocação">
+        <AssociationConnector Association="Dados.FuncionárioLocação">
           <ConnectorPoint PointX="6.9375" PointY="6.9417936197916656" />
           <ConnectorPoint PointX="6.9375" PointY="8.2278857421875" />
           <ConnectorPoint PointX="2" PointY="8.2278857421875" />
         </AssociationConnector>
-        <AssociationConnector Association="Model1.ClienteLocação">
+        <AssociationConnector Association="Dados.ClienteLocação">
           <ConnectorPoint PointX="9.25" PointY="5.8071907552083326" />
           <ConnectorPoint PointX="9.25" PointY="6.5" />
           <ConnectorPoint PointX="8.25" PointY="6.5" />
@@ -371,14 +911,14 @@
           <ConnectorPoint PointX="6.854166666666667" PointY="7.72428216796875" />
           <ConnectorPoint PointX="2" PointY="7.72428216796875" />
         </AssociationConnector>
-        <AssociationConnector Association="Model1.ClienteReserva">
+        <AssociationConnector Association="Dados.ClienteReserva">
           <ConnectorPoint PointX="9.25" PointY="3.25" />
           <ConnectorPoint PointX="9.25" PointY="1.8468834908040366" />
           <ConnectorPoint PointX="6.8941754762776695" PointY="1.8468834908040359" />
           <ConnectorPoint PointX="6.7275088096110034" PointY="1.8468834908040366" />
           <ConnectorPoint PointX="6.25" PointY="1.8468834908040366" />
         </AssociationConnector>
-        <AssociationConnector Association="Model1.ClienteEndereço">
+        <AssociationConnector Association="Dados.ClienteEndereço">
           <ConnectorPoint PointX="9.6875" PointY="5.8071907552083326" />
           <ConnectorPoint PointX="9.6875" PointY="6.75" />
         </AssociationConnector>

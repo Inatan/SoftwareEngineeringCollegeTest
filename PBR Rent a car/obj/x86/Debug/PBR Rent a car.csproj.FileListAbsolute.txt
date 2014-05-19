@@ -5,3 +5,5 @@ C:\Users\Inatan\Documents\pbr-rent-a-car\PBR Rent a car\bin\Debug\PBR Rent a car
 C:\Users\Inatan\Documents\pbr-rent-a-car\PBR Rent a car\bin\Debug\PBR Rent a car.pdb
 C:\Users\Inatan\Documents\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR Rent a car.exe
 C:\Users\Inatan\Documents\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR Rent a car.pdb
+C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR Rent a car.exe
+C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR Rent a car.pdb
