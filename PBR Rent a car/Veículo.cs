@@ -20,6 +20,21 @@ namespace PBR_Rent_a_car
         };
         private estado status;
 
+        public void setLocado()
+        {
+            this.status = estado.Locado;
+        }
+
+        public void setDisponivel()
+        {
+            this.status = estado.Disponivel;
+        }
+        public void setManutenção()
+        {
+            this.status = estado.Manutenção;
+        }
+
+
         public Veículo(string cor, int ano, string categoria,int quilometragem, Modelo modelo)
         {
             this.cor = cor;
