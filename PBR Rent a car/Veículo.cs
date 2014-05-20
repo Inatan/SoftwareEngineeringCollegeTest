@@ -18,8 +18,8 @@ namespace PBR_Rent_a_car
         public void setLocado()
         {
             this.status = estado.Locado;
-            this.Estado = SerializarEstado();
-            atualizarEstado();
+          //  this.Estado = SerializarEstado();
+          //  atualizarEstado();
         }
 
         public void setDisponivel()

@@ -62,6 +62,9 @@ namespace PBR_Rent_a_car
             {
                 Program.reservas.Add(new Reserva(vProcurado, Convert.ToInt32(textBox_Dia.Text), Convert.ToInt32(textBox_Mês.Text), Convert.ToInt32(textBox_Ano.Text), Convert.ToInt32(textBox_Hora.Text), Convert.ToInt32(textBox_Minuto.Text), cProcurado));
                 MessageBox.Show("Sua reserva foi realizada com sucesso, espere a permissão do administrador");
+                vProcurado.setLocado();
+                
+                
             }        
             
         }
