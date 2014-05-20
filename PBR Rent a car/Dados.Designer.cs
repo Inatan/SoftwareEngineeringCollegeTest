@@ -352,18 +352,16 @@ namespace PBR_Rent_a_car
         /// <param name="id">Initial value of the Id property.</param>
         /// <param name="nome">Initial value of the Nome property.</param>
         /// <param name="cPF">Initial value of the CPF property.</param>
-        /// <param name="telefones">Initial value of the Telefones property.</param>
+        /// <param name="telefone">Initial value of the Telefone property.</param>
         /// <param name="notificação">Initial value of the Notificação property.</param>
-        /// <param name="idEndereço">Initial value of the IdEndereço property.</param>
-        public static Cliente CreateCliente(global::System.Int32 id, global::System.String nome, global::System.String cPF, global::System.String telefones, global::System.String notificação, global::System.String idEndereço)
+        public static Cliente CreateCliente(global::System.Int32 id, global::System.String nome, global::System.String cPF, global::System.String telefone, global::System.String notificação)
         {
             Cliente cliente = new Cliente();
             cliente.Id = id;
             cliente.Nome = nome;
             cliente.CPF = cPF;
-            cliente.Telefones = telefones;
+            cliente.Telefone = telefone;
             cliente.Notificação = notificação;
-            cliente.IdEndereço = idEndereço;
             return cliente;
         }
 
@@ -451,24 +449,24 @@ namespace PBR_Rent_a_car
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String Telefones
+        public global::System.String Telefone
         {
             get
             {
-                return _Telefones;
+                return _Telefone;
             }
             set
             {
-                OnTelefonesChanging(value);
-                ReportPropertyChanging("Telefones");
-                _Telefones = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("Telefones");
-                OnTelefonesChanged();
+                OnTelefoneChanging(value);
+                ReportPropertyChanging("Telefone");
+                _Telefone = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("Telefone");
+                OnTelefoneChanged();
             }
         }
-        private global::System.String _Telefones;
-        partial void OnTelefonesChanging(global::System.String value);
-        partial void OnTelefonesChanged();
+        private global::System.String _Telefone;
+        partial void OnTelefoneChanging(global::System.String value);
+        partial void OnTelefoneChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -493,30 +491,6 @@ namespace PBR_Rent_a_car
         private global::System.String _Notificação;
         partial void OnNotificaçãoChanging(global::System.String value);
         partial void OnNotificaçãoChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String IdEndereço
-        {
-            get
-            {
-                return _IdEndereço;
-            }
-            set
-            {
-                OnIdEndereçoChanging(value);
-                ReportPropertyChanging("IdEndereço");
-                _IdEndereço = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("IdEndereço");
-                OnIdEndereçoChanged();
-            }
-        }
-        private global::System.String _IdEndereço;
-        partial void OnIdEndereçoChanging(global::System.String value);
-        partial void OnIdEndereçoChanged();
 
         #endregion
 
@@ -629,8 +603,7 @@ namespace PBR_Rent_a_car
         /// <param name="rua">Initial value of the Rua property.</param>
         /// <param name="número">Initial value of the Número property.</param>
         /// <param name="cEP">Initial value of the CEP property.</param>
-        /// <param name="idCliente">Initial value of the IdCliente property.</param>
-        public static Endereço CreateEndereço(global::System.Int32 id, global::System.String uF, global::System.String cidade, global::System.String bairro, global::System.String rua, global::System.Int32 número, global::System.Int32 cEP, global::System.String idCliente)
+        public static Endereço CreateEndereço(global::System.Int32 id, global::System.String uF, global::System.String cidade, global::System.String bairro, global::System.String rua, global::System.Int32 número, global::System.Int32 cEP)
         {
             Endereço endereço = new Endereço();
             endereço.Id = id;
@@ -640,7 +613,6 @@ namespace PBR_Rent_a_car
             endereço.Rua = rua;
             endereço.Número = número;
             endereço.CEP = cEP;
-            endereço.IdCliente = idCliente;
             return endereço;
         }
 
@@ -818,30 +790,6 @@ namespace PBR_Rent_a_car
         private global::System.Int32 _CEP;
         partial void OnCEPChanging(global::System.Int32 value);
         partial void OnCEPChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String IdCliente
-        {
-            get
-            {
-                return _IdCliente;
-            }
-            set
-            {
-                OnIdClienteChanging(value);
-                ReportPropertyChanging("IdCliente");
-                _IdCliente = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("IdCliente");
-                OnIdClienteChanged();
-            }
-        }
-        private global::System.String _IdCliente;
-        partial void OnIdClienteChanging(global::System.String value);
-        partial void OnIdClienteChanged();
 
         #endregion
 
@@ -1179,12 +1127,10 @@ namespace PBR_Rent_a_car
         /// Create a new Histórico object.
         /// </summary>
         /// <param name="id">Initial value of the Id property.</param>
-        /// <param name="idVeículo">Initial value of the IdVeículo property.</param>
-        public static Histórico CreateHistórico(global::System.Int32 id, global::System.String idVeículo)
+        public static Histórico CreateHistórico(global::System.Int32 id)
         {
             Histórico histórico = new Histórico();
             histórico.Id = id;
-            histórico.IdVeículo = idVeículo;
             return histórico;
         }
 
@@ -1218,30 +1164,6 @@ namespace PBR_Rent_a_car
         private global::System.Int32 _Id;
         partial void OnIdChanging(global::System.Int32 value);
         partial void OnIdChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String IdVeículo
-        {
-            get
-            {
-                return _IdVeículo;
-            }
-            set
-            {
-                OnIdVeículoChanging(value);
-                ReportPropertyChanging("IdVeículo");
-                _IdVeículo = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("IdVeículo");
-                OnIdVeículoChanged();
-            }
-        }
-        private global::System.String _IdVeículo;
-        partial void OnIdVeículoChanging(global::System.String value);
-        partial void OnIdVeículoChanged();
 
         #endregion
 
@@ -2290,9 +2212,7 @@ namespace PBR_Rent_a_car
         /// <param name="categoria">Initial value of the Categoria property.</param>
         /// <param name="quilometragem">Initial value of the Quilometragem property.</param>
         /// <param name="estado">Initial value of the Estado property.</param>
-        /// <param name="idModelo">Initial value of the IdModelo property.</param>
-        /// <param name="idHistórico">Initial value of the IdHistórico property.</param>
-        public static Veículo CreateVeículo(global::System.Int32 id, global::System.String cor, global::System.Int32 ano, global::System.String categoria, global::System.Int32 quilometragem, global::System.Byte estado, global::System.Int32 idModelo, global::System.String idHistórico)
+        public static Veículo CreateVeículo(global::System.Int32 id, global::System.String cor, global::System.Int32 ano, global::System.String categoria, global::System.Int32 quilometragem, global::System.Byte estado)
         {
             Veículo veículo = new Veículo();
             veículo.Id = id;
@@ -2301,8 +2221,6 @@ namespace PBR_Rent_a_car
             veículo.Categoria = categoria;
             veículo.Quilometragem = quilometragem;
             veículo.Estado = estado;
-            veículo.IdModelo = idModelo;
-            veículo.IdHistórico = idHistórico;
             return veículo;
         }
 
@@ -2456,54 +2374,6 @@ namespace PBR_Rent_a_car
         private global::System.Byte _Estado;
         partial void OnEstadoChanging(global::System.Byte value);
         partial void OnEstadoChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 IdModelo
-        {
-            get
-            {
-                return _IdModelo;
-            }
-            set
-            {
-                OnIdModeloChanging(value);
-                ReportPropertyChanging("IdModelo");
-                _IdModelo = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IdModelo");
-                OnIdModeloChanged();
-            }
-        }
-        private global::System.Int32 _IdModelo;
-        partial void OnIdModeloChanging(global::System.Int32 value);
-        partial void OnIdModeloChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String IdHistórico
-        {
-            get
-            {
-                return _IdHistórico;
-            }
-            set
-            {
-                OnIdHistóricoChanging(value);
-                ReportPropertyChanging("IdHistórico");
-                _IdHistórico = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("IdHistórico");
-                OnIdHistóricoChanged();
-            }
-        }
-        private global::System.String _IdHistórico;
-        partial void OnIdHistóricoChanging(global::System.String value);
-        partial void OnIdHistóricoChanged();
 
         #endregion
 

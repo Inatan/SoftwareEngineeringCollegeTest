@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, and Azure
 -- --------------------------------------------------
--- Date Created: 05/19/2014 18:30:58
+-- Date Created: 05/19/2014 23:04:43
 -- Generated from EDMX file: C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a car\Dados.edmx
 -- --------------------------------------------------
 
@@ -17,11 +17,83 @@ GO
 -- Dropping existing FOREIGN KEY constraints
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[FK_VeículoHistórico]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[VeículoSet] DROP CONSTRAINT [FK_VeículoHistórico];
+GO
+IF OBJECT_ID(N'[dbo].[FK_ReservaVeículo]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[ReservaSet] DROP CONSTRAINT [FK_ReservaVeículo];
+GO
+IF OBJECT_ID(N'[dbo].[FK_HistóricoRelatório]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[HistóricoSet] DROP CONSTRAINT [FK_HistóricoRelatório];
+GO
+IF OBJECT_ID(N'[dbo].[FK_VeículoModelo]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[VeículoSet] DROP CONSTRAINT [FK_VeículoModelo];
+GO
+IF OBJECT_ID(N'[dbo].[FK_FuncionárioRelatório]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[RelatórioSet] DROP CONSTRAINT [FK_FuncionárioRelatório];
+GO
+IF OBJECT_ID(N'[dbo].[FK_FuncionárioVeículo]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[VeículoSet] DROP CONSTRAINT [FK_FuncionárioVeículo];
+GO
+IF OBJECT_ID(N'[dbo].[FK_HistóricoManutenção]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[ManutençãoSet] DROP CONSTRAINT [FK_HistóricoManutenção];
+GO
+IF OBJECT_ID(N'[dbo].[FK_FuncionárioManutenção]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[ManutençãoSet] DROP CONSTRAINT [FK_FuncionárioManutenção];
+GO
+IF OBJECT_ID(N'[dbo].[FK_FuncionárioReserva]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[ReservaSet] DROP CONSTRAINT [FK_FuncionárioReserva];
+GO
+IF OBJECT_ID(N'[dbo].[FK_HistóricoLocação]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[LocaçãoSet] DROP CONSTRAINT [FK_HistóricoLocação];
+GO
+IF OBJECT_ID(N'[dbo].[FK_FuncionárioLocação]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[LocaçãoSet] DROP CONSTRAINT [FK_FuncionárioLocação];
+GO
+IF OBJECT_ID(N'[dbo].[FK_ClienteLocação]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[LocaçãoSet] DROP CONSTRAINT [FK_ClienteLocação];
+GO
+IF OBJECT_ID(N'[dbo].[FK_ClienteReserva]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[ReservaSet] DROP CONSTRAINT [FK_ClienteReserva];
+GO
+IF OBJECT_ID(N'[dbo].[FK_ClienteEndereço]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[ClienteSet] DROP CONSTRAINT [FK_ClienteEndereço];
+GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[VeículoSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[VeículoSet];
+GO
+IF OBJECT_ID(N'[dbo].[HistóricoSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[HistóricoSet];
+GO
+IF OBJECT_ID(N'[dbo].[RelatórioSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[RelatórioSet];
+GO
+IF OBJECT_ID(N'[dbo].[ModeloSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[ModeloSet];
+GO
+IF OBJECT_ID(N'[dbo].[FuncionárioSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[FuncionárioSet];
+GO
+IF OBJECT_ID(N'[dbo].[LocaçãoSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[LocaçãoSet];
+GO
+IF OBJECT_ID(N'[dbo].[ReservaSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[ReservaSet];
+GO
+IF OBJECT_ID(N'[dbo].[ManutençãoSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[ManutençãoSet];
+GO
+IF OBJECT_ID(N'[dbo].[ClienteSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[ClienteSet];
+GO
+IF OBJECT_ID(N'[dbo].[EndereçoSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[EndereçoSet];
+GO
 
 -- --------------------------------------------------
 -- Creating all tables
@@ -110,7 +182,7 @@ CREATE TABLE [dbo].[ClienteSet] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [Nome] nvarchar(max)  NOT NULL,
     [CPF] nvarchar(max)  NOT NULL,
-    [Telefones] nvarchar(max)  NOT NULL,
+    [Telefone] nvarchar(max)  NOT NULL,
     [Notificação] nvarchar(max)  NOT NULL,
     [Endereço_Id] int  NOT NULL
 );

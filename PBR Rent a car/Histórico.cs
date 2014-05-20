@@ -10,6 +10,7 @@ namespace PBR_Rent_a_car
         public List<Manutenção> manutenções { get; private set; }
         public List<Locação> locações { get; private set; }
 
+        public Histórico() { }
         public Histórico(Veículo veiculo, List<Manutenção> manutenções, List<Locação> locações)
         {
             this.Veículo = veiculo;

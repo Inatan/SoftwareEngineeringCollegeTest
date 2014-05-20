@@ -8,7 +8,8 @@ namespace PBR_Rent_a_car
     partial class Reserva
     {
         public DateTime Pedido{ get; private set; } //Necessário fazer conversão para o BD
-        
+
+        public Reserva() { }
         public Reserva(Veículo veículo, int dia, int mes, int ano,int hora, int minuto,int segundo, Cliente cliente)
         {
             this.Cliente = cliente;

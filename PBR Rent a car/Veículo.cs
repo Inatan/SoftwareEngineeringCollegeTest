@@ -36,6 +36,7 @@ namespace PBR_Rent_a_car
             atualizarEstado();
         }
 
+        public Veículo() { }
         public Veículo(string cor, int ano, string categoria,int quilometragem, Modelo modelo)
         {
             this.Cor = cor;
@@ -45,7 +46,6 @@ namespace PBR_Rent_a_car
             this.Modelo = modelo;
             this.status = estado.Disponivel;
             this.Estado = SerializarEstado();
-            this.IdModelo = modelo.Id;
         }
 
         private byte SerializarEstado() //Transforma status em formato armazenável pelo BD

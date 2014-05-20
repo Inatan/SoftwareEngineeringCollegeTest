@@ -7,6 +7,7 @@ namespace PBR_Rent_a_car
 {
     partial class Modelo
     {
+        public Modelo() { }
         Modelo(string nome, string fornecedor)
         {
             this.Nome = nome;

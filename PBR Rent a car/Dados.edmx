@@ -158,7 +158,7 @@
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Nome" Type="nvarchar(max)" Nullable="false" />
     <Property Name="CPF" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Telefones" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Telefone" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Notificação" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Endereço_Id" Type="int" Nullable="false" />
   </EntityType>
@@ -432,8 +432,6 @@
               <Summary>Estado é um byte porque essa é a melhor maneira de armazená-lo no BD. É necessário um método de conversão para um Enum Estado que criaremos</Summary>
             </Documentation>
           </Property>
-          <Property Type="Int32" Name="IdModelo" Nullable="false" />
-          <Property Type="String" Name="IdHistórico" Nullable="false" />
         </EntityType>
         <EntityType Name="Histórico">
           <Key>
@@ -444,7 +442,6 @@
           <NavigationProperty Name="Relatório" Relationship="Dados.HistóricoRelatório" FromRole="Histórico" ToRole="Relatório" />
           <NavigationProperty Name="Manutenção" Relationship="Dados.HistóricoManutenção" FromRole="Histórico" ToRole="Manutenção" />
           <NavigationProperty Name="Locação" Relationship="Dados.HistóricoLocação" FromRole="Histórico" ToRole="Locação" />
-          <Property Type="String" Name="IdVeículo" Nullable="false" />
         </EntityType>
         <EntityType Name="Relatório">
           <Key>
@@ -540,9 +537,8 @@
           <NavigationProperty Name="Endereço" Relationship="Dados.ClienteEndereço" FromRole="Cliente" ToRole="Endereço" />
           <Property Type="String" Name="Nome" Nullable="false" />
           <Property Type="String" Name="CPF" Nullable="false" />
-          <Property Type="String" Name="Telefones" Nullable="false" />
+          <Property Type="String" Name="Telefone" Nullable="false" />
           <Property Type="String" Name="Notificação" Nullable="false" />
-          <Property Type="String" Name="IdEndereço" Nullable="false" />
         </EntityType>
         <EntityType Name="Endereço">
           <Key>
@@ -556,7 +552,6 @@
           <Property Type="String" Name="Rua" Nullable="false" />
           <Property Type="Int32" Name="Número" Nullable="false" />
           <Property Type="Int32" Name="CEP" Nullable="false" />
-          <Property Type="String" Name="IdCliente" Nullable="false" />
         </EntityType>
         <Association Name="VeículoHistórico">
           <End Type="Dados.Veículo" Role="Veículo" Multiplicity="1" />
@@ -699,7 +694,7 @@
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Nome" ColumnName="Nome" />
           <ScalarProperty Name="CPF" ColumnName="CPF" />
-          <ScalarProperty Name="Telefones" ColumnName="Telefones" />
+          <ScalarProperty Name="Telefone" ColumnName="Telefone" />
           <ScalarProperty Name="Notificação" ColumnName="Notificação" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -843,23 +838,24 @@
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
       </DesignerInfoPropertySet>
     </edmx:Options>
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram Name="Model1" >
-        <EntityTypeShape EntityType="Dados.Veículo" Width="1.5" PointX="0.5" PointY="0.5" Height="3.3263964843749996" />
-        <EntityTypeShape EntityType="Dados.Histórico" Width="1.5" PointX="0.5" PointY="4.5" Height="2.1725878906249996" />
+        <EntityTypeShape EntityType="Dados.Veículo" Width="1.5" PointX="0.5" PointY="0.5" Height="2.941793619791667" />
+        <EntityTypeShape EntityType="Dados.Histórico" Width="1.5" PointX="0.5" PointY="4.5" Height="1.9802864583333335" />
         <EntityTypeShape EntityType="Dados.Relatório" Width="1.5" PointX="3.125" PointY="5.625" Height="1.5956835937499996" />
         <EntityTypeShape EntityType="Dados.Modelo" Width="1.5" PointX="2.875" PointY="0.75" Height="1.787985026041667" />
         <EntityTypeShape EntityType="Dados.Funcionário" Width="1.875" PointX="6" PointY="4" Height="2.9417936197916656" />
         <EntityTypeShape EntityType="Dados.Locação" Width="1.5" PointX="0.5" PointY="7.375" Height="2.1725878906249996" />
         <EntityTypeShape EntityType="Dados.Reserva" Width="1.5" PointX="4.75" PointY="0.5" Height="1.9802864583333331" />
         <EntityTypeShape EntityType="Dados.Manutenção" Width="1.5" PointX="3.125" PointY="3.25" Height="2.1725878906249996" />
-        <EntityTypeShape EntityType="Dados.Cliente" Width="1.5" PointX="8.5" PointY="3.125" Height="2.7494921874999996" />
-        <EntityTypeShape EntityType="Dados.Endereço" Width="1.5" PointX="8.5" PointY="6.625" Height="2.7494921874999996" />
+        <EntityTypeShape EntityType="Dados.Cliente" Width="1.5" PointX="8.5" PointY="3.125" Height="2.5571907552083326" />
+        <EntityTypeShape EntityType="Dados.Endereço" Width="1.5" PointX="8.5" PointY="6.625" Height="2.5571907552083317" />
         <AssociationConnector Association="Dados.VeículoHistórico">
-          <ConnectorPoint PointX="1.25" PointY="3.8263964843749996" />
+          <ConnectorPoint PointX="1.25" PointY="3.441793619791667" />
           <ConnectorPoint PointX="1.25" PointY="4.5" />
         </AssociationConnector>
         <AssociationConnector Association="Dados.ReservaVeículo">
@@ -867,8 +863,8 @@
           <ConnectorPoint PointX="2" PointY="0.59375" />
         </AssociationConnector>
         <AssociationConnector Association="Dados.HistóricoRelatório">
-          <ConnectorPoint PointX="2" PointY="6.1487939453125" />
-          <ConnectorPoint PointX="3.125" PointY="6.1487939453125" />
+          <ConnectorPoint PointX="2" PointY="6.0526432291666667" />
+          <ConnectorPoint PointX="3.125" PointY="6.0526432291666667" />
         </AssociationConnector>
         <AssociationConnector Association="Dados.VeículoModelo">
           <ConnectorPoint PointX="2" PointY="1.6439925130208337" />
@@ -879,8 +875,8 @@
           <ConnectorPoint PointX="4.625" PointY="6.2833968098958328" />
         </AssociationConnector>
         <AssociationConnector Association="Dados.FuncionárioVeículo">
-          <ConnectorPoint PointX="7.3741735714721681" PointY="4" />
-          <ConnectorPoint PointX="7.3741735714721681" PointY="2.8939925130208337" />
+          <ConnectorPoint PointX="7.3429210714721682" PointY="4" />
+          <ConnectorPoint PointX="7.3429210714721682" PointY="2.8939925130208337" />
           <ConnectorPoint PointX="6.8941754762776695" PointY="2.8939925130208333" />
           <ConnectorPoint PointX="6.7275088096110034" PointY="2.8939925130208337" />
           <ConnectorPoint PointX="5.427083333333333" PointY="2.8939925130208333" />
@@ -901,7 +897,7 @@
           <ConnectorPoint PointX="6.25" PointY="1.1509755232747396" />
         </AssociationConnector>
         <AssociationConnector Association="Dados.HistóricoLocação">
-          <ConnectorPoint PointX="1.25" PointY="6.672587890625" />
+          <ConnectorPoint PointX="1.25" PointY="6.4802864583333335" />
           <ConnectorPoint PointX="1.25" PointY="7.375" />
         </AssociationConnector>
         <AssociationConnector Association="Dados.FuncionárioLocação">
@@ -910,8 +906,8 @@
           <ConnectorPoint PointX="2" PointY="8.4612939453125" />
         </AssociationConnector>
         <AssociationConnector Association="Dados.ClienteLocação">
-          <ConnectorPoint PointX="9.023435625" PointY="5.8744921875" />
-          <ConnectorPoint PointX="9.023435625" PointY="6.375" />
+          <ConnectorPoint PointX="9.0003635566406253" PointY="5.6821907552083326" />
+          <ConnectorPoint PointX="9.0003635566406253" PointY="6.375" />
           <ConnectorPoint PointX="8.25" PointY="6.375" />
           <ConnectorPoint PointX="8.25" PointY="7.8868949726562487" />
           <ConnectorPoint PointX="7.020833333333333" PointY="7.8868949726562478" />
@@ -920,16 +916,16 @@
         </AssociationConnector>
         <AssociationConnector Association="Dados.ClienteReserva">
           <ConnectorPoint PointX="8.5" PointY="3.53125" />
-          <ConnectorPoint PointX="7.4575069048055012" PointY="3.5312499999999996" />
-          <ConnectorPoint PointX="7.2908402381388351" PointY="3.53125" />
+          <ConnectorPoint PointX="7.4262544048055013" PointY="3.5312499999999996" />
+          <ConnectorPoint PointX="7.2595877381388352" PointY="3.53125" />
           <ConnectorPoint PointX="6.8941754762776695" PointY="3.5312499999999996" />
           <ConnectorPoint PointX="6.7275088096110034" PointY="3.53125" />
           <ConnectorPoint PointX="5.34375" PointY="3.53125" />
           <ConnectorPoint PointX="5.34375" PointY="2.4802864583333331" />
         </AssociationConnector>
         <AssociationConnector Association="Dados.ClienteEndereço">
-          <ConnectorPoint PointX="9.5742178124999988" PointY="5.8744921875" />
-          <ConnectorPoint PointX="9.5742178124999988" PointY="6.625" />
+          <ConnectorPoint PointX="9.56323111328125" PointY="5.6821907552083326" />
+          <ConnectorPoint PointX="9.56323111328125" PointY="6.625" />
         </AssociationConnector>
       </Diagram>
     </edmx:Diagrams>
