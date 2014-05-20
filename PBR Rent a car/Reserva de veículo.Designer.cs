@@ -38,7 +38,7 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.ListBoxVeículo = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -126,15 +126,16 @@
             this.textBox5.Size = new System.Drawing.Size(27, 20);
             this.textBox5.TabIndex = 17;
             // 
-            // listBox1
+            // ListBoxVeículo
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Items.AddRange(new object[] {
+            this.ListBoxVeículo.FormattingEnabled = true;
+            this.ListBoxVeículo.Items.AddRange(new object[] {
             "Clique aqui para pesquisar o veículo"});
-            this.listBox1.Location = new System.Drawing.Point(12, 84);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(411, 17);
-            this.listBox1.TabIndex = 27;
+            this.ListBoxVeículo.Location = new System.Drawing.Point(12, 84);
+            this.ListBoxVeículo.Name = "ListBoxVeículo";
+            this.ListBoxVeículo.Size = new System.Drawing.Size(411, 17);
+            this.ListBoxVeículo.TabIndex = 27;
+            this.ListBoxVeículo.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ListBoxVeículo_MouseDoubleClick);
             // 
             // label1
             // 
@@ -190,7 +191,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.ListBoxVeículo);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -223,7 +224,7 @@
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox ListBoxVeículo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
