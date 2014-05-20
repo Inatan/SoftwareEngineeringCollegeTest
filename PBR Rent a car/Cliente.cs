@@ -7,19 +7,25 @@ namespace PBR_Rent_a_car
 {
     partial class Cliente
     {
-        public string nome { get; private set; }
-        public string cpfcnpj { get; private set; }
-        public List<string> telefones { get; private set; }
-        public Endereço endereço { get; private set; }
-        public string notificação { get; private set; }
+        public List<string> telefones { get; private set; } //Para a próxima etapa...
 
-        public Cliente(string nome, string cpfcnpj, List<string> telefones, Endereço endereço, string notificação)
+        public Cliente() { }
+        public Cliente(string nome, string cpfcnpj, string telefone, Endereço endereço, string notificação)
         {
-            this.nome=nome;
-            this.cpfcnpj=cpfcnpj;
-            this.telefones=telefones;
-            this.endereço=endereço;
-            this.notificação=notificação;
+            this.Nome=nome;
+            this.CPF=cpfcnpj;
+            this.Telefone = telefone;
+            this.Endereço=endereço;
+            this.Notificação=notificação;
+        }
+
+        public void gravar()
+        {
+            using (var ctx = new DadosContainer())
+            {
+                ctx.AddToClienteSet(this);
+                ctx.SaveChanges();
+            }
         }
     }
 }
