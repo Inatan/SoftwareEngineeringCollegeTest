@@ -49,24 +49,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cadastro Cliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Cadastro Cliente.Designer.cs">
-      <DependentUpon>Cadastro Cliente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Cadastro Modelo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Cadastro Modelo.Designer.cs">
-      <DependentUpon>Cadastro Modelo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Cadastro Veículo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Cadastro Veículo.Designer.cs">
-      <DependentUpon>Cadastro Veículo.cs</DependentUpon>
-    </Compile>
     <Compile Include="Cliente.cs" />
     <Compile Include="Endereço.cs" />
     <Compile Include="Funcionário.cs" />
@@ -88,22 +70,10 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Relatório.cs" />
-    <Compile Include="Reserva de veículo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Reserva de veículo.Designer.cs">
-      <DependentUpon>Reserva de veículo.cs</DependentUpon>
-    </Compile>
     <Compile Include="Reserva.cs" />
     <Compile Include="Veículo.cs" />
-    <EmbeddedResource Include="Cadastro Cliente.resx">
-      <DependentUpon>Cadastro Cliente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Cadastro Modelo.resx">
-      <DependentUpon>Cadastro Modelo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Cadastro Veículo.resx">
-      <DependentUpon>Cadastro Veículo.cs</DependentUpon>
+    <EmbeddedResource Include="Interface.resx">
+      <DependentUpon>Interface.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -114,13 +84,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Reserva de veículo.resx">
-      <DependentUpon>Reserva de veículo.cs</DependentUpon>
-    </EmbeddedResource>
     <EntityDeploy Include="Dados.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Dados.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="App.Config" />
+    <None Include="Properties\DataSources\DadosContainer.datasource" />
     <None Include="Properties\DataSources\Model1Container.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -131,6 +100,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Dados.edmx.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
