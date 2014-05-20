@@ -19,20 +19,20 @@ using System.Xml.Serialization;
 [assembly: EdmSchemaAttribute()]
 #region EDM Relationship Metadata
 
-[assembly: EdmRelationshipAttribute("Dados", "VeículoHistórico", "Veículo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Veículo), "Histórico", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Histórico))]
-[assembly: EdmRelationshipAttribute("Dados", "ReservaVeículo", "Reserva", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PBR_Rent_a_car.Reserva), "Veículo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Veículo))]
-[assembly: EdmRelationshipAttribute("Dados", "HistóricoRelatório", "Histórico", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PBR_Rent_a_car.Histórico), "Relatório", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Relatório))]
-[assembly: EdmRelationshipAttribute("Dados", "VeículoModelo", "Veículo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PBR_Rent_a_car.Veículo), "Modelo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Modelo))]
-[assembly: EdmRelationshipAttribute("Dados", "FuncionárioRelatório", "Funcionário", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Funcionário), "Relatório", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PBR_Rent_a_car.Relatório))]
-[assembly: EdmRelationshipAttribute("Dados", "FuncionárioVeículo", "Funcionário", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Funcionário), "Veículo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PBR_Rent_a_car.Veículo))]
-[assembly: EdmRelationshipAttribute("Dados", "HistóricoManutenção", "Histórico", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Histórico), "Manutenção", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PBR_Rent_a_car.Manutenção))]
-[assembly: EdmRelationshipAttribute("Dados", "FuncionárioManutenção", "Funcionário", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Funcionário), "Manutenção", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PBR_Rent_a_car.Manutenção))]
-[assembly: EdmRelationshipAttribute("Dados", "FuncionárioReserva", "Funcionário", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Funcionário), "Reserva", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PBR_Rent_a_car.Reserva))]
-[assembly: EdmRelationshipAttribute("Dados", "HistóricoLocação", "Histórico", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Histórico), "Locação", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PBR_Rent_a_car.Locação))]
-[assembly: EdmRelationshipAttribute("Dados", "FuncionárioLocação", "Funcionário", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Funcionário), "Locação", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PBR_Rent_a_car.Locação))]
-[assembly: EdmRelationshipAttribute("Dados", "ClienteLocação", "Cliente", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Cliente), "Locação", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PBR_Rent_a_car.Locação))]
-[assembly: EdmRelationshipAttribute("Dados", "ClienteReserva", "Cliente", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Cliente), "Reserva", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PBR_Rent_a_car.Reserva))]
-[assembly: EdmRelationshipAttribute("Dados", "ClienteEndereço", "Cliente", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Cliente), "Endereço", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Endereço))]
+[assembly: EdmRelationshipAttribute("Model1", "VeículoHistórico", "Veículo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Veículo), "Histórico", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Histórico))]
+[assembly: EdmRelationshipAttribute("Model1", "ReservaVeículo", "Reserva", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PBR_Rent_a_car.Reserva), "Veículo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Veículo))]
+[assembly: EdmRelationshipAttribute("Model1", "HistóricoRelatório", "Histórico", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PBR_Rent_a_car.Histórico), "Relatório", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Relatório))]
+[assembly: EdmRelationshipAttribute("Model1", "VeículoModelo", "Veículo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PBR_Rent_a_car.Veículo), "Modelo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Modelo))]
+[assembly: EdmRelationshipAttribute("Model1", "FuncionárioRelatório", "Funcionário", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Funcionário), "Relatório", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PBR_Rent_a_car.Relatório))]
+[assembly: EdmRelationshipAttribute("Model1", "FuncionárioVeículo", "Funcionário", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Funcionário), "Veículo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PBR_Rent_a_car.Veículo))]
+[assembly: EdmRelationshipAttribute("Model1", "HistóricoManutenção", "Histórico", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Histórico), "Manutenção", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PBR_Rent_a_car.Manutenção))]
+[assembly: EdmRelationshipAttribute("Model1", "FuncionárioManutenção", "Funcionário", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Funcionário), "Manutenção", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PBR_Rent_a_car.Manutenção))]
+[assembly: EdmRelationshipAttribute("Model1", "FuncionárioReserva", "Funcionário", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Funcionário), "Reserva", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PBR_Rent_a_car.Reserva))]
+[assembly: EdmRelationshipAttribute("Model1", "HistóricoLocação", "Histórico", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Histórico), "Locação", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PBR_Rent_a_car.Locação))]
+[assembly: EdmRelationshipAttribute("Model1", "FuncionárioLocação", "Funcionário", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Funcionário), "Locação", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PBR_Rent_a_car.Locação))]
+[assembly: EdmRelationshipAttribute("Model1", "ClienteLocação", "Cliente", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Cliente), "Locação", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PBR_Rent_a_car.Locação))]
+[assembly: EdmRelationshipAttribute("Model1", "ClienteReserva", "Cliente", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Cliente), "Reserva", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PBR_Rent_a_car.Reserva))]
+[assembly: EdmRelationshipAttribute("Model1", "ClienteEndereço", "Cliente", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Cliente), "Endereço", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Endereço))]
 
 #endregion
 
@@ -43,32 +43,32 @@ namespace PBR_Rent_a_car
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    public partial class DadosContainer : ObjectContext
+    public partial class Model1Container : ObjectContext
     {
         #region Constructors
     
         /// <summary>
-        /// Initializes a new DadosContainer object using the connection string found in the 'DadosContainer' section of the application configuration file.
+        /// Initializes a new Model1Container object using the connection string found in the 'Model1Container' section of the application configuration file.
         /// </summary>
-        public DadosContainer() : base("name=DadosContainer", "DadosContainer")
+        public Model1Container() : base("name=Model1Container", "Model1Container")
         {
             this.ContextOptions.LazyLoadingEnabled = true;
             OnContextCreated();
         }
     
         /// <summary>
-        /// Initialize a new DadosContainer object.
+        /// Initialize a new Model1Container object.
         /// </summary>
-        public DadosContainer(string connectionString) : base(connectionString, "DadosContainer")
+        public Model1Container(string connectionString) : base(connectionString, "Model1Container")
         {
             this.ContextOptions.LazyLoadingEnabled = true;
             OnContextCreated();
         }
     
         /// <summary>
-        /// Initialize a new DadosContainer object.
+        /// Initialize a new Model1Container object.
         /// </summary>
-        public DadosContainer(EntityConnection connection) : base(connection, "DadosContainer")
+        public Model1Container(EntityConnection connection) : base(connection, "Model1Container")
         {
             this.ContextOptions.LazyLoadingEnabled = true;
             OnContextCreated();
@@ -339,7 +339,7 @@ namespace PBR_Rent_a_car
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="Dados", Name="Cliente")]
+    [EdmEntityTypeAttribute(NamespaceName="Model1", Name="Cliente")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Cliente : EntityObject
@@ -352,15 +352,15 @@ namespace PBR_Rent_a_car
         /// <param name="id">Initial value of the Id property.</param>
         /// <param name="nome">Initial value of the Nome property.</param>
         /// <param name="cPF">Initial value of the CPF property.</param>
-        /// <param name="telefone">Initial value of the Telefone property.</param>
+        /// <param name="telefones">Initial value of the Telefones property.</param>
         /// <param name="notificação">Initial value of the Notificação property.</param>
-        public static Cliente CreateCliente(global::System.Int32 id, global::System.String nome, global::System.String cPF, global::System.String telefone, global::System.String notificação)
+        public static Cliente CreateCliente(global::System.Int32 id, global::System.String nome, global::System.String cPF, global::System.String telefones, global::System.String notificação)
         {
             Cliente cliente = new Cliente();
             cliente.Id = id;
             cliente.Nome = nome;
             cliente.CPF = cPF;
-            cliente.Telefone = telefone;
+            cliente.Telefones = telefones;
             cliente.Notificação = notificação;
             return cliente;
         }
@@ -449,24 +449,24 @@ namespace PBR_Rent_a_car
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String Telefone
+        public global::System.String Telefones
         {
             get
             {
-                return _Telefone;
+                return _Telefones;
             }
             set
             {
-                OnTelefoneChanging(value);
-                ReportPropertyChanging("Telefone");
-                _Telefone = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("Telefone");
-                OnTelefoneChanged();
+                OnTelefonesChanging(value);
+                ReportPropertyChanging("Telefones");
+                _Telefones = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("Telefones");
+                OnTelefonesChanged();
             }
         }
-        private global::System.String _Telefone;
-        partial void OnTelefoneChanging(global::System.String value);
-        partial void OnTelefoneChanged();
+        private global::System.String _Telefones;
+        partial void OnTelefonesChanging(global::System.String value);
+        partial void OnTelefonesChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -503,18 +503,18 @@ namespace PBR_Rent_a_car
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("Dados", "ClienteLocação", "Locação")]
+        [EdmRelationshipNavigationPropertyAttribute("Model1", "ClienteLocação", "Locação")]
         public EntityCollection<Locação> Locação
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Locação>("Dados.ClienteLocação", "Locação");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Locação>("Model1.ClienteLocação", "Locação");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Locação>("Dados.ClienteLocação", "Locação", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Locação>("Model1.ClienteLocação", "Locação", value);
                 }
             }
         }
@@ -525,18 +525,18 @@ namespace PBR_Rent_a_car
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("Dados", "ClienteReserva", "Reserva")]
+        [EdmRelationshipNavigationPropertyAttribute("Model1", "ClienteReserva", "Reserva")]
         public EntityCollection<Reserva> Reserva
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Reserva>("Dados.ClienteReserva", "Reserva");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Reserva>("Model1.ClienteReserva", "Reserva");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Reserva>("Dados.ClienteReserva", "Reserva", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Reserva>("Model1.ClienteReserva", "Reserva", value);
                 }
             }
         }
@@ -547,16 +547,16 @@ namespace PBR_Rent_a_car
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("Dados", "ClienteEndereço", "Endereço")]
+        [EdmRelationshipNavigationPropertyAttribute("Model1", "ClienteEndereço", "Endereço")]
         public Endereço Endereço
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Endereço>("Dados.ClienteEndereço", "Endereço").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Endereço>("Model1.ClienteEndereço", "Endereço").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Endereço>("Dados.ClienteEndereço", "Endereço").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Endereço>("Model1.ClienteEndereço", "Endereço").Value = value;
             }
         }
         /// <summary>
@@ -568,25 +568,30 @@ namespace PBR_Rent_a_car
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Endereço>("Dados.ClienteEndereço", "Endereço");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Endereço>("Model1.ClienteEndereço", "Endereço");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Endereço>("Dados.ClienteEndereço", "Endereço", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Endereço>("Model1.ClienteEndereço", "Endereço", value);
                 }
             }
         }
 
         #endregion
 
+
+        public Cliente()
+        {
+            // TODO: Complete member initialization
+        }
     }
     
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="Dados", Name="Endereço")]
+    [EdmEntityTypeAttribute(NamespaceName="Model1", Name="Endereço")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Endereço : EntityObject
@@ -802,16 +807,16 @@ namespace PBR_Rent_a_car
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("Dados", "ClienteEndereço", "Cliente")]
+        [EdmRelationshipNavigationPropertyAttribute("Model1", "ClienteEndereço", "Cliente")]
         public Cliente Cliente
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Cliente>("Dados.ClienteEndereço", "Cliente").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Cliente>("Model1.ClienteEndereço", "Cliente").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Cliente>("Dados.ClienteEndereço", "Cliente").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Cliente>("Model1.ClienteEndereço", "Cliente").Value = value;
             }
         }
         /// <summary>
@@ -823,25 +828,30 @@ namespace PBR_Rent_a_car
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Cliente>("Dados.ClienteEndereço", "Cliente");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Cliente>("Model1.ClienteEndereço", "Cliente");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Cliente>("Dados.ClienteEndereço", "Cliente", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Cliente>("Model1.ClienteEndereço", "Cliente", value);
                 }
             }
         }
 
         #endregion
 
+
+        public Endereço()
+        {
+            // TODO: Complete member initialization
+        }
     }
     
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="Dados", Name="Funcionário")]
+    [EdmEntityTypeAttribute(NamespaceName="Model1", Name="Funcionário")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Funcionário : EntityObject
@@ -1005,18 +1015,18 @@ namespace PBR_Rent_a_car
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("Dados", "FuncionárioRelatório", "Relatório")]
+        [EdmRelationshipNavigationPropertyAttribute("Model1", "FuncionárioRelatório", "Relatório")]
         public EntityCollection<Relatório> Relatório
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Relatório>("Dados.FuncionárioRelatório", "Relatório");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Relatório>("Model1.FuncionárioRelatório", "Relatório");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Relatório>("Dados.FuncionárioRelatório", "Relatório", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Relatório>("Model1.FuncionárioRelatório", "Relatório", value);
                 }
             }
         }
@@ -1027,18 +1037,18 @@ namespace PBR_Rent_a_car
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("Dados", "FuncionárioVeículo", "Veículo")]
+        [EdmRelationshipNavigationPropertyAttribute("Model1", "FuncionárioVeículo", "Veículo")]
         public EntityCollection<Veículo> Veículo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Veículo>("Dados.FuncionárioVeículo", "Veículo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Veículo>("Model1.FuncionárioVeículo", "Veículo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Veículo>("Dados.FuncionárioVeículo", "Veículo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Veículo>("Model1.FuncionárioVeículo", "Veículo", value);
                 }
             }
         }
@@ -1049,18 +1059,18 @@ namespace PBR_Rent_a_car
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("Dados", "FuncionárioManutenção", "Manutenção")]
+        [EdmRelationshipNavigationPropertyAttribute("Model1", "FuncionárioManutenção", "Manutenção")]
         public EntityCollection<Manutenção> Manutenção
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Manutenção>("Dados.FuncionárioManutenção", "Manutenção");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Manutenção>("Model1.FuncionárioManutenção", "Manutenção");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Manutenção>("Dados.FuncionárioManutenção", "Manutenção", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Manutenção>("Model1.FuncionárioManutenção", "Manutenção", value);
                 }
             }
         }
@@ -1071,18 +1081,18 @@ namespace PBR_Rent_a_car
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("Dados", "FuncionárioReserva", "Reserva")]
+        [EdmRelationshipNavigationPropertyAttribute("Model1", "FuncionárioReserva", "Reserva")]
         public EntityCollection<Reserva> Reserva
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Reserva>("Dados.FuncionárioReserva", "Reserva");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Reserva>("Model1.FuncionárioReserva", "Reserva");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Reserva>("Dados.FuncionárioReserva", "Reserva", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Reserva>("Model1.FuncionárioReserva", "Reserva", value);
                 }
             }
         }
@@ -1093,30 +1103,35 @@ namespace PBR_Rent_a_car
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("Dados", "FuncionárioLocação", "Locação")]
+        [EdmRelationshipNavigationPropertyAttribute("Model1", "FuncionárioLocação", "Locação")]
         public EntityCollection<Locação> Locação
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Locação>("Dados.FuncionárioLocação", "Locação");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Locação>("Model1.FuncionárioLocação", "Locação");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Locação>("Dados.FuncionárioLocação", "Locação", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Locação>("Model1.FuncionárioLocação", "Locação", value);
                 }
             }
         }
 
         #endregion
 
+
+        public Funcionário()
+        {
+            // TODO: Complete member initialization
+        }
     }
     
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="Dados", Name="Histórico")]
+    [EdmEntityTypeAttribute(NamespaceName="Model1", Name="Histórico")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Histórico : EntityObject
@@ -1176,16 +1191,16 @@ namespace PBR_Rent_a_car
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("Dados", "VeículoHistórico", "Veículo")]
+        [EdmRelationshipNavigationPropertyAttribute("Model1", "VeículoHistórico", "Veículo")]
         public Veículo Veículo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Veículo>("Dados.VeículoHistórico", "Veículo").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Veículo>("Model1.VeículoHistórico", "Veículo").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Veículo>("Dados.VeículoHistórico", "Veículo").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Veículo>("Model1.VeículoHistórico", "Veículo").Value = value;
             }
         }
         /// <summary>
@@ -1197,13 +1212,13 @@ namespace PBR_Rent_a_car
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Veículo>("Dados.VeículoHistórico", "Veículo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Veículo>("Model1.VeículoHistórico", "Veículo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Veículo>("Dados.VeículoHistórico", "Veículo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Veículo>("Model1.VeículoHistórico", "Veículo", value);
                 }
             }
         }
@@ -1214,16 +1229,16 @@ namespace PBR_Rent_a_car
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("Dados", "HistóricoRelatório", "Relatório")]
+        [EdmRelationshipNavigationPropertyAttribute("Model1", "HistóricoRelatório", "Relatório")]
         public Relatório Relatório
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Relatório>("Dados.HistóricoRelatório", "Relatório").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Relatório>("Model1.HistóricoRelatório", "Relatório").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Relatório>("Dados.HistóricoRelatório", "Relatório").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Relatório>("Model1.HistóricoRelatório", "Relatório").Value = value;
             }
         }
         /// <summary>
@@ -1235,13 +1250,13 @@ namespace PBR_Rent_a_car
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Relatório>("Dados.HistóricoRelatório", "Relatório");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Relatório>("Model1.HistóricoRelatório", "Relatório");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Relatório>("Dados.HistóricoRelatório", "Relatório", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Relatório>("Model1.HistóricoRelatório", "Relatório", value);
                 }
             }
         }
@@ -1252,18 +1267,18 @@ namespace PBR_Rent_a_car
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("Dados", "HistóricoManutenção", "Manutenção")]
+        [EdmRelationshipNavigationPropertyAttribute("Model1", "HistóricoManutenção", "Manutenção")]
         public EntityCollection<Manutenção> Manutenção
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Manutenção>("Dados.HistóricoManutenção", "Manutenção");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Manutenção>("Model1.HistóricoManutenção", "Manutenção");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Manutenção>("Dados.HistóricoManutenção", "Manutenção", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Manutenção>("Model1.HistóricoManutenção", "Manutenção", value);
                 }
             }
         }
@@ -1274,30 +1289,35 @@ namespace PBR_Rent_a_car
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("Dados", "HistóricoLocação", "Locação")]
+        [EdmRelationshipNavigationPropertyAttribute("Model1", "HistóricoLocação", "Locação")]
         public EntityCollection<Locação> Locação
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Locação>("Dados.HistóricoLocação", "Locação");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Locação>("Model1.HistóricoLocação", "Locação");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Locação>("Dados.HistóricoLocação", "Locação", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Locação>("Model1.HistóricoLocação", "Locação", value);
                 }
             }
         }
 
         #endregion
 
+
+        public Histórico()
+        {
+            // TODO: Complete member initialization
+        }
     }
     
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="Dados", Name="Locação")]
+    [EdmEntityTypeAttribute(NamespaceName="Model1", Name="Locação")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Locação : EntityObject
@@ -1409,16 +1429,16 @@ namespace PBR_Rent_a_car
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("Dados", "HistóricoLocação", "Histórico")]
+        [EdmRelationshipNavigationPropertyAttribute("Model1", "HistóricoLocação", "Histórico")]
         public Histórico Histórico
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Histórico>("Dados.HistóricoLocação", "Histórico").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Histórico>("Model1.HistóricoLocação", "Histórico").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Histórico>("Dados.HistóricoLocação", "Histórico").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Histórico>("Model1.HistóricoLocação", "Histórico").Value = value;
             }
         }
         /// <summary>
@@ -1430,13 +1450,13 @@ namespace PBR_Rent_a_car
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Histórico>("Dados.HistóricoLocação", "Histórico");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Histórico>("Model1.HistóricoLocação", "Histórico");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Histórico>("Dados.HistóricoLocação", "Histórico", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Histórico>("Model1.HistóricoLocação", "Histórico", value);
                 }
             }
         }
@@ -1447,16 +1467,16 @@ namespace PBR_Rent_a_car
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("Dados", "FuncionárioLocação", "Funcionário")]
+        [EdmRelationshipNavigationPropertyAttribute("Model1", "FuncionárioLocação", "Funcionário")]
         public Funcionário Funcionário
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Funcionário>("Dados.FuncionárioLocação", "Funcionário").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Funcionário>("Model1.FuncionárioLocação", "Funcionário").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Funcionário>("Dados.FuncionárioLocação", "Funcionário").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Funcionário>("Model1.FuncionárioLocação", "Funcionário").Value = value;
             }
         }
         /// <summary>
@@ -1468,13 +1488,13 @@ namespace PBR_Rent_a_car
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Funcionário>("Dados.FuncionárioLocação", "Funcionário");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Funcionário>("Model1.FuncionárioLocação", "Funcionário");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Funcionário>("Dados.FuncionárioLocação", "Funcionário", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Funcionário>("Model1.FuncionárioLocação", "Funcionário", value);
                 }
             }
         }
@@ -1485,16 +1505,16 @@ namespace PBR_Rent_a_car
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("Dados", "ClienteLocação", "Cliente")]
+        [EdmRelationshipNavigationPropertyAttribute("Model1", "ClienteLocação", "Cliente")]
         public Cliente Cliente
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Cliente>("Dados.ClienteLocação", "Cliente").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Cliente>("Model1.ClienteLocação", "Cliente").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Cliente>("Dados.ClienteLocação", "Cliente").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Cliente>("Model1.ClienteLocação", "Cliente").Value = value;
             }
         }
         /// <summary>
@@ -1506,25 +1526,30 @@ namespace PBR_Rent_a_car
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Cliente>("Dados.ClienteLocação", "Cliente");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Cliente>("Model1.ClienteLocação", "Cliente");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Cliente>("Dados.ClienteLocação", "Cliente", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Cliente>("Model1.ClienteLocação", "Cliente", value);
                 }
             }
         }
 
         #endregion
 
+
+        public Locação()
+        {
+            // TODO: Complete member initialization
+        }
     }
     
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="Dados", Name="Manutenção")]
+    [EdmEntityTypeAttribute(NamespaceName="Model1", Name="Manutenção")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Manutenção : EntityObject
@@ -1662,16 +1687,16 @@ namespace PBR_Rent_a_car
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("Dados", "HistóricoManutenção", "Histórico")]
+        [EdmRelationshipNavigationPropertyAttribute("Model1", "HistóricoManutenção", "Histórico")]
         public Histórico Histórico
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Histórico>("Dados.HistóricoManutenção", "Histórico").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Histórico>("Model1.HistóricoManutenção", "Histórico").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Histórico>("Dados.HistóricoManutenção", "Histórico").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Histórico>("Model1.HistóricoManutenção", "Histórico").Value = value;
             }
         }
         /// <summary>
@@ -1683,13 +1708,13 @@ namespace PBR_Rent_a_car
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Histórico>("Dados.HistóricoManutenção", "Histórico");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Histórico>("Model1.HistóricoManutenção", "Histórico");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Histórico>("Dados.HistóricoManutenção", "Histórico", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Histórico>("Model1.HistóricoManutenção", "Histórico", value);
                 }
             }
         }
@@ -1700,16 +1725,16 @@ namespace PBR_Rent_a_car
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("Dados", "FuncionárioManutenção", "Funcionário")]
+        [EdmRelationshipNavigationPropertyAttribute("Model1", "FuncionárioManutenção", "Funcionário")]
         public Funcionário Funcionário
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Funcionário>("Dados.FuncionárioManutenção", "Funcionário").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Funcionário>("Model1.FuncionárioManutenção", "Funcionário").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Funcionário>("Dados.FuncionárioManutenção", "Funcionário").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Funcionário>("Model1.FuncionárioManutenção", "Funcionário").Value = value;
             }
         }
         /// <summary>
@@ -1721,25 +1746,30 @@ namespace PBR_Rent_a_car
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Funcionário>("Dados.FuncionárioManutenção", "Funcionário");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Funcionário>("Model1.FuncionárioManutenção", "Funcionário");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Funcionário>("Dados.FuncionárioManutenção", "Funcionário", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Funcionário>("Model1.FuncionárioManutenção", "Funcionário", value);
                 }
             }
         }
 
         #endregion
 
+
+        public Manutenção()
+        {
+            // TODO: Complete member initialization
+        }
     }
     
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="Dados", Name="Modelo")]
+    [EdmEntityTypeAttribute(NamespaceName="Model1", Name="Modelo")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Modelo : EntityObject
@@ -1851,30 +1881,35 @@ namespace PBR_Rent_a_car
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("Dados", "VeículoModelo", "Veículo")]
+        [EdmRelationshipNavigationPropertyAttribute("Model1", "VeículoModelo", "Veículo")]
         public EntityCollection<Veículo> Veículo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Veículo>("Dados.VeículoModelo", "Veículo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Veículo>("Model1.VeículoModelo", "Veículo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Veículo>("Dados.VeículoModelo", "Veículo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Veículo>("Model1.VeículoModelo", "Veículo", value);
                 }
             }
         }
 
         #endregion
 
+
+        public Modelo()
+        {
+            // TODO: Complete member initialization
+        }
     }
     
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="Dados", Name="Relatório")]
+    [EdmEntityTypeAttribute(NamespaceName="Model1", Name="Relatório")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Relatório : EntityObject
@@ -1934,18 +1969,18 @@ namespace PBR_Rent_a_car
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("Dados", "HistóricoRelatório", "Histórico")]
+        [EdmRelationshipNavigationPropertyAttribute("Model1", "HistóricoRelatório", "Histórico")]
         public EntityCollection<Histórico> Histórico
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Histórico>("Dados.HistóricoRelatório", "Histórico");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Histórico>("Model1.HistóricoRelatório", "Histórico");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Histórico>("Dados.HistóricoRelatório", "Histórico", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Histórico>("Model1.HistóricoRelatório", "Histórico", value);
                 }
             }
         }
@@ -1956,16 +1991,16 @@ namespace PBR_Rent_a_car
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("Dados", "FuncionárioRelatório", "Funcionário")]
+        [EdmRelationshipNavigationPropertyAttribute("Model1", "FuncionárioRelatório", "Funcionário")]
         public Funcionário Funcionário
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Funcionário>("Dados.FuncionárioRelatório", "Funcionário").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Funcionário>("Model1.FuncionárioRelatório", "Funcionário").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Funcionário>("Dados.FuncionárioRelatório", "Funcionário").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Funcionário>("Model1.FuncionárioRelatório", "Funcionário").Value = value;
             }
         }
         /// <summary>
@@ -1977,25 +2012,30 @@ namespace PBR_Rent_a_car
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Funcionário>("Dados.FuncionárioRelatório", "Funcionário");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Funcionário>("Model1.FuncionárioRelatório", "Funcionário");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Funcionário>("Dados.FuncionárioRelatório", "Funcionário", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Funcionário>("Model1.FuncionárioRelatório", "Funcionário", value);
                 }
             }
         }
 
         #endregion
 
+
+        public Relatório()
+        {
+            // TODO: Complete member initialization
+        }
     }
     
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="Dados", Name="Reserva")]
+    [EdmEntityTypeAttribute(NamespaceName="Model1", Name="Reserva")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Reserva : EntityObject
@@ -2081,16 +2121,16 @@ namespace PBR_Rent_a_car
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("Dados", "ReservaVeículo", "Veículo")]
+        [EdmRelationshipNavigationPropertyAttribute("Model1", "ReservaVeículo", "Veículo")]
         public Veículo Veículo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Veículo>("Dados.ReservaVeículo", "Veículo").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Veículo>("Model1.ReservaVeículo", "Veículo").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Veículo>("Dados.ReservaVeículo", "Veículo").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Veículo>("Model1.ReservaVeículo", "Veículo").Value = value;
             }
         }
         /// <summary>
@@ -2102,13 +2142,13 @@ namespace PBR_Rent_a_car
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Veículo>("Dados.ReservaVeículo", "Veículo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Veículo>("Model1.ReservaVeículo", "Veículo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Veículo>("Dados.ReservaVeículo", "Veículo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Veículo>("Model1.ReservaVeículo", "Veículo", value);
                 }
             }
         }
@@ -2119,16 +2159,16 @@ namespace PBR_Rent_a_car
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("Dados", "FuncionárioReserva", "Funcionário")]
+        [EdmRelationshipNavigationPropertyAttribute("Model1", "FuncionárioReserva", "Funcionário")]
         public Funcionário Funcionário
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Funcionário>("Dados.FuncionárioReserva", "Funcionário").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Funcionário>("Model1.FuncionárioReserva", "Funcionário").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Funcionário>("Dados.FuncionárioReserva", "Funcionário").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Funcionário>("Model1.FuncionárioReserva", "Funcionário").Value = value;
             }
         }
         /// <summary>
@@ -2140,13 +2180,13 @@ namespace PBR_Rent_a_car
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Funcionário>("Dados.FuncionárioReserva", "Funcionário");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Funcionário>("Model1.FuncionárioReserva", "Funcionário");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Funcionário>("Dados.FuncionárioReserva", "Funcionário", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Funcionário>("Model1.FuncionárioReserva", "Funcionário", value);
                 }
             }
         }
@@ -2157,16 +2197,16 @@ namespace PBR_Rent_a_car
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("Dados", "ClienteReserva", "Cliente")]
+        [EdmRelationshipNavigationPropertyAttribute("Model1", "ClienteReserva", "Cliente")]
         public Cliente Cliente
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Cliente>("Dados.ClienteReserva", "Cliente").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Cliente>("Model1.ClienteReserva", "Cliente").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Cliente>("Dados.ClienteReserva", "Cliente").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Cliente>("Model1.ClienteReserva", "Cliente").Value = value;
             }
         }
         /// <summary>
@@ -2178,25 +2218,30 @@ namespace PBR_Rent_a_car
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Cliente>("Dados.ClienteReserva", "Cliente");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Cliente>("Model1.ClienteReserva", "Cliente");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Cliente>("Dados.ClienteReserva", "Cliente", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Cliente>("Model1.ClienteReserva", "Cliente", value);
                 }
             }
         }
 
         #endregion
 
+
+        public Reserva()
+        {
+            // TODO: Complete member initialization
+        }
     }
     
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="Dados", Name="Veículo")]
+    [EdmEntityTypeAttribute(NamespaceName="Model1", Name="Veículo")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Veículo : EntityObject
@@ -2386,16 +2431,16 @@ namespace PBR_Rent_a_car
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("Dados", "VeículoHistórico", "Histórico")]
+        [EdmRelationshipNavigationPropertyAttribute("Model1", "VeículoHistórico", "Histórico")]
         public Histórico Histórico
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Histórico>("Dados.VeículoHistórico", "Histórico").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Histórico>("Model1.VeículoHistórico", "Histórico").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Histórico>("Dados.VeículoHistórico", "Histórico").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Histórico>("Model1.VeículoHistórico", "Histórico").Value = value;
             }
         }
         /// <summary>
@@ -2407,13 +2452,13 @@ namespace PBR_Rent_a_car
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Histórico>("Dados.VeículoHistórico", "Histórico");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Histórico>("Model1.VeículoHistórico", "Histórico");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Histórico>("Dados.VeículoHistórico", "Histórico", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Histórico>("Model1.VeículoHistórico", "Histórico", value);
                 }
             }
         }
@@ -2424,18 +2469,18 @@ namespace PBR_Rent_a_car
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("Dados", "ReservaVeículo", "Reserva")]
+        [EdmRelationshipNavigationPropertyAttribute("Model1", "ReservaVeículo", "Reserva")]
         public EntityCollection<Reserva> Reserva
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Reserva>("Dados.ReservaVeículo", "Reserva");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Reserva>("Model1.ReservaVeículo", "Reserva");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Reserva>("Dados.ReservaVeículo", "Reserva", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Reserva>("Model1.ReservaVeículo", "Reserva", value);
                 }
             }
         }
@@ -2446,16 +2491,16 @@ namespace PBR_Rent_a_car
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("Dados", "VeículoModelo", "Modelo")]
+        [EdmRelationshipNavigationPropertyAttribute("Model1", "VeículoModelo", "Modelo")]
         public Modelo Modelo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Modelo>("Dados.VeículoModelo", "Modelo").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Modelo>("Model1.VeículoModelo", "Modelo").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Modelo>("Dados.VeículoModelo", "Modelo").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Modelo>("Model1.VeículoModelo", "Modelo").Value = value;
             }
         }
         /// <summary>
@@ -2467,13 +2512,13 @@ namespace PBR_Rent_a_car
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Modelo>("Dados.VeículoModelo", "Modelo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Modelo>("Model1.VeículoModelo", "Modelo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Modelo>("Dados.VeículoModelo", "Modelo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Modelo>("Model1.VeículoModelo", "Modelo", value);
                 }
             }
         }
@@ -2484,16 +2529,16 @@ namespace PBR_Rent_a_car
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("Dados", "FuncionárioVeículo", "Funcionário")]
+        [EdmRelationshipNavigationPropertyAttribute("Model1", "FuncionárioVeículo", "Funcionário")]
         public Funcionário Funcionário
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Funcionário>("Dados.FuncionárioVeículo", "Funcionário").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Funcionário>("Model1.FuncionárioVeículo", "Funcionário").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Funcionário>("Dados.FuncionárioVeículo", "Funcionário").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Funcionário>("Model1.FuncionárioVeículo", "Funcionário").Value = value;
             }
         }
         /// <summary>
@@ -2505,19 +2550,24 @@ namespace PBR_Rent_a_car
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Funcionário>("Dados.FuncionárioVeículo", "Funcionário");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Funcionário>("Model1.FuncionárioVeículo", "Funcionário");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Funcionário>("Dados.FuncionárioVeículo", "Funcionário", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Funcionário>("Model1.FuncionárioVeículo", "Funcionário", value);
                 }
             }
         }
 
         #endregion
 
+
+        public Veículo()
+        {
+            // TODO: Complete member initialization
+        }
     }
 
     #endregion

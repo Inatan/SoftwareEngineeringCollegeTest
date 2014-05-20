@@ -7,33 +7,14 @@ namespace PBR_Rent_a_car
 {
     partial class Modelo
     {
-        public Modelo() { }
+        public string nome { get; private set; }
+        public string fornecedor { get; private set; }
+
         Modelo(string nome, string fornecedor)
         {
-            this.Nome = nome;
-            this.Fornecedor = fornecedor;
+            this.nome = nome;
+            this.fornecedor = fornecedor;
         }
 
-        //Métodos responsáveis pela interação com o BD
-        public void gravar()
-        {
-            using (var ctx = new DadosContainer())
-            {
-                ctx.AddToModeloSet(this);
-                ctx.SaveChanges();
-            }
-        }
-
-        public static Modelo pesquisar(int id)
-        {
-            using (var ctx = new DadosContainer())
-            {
-                foreach (var x in ctx.ModeloSet)
-                {
-                    if (x.Id == id) return x;
-                }
-            }
-            return null;
-        }
     }
 }

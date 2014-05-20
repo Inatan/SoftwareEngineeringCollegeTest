@@ -7,12 +7,15 @@ namespace PBR_Rent_a_car
 {
     partial class Funcionário
     {
-        public Funcionário() { }
+        public string nome { get; private set; }
+        public string carteiraTrab { get; private set; }
+        public float salário { get; private set; }
+
         public Funcionário(string nome, string carteiraTrab, float salário)
         {
-            this.Nome = nome;
-            this.CarteiraDeTrabalho = carteiraTrab;
-            this.Salário = salário;
+            this.nome = nome;
+            this.carteiraTrab = carteiraTrab;
+            this.salário = salário;
         }
 
     }
