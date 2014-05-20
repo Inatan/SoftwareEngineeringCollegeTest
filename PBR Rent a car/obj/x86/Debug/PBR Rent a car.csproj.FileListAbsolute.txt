@@ -5,7 +5,12 @@ C:\Users\Inatan\Documents\pbr-rent-a-car\PBR Rent a car\bin\Debug\PBR Rent a car
 C:\Users\Inatan\Documents\pbr-rent-a-car\PBR Rent a car\bin\Debug\PBR Rent a car.pdb
 C:\Users\Inatan\Documents\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR Rent a car.exe
 C:\Users\Inatan\Documents\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR Rent a car.pdb
+<<<<<<< HEAD
 C:\Users\Inatan\Documents\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.Cadastro_Cliente.resources
 C:\Users\Inatan\Documents\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.Cadastro_Modelo.resources
 C:\Users\Inatan\Documents\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.Cadastro_Veículo.resources
 C:\Users\Inatan\Documents\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.Reserva_de_veículo.resources
+=======
+C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR Rent a car.exe
+C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR Rent a car.pdb
+>>>>>>> 98b2b5fd2cab3c0fb3896cba1bef504d8134f6ce

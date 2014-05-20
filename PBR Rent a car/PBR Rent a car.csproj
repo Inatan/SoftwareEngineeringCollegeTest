@@ -96,6 +96,7 @@
     </Compile>
     <Compile Include="Reserva.cs" />
     <Compile Include="Veículo.cs" />
+<<<<<<< HEAD
     <EmbeddedResource Include="Cadastro Cliente.resx">
       <DependentUpon>Cadastro Cliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -104,6 +105,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cadastro Veículo.resx">
       <DependentUpon>Cadastro Veículo.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="Interface.resx">
+      <DependentUpon>Interface.cs</DependentUpon>
+>>>>>>> 98b2b5fd2cab3c0fb3896cba1bef504d8134f6ce
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -121,6 +126,8 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Dados.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="App.Config" />
+    <None Include="Properties\DataSources\DadosContainer.datasource" />
     <None Include="Properties\DataSources\Model1Container.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -131,6 +138,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Dados.edmx.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

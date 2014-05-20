@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Dados" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+  <EntityContainer Name="DadosContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="VeículoSet" EntityType="Dados.Veículo" />
+    <EntitySet Name="HistóricoSet" EntityType="Dados.Histórico" />
+    <EntitySet Name="RelatórioSet" EntityType="Dados.Relatório" />
+    <EntitySet Name="ModeloSet" EntityType="Dados.Modelo" />
+    <EntitySet Name="FuncionárioSet" EntityType="Dados.Funcionário" />
+    <EntitySet Name="LocaçãoSet" EntityType="Dados.Locação" />
+    <EntitySet Name="ReservaSet" EntityType="Dados.Reserva" />
+    <EntitySet Name="ManutençãoSet" EntityType="Dados.Manutenção" />
+    <EntitySet Name="ClienteSet" EntityType="Dados.Cliente" />
+    <EntitySet Name="EndereçoSet" EntityType="Dados.Endereço" />
+    <AssociationSet Name="VeículoHistórico" Association="Dados.VeículoHistórico">
+      <End Role="Veículo" EntitySet="VeículoSet" />
+      <End Role="Histórico" EntitySet="HistóricoSet" />
+    </AssociationSet>
+    <AssociationSet Name="ReservaVeículo" Association="Dados.ReservaVeículo">
+      <End Role="Reserva" EntitySet="ReservaSet" />
+      <End Role="Veículo" EntitySet="VeículoSet" />
+    </AssociationSet>
+    <AssociationSet Name="HistóricoRelatório" Association="Dados.HistóricoRelatório">
+      <End Role="Histórico" EntitySet="HistóricoSet" />
+      <End Role="Relatório" EntitySet="RelatórioSet" />
+    </AssociationSet>
+    <AssociationSet Name="VeículoModelo" Association="Dados.VeículoModelo">
+      <End Role="Veículo" EntitySet="VeículoSet" />
+      <End Role="Modelo" EntitySet="ModeloSet" />
+    </AssociationSet>
+    <AssociationSet Name="FuncionárioRelatório" Association="Dados.FuncionárioRelatório">
+      <End Role="Funcionário" EntitySet="FuncionárioSet" />
+      <End Role="Relatório" EntitySet="RelatórioSet" />
+    </AssociationSet>
+    <AssociationSet Name="FuncionárioVeículo" Association="Dados.FuncionárioVeículo">
+      <End Role="Funcionário" EntitySet="FuncionárioSet" />
+      <End Role="Veículo" EntitySet="VeículoSet" />
+    </AssociationSet>
+    <AssociationSet Name="HistóricoManutenção" Association="Dados.HistóricoManutenção">
+      <End Role="Histórico" EntitySet="HistóricoSet" />
+      <End Role="Manutenção" EntitySet="ManutençãoSet" />
+    </AssociationSet>
+    <AssociationSet Name="FuncionárioManutenção" Association="Dados.FuncionárioManutenção">
+      <End Role="Funcionário" EntitySet="FuncionárioSet" />
+      <End Role="Manutenção" EntitySet="ManutençãoSet" />
+    </AssociationSet>
+    <AssociationSet Name="FuncionárioReserva" Association="Dados.FuncionárioReserva">
+      <End Role="Funcionário" EntitySet="FuncionárioSet" />
+      <End Role="Reserva" EntitySet="ReservaSet" />
+    </AssociationSet>
+    <AssociationSet Name="HistóricoLocação" Association="Dados.HistóricoLocação">
+      <End Role="Histórico" EntitySet="HistóricoSet" />
+      <End Role="Locação" EntitySet="LocaçãoSet" />
+    </AssociationSet>
+    <AssociationSet Name="FuncionárioLocação" Association="Dados.FuncionárioLocação">
+      <End Role="Funcionário" EntitySet="FuncionárioSet" />
+      <End Role="Locação" EntitySet="LocaçãoSet" />
+    </AssociationSet>
+    <AssociationSet Name="ClienteLocação" Association="Dados.ClienteLocação">
+      <End Role="Cliente" EntitySet="ClienteSet" />
+      <End Role="Locação" EntitySet="LocaçãoSet" />
+    </AssociationSet>
+    <AssociationSet Name="ClienteReserva" Association="Dados.ClienteReserva">
+      <End Role="Cliente" EntitySet="ClienteSet" />
+      <End Role="Reserva" EntitySet="ReservaSet" />
+    </AssociationSet>
+    <AssociationSet Name="ClienteEndereço" Association="Dados.ClienteEndereço">
+      <End Role="Cliente" EntitySet="ClienteSet" />
+      <End Role="Endereço" EntitySet="EndereçoSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Veículo" cg:TypeAccess="Public">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Histórico" Relationship="Dados.VeículoHistórico" FromRole="Veículo" ToRole="Histórico" />
+    <NavigationProperty Name="Reserva" Relationship="Dados.ReservaVeículo" FromRole="Veículo" ToRole="Reserva" />
+    <NavigationProperty Name="Modelo" Relationship="Dados.VeículoModelo" FromRole="Veículo" ToRole="Modelo" />
+    <NavigationProperty Name="Funcionário" Relationship="Dados.FuncionárioVeículo" FromRole="Veículo" ToRole="Funcionário" />
+    <Property Type="String" Name="Cor" Nullable="false" />
+    <Property Type="Int32" Name="Ano" Nullable="false" />
+    <Property Type="String" Name="Categoria" Nullable="false" />
+    <Property Type="Int32" Name="Quilometragem" Nullable="false" />
+    <Property Type="Byte" Name="Estado" Nullable="false">
+      <Documentation>
+        <Summary>Estado é um byte porque essa é a melhor maneira de armazená-lo no BD. É necessário um método de conversão para um Enum Estado que criaremos</Summary>
+      </Documentation>
+    </Property>
+  </EntityType>
+  <EntityType Name="Histórico">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Veículo" Relationship="Dados.VeículoHistórico" FromRole="Histórico" ToRole="Veículo" />
+    <NavigationProperty Name="Relatório" Relationship="Dados.HistóricoRelatório" FromRole="Histórico" ToRole="Relatório" />
+    <NavigationProperty Name="Manutenção" Relationship="Dados.HistóricoManutenção" FromRole="Histórico" ToRole="Manutenção" />
+    <NavigationProperty Name="Locação" Relationship="Dados.HistóricoLocação" FromRole="Histórico" ToRole="Locação" />
+  </EntityType>
+  <EntityType Name="Relatório">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Histórico" Relationship="Dados.HistóricoRelatório" FromRole="Relatório" ToRole="Histórico" />
+    <NavigationProperty Name="Funcionário" Relationship="Dados.FuncionárioRelatório" FromRole="Relatório" ToRole="Funcionário" />
+  </EntityType>
+  <EntityType Name="Modelo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Veículo" Relationship="Dados.VeículoModelo" FromRole="Modelo" ToRole="Veículo" />
+    <Property Type="String" Name="Nome" Nullable="false" />
+    <Property Type="String" Name="Fornecedor" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Funcionário">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Relatório" Relationship="Dados.FuncionárioRelatório" FromRole="Funcionário" ToRole="Relatório" />
+    <NavigationProperty Name="Veículo" Relationship="Dados.FuncionárioVeículo" FromRole="Funcionário" ToRole="Veículo" />
+    <NavigationProperty Name="Manutenção" Relationship="Dados.FuncionárioManutenção" FromRole="Funcionário" ToRole="Manutenção" />
+    <NavigationProperty Name="Reserva" Relationship="Dados.FuncionárioReserva" FromRole="Funcionário" ToRole="Reserva" />
+    <NavigationProperty Name="Locação" Relationship="Dados.FuncionárioLocação" FromRole="Funcionário" ToRole="Locação" />
+    <Property Type="String" Name="Nome" Nullable="false" />
+    <Property Type="String" Name="CarteiraDeTrabalho" Nullable="false" />
+    <Property Type="Double" Name="Salário" Nullable="false" />
+    <Property Type="String" Name="Função" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Locação">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Histórico" Relationship="Dados.HistóricoLocação" FromRole="Locação" ToRole="Histórico" />
+    <NavigationProperty Name="Funcionário" Relationship="Dados.FuncionárioLocação" FromRole="Locação" ToRole="Funcionário" />
+    <NavigationProperty Name="Cliente" Relationship="Dados.ClienteLocação" FromRole="Locação" ToRole="Cliente" />
+    <Property Type="String" Name="Inicio" Nullable="false">
+      <Documentation>
+        <Summary>Inicio é uma data. Fazer conversão na classe</Summary>
+      </Documentation>
+    </Property>
+    <Property Type="String" Name="Fim" Nullable="false">
+      <Documentation>
+        <Summary>Fim é uma data. Fazer conversão na classe</Summary>
+      </Documentation>
+    </Property>
+  </EntityType>
+  <EntityType Name="Reserva">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Veículo" Relationship="Dados.ReservaVeículo" FromRole="Reserva" ToRole="Veículo" />
+    <NavigationProperty Name="Funcionário" Relationship="Dados.FuncionárioReserva" FromRole="Reserva" ToRole="Funcionário" />
+    <NavigationProperty Name="Cliente" Relationship="Dados.ClienteReserva" FromRole="Reserva" ToRole="Cliente" />
+    <Property Type="String" Name="Data" Nullable="false">
+      <Documentation>
+        <Summary>Representação de Data como string. Fazer conversão na classe para algo mais alto nível (DateTime, por exemplo)</Summary>
+      </Documentation>
+    </Property>
+  </EntityType>
+  <EntityType Name="Manutenção">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Histórico" Relationship="Dados.HistóricoManutenção" FromRole="Manutenção" ToRole="Histórico" />
+    <NavigationProperty Name="Funcionário" Relationship="Dados.FuncionárioManutenção" FromRole="Manutenção" ToRole="Funcionário" />
+    <Property Type="String" Name="Inicio" Nullable="false">
+      <Documentation>
+        <Summary>Inicio é uma data. Usar conversão na classe</Summary>
+      </Documentation>
+    </Property>
+    <Property Type="String" Name="Fim" Nullable="false">
+      <Documentation>
+        <Summary>Fim é uma Data. Usar conversão na classe</Summary>
+      </Documentation>
+    </Property>
+    <Property Type="String" Name="Motivo" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Locação" Relationship="Dados.ClienteLocação" FromRole="Cliente" ToRole="Locação" />
+    <NavigationProperty Name="Reserva" Relationship="Dados.ClienteReserva" FromRole="Cliente" ToRole="Reserva" />
+    <NavigationProperty Name="Endereço" Relationship="Dados.ClienteEndereço" FromRole="Cliente" ToRole="Endereço" />
+    <Property Type="String" Name="Nome" Nullable="false" />
+    <Property Type="String" Name="CPF" Nullable="false" />
+    <Property Type="String" Name="Telefone" Nullable="false" />
+    <Property Type="String" Name="Notificação" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Endereço">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Cliente" Relationship="Dados.ClienteEndereço" FromRole="Endereço" ToRole="Cliente" />
+    <Property Type="String" Name="UF" Nullable="false" />
+    <Property Type="String" Name="Cidade" Nullable="false" />
+    <Property Type="String" Name="Bairro" Nullable="false" />
+    <Property Type="String" Name="Rua" Nullable="false" />
+    <Property Type="Int32" Name="Número" Nullable="false" />
+    <Property Type="Int32" Name="CEP" Nullable="false" />
+  </EntityType>
+  <Association Name="VeículoHistórico">
+    <End Type="Dados.Veículo" Role="Veículo" Multiplicity="1" />
+    <End Type="Dados.Histórico" Role="Histórico" Multiplicity="1" />
+  </Association>
+  <Association Name="ReservaVeículo">
+    <End Type="Dados.Reserva" Role="Reserva" Multiplicity="*" />
+    <End Type="Dados.Veículo" Role="Veículo" Multiplicity="1" />
+  </Association>
+  <Association Name="HistóricoRelatório">
+    <End Type="Dados.Histórico" Role="Histórico" Multiplicity="*" />
+    <End Type="Dados.Relatório" Role="Relatório" Multiplicity="1" />
+  </Association>
+  <Association Name="VeículoModelo">
+    <End Type="Dados.Veículo" Role="Veículo" Multiplicity="*" />
+    <End Type="Dados.Modelo" Role="Modelo" Multiplicity="1" />
+  </Association>
+  <Association Name="FuncionárioRelatório">
+    <End Type="Dados.Funcionário" Role="Funcionário" Multiplicity="1" />
+    <End Type="Dados.Relatório" Role="Relatório" Multiplicity="*" />
+  </Association>
+  <Association Name="FuncionárioVeículo">
+    <End Type="Dados.Funcionário" Role="Funcionário" Multiplicity="1" />
+    <End Type="Dados.Veículo" Role="Veículo" Multiplicity="*" />
+  </Association>
+  <Association Name="HistóricoManutenção">
+    <End Type="Dados.Histórico" Role="Histórico" Multiplicity="1" />
+    <End Type="Dados.Manutenção" Role="Manutenção" Multiplicity="*" />
+  </Association>
+  <Association Name="FuncionárioManutenção">
+    <End Type="Dados.Funcionário" Role="Funcionário" Multiplicity="1" />
+    <End Type="Dados.Manutenção" Role="Manutenção" Multiplicity="*" />
+  </Association>
+  <Association Name="FuncionárioReserva">
+    <End Type="Dados.Funcionário" Role="Funcionário" Multiplicity="1" />
+    <End Type="Dados.Reserva" Role="Reserva" Multiplicity="*" />
+  </Association>
+  <Association Name="HistóricoLocação">
+    <End Type="Dados.Histórico" Role="Histórico" Multiplicity="1" />
+    <End Type="Dados.Locação" Role="Locação" Multiplicity="*" />
+  </Association>
+  <Association Name="FuncionárioLocação">
+    <End Type="Dados.Funcionário" Role="Funcionário" Multiplicity="1" />
+    <End Type="Dados.Locação" Role="Locação" Multiplicity="*" />
+  </Association>
+  <Association Name="ClienteLocação">
+    <End Type="Dados.Cliente" Role="Cliente" Multiplicity="1" />
+    <End Type="Dados.Locação" Role="Locação" Multiplicity="*" />
+  </Association>
+  <Association Name="ClienteReserva">
+    <End Type="Dados.Cliente" Role="Cliente" Multiplicity="1" />
+    <End Type="Dados.Reserva" Role="Reserva" Multiplicity="*" />
+  </Association>
+  <Association Name="ClienteEndereço">
+    <End Type="Dados.Cliente" Role="Cliente" Multiplicity="1" />
+    <End Type="Dados.Endereço" Role="Endereço" Multiplicity="1" />
+  </Association>
+</Schema>
