@@ -7,11 +7,6 @@ namespace PBR_Rent_a_car
 {
     partial class Veículo
     {
-        public string cor { get; private set; }
-        public int ano { get; private set; }
-        public string categoria { get; private set; }
-        public int quilometragem { get; private set; }
-        public Modelo modelo { get; private set; }
         private enum estado
         {
             Locado,
@@ -24,27 +19,30 @@ namespace PBR_Rent_a_car
         {
             this.status = estado.Locado;
             this.Estado = SerializarEstado();
+            atualizarEstado();
         }
 
         public void setDisponivel()
         {
             this.status = estado.Disponivel;
             this.Estado = SerializarEstado();
+            atualizarEstado();
         }
 
         public void setManutenção()
         {
             this.status = estado.Manutenção;
             this.Estado = SerializarEstado();
+            atualizarEstado();
         }
 
         public Veículo(string cor, int ano, string categoria,int quilometragem, Modelo modelo)
         {
-            this.cor = cor;
-            this.ano = ano;
-            this.categoria = categoria;
-            this.quilometragem = quilometragem;
-            this.modelo = modelo;
+            this.Cor = cor;
+            this.Ano = ano;
+            this.Categoria = categoria;
+            this.Quilometragem = quilometragem;
+            this.Modelo = modelo;
             this.status = estado.Disponivel;
             this.Estado = SerializarEstado();
             this.IdModelo = modelo.Id;
@@ -65,7 +63,7 @@ namespace PBR_Rent_a_car
             }
         }
 
-        public void atualizarEstado()
+        private void atualizarEstado()
         {
             using (var ctx = new DadosContainer())
             {
@@ -107,7 +105,7 @@ namespace PBR_Rent_a_car
 
         private static bool adequado(Veículo v, Modelo m, string cor, int ano, string cat, int km)
         {
-            if (v.  Modelo == m && v.cor == cor && v.ano == ano && v.categoria == cat && v.quilometragem == km) return true;
+            if (v.  Modelo == m && v.Cor == cor && v.Ano == ano && v.Categoria == cat && v.Quilometragem == km) return true;
             return false;
         }
     }
