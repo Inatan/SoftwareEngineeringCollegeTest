@@ -7,13 +7,13 @@ namespace PBR_Rent_a_car
 {
     partial class Veículo
     {
-        private enum estado
+        public enum estado
         {
             Locado,
             Manutenção,
             Disponivel
         };
-        private estado status;
+        public estado status;
 
         public void setLocado()
         {

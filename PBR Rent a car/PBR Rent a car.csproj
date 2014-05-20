@@ -133,6 +133,7 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Dados.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="Properties\DataSources\DadosContainer1.datasource" />
     <None Include="Properties\DataSources\Model1Container.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

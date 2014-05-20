@@ -31,13 +31,13 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox_Categoria = new System.Windows.Forms.TextBox();
+            this.textBox_Cor = new System.Windows.Forms.TextBox();
+            this.textBox_Ano = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox_Modelo = new System.Windows.Forms.ComboBox();
             this.Button_Cancelar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Button_Cadastrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label8
@@ -67,26 +67,26 @@
             this.label7.TabIndex = 25;
             this.label7.Text = "Categoria";
             // 
-            // textBox10
+            // textBox_Categoria
             // 
-            this.textBox10.Location = new System.Drawing.Point(12, 112);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(183, 20);
-            this.textBox10.TabIndex = 23;
+            this.textBox_Categoria.Location = new System.Drawing.Point(12, 112);
+            this.textBox_Categoria.Name = "textBox_Categoria";
+            this.textBox_Categoria.Size = new System.Drawing.Size(183, 20);
+            this.textBox_Categoria.TabIndex = 23;
             // 
-            // textBox7
+            // textBox_Cor
             // 
-            this.textBox7.Location = new System.Drawing.Point(12, 64);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(183, 20);
-            this.textBox7.TabIndex = 20;
+            this.textBox_Cor.Location = new System.Drawing.Point(12, 64);
+            this.textBox_Cor.Name = "textBox_Cor";
+            this.textBox_Cor.Size = new System.Drawing.Size(183, 20);
+            this.textBox_Cor.TabIndex = 20;
             // 
-            // textBox5
+            // textBox_Ano
             // 
-            this.textBox5.Location = new System.Drawing.Point(12, 25);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(48, 20);
-            this.textBox5.TabIndex = 18;
+            this.textBox_Ano.Location = new System.Drawing.Point(12, 25);
+            this.textBox_Ano.Name = "textBox_Ano";
+            this.textBox_Ano.Size = new System.Drawing.Size(48, 20);
+            this.textBox_Ano.TabIndex = 18;
             // 
             // label1
             // 
@@ -97,13 +97,13 @@
             this.label1.TabIndex = 27;
             this.label1.Text = "Modelo";
             // 
-            // comboBox1
+            // comboBox_Modelo
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(12, 151);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(183, 21);
-            this.comboBox1.TabIndex = 28;
+            this.comboBox_Modelo.FormattingEnabled = true;
+            this.comboBox_Modelo.Location = new System.Drawing.Point(12, 151);
+            this.comboBox_Modelo.Name = "comboBox_Modelo";
+            this.comboBox_Modelo.Size = new System.Drawing.Size(183, 21);
+            this.comboBox_Modelo.TabIndex = 28;
             // 
             // Button_Cancelar
             // 
@@ -115,14 +115,15 @@
             this.Button_Cancelar.UseVisualStyleBackColor = true;
             this.Button_Cancelar.Click += new System.EventHandler(this.Button_Cancelar_Click);
             // 
-            // button1
+            // Button_Cadastrar
             // 
-            this.button1.Location = new System.Drawing.Point(12, 193);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "Cadastrar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Button_Cadastrar.Location = new System.Drawing.Point(12, 193);
+            this.Button_Cadastrar.Name = "Button_Cadastrar";
+            this.Button_Cadastrar.Size = new System.Drawing.Size(75, 23);
+            this.Button_Cadastrar.TabIndex = 29;
+            this.Button_Cadastrar.Text = "Cadastrar";
+            this.Button_Cadastrar.UseVisualStyleBackColor = true;
+            this.Button_Cadastrar.Click += new System.EventHandler(this.Button_Cadastrar_Click);
             // 
             // Cadastro_Veículo
             // 
@@ -130,15 +131,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(213, 226);
             this.Controls.Add(this.Button_Cancelar);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.Button_Cadastrar);
+            this.Controls.Add(this.comboBox_Modelo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBox_Categoria);
+            this.Controls.Add(this.textBox_Cor);
+            this.Controls.Add(this.textBox_Ano);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Cadastro_Veículo";
@@ -154,12 +155,12 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox_Categoria;
+        private System.Windows.Forms.TextBox textBox_Cor;
+        private System.Windows.Forms.TextBox textBox_Ano;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox_Modelo;
         private System.Windows.Forms.Button Button_Cancelar;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Button_Cadastrar;
     }
 }

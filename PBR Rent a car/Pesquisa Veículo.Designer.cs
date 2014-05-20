@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView_Veículos = new System.Windows.Forms.DataGridView();
             this.Modelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ano = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -37,33 +37,34 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox_Fornecedor = new System.Windows.Forms.TextBox();
+            this.textBox_Nome = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox_Categoria = new System.Windows.Forms.TextBox();
+            this.textBox_Cor = new System.Windows.Forms.TextBox();
+            this.textBox_Ano = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox_Quilometragem = new System.Windows.Forms.TextBox();
             this.button_Cancelar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Veículos)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridView_Veículos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridView_Veículos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_Veículos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Modelo,
             this.Cor,
             this.Ano,
             this.Quilometragem,
             this.Estado});
-            this.dataGridView1.Location = new System.Drawing.Point(23, 13);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(545, 241);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridView_Veículos.Location = new System.Drawing.Point(23, 13);
+            this.dataGridView_Veículos.Name = "dataGridView_Veículos";
+            this.dataGridView_Veículos.Size = new System.Drawing.Size(545, 241);
+            this.dataGridView_Veículos.TabIndex = 0;
+            this.dataGridView_Veículos.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView_Veículos_RowHeaderMouseDoubleClick);
             // 
             // Modelo
             // 
@@ -98,6 +99,7 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "Atualizar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -117,19 +119,19 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Nome";
             // 
-            // textBox2
+            // textBox_Fornecedor
             // 
-            this.textBox2.Location = new System.Drawing.Point(278, 314);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(228, 20);
-            this.textBox2.TabIndex = 14;
+            this.textBox_Fornecedor.Location = new System.Drawing.Point(278, 314);
+            this.textBox_Fornecedor.Name = "textBox_Fornecedor";
+            this.textBox_Fornecedor.Size = new System.Drawing.Size(228, 20);
+            this.textBox_Fornecedor.TabIndex = 14;
             // 
-            // textBox1
+            // textBox_Nome
             // 
-            this.textBox1.Location = new System.Drawing.Point(23, 314);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(201, 20);
-            this.textBox1.TabIndex = 13;
+            this.textBox_Nome.Location = new System.Drawing.Point(23, 314);
+            this.textBox_Nome.Name = "textBox_Nome";
+            this.textBox_Nome.Size = new System.Drawing.Size(201, 20);
+            this.textBox_Nome.TabIndex = 13;
             // 
             // label8
             // 
@@ -158,26 +160,26 @@
             this.label7.TabIndex = 31;
             this.label7.Text = "Categoria";
             // 
-            // textBox10
+            // textBox_Categoria
             // 
-            this.textBox10.Location = new System.Drawing.Point(281, 363);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(203, 20);
-            this.textBox10.TabIndex = 29;
+            this.textBox_Categoria.Location = new System.Drawing.Point(281, 363);
+            this.textBox_Categoria.Name = "textBox_Categoria";
+            this.textBox_Categoria.Size = new System.Drawing.Size(203, 20);
+            this.textBox_Categoria.TabIndex = 29;
             // 
-            // textBox7
+            // textBox_Cor
             // 
-            this.textBox7.Location = new System.Drawing.Point(281, 403);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(183, 20);
-            this.textBox7.TabIndex = 28;
+            this.textBox_Cor.Location = new System.Drawing.Point(281, 403);
+            this.textBox_Cor.Name = "textBox_Cor";
+            this.textBox_Cor.Size = new System.Drawing.Size(183, 20);
+            this.textBox_Cor.TabIndex = 28;
             // 
-            // textBox5
+            // textBox_Ano
             // 
-            this.textBox5.Location = new System.Drawing.Point(26, 403);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(48, 20);
-            this.textBox5.TabIndex = 27;
+            this.textBox_Ano.Location = new System.Drawing.Point(26, 403);
+            this.textBox_Ano.Name = "textBox_Ano";
+            this.textBox_Ano.Size = new System.Drawing.Size(48, 20);
+            this.textBox_Ano.TabIndex = 27;
             // 
             // label3
             // 
@@ -188,12 +190,12 @@
             this.label3.TabIndex = 34;
             this.label3.Text = "Quilometragem menor que";
             // 
-            // textBox3
+            // textBox_Quilometragem
             // 
-            this.textBox3.Location = new System.Drawing.Point(23, 363);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(144, 20);
-            this.textBox3.TabIndex = 33;
+            this.textBox_Quilometragem.Location = new System.Drawing.Point(23, 363);
+            this.textBox_Quilometragem.Name = "textBox_Quilometragem";
+            this.textBox_Quilometragem.Size = new System.Drawing.Size(144, 20);
+            this.textBox_Quilometragem.TabIndex = 33;
             // 
             // button_Cancelar
             // 
@@ -212,25 +214,25 @@
             this.ClientSize = new System.Drawing.Size(589, 463);
             this.Controls.Add(this.button_Cancelar);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox_Quilometragem);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBox_Categoria);
+            this.Controls.Add(this.textBox_Cor);
+            this.Controls.Add(this.textBox_Ano);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox_Fornecedor);
+            this.Controls.Add(this.textBox_Nome);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridView_Veículos);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Pesquisa_Veículo";
             this.ShowIcon = false;
             this.Text = "Pesquisa de Veículo";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Veículos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,7 +240,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView_Veículos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Modelo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ano;
@@ -247,16 +249,16 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_Fornecedor;
+        private System.Windows.Forms.TextBox textBox_Nome;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox_Categoria;
+        private System.Windows.Forms.TextBox textBox_Cor;
+        private System.Windows.Forms.TextBox textBox_Ano;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox_Quilometragem;
         private System.Windows.Forms.Button button_Cancelar;
 
     }

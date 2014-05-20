@@ -1869,6 +1869,11 @@ namespace PBR_Rent_a_car
 
         #endregion
 
+
+        public Modelo()
+        {
+            // TODO: Complete member initialization
+        }
     }
     
     /// <summary>

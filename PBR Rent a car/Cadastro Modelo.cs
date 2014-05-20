@@ -20,5 +20,12 @@ namespace PBR_Rent_a_car
         {
             this.Close();
         }
+
+        private void Button_Cadastrar_Click(object sender, EventArgs e)
+        {
+            Program.modelos.Add(new Modelo(textBox_Nome.Text, textBox_Fornecedor.Text));
+            this.Close();
+        }
+
     }
 }

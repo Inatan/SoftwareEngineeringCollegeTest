@@ -33,16 +33,16 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox_Mês = new System.Windows.Forms.TextBox();
+            this.textBox_Minuto = new System.Windows.Forms.TextBox();
+            this.textBox_Ano = new System.Windows.Forms.TextBox();
+            this.textBox_Hora = new System.Windows.Forms.TextBox();
+            this.textBox_Dia = new System.Windows.Forms.TextBox();
             this.ListBoxVeículo = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.textBox_Nome_Cliente = new System.Windows.Forms.TextBox();
+            this.Button_Reservar = new System.Windows.Forms.Button();
             this.Button_Cancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -91,40 +91,40 @@
             this.label7.TabIndex = 23;
             this.label7.Text = "Dia";
             // 
-            // textBox10
+            // textBox_Mês
             // 
-            this.textBox10.Location = new System.Drawing.Point(46, 131);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(24, 20);
-            this.textBox10.TabIndex = 21;
+            this.textBox_Mês.Location = new System.Drawing.Point(46, 131);
+            this.textBox_Mês.Name = "textBox_Mês";
+            this.textBox_Mês.Size = new System.Drawing.Size(24, 20);
+            this.textBox_Mês.TabIndex = 21;
             // 
-            // textBox8
+            // textBox_Minuto
             // 
-            this.textBox8.Location = new System.Drawing.Point(167, 131);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(33, 20);
-            this.textBox8.TabIndex = 20;
+            this.textBox_Minuto.Location = new System.Drawing.Point(167, 131);
+            this.textBox_Minuto.Name = "textBox_Minuto";
+            this.textBox_Minuto.Size = new System.Drawing.Size(33, 20);
+            this.textBox_Minuto.TabIndex = 20;
             // 
-            // textBox7
+            // textBox_Ano
             // 
-            this.textBox7.Location = new System.Drawing.Point(76, 131);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(41, 20);
-            this.textBox7.TabIndex = 19;
+            this.textBox_Ano.Location = new System.Drawing.Point(76, 131);
+            this.textBox_Ano.Name = "textBox_Ano";
+            this.textBox_Ano.Size = new System.Drawing.Size(41, 20);
+            this.textBox_Ano.TabIndex = 19;
             // 
-            // textBox6
+            // textBox_Hora
             // 
-            this.textBox6.Location = new System.Drawing.Point(134, 131);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(27, 20);
-            this.textBox6.TabIndex = 18;
+            this.textBox_Hora.Location = new System.Drawing.Point(134, 131);
+            this.textBox_Hora.Name = "textBox_Hora";
+            this.textBox_Hora.Size = new System.Drawing.Size(27, 20);
+            this.textBox_Hora.TabIndex = 18;
             // 
-            // textBox5
+            // textBox_Dia
             // 
-            this.textBox5.Location = new System.Drawing.Point(12, 131);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(27, 20);
-            this.textBox5.TabIndex = 17;
+            this.textBox_Dia.Location = new System.Drawing.Point(12, 131);
+            this.textBox_Dia.Name = "textBox_Dia";
+            this.textBox_Dia.Size = new System.Drawing.Size(27, 20);
+            this.textBox_Dia.TabIndex = 17;
             // 
             // ListBoxVeículo
             // 
@@ -155,21 +155,22 @@
             this.label2.TabIndex = 30;
             this.label2.Text = "Nome completo do Cliente";
             // 
-            // textBox1
+            // textBox_Nome_Cliente
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 32);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(411, 20);
-            this.textBox1.TabIndex = 29;
+            this.textBox_Nome_Cliente.Location = new System.Drawing.Point(12, 32);
+            this.textBox_Nome_Cliente.Name = "textBox_Nome_Cliente";
+            this.textBox_Nome_Cliente.Size = new System.Drawing.Size(411, 20);
+            this.textBox_Nome_Cliente.TabIndex = 29;
             // 
-            // button1
+            // Button_Reservar
             // 
-            this.button1.Location = new System.Drawing.Point(16, 171);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(145, 23);
-            this.button1.TabIndex = 31;
-            this.button1.Text = "Fazer pedido de Rezerva";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Button_Reservar.Location = new System.Drawing.Point(16, 171);
+            this.Button_Reservar.Name = "Button_Reservar";
+            this.Button_Reservar.Size = new System.Drawing.Size(68, 23);
+            this.Button_Reservar.TabIndex = 31;
+            this.Button_Reservar.Text = "Reservar";
+            this.Button_Reservar.UseVisualStyleBackColor = true;
+            this.Button_Reservar.Click += new System.EventHandler(this.Button_Reservar_Click);
             // 
             // Button_Cancelar
             // 
@@ -187,9 +188,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(435, 206);
             this.Controls.Add(this.Button_Cancelar);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Button_Reservar);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox_Nome_Cliente);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ListBoxVeículo);
             this.Controls.Add(this.label10);
@@ -197,11 +198,11 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBox_Mês);
+            this.Controls.Add(this.textBox_Minuto);
+            this.Controls.Add(this.textBox_Ano);
+            this.Controls.Add(this.textBox_Hora);
+            this.Controls.Add(this.textBox_Dia);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Reserva_de_veículo";
@@ -219,16 +220,16 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox_Mês;
+        private System.Windows.Forms.TextBox textBox_Minuto;
+        private System.Windows.Forms.TextBox textBox_Ano;
+        private System.Windows.Forms.TextBox textBox_Hora;
+        private System.Windows.Forms.TextBox textBox_Dia;
         private System.Windows.Forms.ListBox ListBoxVeículo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox_Nome_Cliente;
+        private System.Windows.Forms.Button Button_Reservar;
         private System.Windows.Forms.Button Button_Cancelar;
     }
 }

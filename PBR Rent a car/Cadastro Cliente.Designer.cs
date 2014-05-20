@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox_Nome = new System.Windows.Forms.TextBox();
+            this.textBox_CPF_CNPJ = new System.Windows.Forms.TextBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox_TelefoneMóvel = new System.Windows.Forms.TextBox();
+            this.textBox_TelefoneFixo = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -41,35 +41,35 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox_Cidade = new System.Windows.Forms.TextBox();
+            this.textBox_Número = new System.Windows.Forms.TextBox();
+            this.textBox_Rua = new System.Windows.Forms.TextBox();
+            this.textBox_CEP = new System.Windows.Forms.TextBox();
+            this.textBox_Bairro = new System.Windows.Forms.TextBox();
+            this.textBox_UF = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Button_Cadastrar = new System.Windows.Forms.Button();
             this.Button_Cancelar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox1
+            // textBox_Nome
             // 
-            this.textBox1.Location = new System.Drawing.Point(13, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(238, 20);
-            this.textBox1.TabIndex = 0;
+            this.textBox_Nome.Location = new System.Drawing.Point(13, 42);
+            this.textBox_Nome.Name = "textBox_Nome";
+            this.textBox_Nome.Size = new System.Drawing.Size(238, 20);
+            this.textBox_Nome.TabIndex = 0;
             // 
-            // textBox2
+            // textBox_CPF_CNPJ
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 98);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(160, 20);
-            this.textBox2.TabIndex = 1;
+            this.textBox_CPF_CNPJ.Location = new System.Drawing.Point(12, 98);
+            this.textBox_CPF_CNPJ.Name = "textBox_CPF_CNPJ";
+            this.textBox_CPF_CNPJ.Size = new System.Drawing.Size(160, 20);
+            this.textBox_CPF_CNPJ.TabIndex = 1;
             // 
             // radioButton1
             // 
@@ -93,19 +93,19 @@
             this.radioButton2.Text = "CNPJ";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // textBox_TelefoneMóvel
             // 
-            this.textBox3.Location = new System.Drawing.Point(143, 182);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(112, 20);
-            this.textBox3.TabIndex = 4;
+            this.textBox_TelefoneMóvel.Location = new System.Drawing.Point(143, 182);
+            this.textBox_TelefoneMóvel.Name = "textBox_TelefoneMóvel";
+            this.textBox_TelefoneMóvel.Size = new System.Drawing.Size(112, 20);
+            this.textBox_TelefoneMóvel.TabIndex = 4;
             // 
-            // textBox4
+            // textBox_TelefoneFixo
             // 
-            this.textBox4.Location = new System.Drawing.Point(12, 182);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(113, 20);
-            this.textBox4.TabIndex = 5;
+            this.textBox_TelefoneFixo.Location = new System.Drawing.Point(12, 182);
+            this.textBox_TelefoneFixo.Name = "textBox_TelefoneFixo";
+            this.textBox_TelefoneFixo.Size = new System.Drawing.Size(113, 20);
+            this.textBox_TelefoneFixo.TabIndex = 5;
             // 
             // panel1
             // 
@@ -115,12 +115,12 @@
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.textBox10);
-            this.panel1.Controls.Add(this.textBox9);
-            this.panel1.Controls.Add(this.textBox8);
-            this.panel1.Controls.Add(this.textBox7);
-            this.panel1.Controls.Add(this.textBox6);
-            this.panel1.Controls.Add(this.textBox5);
+            this.panel1.Controls.Add(this.textBox_Cidade);
+            this.panel1.Controls.Add(this.textBox_Número);
+            this.panel1.Controls.Add(this.textBox_Rua);
+            this.panel1.Controls.Add(this.textBox_CEP);
+            this.panel1.Controls.Add(this.textBox_Bairro);
+            this.panel1.Controls.Add(this.textBox_UF);
             this.panel1.Location = new System.Drawing.Point(295, 25);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(318, 256);
@@ -180,47 +180,47 @@
             this.label7.TabIndex = 13;
             this.label7.Text = "Cidade";
             // 
-            // textBox10
+            // textBox_Cidade
             // 
-            this.textBox10.Location = new System.Drawing.Point(70, 21);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(146, 20);
-            this.textBox10.TabIndex = 5;
+            this.textBox_Cidade.Location = new System.Drawing.Point(70, 21);
+            this.textBox_Cidade.Name = "textBox_Cidade";
+            this.textBox_Cidade.Size = new System.Drawing.Size(146, 20);
+            this.textBox_Cidade.TabIndex = 5;
             // 
-            // textBox9
+            // textBox_Número
             // 
-            this.textBox9.Location = new System.Drawing.Point(16, 218);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(55, 20);
-            this.textBox9.TabIndex = 4;
+            this.textBox_Número.Location = new System.Drawing.Point(16, 218);
+            this.textBox_Número.Name = "textBox_Número";
+            this.textBox_Número.Size = new System.Drawing.Size(55, 20);
+            this.textBox_Número.TabIndex = 4;
             // 
-            // textBox8
+            // textBox_Rua
             // 
-            this.textBox8.Location = new System.Drawing.Point(16, 170);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(288, 20);
-            this.textBox8.TabIndex = 3;
+            this.textBox_Rua.Location = new System.Drawing.Point(16, 170);
+            this.textBox_Rua.Name = "textBox_Rua";
+            this.textBox_Rua.Size = new System.Drawing.Size(288, 20);
+            this.textBox_Rua.TabIndex = 3;
             // 
-            // textBox7
+            // textBox_CEP
             // 
-            this.textBox7.Location = new System.Drawing.Point(16, 64);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(140, 20);
-            this.textBox7.TabIndex = 2;
+            this.textBox_CEP.Location = new System.Drawing.Point(16, 64);
+            this.textBox_CEP.Name = "textBox_CEP";
+            this.textBox_CEP.Size = new System.Drawing.Size(140, 20);
+            this.textBox_CEP.TabIndex = 2;
             // 
-            // textBox6
+            // textBox_Bairro
             // 
-            this.textBox6.Location = new System.Drawing.Point(16, 115);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(133, 20);
-            this.textBox6.TabIndex = 1;
+            this.textBox_Bairro.Location = new System.Drawing.Point(16, 115);
+            this.textBox_Bairro.Name = "textBox_Bairro";
+            this.textBox_Bairro.Size = new System.Drawing.Size(133, 20);
+            this.textBox_Bairro.TabIndex = 1;
             // 
-            // textBox5
+            // textBox_UF
             // 
-            this.textBox5.Location = new System.Drawing.Point(16, 21);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(27, 20);
-            this.textBox5.TabIndex = 0;
+            this.textBox_UF.Location = new System.Drawing.Point(16, 21);
+            this.textBox_UF.Name = "textBox_UF";
+            this.textBox_UF.Size = new System.Drawing.Size(27, 20);
+            this.textBox_UF.TabIndex = 0;
             // 
             // label1
             // 
@@ -267,14 +267,15 @@
             this.label5.TabIndex = 11;
             this.label5.Text = "Endereço";
             // 
-            // button1
+            // Button_Cadastrar
             // 
-            this.button1.Location = new System.Drawing.Point(13, 258);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Cadastrar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Button_Cadastrar.Location = new System.Drawing.Point(13, 258);
+            this.Button_Cadastrar.Name = "Button_Cadastrar";
+            this.Button_Cadastrar.Size = new System.Drawing.Size(75, 23);
+            this.Button_Cadastrar.TabIndex = 12;
+            this.Button_Cadastrar.Text = "Cadastrar";
+            this.Button_Cadastrar.UseVisualStyleBackColor = true;
+            this.Button_Cadastrar.Click += new System.EventHandler(this.Button_Cadastrar_Click);
             // 
             // Button_Cancelar
             // 
@@ -292,19 +293,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(626, 288);
             this.Controls.Add(this.Button_Cancelar);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Button_Cadastrar);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox_TelefoneFixo);
+            this.Controls.Add(this.textBox_TelefoneMóvel);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox_CPF_CNPJ);
+            this.Controls.Add(this.textBox_Nome);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Cadastro_Cliente";
@@ -319,19 +320,19 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox_Nome;
+        private System.Windows.Forms.TextBox textBox_CPF_CNPJ;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox_TelefoneMóvel;
+        private System.Windows.Forms.TextBox textBox_TelefoneFixo;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox_UF;
+        private System.Windows.Forms.TextBox textBox_Bairro;
+        private System.Windows.Forms.TextBox textBox_Cidade;
+        private System.Windows.Forms.TextBox textBox_Número;
+        private System.Windows.Forms.TextBox textBox_Rua;
+        private System.Windows.Forms.TextBox textBox_CEP;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -343,7 +344,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Button_Cadastrar;
         private System.Windows.Forms.Button Button_Cancelar;
     }
 }

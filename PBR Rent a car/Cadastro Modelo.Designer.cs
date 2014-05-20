@@ -30,10 +30,10 @@
         {
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox_Fornecedor = new System.Windows.Forms.TextBox();
+            this.textBox_Nome = new System.Windows.Forms.TextBox();
             this.Button_Cancelar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Button_Cadastrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label2
@@ -54,19 +54,19 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Nome";
             // 
-            // textBox2
+            // textBox_Fornecedor
             // 
-            this.textBox2.Location = new System.Drawing.Point(11, 70);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(244, 20);
-            this.textBox2.TabIndex = 10;
+            this.textBox_Fornecedor.Location = new System.Drawing.Point(11, 70);
+            this.textBox_Fornecedor.Name = "textBox_Fornecedor";
+            this.textBox_Fornecedor.Size = new System.Drawing.Size(244, 20);
+            this.textBox_Fornecedor.TabIndex = 10;
             // 
-            // textBox1
+            // textBox_Nome
             // 
-            this.textBox1.Location = new System.Drawing.Point(11, 24);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(244, 20);
-            this.textBox1.TabIndex = 9;
+            this.textBox_Nome.Location = new System.Drawing.Point(11, 24);
+            this.textBox_Nome.Name = "textBox_Nome";
+            this.textBox_Nome.Size = new System.Drawing.Size(244, 20);
+            this.textBox_Nome.TabIndex = 9;
             // 
             // Button_Cancelar
             // 
@@ -78,14 +78,15 @@
             this.Button_Cancelar.UseVisualStyleBackColor = true;
             this.Button_Cancelar.Click += new System.EventHandler(this.Button_Cancelar_Click);
             // 
-            // button1
+            // Button_Cadastrar
             // 
-            this.button1.Location = new System.Drawing.Point(11, 110);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Cadastrar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Button_Cadastrar.Location = new System.Drawing.Point(11, 110);
+            this.Button_Cadastrar.Name = "Button_Cadastrar";
+            this.Button_Cadastrar.Size = new System.Drawing.Size(75, 23);
+            this.Button_Cadastrar.TabIndex = 14;
+            this.Button_Cadastrar.Text = "Cadastrar";
+            this.Button_Cadastrar.UseVisualStyleBackColor = true;
+            this.Button_Cadastrar.Click += new System.EventHandler(this.Button_Cadastrar_Click);
             // 
             // Cadastro_Modelo
             // 
@@ -93,11 +94,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(267, 141);
             this.Controls.Add(this.Button_Cancelar);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Button_Cadastrar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox_Fornecedor);
+            this.Controls.Add(this.textBox_Nome);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Cadastro_Modelo";
@@ -112,9 +113,11 @@
 
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_Fornecedor;
+        private System.Windows.Forms.TextBox textBox_Nome;
         private System.Windows.Forms.Button Button_Cancelar;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Button_Cadastrar;
+
+        public System.EventHandler Button_Reservar_Click { get; set; }
     }
 }
