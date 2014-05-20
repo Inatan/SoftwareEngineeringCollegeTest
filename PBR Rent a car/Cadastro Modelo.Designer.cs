@@ -32,7 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Button_Cancelar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -68,14 +68,15 @@
             this.textBox1.Size = new System.Drawing.Size(244, 20);
             this.textBox1.TabIndex = 9;
             // 
-            // button2
+            // Button_Cancelar
             // 
-            this.button2.Location = new System.Drawing.Point(180, 110);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.Button_Cancelar.Location = new System.Drawing.Point(180, 110);
+            this.Button_Cancelar.Name = "Button_Cancelar";
+            this.Button_Cancelar.Size = new System.Drawing.Size(75, 23);
+            this.Button_Cancelar.TabIndex = 15;
+            this.Button_Cancelar.Text = "Cancelar";
+            this.Button_Cancelar.UseVisualStyleBackColor = true;
+            this.Button_Cancelar.Click += new System.EventHandler(this.Button_Cancelar_Click);
             // 
             // button1
             // 
@@ -91,7 +92,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(267, 141);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.Button_Cancelar);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -113,7 +114,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Button_Cancelar;
         private System.Windows.Forms.Button button1;
     }
 }

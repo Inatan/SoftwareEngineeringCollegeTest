@@ -1,6 +1,214 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Mapping xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs" Space="C-S">
-  <Alias Key="Model" Value="Model1" />
-  <Alias Key="Target" Value="Model1.Store" />
-  <EntityContainerMapping CdmEntityContainer="Model1Container" StorageEntityContainer="Model1TargetContainer" />
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DadosStoreContainer" CdmEntityContainer="DadosContainer">
+    <EntitySetMapping Name="VeículoSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Dados.Veículo)">
+        <MappingFragment StoreEntitySet="VeículoSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Cor" ColumnName="Cor" />
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
+          <ScalarProperty Name="Categoria" ColumnName="Categoria" />
+          <ScalarProperty Name="Quilometragem" ColumnName="Quilometragem" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HistóricoSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Dados.Histórico)">
+        <MappingFragment StoreEntitySet="HistóricoSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RelatórioSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Dados.Relatório)">
+        <MappingFragment StoreEntitySet="RelatórioSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ModeloSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Dados.Modelo)">
+        <MappingFragment StoreEntitySet="ModeloSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Fornecedor" ColumnName="Fornecedor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FuncionárioSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Dados.Funcionário)">
+        <MappingFragment StoreEntitySet="FuncionárioSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="CarteiraDeTrabalho" ColumnName="CarteiraDeTrabalho" />
+          <ScalarProperty Name="Salário" ColumnName="Salário" />
+          <ScalarProperty Name="Função" ColumnName="Função" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LocaçãoSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Dados.Locação)">
+        <MappingFragment StoreEntitySet="LocaçãoSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Inicio" ColumnName="Inicio" />
+          <ScalarProperty Name="Fim" ColumnName="Fim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReservaSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Dados.Reserva)">
+        <MappingFragment StoreEntitySet="ReservaSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ManutençãoSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Dados.Manutenção)">
+        <MappingFragment StoreEntitySet="ManutençãoSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Inicio" ColumnName="Inicio" />
+          <ScalarProperty Name="Fim" ColumnName="Fim" />
+          <ScalarProperty Name="Motivo" ColumnName="Motivo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClienteSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Dados.Cliente)">
+        <MappingFragment StoreEntitySet="ClienteSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="CPF" ColumnName="CPF" />
+          <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+          <ScalarProperty Name="Notificação" ColumnName="Notificação" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EndereçoSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Dados.Endereço)">
+        <MappingFragment StoreEntitySet="EndereçoSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UF" ColumnName="UF" />
+          <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+          <ScalarProperty Name="Bairro" ColumnName="Bairro" />
+          <ScalarProperty Name="Rua" ColumnName="Rua" />
+          <ScalarProperty Name="Número" ColumnName="Número" />
+          <ScalarProperty Name="CEP" ColumnName="CEP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="VeículoHistórico" TypeName="Dados.VeículoHistórico" StoreEntitySet="VeículoSet">
+      <EndProperty Name="Histórico">
+        <ScalarProperty Name="Id" ColumnName="Histórico_Id" />
+      </EndProperty>
+      <EndProperty Name="Veículo">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ReservaVeículo" TypeName="Dados.ReservaVeículo" StoreEntitySet="ReservaSet">
+      <EndProperty Name="Veículo">
+        <ScalarProperty Name="Id" ColumnName="Veículo_Id" />
+      </EndProperty>
+      <EndProperty Name="Reserva">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="HistóricoRelatório" TypeName="Dados.HistóricoRelatório" StoreEntitySet="HistóricoSet">
+      <EndProperty Name="Relatório">
+        <ScalarProperty Name="Id" ColumnName="Relatório_Id" />
+      </EndProperty>
+      <EndProperty Name="Histórico">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="VeículoModelo" TypeName="Dados.VeículoModelo" StoreEntitySet="VeículoSet">
+      <EndProperty Name="Modelo">
+        <ScalarProperty Name="Id" ColumnName="Modelo_Id" />
+      </EndProperty>
+      <EndProperty Name="Veículo">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FuncionárioRelatório" TypeName="Dados.FuncionárioRelatório" StoreEntitySet="RelatórioSet">
+      <EndProperty Name="Funcionário">
+        <ScalarProperty Name="Id" ColumnName="Funcionário_Id" />
+      </EndProperty>
+      <EndProperty Name="Relatório">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FuncionárioVeículo" TypeName="Dados.FuncionárioVeículo" StoreEntitySet="VeículoSet">
+      <EndProperty Name="Funcionário">
+        <ScalarProperty Name="Id" ColumnName="Funcionário_Id" />
+      </EndProperty>
+      <EndProperty Name="Veículo">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="HistóricoManutenção" TypeName="Dados.HistóricoManutenção" StoreEntitySet="ManutençãoSet">
+      <EndProperty Name="Histórico">
+        <ScalarProperty Name="Id" ColumnName="Histórico_Id" />
+      </EndProperty>
+      <EndProperty Name="Manutenção">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FuncionárioManutenção" TypeName="Dados.FuncionárioManutenção" StoreEntitySet="ManutençãoSet">
+      <EndProperty Name="Funcionário">
+        <ScalarProperty Name="Id" ColumnName="Funcionário_Id" />
+      </EndProperty>
+      <EndProperty Name="Manutenção">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FuncionárioReserva" TypeName="Dados.FuncionárioReserva" StoreEntitySet="ReservaSet">
+      <EndProperty Name="Funcionário">
+        <ScalarProperty Name="Id" ColumnName="Funcionário_Id" />
+      </EndProperty>
+      <EndProperty Name="Reserva">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="HistóricoLocação" TypeName="Dados.HistóricoLocação" StoreEntitySet="LocaçãoSet">
+      <EndProperty Name="Histórico">
+        <ScalarProperty Name="Id" ColumnName="Histórico_Id" />
+      </EndProperty>
+      <EndProperty Name="Locação">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FuncionárioLocação" TypeName="Dados.FuncionárioLocação" StoreEntitySet="LocaçãoSet">
+      <EndProperty Name="Funcionário">
+        <ScalarProperty Name="Id" ColumnName="Funcionário_Id" />
+      </EndProperty>
+      <EndProperty Name="Locação">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ClienteLocação" TypeName="Dados.ClienteLocação" StoreEntitySet="LocaçãoSet">
+      <EndProperty Name="Cliente">
+        <ScalarProperty Name="Id" ColumnName="Cliente_Id" />
+      </EndProperty>
+      <EndProperty Name="Locação">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ClienteReserva" TypeName="Dados.ClienteReserva" StoreEntitySet="ReservaSet">
+      <EndProperty Name="Cliente">
+        <ScalarProperty Name="Id" ColumnName="Cliente_Id" />
+      </EndProperty>
+      <EndProperty Name="Reserva">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ClienteEndereço" TypeName="Dados.ClienteEndereço" StoreEntitySet="ClienteSet">
+      <EndProperty Name="Endereço">
+        <ScalarProperty Name="Id" ColumnName="Endereço_Id" />
+      </EndProperty>
+      <EndProperty Name="Cliente">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
 </Mapping>

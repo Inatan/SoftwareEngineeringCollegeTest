@@ -111,6 +111,9 @@
     <EmbeddedResource Include="Cadastro Veículo.resx">
       <DependentUpon>Cadastro Veículo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Interface.resx">
+      <DependentUpon>Interface.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pesquisa Veículo.resx">
       <DependentUpon>Pesquisa Veículo.cs</DependentUpon>
     </EmbeddedResource>

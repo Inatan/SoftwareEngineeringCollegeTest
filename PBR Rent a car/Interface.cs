@@ -11,14 +11,80 @@ namespace PBR_Rent_a_car
 {
     public partial class Interface : Form
     {
+        Cadastro_Modelo cModelo;
+        Cadastro_Veículo cVeículo;
+        Cadastro_Cliente cCliente;
+        Reserva_de_veículo rVeículo;
+        Pesquisa_Veículo pVeículo;
         public Interface()
         {
             InitializeComponent();
         }
 
-        private void Interface_Load(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-
+            cModelo = new Cadastro_Modelo();
+            cModelo.ShowDialog();
         }
+
+        private void Button_Cadastrar_Veículo_Click(object sender, EventArgs e)
+        {
+            cVeículo = new Cadastro_Veículo();
+            cVeículo.ShowDialog();
+        }
+
+        private void Button_Cadastrar_Cliente_Click(object sender, EventArgs e)
+        {
+            cCliente = new Cadastro_Cliente();
+            cCliente.ShowDialog();
+        }
+
+        private void Button_Reservar_Veículo_Click(object sender, EventArgs e)
+        {
+            rVeículo = new Reserva_de_veículo();
+            rVeículo.ShowDialog();
+        }
+
+        private void Button_Pesquisar_Veículo_Click(object sender, EventArgs e)
+        {
+            pVeículo = new Pesquisa_Veículo();
+            pVeículo.ShowDialog();
+        }
+
+        private void cadastrarClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cCliente = new Cadastro_Cliente();
+            cCliente.ShowDialog();
+        }
+
+        private void cadastrarModeloToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cModelo = new Cadastro_Modelo();
+            cModelo.ShowDialog();
+        }
+
+        private void cadastrarVeículoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cVeículo = new Cadastro_Veículo();
+            cVeículo.ShowDialog();
+        }
+
+        private void pesquisarVeículosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pVeículo = new Pesquisa_Veículo();
+            pVeículo.ShowDialog();
+        }
+
+        private void reservarVeículoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rVeículo = new Reserva_de_veículo();
+            rVeículo.ShowDialog();
+        }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
     }
 }

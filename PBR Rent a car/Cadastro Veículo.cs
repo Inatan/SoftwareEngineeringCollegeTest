@@ -16,5 +16,10 @@ namespace PBR_Rent_a_car
             InitializeComponent();
         }
 
+        private void Button_Cancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
     }
 }
