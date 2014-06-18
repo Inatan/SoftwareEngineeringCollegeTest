@@ -876,10 +876,10 @@
           <ConnectorPoint PointX="4.625" PointY="6.2833968098958328" />
         </AssociationConnector>
         <AssociationConnector Association="Dados.FuncionárioVeículo">
-          <ConnectorPoint PointX="7.3429210714721682" PointY="4" />
-          <ConnectorPoint PointX="7.3429210714721682" PointY="2.8939925130208337" />
-          <ConnectorPoint PointX="6.8941754762776695" PointY="2.8939925130208333" />
-          <ConnectorPoint PointX="6.7275088096110034" PointY="2.8939925130208337" />
+          <ConnectorPoint PointX="7.3541882027065153" PointY="4" />
+          <ConnectorPoint PointX="7.3541882027065153" PointY="2.8939925130208337" />
+          <ConnectorPoint PointX="6.8541754346865913" PointY="2.8939925130208333" />
+          <ConnectorPoint PointX="6.6875087680199252" PointY="2.8939925130208337" />
           <ConnectorPoint PointX="5.427083333333333" PointY="2.8939925130208333" />
           <ConnectorPoint PointX="5.260416666666667" PointY="2.8939925130208337" />
           <ConnectorPoint PointX="2" PointY="2.8939925130208337" />
@@ -893,9 +893,9 @@
           <ConnectorPoint PointX="4.625" PointY="4.7112939453125" />
         </AssociationConnector>
         <AssociationConnector Association="Dados.FuncionárioReserva">
-          <ConnectorPoint PointX="6.8108421429443364" PointY="4" />
-          <ConnectorPoint PointX="6.8108421429443364" PointY="1.1509755232747396" />
-          <ConnectorPoint PointX="6.25" PointY="1.1509755232747396" />
+          <ConnectorPoint PointX="6.7708421013532583" PointY="4" />
+          <ConnectorPoint PointX="6.7708421013532583" PointY="1.4901432291666668" />
+          <ConnectorPoint PointX="6.25" PointY="1.4901432291666668" />
         </AssociationConnector>
         <AssociationConnector Association="Dados.HistóricoLocação">
           <ConnectorPoint PointX="1.25" PointY="6.4802864583333335" />
@@ -917,10 +917,10 @@
         </AssociationConnector>
         <AssociationConnector Association="Dados.ClienteReserva">
           <ConnectorPoint PointX="8.5" PointY="3.53125" />
-          <ConnectorPoint PointX="7.4262544048055013" PointY="3.5312499999999996" />
-          <ConnectorPoint PointX="7.2595877381388352" PointY="3.53125" />
-          <ConnectorPoint PointX="6.8941754762776695" PointY="3.5312499999999996" />
-          <ConnectorPoint PointX="6.7275088096110034" PointY="3.53125" />
+          <ConnectorPoint PointX="7.4375215360398483" PointY="3.5312499999999996" />
+          <ConnectorPoint PointX="7.2708548693731823" PointY="3.53125" />
+          <ConnectorPoint PointX="6.8541754346865913" PointY="3.5312499999999996" />
+          <ConnectorPoint PointX="6.6875087680199252" PointY="3.53125" />
           <ConnectorPoint PointX="5.34375" PointY="3.53125" />
           <ConnectorPoint PointX="5.34375" PointY="2.4802864583333331" />
         </AssociationConnector>

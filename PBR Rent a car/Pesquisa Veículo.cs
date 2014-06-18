@@ -25,7 +25,7 @@ namespace PBR_Rent_a_car
                 dataGridView_Veículos.Rows[i].Cells[1].Value = Program.veículos[i].Cor;
                 dataGridView_Veículos.Rows[i].Cells[2].Value = Program.veículos[i].Ano.ToString();
                 dataGridView_Veículos.Rows[i].Cells[3].Value = Program.veículos[i].Quilometragem.ToString();
-                dataGridView_Veículos.Rows[i].Cells[4].Value = Program.veículos[i].status.ToString();
+             //   dataGridView_Veículos.Rows[i].Cells[4].Value = Program.veículos[i].status.ToString();
             }
         }
 
@@ -51,7 +51,7 @@ namespace PBR_Rent_a_car
                     dataGridView_Veículos.Rows[i].Cells[1].Value = Program.veículos[i].Cor;
                     dataGridView_Veículos.Rows[i].Cells[2].Value = Program.veículos[i].Ano.ToString();
                     dataGridView_Veículos.Rows[i].Cells[3].Value = Program.veículos[i].Quilometragem.ToString();
-                    dataGridView_Veículos.Rows[i].Cells[4].Value = Program.veículos[i].status.ToString();
+                //    dataGridView_Veículos.Rows[i].Cells[4].Value = Program.veículos[i].status.ToString();
                 }
             }
         }

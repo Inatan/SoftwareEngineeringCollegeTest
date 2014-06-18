@@ -9,22 +9,22 @@ using System.Windows.Forms;
 
 namespace PBR_Rent_a_car
 {
-    public partial class Cadastro_Modelo : Form
+    public partial class Login : Form
     {
-        public Cadastro_Modelo()
+        public Login()
         {
             InitializeComponent();
         }
 
-        private void Button_Cancelar_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void Button_Cadastrar_Click(object sender, EventArgs e)
+        private void buttonRedefinirSenha_Click(object sender, EventArgs e)
         {
-           // Program.modelos.Add(new Modelo(textBox_Nome.Text, textBox_Fornecedor.Text));
-            this.Close();
+            Redefinição_de_senha Redefinição = new Redefinição_de_senha();
+            Redefinição.ShowDialog();
         }
 
     }

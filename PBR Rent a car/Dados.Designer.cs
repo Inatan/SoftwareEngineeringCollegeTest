@@ -1,4 +1,4 @@
-﻿// Default code generation is disabled for model 'C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a car\Dados.edmx'. 
+﻿// Default code generation is disabled for model 'C:\Users\Inatan\Documents\pbr-rent-a-car\PBR Rent a car\Dados.edmx'. 
 // To enable default code generation, change the value of the 'Code Generation Strategy' designer
 // property to an alternate value. This property is available in the Properties Window when the model is
 // open in the designer.
