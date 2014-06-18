@@ -10,6 +10,8 @@ namespace PBR_Rent_a_car
         //private string p;
        // private string p_2;
 
+        public Modelo() {}
+
         public Modelo(string nome, string fornecedor)
         {
             this.Nome = nome;
@@ -33,16 +35,21 @@ namespace PBR_Rent_a_car
             }
         }
 
-        public static Modelo pesquisar(int id)
+        public static Modelo pesquisar()
         {
             using (var ctx = new DadosContainer())
             {
                 foreach (var x in ctx.ModeloSet)
                 {
-                    if (x.Id == id) return x;
+                    Console.WriteLine(x);
                 }
             }
             return null;
+        }
+
+        public override string ToString()
+        {
+            return "Modelo " + this.Nome + " com fornecedor " + this.Fornecedor;
         }
     }
 }

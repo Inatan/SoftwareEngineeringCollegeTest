@@ -24,3 +24,4 @@ C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a
 C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.Properties.Resources.resources
 C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.Reserva_de_veículo.resources
 C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR Rent a car.csproj.GenerateResource.Cache
+C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a car\bin\Debug\PBR Rent a car.exe.config
