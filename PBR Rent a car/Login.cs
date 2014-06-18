@@ -55,9 +55,9 @@ namespace PBR_Rent_a_car
             }
         }
 
-        public bool loginVálido(string usuário, string senha)
-        {
-            return todosOsLogins().Exists(l => verificaUsuárioESenha(usuário, senha, l));
+        public static Login loginVálido(string usuário, string senha)
+        {//Retorna NULL caso o login seja inválido!!!
+            return todosOsLogins().Find(l => verificaUsuárioESenha(usuário, senha, l));
         }
 
         private static bool verificaUsuárioESenha(string usuário, string senha, Login login)
