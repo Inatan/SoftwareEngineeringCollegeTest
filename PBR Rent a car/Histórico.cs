@@ -5,7 +5,7 @@ using System.Text;
 
 namespace PBR_Rent_a_car
 {
-    partial class Histórico
+    public partial class Histórico
     {
         public List<Manutenção> manutenções { get; private set; }
         public List<Locação> locações { get; private set; }

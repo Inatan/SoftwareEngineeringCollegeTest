@@ -5,7 +5,7 @@ using System.Text;
 
 namespace PBR_Rent_a_car
 {
-    partial class Manutenção
+    public partial class Manutenção
     {
         public DateTime inicio { get; private set; }
         public DateTime fim { get; private set; }

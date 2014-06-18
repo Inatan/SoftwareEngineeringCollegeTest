@@ -5,7 +5,7 @@ using System.Text;
 
 namespace PBR_Rent_a_car
 {
-    partial class Cliente
+    public partial class Cliente
     {
         public List<string> telefones { get; private set; } //Para a próxima etapa...
 

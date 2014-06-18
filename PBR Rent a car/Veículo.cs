@@ -5,7 +5,7 @@ using System.Text;
 
 namespace PBR_Rent_a_car
 {
-    partial class Veículo
+    public partial class Veículo
     {
         public enum estado
         {

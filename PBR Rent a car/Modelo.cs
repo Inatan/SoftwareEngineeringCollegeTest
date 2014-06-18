@@ -5,7 +5,7 @@ using System.Text;
 
 namespace PBR_Rent_a_car
 {
-    partial class Modelo
+    public partial class Modelo
     {
         //private string p;
        // private string p_2;

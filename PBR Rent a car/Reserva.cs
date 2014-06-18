@@ -5,7 +5,7 @@ using System.Text;
 
 namespace PBR_Rent_a_car
 {
-    partial class Reserva
+    public partial class Reserva
     {
         public DateTime Pedido{ get; private set; } //Necessário fazer conversão para o BD
 
