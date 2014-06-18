@@ -13,6 +13,21 @@ C:\Users\Inatan\Documents\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a
 C:\Users\Inatan\Documents\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.Interface.resources
 C:\Users\Inatan\Documents\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.Pesquisa_Veículo.resources
 C:\Users\Inatan\Documents\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.Reserva_de_veículo.resources
+<<<<<<< HEAD
 C:\Users\Inatan\Documents\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.Login.resources
 C:\Users\Inatan\Documents\pbr-rent-a-car\PBR Rent a car\bin\Debug\PBR Rent a car.exe.config
 C:\Users\Inatan\Documents\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.Redefinição_de_senha.resources
+=======
+C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a car\bin\Debug\PBR Rent a car.exe
+C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a car\bin\Debug\PBR Rent a car.pdb
+C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR Rent a car.csprojResolveAssemblyReference.cache
+C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.Cadastro_Cliente.resources
+C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.Cadastro_Modelo.resources
+C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.Cadastro_Veículo.resources
+C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.Interface.resources
+C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.Pesquisa_Veículo.resources
+C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.Properties.Resources.resources
+C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.Reserva_de_veículo.resources
+C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR Rent a car.csproj.GenerateResource.Cache
+C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a car\bin\Debug\PBR Rent a car.exe.config
+>>>>>>> origin/Code_Generator_fix

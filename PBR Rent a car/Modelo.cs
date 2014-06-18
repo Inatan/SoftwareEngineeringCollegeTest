@@ -9,6 +9,7 @@
 
 namespace PBR_Rent_a_car
 {
+<<<<<<< HEAD
     using System;
     using System.Collections.Generic;
     
@@ -24,5 +25,53 @@ namespace PBR_Rent_a_car
         public string Fornecedor { get; set; }
     
         public virtual ICollection<Veículo> Veículo { get; set; }
+=======
+    public partial class Modelo
+    {
+        //private string p;
+       // private string p_2;
+
+        public Modelo() {}
+
+        public Modelo(string nome, string fornecedor)
+        {
+            this.Nome = nome;
+            this.Fornecedor = fornecedor;
+        }
+
+       /* public Modelo(string p, string p_2)
+        {
+            // TODO: Complete member initialization
+            this.p = p;
+            this.p_2 = p_2;
+        }*/
+
+        //Métodos responsáveis pela interação com o BD
+        public void gravar()
+        {
+            using (var ctx = new DadosContainer())
+            {
+                ctx.AddToModeloSet(this);
+                ctx.SaveChanges();
+            }
+        }
+
+        public static Modelo pesquisar()
+        {
+            using (var ctx = new DadosContainer())
+            {
+                foreach (var x in ctx.ModeloSet)
+                {
+                    Console.WriteLine(x);
+                }
+            }
+            return null;
+        }
+
+        public override string ToString()
+        {
+            return "Modelo " + this.Nome + " com fornecedor " + this.Fornecedor;
+        }
+>>>>>>> origin/Code_Generator_fix
     }
 }

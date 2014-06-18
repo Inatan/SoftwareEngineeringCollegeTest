@@ -9,9 +9,12 @@
 
 namespace PBR_Rent_a_car
 {
+<<<<<<< HEAD
     using System;
     using System.Collections.Generic;
     
+=======
+>>>>>>> origin/Code_Generator_fix
     public partial class Funcionário
     {
         public Funcionário()
