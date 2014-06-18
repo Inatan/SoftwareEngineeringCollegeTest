@@ -35,16 +35,17 @@ namespace PBR_Rent_a_car
             }
         }
 
-        public static Modelo pesquisar()
+        public static List<Modelo> todosOsModelos()
         {
+            List<Modelo> modelos = new List<Modelo>();
             using (var ctx = new DadosContainer())
             {
-                foreach (var x in ctx.ModeloSet)
+                foreach (var modelo in ctx.ModeloSet)
                 {
-                    Console.WriteLine(x);
+                    modelos.Add(modelo);
                 }
             }
-            return null;
+            return modelos;
         }
 
         public override string ToString()

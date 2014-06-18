@@ -33,6 +33,8 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("Dados", "ClienteLocação", "Cliente", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Cliente), "Locação", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PBR_Rent_a_car.Locação))]
 [assembly: EdmRelationshipAttribute("Dados", "ClienteReserva", "Cliente", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Cliente), "Reserva", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PBR_Rent_a_car.Reserva))]
 [assembly: EdmRelationshipAttribute("Dados", "ClienteEndereço", "Cliente", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Cliente), "Endereço", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Endereço))]
+[assembly: EdmRelationshipAttribute("Dados", "LoginCliente", "Login", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Login), "Cliente", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Cliente))]
+[assembly: EdmRelationshipAttribute("Dados", "LoginFuncionário", "Login", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Login), "Funcionário", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Funcionário))]
 
 #endregion
 
@@ -243,6 +245,22 @@ namespace PBR_Rent_a_car
             }
         }
         private ObjectSet<Endereço> _EndereçoSet;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<Login> LoginSet
+        {
+            get
+            {
+                if ((_LoginSet == null))
+                {
+                    _LoginSet = base.CreateObjectSet<Login>("LoginSet");
+                }
+                return _LoginSet;
+            }
+        }
+        private ObjectSet<Login> _LoginSet;
 
         #endregion
 
@@ -326,6 +344,14 @@ namespace PBR_Rent_a_car
         public void AddToEndereçoSet(Endereço endereço)
         {
             base.AddObject("EndereçoSet", endereço);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the LoginSet EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToLoginSet(Login login)
+        {
+            base.AddObject("LoginSet", login);
         }
 
         #endregion
@@ -575,6 +601,44 @@ namespace PBR_Rent_a_car
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Endereço>("Dados.ClienteEndereço", "Endereço", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("Dados", "LoginCliente", "Login")]
+        public Login Login
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Login>("Dados.LoginCliente", "Login").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Login>("Dados.LoginCliente", "Login").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Login> LoginReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Login>("Dados.LoginCliente", "Login");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Login>("Dados.LoginCliente", "Login", value);
                 }
             }
         }
@@ -1108,6 +1172,44 @@ namespace PBR_Rent_a_car
                 }
             }
         }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("Dados", "LoginFuncionário", "Login")]
+        public Login Login
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Login>("Dados.LoginFuncionário", "Login").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Login>("Dados.LoginFuncionário", "Login").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Login> LoginReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Login>("Dados.LoginFuncionário", "Login");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Login>("Dados.LoginFuncionário", "Login", value);
+                }
+            }
+        }
 
         #endregion
 
@@ -1513,6 +1615,221 @@ namespace PBR_Rent_a_car
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Cliente>("Dados.ClienteLocação", "Cliente", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="Dados", Name="Login")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class Login : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new Login object.
+        /// </summary>
+        /// <param name="id">Initial value of the Id property.</param>
+        /// <param name="usuário">Initial value of the Usuário property.</param>
+        /// <param name="senha">Initial value of the Senha property.</param>
+        /// <param name="permissão">Initial value of the Permissão property.</param>
+        public static Login CreateLogin(global::System.Int32 id, global::System.String usuário, global::System.String senha, global::System.Byte permissão)
+        {
+            Login login = new Login();
+            login.Id = id;
+            login.Usuário = usuário;
+            login.Senha = senha;
+            login.Permissão = permissão;
+            return login;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Id
+        {
+            get
+            {
+                return _Id;
+            }
+            set
+            {
+                if (_Id != value)
+                {
+                    OnIdChanging(value);
+                    ReportPropertyChanging("Id");
+                    _Id = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("Id");
+                    OnIdChanged();
+                }
+            }
+        }
+        private global::System.Int32 _Id;
+        partial void OnIdChanging(global::System.Int32 value);
+        partial void OnIdChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Usuário
+        {
+            get
+            {
+                return _Usuário;
+            }
+            set
+            {
+                OnUsuárioChanging(value);
+                ReportPropertyChanging("Usuário");
+                _Usuário = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("Usuário");
+                OnUsuárioChanged();
+            }
+        }
+        private global::System.String _Usuário;
+        partial void OnUsuárioChanging(global::System.String value);
+        partial void OnUsuárioChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Senha
+        {
+            get
+            {
+                return _Senha;
+            }
+            set
+            {
+                OnSenhaChanging(value);
+                ReportPropertyChanging("Senha");
+                _Senha = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("Senha");
+                OnSenhaChanged();
+            }
+        }
+        private global::System.String _Senha;
+        partial void OnSenhaChanging(global::System.String value);
+        partial void OnSenhaChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Byte Permissão
+        {
+            get
+            {
+                return _Permissão;
+            }
+            set
+            {
+                OnPermissãoChanging(value);
+                ReportPropertyChanging("Permissão");
+                _Permissão = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("Permissão");
+                OnPermissãoChanged();
+            }
+        }
+        private global::System.Byte _Permissão;
+        partial void OnPermissãoChanging(global::System.Byte value);
+        partial void OnPermissãoChanged();
+
+        #endregion
+
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("Dados", "LoginCliente", "Cliente")]
+        public Cliente Cliente
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Cliente>("Dados.LoginCliente", "Cliente").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Cliente>("Dados.LoginCliente", "Cliente").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Cliente> ClienteReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Cliente>("Dados.LoginCliente", "Cliente");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Cliente>("Dados.LoginCliente", "Cliente", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("Dados", "LoginFuncionário", "Funcionário")]
+        public Funcionário Funcionário
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Funcionário>("Dados.LoginFuncionário", "Funcionário").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Funcionário>("Dados.LoginFuncionário", "Funcionário").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Funcionário> FuncionárioReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Funcionário>("Dados.LoginFuncionário", "Funcionário");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Funcionário>("Dados.LoginFuncionário", "Funcionário", value);
                 }
             }
         }

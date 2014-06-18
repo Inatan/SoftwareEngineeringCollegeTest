@@ -16,6 +16,7 @@
     <EntitySet Name="ManutençãoSet" EntityType="Dados.Store.ManutençãoSet" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="ClienteSet" EntityType="Dados.Store.ClienteSet" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="EndereçoSet" EntityType="Dados.Store.EndereçoSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LoginSet" EntityType="Dados.Store.LoginSet" store:Type="Tables" Schema="dbo" />
     <AssociationSet Name="VeículoHistórico" Association="Dados.Store.VeículoHistórico">
       <End Role="Veículo" EntitySet="VeículoSet" />
       <End Role="Histórico" EntitySet="HistóricoSet" />
@@ -71,6 +72,14 @@
     <AssociationSet Name="ClienteEndereço" Association="Dados.Store.ClienteEndereço">
       <End Role="Cliente" EntitySet="ClienteSet" />
       <End Role="Endereço" EntitySet="EndereçoSet" />
+    </AssociationSet>
+    <AssociationSet Name="LoginCliente" Association="Dados.Store.LoginCliente">
+      <End Role="Login" EntitySet="LoginSet" />
+      <End Role="Cliente" EntitySet="ClienteSet" />
+    </AssociationSet>
+    <AssociationSet Name="LoginFuncionário" Association="Dados.Store.LoginFuncionário">
+      <End Role="Login" EntitySet="LoginSet" />
+      <End Role="Funcionário" EntitySet="FuncionárioSet" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="VeículoSet">
@@ -173,6 +182,17 @@
     <Property Name="Rua" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Número" Type="int" Nullable="false" />
     <Property Name="CEP" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LoginSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Usuário" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Senha" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Permissão" Type="tinyint" Nullable="false" />
+    <Property Name="Cliente_Id" Type="int" Nullable="false" />
+    <Property Name="Funcionário_Id" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="VeículoHistórico">
     <End Role="Veículo" Type="Dados.Store.VeículoSet" Multiplicity="*" />
@@ -342,6 +362,30 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="LoginCliente">
+    <End Role="Login" Type="Dados.Store.LoginSet" Multiplicity="*" />
+    <End Role="Cliente" Type="Dados.Store.ClienteSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Login">
+        <PropertyRef Name="Cliente_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="LoginFuncionário">
+    <End Role="Login" Type="Dados.Store.LoginSet" Multiplicity="*" />
+    <End Role="Funcionário" Type="Dados.Store.FuncionárioSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Funcionário">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Login">
+        <PropertyRef Name="Funcionário_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
@@ -413,6 +457,15 @@
             <End Role="Cliente" EntitySet="ClienteSet" />
             <End Role="Endereço" EntitySet="EndereçoSet" />
           </AssociationSet>
+          <EntitySet Name="LoginSet" EntityType="Dados.Login" />
+          <AssociationSet Name="LoginCliente" Association="Dados.LoginCliente">
+            <End Role="Login" EntitySet="LoginSet" />
+            <End Role="Cliente" EntitySet="ClienteSet" />
+          </AssociationSet>
+          <AssociationSet Name="LoginFuncionário" Association="Dados.LoginFuncionário">
+            <End Role="Login" EntitySet="LoginSet" />
+            <End Role="Funcionário" EntitySet="FuncionárioSet" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="Veículo" cg:TypeAccess="Public">
           <Key>
@@ -474,6 +527,7 @@
           <Property Type="String" Name="CarteiraDeTrabalho" Nullable="false" />
           <Property Type="Double" Name="Salário" Nullable="false" />
           <Property Type="String" Name="Função" Nullable="false" />
+          <NavigationProperty Name="Login" Relationship="Dados.LoginFuncionário" FromRole="Funcionário" ToRole="Login" />
         </EntityType>
         <EntityType Name="Locação">
           <Key>
@@ -539,6 +593,7 @@
           <Property Type="String" Name="CPF" Nullable="false" />
           <Property Type="String" Name="Telefone" Nullable="false" />
           <Property Type="String" Name="Notificação" Nullable="false" />
+          <NavigationProperty Name="Login" Relationship="Dados.LoginCliente" FromRole="Cliente" ToRole="Login" />
         </EntityType>
         <EntityType Name="Endereço">
           <Key>
@@ -608,6 +663,25 @@
         <Association Name="ClienteEndereço">
           <End Type="Dados.Cliente" Role="Cliente" Multiplicity="1" />
           <End Type="Dados.Endereço" Role="Endereço" Multiplicity="1" />
+        </Association>
+        <EntityType Name="Login">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Usuário" Nullable="false" />
+          <Property Type="String" Name="Senha" Nullable="false" />
+          <NavigationProperty Name="Cliente" Relationship="Dados.LoginCliente" FromRole="Login" ToRole="Cliente" />
+          <NavigationProperty Name="Funcionário" Relationship="Dados.LoginFuncionário" FromRole="Login" ToRole="Funcionário" />
+          <Property Type="Byte" Name="Permissão" Nullable="false" />
+        </EntityType>
+        <Association Name="LoginCliente">
+          <End Type="Dados.Login" Role="Login" Multiplicity="1" />
+          <End Type="Dados.Cliente" Role="Cliente" Multiplicity="1" />
+        </Association>
+        <Association Name="LoginFuncionário">
+          <End Type="Dados.Login" Role="Login" Multiplicity="1" />
+          <End Type="Dados.Funcionário" Role="Funcionário" Multiplicity="1" />
         </Association>
       </Schema>
     </edmx:ConceptualModels>
@@ -709,6 +783,16 @@
           <ScalarProperty Name="Rua" ColumnName="Rua" />
           <ScalarProperty Name="Número" ColumnName="Número" />
           <ScalarProperty Name="CEP" ColumnName="CEP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoginSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Dados.Login)">
+        <MappingFragment StoreEntitySet="LoginSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Usuário" ColumnName="Usuário" />
+          <ScalarProperty Name="Senha" ColumnName="Senha" />
+          <ScalarProperty Name="Permissão" ColumnName="Permissão" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -824,6 +908,22 @@
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>
+    <AssociationSetMapping Name="LoginCliente" TypeName="Dados.LoginCliente" StoreEntitySet="LoginSet">
+      <EndProperty Name="Cliente">
+        <ScalarProperty Name="Id" ColumnName="Cliente_Id" />
+      </EndProperty>
+      <EndProperty Name="Login">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="LoginFuncionário" TypeName="Dados.LoginFuncionário" StoreEntitySet="LoginSet">
+      <EndProperty Name="Funcionário">
+        <ScalarProperty Name="Id" ColumnName="Funcionário_Id" />
+      </EndProperty>
+      <EndProperty Name="Login">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping></edmx:Mappings>
   </edmx:Runtime>
@@ -876,10 +976,12 @@
           <ConnectorPoint PointX="4.625" PointY="6.2833968098958328" />
         </AssociationConnector>
         <AssociationConnector Association="Dados.FuncionárioVeículo">
-          <ConnectorPoint PointX="7.3541882027065153" PointY="4" />
-          <ConnectorPoint PointX="7.3541882027065153" PointY="2.8939925130208337" />
-          <ConnectorPoint PointX="6.8541754346865913" PointY="2.8939925130208333" />
-          <ConnectorPoint PointX="6.6875087680199252" PointY="2.8939925130208337" />
+          <ConnectorPoint PointX="7.5742219375" PointY="4" />
+          <ConnectorPoint PointX="7.5742219375" PointY="2.8939925130208337" />
+          <ConnectorPoint PointX="7.2200530208333324" PointY="2.8939925130208333" />
+          <ConnectorPoint PointX="7.0533863541666664" PointY="2.8939925130208337" />
+          <ConnectorPoint PointX="6.7825507708333328" PointY="2.8939925130208333" />
+          <ConnectorPoint PointX="6.6158841041666667" PointY="2.8939925130208337" />
           <ConnectorPoint PointX="5.427083333333333" PointY="2.8939925130208333" />
           <ConnectorPoint PointX="5.260416666666667" PointY="2.8939925130208337" />
           <ConnectorPoint PointX="2" PointY="2.8939925130208337" />
@@ -893,9 +995,9 @@
           <ConnectorPoint PointX="4.625" PointY="4.7112939453125" />
         </AssociationConnector>
         <AssociationConnector Association="Dados.FuncionárioReserva">
-          <ConnectorPoint PointX="6.7708421013532583" PointY="4" />
-          <ConnectorPoint PointX="6.7708421013532583" PointY="1.4901432291666668" />
-          <ConnectorPoint PointX="6.25" PointY="1.4901432291666668" />
+          <ConnectorPoint PointX="6.7812505000000005" PointY="4" />
+          <ConnectorPoint PointX="6.7812505000000005" PointY="2.25193359375" />
+          <ConnectorPoint PointX="6.25" PointY="2.25193359375" />
         </AssociationConnector>
         <AssociationConnector Association="Dados.HistóricoLocação">
           <ConnectorPoint PointX="1.25" PointY="6.4802864583333335" />
@@ -916,17 +1018,29 @@
           <ConnectorPoint PointX="2" PointY="7.8868949726562487" />
         </AssociationConnector>
         <AssociationConnector Association="Dados.ClienteReserva">
-          <ConnectorPoint PointX="8.5" PointY="3.53125" />
-          <ConnectorPoint PointX="7.4375215360398483" PointY="3.5312499999999996" />
-          <ConnectorPoint PointX="7.2708548693731823" PointY="3.53125" />
-          <ConnectorPoint PointX="6.8541754346865913" PointY="3.5312499999999996" />
-          <ConnectorPoint PointX="6.6875087680199252" PointY="3.53125" />
-          <ConnectorPoint PointX="5.34375" PointY="3.53125" />
+          <ConnectorPoint PointX="8.5" PointY="3.4831721419270827" />
+          <ConnectorPoint PointX="7.657555270833333" PointY="3.4831721419270822" />
+          <ConnectorPoint PointX="7.4908886041666669" PointY="3.4831721419270827" />
+          <ConnectorPoint PointX="7.2200530208333324" PointY="3.4831721419270822" />
+          <ConnectorPoint PointX="7.0533863541666664" PointY="3.4831721419270827" />
+          <ConnectorPoint PointX="6.7825507708333328" PointY="3.4831721419270822" />
+          <ConnectorPoint PointX="6.6158841041666667" PointY="3.4831721419270827" />
+          <ConnectorPoint PointX="5.34375" PointY="3.4831721419270827" />
           <ConnectorPoint PointX="5.34375" PointY="2.4802864583333331" />
         </AssociationConnector>
         <AssociationConnector Association="Dados.ClienteEndereço">
           <ConnectorPoint PointX="9.56323111328125" PointY="5.6821907552083326" />
           <ConnectorPoint PointX="9.56323111328125" PointY="6.625" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="Dados.Login" Width="1.5" PointX="8.5" PointY="0.5" Height="2.172587890625" />
+        <AssociationConnector Association="Dados.LoginCliente">
+          <ConnectorPoint PointX="9.25" PointY="2.672587890625" />
+          <ConnectorPoint PointX="9.25" PointY="3.125" />
+        </AssociationConnector>
+        <AssociationConnector Association="Dados.LoginFuncionário">
+          <ConnectorPoint PointX="8.5" PointY="2.6076871744791665" />
+          <ConnectorPoint PointX="7.1367196874999994" PointY="2.6076871744791665" />
+          <ConnectorPoint PointX="7.1367196874999994" PointY="4" />
         </AssociationConnector>
       </Diagram>
     </edmx:Diagrams>

@@ -37,3 +37,4 @@ C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a
 C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.Pesquisar_Locações.resources
 C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.PesquisarCliente.resources
 C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.Redefinição_de_senha.resources
+C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.CadastroLogin.resources

@@ -73,6 +73,7 @@
     <Compile Include="Cadastro Veículo.Designer.cs">
       <DependentUpon>Cadastro Veículo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Criar Locação.cs">
       <SubType>Form</SubType>
@@ -95,11 +96,11 @@
       <DependentUpon>Dados.edmx</DependentUpon>
     </Compile>
     <Compile Include="Locação.cs" />
-    <Compile Include="Login.cs">
+    <Compile Include="Cadastro Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="Cadastro Login.Designer.cs">
+      <DependentUpon>Cadastro Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Manutenção.cs" />
     <Compile Include="Modelo.cs" />
@@ -159,8 +160,8 @@
     <EmbeddedResource Include="Interface.resx">
       <DependentUpon>Interface.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="Cadastro Login.resx">
+      <DependentUpon>Cadastro Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pesquisa Veículo.resx">
       <DependentUpon>Pesquisa Veículo.cs</DependentUpon>

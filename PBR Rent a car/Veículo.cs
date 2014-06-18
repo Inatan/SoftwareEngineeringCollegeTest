@@ -18,8 +18,8 @@ namespace PBR_Rent_a_car
         public void setLocado()
         {
             this.status = estado.Locado;
-          //  this.Estado = SerializarEstado();
-          //  atualizarEstado();
+            this.Estado = SerializarEstado();
+            atualizarEstado();
         }
 
         public void setDisponivel()
@@ -79,20 +79,6 @@ namespace PBR_Rent_a_car
             }
         }
 
-        //Métodos responsáveis principalmente pela implementação do caso de uso Pesquisar Veículo
-        public static List<Veículo> pesquisar(Modelo modelo, string cor, int ano, string categoria, int quilometragem)
-        {
-            List<Veículo> encontrados = new List<Veículo>();
-            using (var ctx = new DadosContainer())
-            {
-                foreach (var v in ctx.VeículoSet)
-                {
-                    if (adequado(v, modelo, cor, ano, categoria, quilometragem)) encontrados.Add(v);
-                }
-            }
-            return encontrados;
-        }
-
         public static List<Veículo> todosOsVeículos()
         {
             List<Veículo> todos = new List<Veículo>();
@@ -101,12 +87,6 @@ namespace PBR_Rent_a_car
                 foreach (var v in ctx.VeículoSet) todos.Add(v);
             }
             return todos;
-        }
-
-        private static bool adequado(Veículo v, Modelo m, string cor, int ano, string cat, int km)
-        {
-            if (v.  Modelo == m && v.Cor == cor && v.Ano == ano && v.Categoria == cat && v.Quilometragem == km) return true;
-            return false;
         }
     }
 }
