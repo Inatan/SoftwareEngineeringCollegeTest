@@ -49,7 +49,7 @@
             // 
             this.ListBoxVeículo.FormattingEnabled = true;
             this.ListBoxVeículo.Items.AddRange(new object[] {
-            "Clique aqui para pesquisar o veículo"});
+            "Clique aqui para pesquisar o Veículo"});
             this.ListBoxVeículo.Location = new System.Drawing.Point(12, 77);
             this.ListBoxVeículo.Name = "ListBoxVeículo";
             this.ListBoxVeículo.Size = new System.Drawing.Size(286, 17);
@@ -76,7 +76,7 @@
             // 
             // buttonLocar
             // 
-            this.buttonLocar.Location = new System.Drawing.Point(13, 137);
+            this.buttonLocar.Location = new System.Drawing.Point(12, 112);
             this.buttonLocar.Name = "buttonLocar";
             this.buttonLocar.Size = new System.Drawing.Size(75, 23);
             this.buttonLocar.TabIndex = 31;
@@ -85,7 +85,7 @@
             // 
             // buttonCancelar
             // 
-            this.buttonCancelar.Location = new System.Drawing.Point(223, 137);
+            this.buttonCancelar.Location = new System.Drawing.Point(222, 112);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(75, 23);
             this.buttonCancelar.TabIndex = 32;
@@ -97,7 +97,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(309, 172);
+            this.ClientSize = new System.Drawing.Size(309, 142);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonLocar);
             this.Controls.Add(this.listBoxCliente);

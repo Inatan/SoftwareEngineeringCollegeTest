@@ -146,8 +146,9 @@
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.sairToolStripMenuItem.Text = "Sair";
+            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // pesquisasToolStripMenuItem
             // 
@@ -212,7 +213,7 @@
             // 
             // buttonAlterar
             // 
-            this.buttonAlterar.Location = new System.Drawing.Point(575, 436);
+            this.buttonAlterar.Location = new System.Drawing.Point(571, 436);
             this.buttonAlterar.Name = "buttonAlterar";
             this.buttonAlterar.Size = new System.Drawing.Size(122, 28);
             this.buttonAlterar.TabIndex = 20;
@@ -222,7 +223,7 @@
             // 
             // buttonLocar
             // 
-            this.buttonLocar.Location = new System.Drawing.Point(709, 436);
+            this.buttonLocar.Location = new System.Drawing.Point(699, 436);
             this.buttonLocar.Name = "buttonLocar";
             this.buttonLocar.Size = new System.Drawing.Size(122, 28);
             this.buttonLocar.TabIndex = 22;

@@ -33,7 +33,6 @@
             this.ListBoxVeículo = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox_Nome_Cliente = new System.Windows.Forms.TextBox();
             this.Button_Reservar = new System.Windows.Forms.Button();
             this.Button_Cancelar = new System.Windows.Forms.Button();
             this.comboBoxAno = new System.Windows.Forms.ComboBox();
@@ -44,6 +43,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.comboBoxHora = new System.Windows.Forms.ComboBox();
             this.comboBoxMinuto = new System.Windows.Forms.ComboBox();
+            this.listBoxCliente = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // label10
@@ -69,7 +69,7 @@
             this.ListBoxVeículo.FormattingEnabled = true;
             this.ListBoxVeículo.Items.AddRange(new object[] {
             "Clique aqui para pesquisar o veículo"});
-            this.ListBoxVeículo.Location = new System.Drawing.Point(12, 84);
+            this.ListBoxVeículo.Location = new System.Drawing.Point(9, 84);
             this.ListBoxVeículo.Name = "ListBoxVeículo";
             this.ListBoxVeículo.Size = new System.Drawing.Size(411, 17);
             this.ListBoxVeículo.TabIndex = 27;
@@ -89,16 +89,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(13, 16);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(131, 13);
+            this.label2.Size = new System.Drawing.Size(39, 13);
             this.label2.TabIndex = 30;
-            this.label2.Text = "Nome completo do Cliente";
-            // 
-            // textBox_Nome_Cliente
-            // 
-            this.textBox_Nome_Cliente.Location = new System.Drawing.Point(12, 32);
-            this.textBox_Nome_Cliente.Name = "textBox_Nome_Cliente";
-            this.textBox_Nome_Cliente.Size = new System.Drawing.Size(411, 20);
-            this.textBox_Nome_Cliente.TabIndex = 29;
+            this.label2.Text = "Cliente";
             // 
             // Button_Reservar
             // 
@@ -123,7 +116,7 @@
             // comboBoxAno
             // 
             this.comboBoxAno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxAno.Enabled = false;
+            this.comboBoxAno.FormattingEnabled = true;
             this.comboBoxAno.Items.AddRange(new object[] {
             "2024",
             "2023",
@@ -144,7 +137,7 @@
             // comboBoxMês
             // 
             this.comboBoxMês.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxMês.Enabled = false;
+            this.comboBoxMês.FormattingEnabled = true;
             this.comboBoxMês.Items.AddRange(new object[] {
             "1",
             "2",
@@ -166,7 +159,6 @@
             // comboBoxDia
             // 
             this.comboBoxDia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxDia.Enabled = false;
             this.comboBoxDia.Items.AddRange(new object[] {
             "1",
             "2",
@@ -234,7 +226,7 @@
             // comboBoxHora
             // 
             this.comboBoxHora.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxHora.Enabled = false;
+            this.comboBoxHora.FormattingEnabled = true;
             this.comboBoxHora.Items.AddRange(new object[] {
             "01",
             "02",
@@ -256,7 +248,7 @@
             // comboBoxMinuto
             // 
             this.comboBoxMinuto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxMinuto.Enabled = false;
+            this.comboBoxMinuto.FormattingEnabled = true;
             this.comboBoxMinuto.Items.AddRange(new object[] {
             "00",
             "01",
@@ -323,11 +315,22 @@
             this.comboBoxMinuto.Size = new System.Drawing.Size(33, 21);
             this.comboBoxMinuto.TabIndex = 40;
             // 
+            // listBoxCliente
+            // 
+            this.listBoxCliente.FormattingEnabled = true;
+            this.listBoxCliente.Items.AddRange(new object[] {
+            "Clique aqui para pesquisar o Cliente"});
+            this.listBoxCliente.Location = new System.Drawing.Point(9, 32);
+            this.listBoxCliente.Name = "listBoxCliente";
+            this.listBoxCliente.Size = new System.Drawing.Size(414, 17);
+            this.listBoxCliente.TabIndex = 41;
+            // 
             // Reserva_de_veículo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(435, 206);
+            this.Controls.Add(this.listBoxCliente);
             this.Controls.Add(this.comboBoxMinuto);
             this.Controls.Add(this.comboBoxHora);
             this.Controls.Add(this.comboBoxAno);
@@ -339,7 +342,6 @@
             this.Controls.Add(this.Button_Cancelar);
             this.Controls.Add(this.Button_Reservar);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox_Nome_Cliente);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ListBoxVeículo);
             this.Controls.Add(this.label10);
@@ -361,7 +363,6 @@
         private System.Windows.Forms.ListBox ListBoxVeículo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox_Nome_Cliente;
         private System.Windows.Forms.Button Button_Reservar;
         private System.Windows.Forms.Button Button_Cancelar;
         private System.Windows.Forms.ComboBox comboBoxAno;
@@ -372,5 +373,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboBoxHora;
         private System.Windows.Forms.ComboBox comboBoxMinuto;
+        private System.Windows.Forms.ListBox listBoxCliente;
     }
 }

@@ -74,5 +74,10 @@ namespace PBR_Rent_a_car
             locação = new Criar_Locação();
             locação.ShowDialog();
         }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
