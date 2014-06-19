@@ -12,6 +12,7 @@ namespace PBR_Rent_a_car
     public partial class Adicionar_funcionário : Form
     {
         private bool comma = false;
+        private Funcionário.TipoDeFuncionário função;
 
         public Adicionar_funcionário()
         {
@@ -47,8 +48,6 @@ namespace PBR_Rent_a_car
                      e.Handled = true;
         }
 
-
-
         private void textBox_Nome_KeyPress(object sender, KeyPressEventArgs e)
         {
             apenasLetras(e);
@@ -71,9 +70,51 @@ namespace PBR_Rent_a_car
             apenasLetras(e);
         }
 
+<<<<<<< HEAD
+=======
+        private void Adicionar_funcionário_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonAdicionar_Click(object sender, EventArgs e)
+        {
+            string nome = textBox_Nome.Text;
+            string carteira = textBox_CarteiraTrabalho.Text;
+            float salário = float.Parse(textBox_Salario.Text);
+            string usuário = textBox_Usuario.Text;
+            string senha = textBox_Senha.Text;
+            Login.TipoDeUsuário tipo = função == Funcionário.TipoDeFuncionário.Funcionário ? Login.TipoDeUsuário.Funcionário : Login.TipoDeUsuário.Gerente;
+            Login novoFunc = new Login(usuário, senha, tipo);
+            //novoFunc.gravar();
+            Funcionário novo = new Funcionário(nome, carteira, salário, função, novoFunc);
+            novo.gravar();
+            this.Close();
+        }
+
+>>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+<<<<<<< HEAD
+=======
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked)
+            {
+                função = Funcionário.TipoDeFuncionário.Funcionário;
+            }
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton2.Checked)
+            {
+                função = Funcionário.TipoDeFuncionário.Gerente;
+            }
+        }
+>>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
     }
 }

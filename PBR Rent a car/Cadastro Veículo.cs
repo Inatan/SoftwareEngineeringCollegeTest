@@ -11,13 +11,17 @@ namespace PBR_Rent_a_car
 {
     public partial class Cadastro_Veículo : Form
     {
-        
+
         public Cadastro_Veículo()
         {
             comboBox_Modelo = new ComboBox();
             List<Modelo> modelos = Modelo.todosOsModelos();
             int CountModelo = modelos.Count;
+<<<<<<< HEAD
            
+=======
+
+>>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
             InitializeComponent();
             for (int i = 0; i < CountModelo; i++)
             {
@@ -26,7 +30,7 @@ namespace PBR_Rent_a_car
                 modelo.Add(modelos[i].Nome);
                 comboBox_Modelo.Items.Add(String.Join("/", modelo));
             }
-           
+
         }
 
         private void Button_Cancelar_Click(object sender, EventArgs e)
@@ -38,7 +42,11 @@ namespace PBR_Rent_a_car
         {
             string[] modelo = new string[2];
             modelo = comboBox_Modelo.Text.Split('/');
+<<<<<<< HEAD
             Veículo novo = new Veículo(textBox_Cor.Text,Convert.ToInt32(textBox_Ano.Text),textBox_Categoria.Text,0,new Modelo(modelo[1],modelo[0]));
+=======
+            Veículo novo = new Veículo(textBox_Cor.Text, Convert.ToInt32(textBox_Ano.Text), textBox_Categoria.Text, 0, new Modelo(modelo[1], modelo[0]));
+>>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
             novo.gravar();
             this.Close();
         }
@@ -73,6 +81,11 @@ namespace PBR_Rent_a_car
         {
             apenasLetras(e);
         }
+        private void Cadastro_Veículo_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void Cadastro_Veículo_Load(object sender, EventArgs e)
         {
 
