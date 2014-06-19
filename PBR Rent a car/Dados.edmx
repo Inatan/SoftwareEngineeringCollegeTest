@@ -126,23 +126,7 @@
     <Property Name="Nome" Type="nvarchar(max)" Nullable="false" />
     <Property Name="CarteiraDeTrabalho" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Salário" Type="float" Nullable="false" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <Property Name="Função" Type="nvarchar(max)" Nullable="false" />
-=======
     <Property Name="Função" Type="tinyint" Nullable="false" />
->>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
-=======
-    <Property Name="Função" Type="tinyint" Nullable="false" />
->>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
-=======
-    <Property Name="Função" Type="nvarchar(max)" Nullable="false" />
->>>>>>> f4525a2cb45744424d6bb856ffc06eaa25e5f24b
-=======
-    <Property Name="Função" Type="nvarchar(max)" Nullable="false" />
->>>>>>> f4525a2cb45744424d6bb856ffc06eaa25e5f24b
     <Property Name="Login_Id" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="LocaçãoSet">
@@ -542,7 +526,7 @@
           <Property Type="String" Name="Nome" Nullable="false" />
           <Property Type="String" Name="CarteiraDeTrabalho" Nullable="false" />
           <Property Type="Double" Name="Salário" Nullable="false" />
-          <Property Type="String" Name="Função" Nullable="false" />
+          <Property Type="Byte" Name="Função" Nullable="false" />
           <NavigationProperty Name="Login" Relationship="Dados.LoginFuncionário" FromRole="Funcionário" ToRole="Login" />
         </EntityType>
         <EntityType Name="Locação">

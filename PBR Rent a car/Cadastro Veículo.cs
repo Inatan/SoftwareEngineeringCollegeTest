@@ -17,23 +17,6 @@ namespace PBR_Rent_a_car
             comboBox_Modelo = new ComboBox();
             List<Modelo> modelos = Modelo.todosOsModelos();
             int CountModelo = modelos.Count;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-           
-=======
-
->>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
-=======
-
->>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
-=======
-           
->>>>>>> f4525a2cb45744424d6bb856ffc06eaa25e5f24b
-=======
-           
->>>>>>> f4525a2cb45744424d6bb856ffc06eaa25e5f24b
             InitializeComponent();
             for (int i = 0; i < CountModelo; i++)
             {
@@ -54,23 +37,7 @@ namespace PBR_Rent_a_car
         {
             string[] modelo = new string[2];
             modelo = comboBox_Modelo.Text.Split('/');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             Veículo novo = new Veículo(textBox_Cor.Text,Convert.ToInt32(textBox_Ano.Text),textBox_Categoria.Text,0,new Modelo(modelo[1],modelo[0]));
-=======
-            Veículo novo = new Veículo(textBox_Cor.Text, Convert.ToInt32(textBox_Ano.Text), textBox_Categoria.Text, 0, new Modelo(modelo[1], modelo[0]));
->>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
-=======
-            Veículo novo = new Veículo(textBox_Cor.Text, Convert.ToInt32(textBox_Ano.Text), textBox_Categoria.Text, 0, new Modelo(modelo[1], modelo[0]));
->>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
-=======
-            Veículo novo = new Veículo(textBox_Cor.Text,Convert.ToInt32(textBox_Ano.Text),textBox_Categoria.Text,0,new Modelo(modelo[1],modelo[0]));
->>>>>>> f4525a2cb45744424d6bb856ffc06eaa25e5f24b
-=======
-            Veículo novo = new Veículo(textBox_Cor.Text,Convert.ToInt32(textBox_Ano.Text),textBox_Categoria.Text,0,new Modelo(modelo[1],modelo[0]));
->>>>>>> f4525a2cb45744424d6bb856ffc06eaa25e5f24b
             novo.gravar();
             this.Close();
         }
@@ -109,22 +76,5 @@ namespace PBR_Rent_a_car
         {
 
         }
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-        private void Cadastro_Veículo_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Cadastro_Veículo_Load(object sender, EventArgs e)
-        {
-
-        }
-
-=======
->>>>>>> f4525a2cb45744424d6bb856ffc06eaa25e5f24b
-=======
->>>>>>> f4525a2cb45744424d6bb856ffc06eaa25e5f24b
     }
 }

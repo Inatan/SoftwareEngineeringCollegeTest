@@ -23,38 +23,15 @@ namespace PBR_Rent_a_car
 
         private void Button_Cadastrar_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            Endereço moraAqui = new Endereço(textBox_UF.Text,textBox_Cidade.Text,textBox_Bairro.Text,textBox_Rua.Text,Convert.ToInt32(textBox_Número.Text),Convert.ToInt32(textBox_CEP.Text));
-            Cliente novo = new Cliente(textBox_Nome.Text,textBox_CPF_CNPJ.Text,textBox_TelefoneFixo.Text,textBox_TelefoneMóvel.Text, moraAqui);
-            novo.gravar();
-=======
-=======
->>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
             Login novoCliente = new Login(textBox_Usuario.Text, textBox_Senha.Text, Login.TipoDeUsuário.Cliente);
             //novoCliente.gravar();
             Endereço moraAqui = new Endereço(textBox_UF.Text, textBox_Cidade.Text, textBox_Bairro.Text, textBox_Rua.Text, Convert.ToInt32(textBox_Número.Text), Convert.ToInt32(textBox_CEP.Text));
             Cliente novo = new Cliente(textBox_Nome.Text, textBox_CPF_CNPJ.Text, textBox_TelefoneFixo.Text, textBox_TelefoneMóvel.Text, moraAqui, novoCliente);
             //novo.gravar();
-<<<<<<< HEAD
->>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
-=======
->>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
-=======
-            Endereço moraAqui = new Endereço(textBox_UF.Text,textBox_Cidade.Text,textBox_Bairro.Text,textBox_Rua.Text,Convert.ToInt32(textBox_Número.Text),Convert.ToInt32(textBox_CEP.Text));
-            Cliente novo = new Cliente(textBox_Nome.Text,textBox_CPF_CNPJ.Text,textBox_TelefoneFixo.Text,textBox_TelefoneMóvel.Text, moraAqui);
-            novo.gravar();
->>>>>>> f4525a2cb45744424d6bb856ffc06eaa25e5f24b
-=======
-            Endereço moraAqui = new Endereço(textBox_UF.Text,textBox_Cidade.Text,textBox_Bairro.Text,textBox_Rua.Text,Convert.ToInt32(textBox_Número.Text),Convert.ToInt32(textBox_CEP.Text));
-            Cliente novo = new Cliente(textBox_Nome.Text,textBox_CPF_CNPJ.Text,textBox_TelefoneFixo.Text,textBox_TelefoneMóvel.Text, moraAqui);
-            novo.gravar();
->>>>>>> f4525a2cb45744424d6bb856ffc06eaa25e5f24b
             moraAqui.gravar();
             this.Close();
         }
+
         private void apenasLetras(KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
@@ -139,11 +116,11 @@ namespace PBR_Rent_a_car
             }
         }
 
-
-
         private void Cadastro_Cliente_Load(object sender, EventArgs e)
         {
 
         }
+
+
     }
 }
