@@ -16,5 +16,10 @@ namespace PBR_Rent_a_car
             InitializeComponent();
         }
 
+        private void PesquisarCliente_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

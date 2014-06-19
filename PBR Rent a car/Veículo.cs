@@ -46,6 +46,7 @@ namespace PBR_Rent_a_car
             this.Modelo = modelo;
             this.status = estado.Disponivel;
             this.Estado = SerializarEstado();
+            this.Histórico = new Histórico(this, new List<Manutenção>(), new List<Locação>());
             this.Modelo.Veículo.Add(this);
         }
 
