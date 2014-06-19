@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adicionar funcionário.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adicionar funcionário.Designer.cs">
+      <DependentUpon>Adicionar funcionário.cs</DependentUpon>
+    </Compile>
     <Compile Include="Alterar Dados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,30 @@
     </Compile>
     <Compile Include="Cadastro Veículo.Designer.cs">
       <DependentUpon>Cadastro Veículo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Devolução de Veículo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Devolução de Veículo.Designer.cs">
+      <DependentUpon>Devolução de Veículo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editar Funcionário.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editar Funcionário.Designer.cs">
+      <DependentUpon>Editar Funcionário.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Emissão de Relatório.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Emissão de Relatório.Designer.cs">
+      <DependentUpon>Emissão de Relatório.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface Cliente.Designer.cs">
+      <DependentUpon>Interface Cliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs" />
     <Compile Include="Cliente.cs" />
@@ -104,11 +134,29 @@
     </Compile>
     <Compile Include="Manutenção.cs" />
     <Compile Include="Modelo.cs" />
+    <Compile Include="PBR Rent a Car.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PBR Rent a Car.Designer.cs">
+      <DependentUpon>PBR Rent a Car.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pesquisa Manutenção.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pesquisa Manutenção.Designer.cs">
+      <DependentUpon>Pesquisa Manutenção.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pesquisa Veículo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Pesquisa Veículo.Designer.cs">
       <DependentUpon>Pesquisa Veículo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pesquisar Funcionário.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pesquisar Funcionário.Designer.cs">
+      <DependentUpon>Pesquisar Funcionário.cs</DependentUpon>
     </Compile>
     <Compile Include="Pesquisar Locações.cs">
       <SubType>Form</SubType>
@@ -139,6 +187,9 @@
     </Compile>
     <Compile Include="Reserva.cs" />
     <Compile Include="Veículo.cs" />
+    <EmbeddedResource Include="Adicionar funcionário.resx">
+      <DependentUpon>Adicionar funcionário.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Alterar Dados.resx">
       <DependentUpon>Alterar Dados.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -157,14 +208,35 @@
     <EmbeddedResource Include="Criar Locação.resx">
       <DependentUpon>Criar Locação.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Devolução de Veículo.resx">
+      <DependentUpon>Devolução de Veículo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editar Funcionário.resx">
+      <DependentUpon>Editar Funcionário.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emissão de Relatório.resx">
+      <DependentUpon>Emissão de Relatório.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface Cliente.resx">
+      <DependentUpon>Interface Cliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Interface.resx">
       <DependentUpon>Interface.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cadastro Login.resx">
       <DependentUpon>Cadastro Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PBR Rent a Car.resx">
+      <DependentUpon>PBR Rent a Car.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pesquisa Manutenção.resx">
+      <DependentUpon>Pesquisa Manutenção.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pesquisa Veículo.resx">
       <DependentUpon>Pesquisa Veículo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pesquisar Funcionário.resx">
+      <DependentUpon>Pesquisar Funcionário.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pesquisar Locações.resx">
       <DependentUpon>Pesquisar Locações.cs</DependentUpon>

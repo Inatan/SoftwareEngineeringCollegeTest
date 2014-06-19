@@ -30,26 +30,26 @@
         {
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox_Mês = new System.Windows.Forms.TextBox();
-            this.textBox_Minuto = new System.Windows.Forms.TextBox();
-            this.textBox_Ano = new System.Windows.Forms.TextBox();
-            this.textBox_Hora = new System.Windows.Forms.TextBox();
-            this.textBox_Dia = new System.Windows.Forms.TextBox();
             this.ListBoxVeículo = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox_Nome_Cliente = new System.Windows.Forms.TextBox();
             this.Button_Reservar = new System.Windows.Forms.Button();
             this.Button_Cancelar = new System.Windows.Forms.Button();
+            this.comboBoxAno = new System.Windows.Forms.ComboBox();
+            this.comboBoxMês = new System.Windows.Forms.ComboBox();
+            this.comboBoxDia = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.comboBoxHora = new System.Windows.Forms.ComboBox();
+            this.comboBoxMinuto = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(164, 115);
+            this.label10.Location = new System.Drawing.Point(185, 114);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(39, 13);
             this.label10.TabIndex = 26;
@@ -58,73 +58,11 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(131, 115);
+            this.label9.Location = new System.Drawing.Point(149, 114);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(30, 13);
             this.label9.TabIndex = 25;
             this.label9.Text = "Hora";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(43, 115);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(27, 13);
-            this.label8.TabIndex = 24;
-            this.label8.Text = "Mês";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(91, 115);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(26, 13);
-            this.label6.TabIndex = 22;
-            this.label6.Text = "Ano";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(13, 115);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(23, 13);
-            this.label7.TabIndex = 23;
-            this.label7.Text = "Dia";
-            // 
-            // textBox_Mês
-            // 
-            this.textBox_Mês.Location = new System.Drawing.Point(46, 131);
-            this.textBox_Mês.Name = "textBox_Mês";
-            this.textBox_Mês.Size = new System.Drawing.Size(24, 20);
-            this.textBox_Mês.TabIndex = 21;
-            // 
-            // textBox_Minuto
-            // 
-            this.textBox_Minuto.Location = new System.Drawing.Point(167, 131);
-            this.textBox_Minuto.Name = "textBox_Minuto";
-            this.textBox_Minuto.Size = new System.Drawing.Size(33, 20);
-            this.textBox_Minuto.TabIndex = 20;
-            // 
-            // textBox_Ano
-            // 
-            this.textBox_Ano.Location = new System.Drawing.Point(76, 131);
-            this.textBox_Ano.Name = "textBox_Ano";
-            this.textBox_Ano.Size = new System.Drawing.Size(41, 20);
-            this.textBox_Ano.TabIndex = 19;
-            // 
-            // textBox_Hora
-            // 
-            this.textBox_Hora.Location = new System.Drawing.Point(134, 131);
-            this.textBox_Hora.Name = "textBox_Hora";
-            this.textBox_Hora.Size = new System.Drawing.Size(27, 20);
-            this.textBox_Hora.TabIndex = 18;
-            // 
-            // textBox_Dia
-            // 
-            this.textBox_Dia.Location = new System.Drawing.Point(12, 131);
-            this.textBox_Dia.Name = "textBox_Dia";
-            this.textBox_Dia.Size = new System.Drawing.Size(27, 20);
-            this.textBox_Dia.TabIndex = 17;
             // 
             // ListBoxVeículo
             // 
@@ -182,11 +120,222 @@
             this.Button_Cancelar.UseVisualStyleBackColor = true;
             this.Button_Cancelar.Click += new System.EventHandler(this.Button_Cancelar_Click);
             // 
+            // comboBoxAno
+            // 
+            this.comboBoxAno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxAno.Enabled = false;
+            this.comboBoxAno.Items.AddRange(new object[] {
+            "2024",
+            "2023",
+            "2022",
+            "2021",
+            "2020",
+            "2019",
+            "2018",
+            "2017",
+            "2016",
+            "2015",
+            "2014"});
+            this.comboBoxAno.Location = new System.Drawing.Point(87, 130);
+            this.comboBoxAno.Name = "comboBoxAno";
+            this.comboBoxAno.Size = new System.Drawing.Size(53, 21);
+            this.comboBoxAno.TabIndex = 38;
+            // 
+            // comboBoxMês
+            // 
+            this.comboBoxMês.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMês.Enabled = false;
+            this.comboBoxMês.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"});
+            this.comboBoxMês.Location = new System.Drawing.Point(48, 130);
+            this.comboBoxMês.Name = "comboBoxMês";
+            this.comboBoxMês.Size = new System.Drawing.Size(33, 21);
+            this.comboBoxMês.TabIndex = 37;
+            // 
+            // comboBoxDia
+            // 
+            this.comboBoxDia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxDia.Enabled = false;
+            this.comboBoxDia.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"});
+            this.comboBoxDia.Location = new System.Drawing.Point(9, 130);
+            this.comboBoxDia.Name = "comboBoxDia";
+            this.comboBoxDia.Size = new System.Drawing.Size(33, 21);
+            this.comboBoxDia.TabIndex = 36;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(84, 114);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(26, 13);
+            this.label3.TabIndex = 35;
+            this.label3.Text = "Ano";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(50, 114);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(27, 13);
+            this.label4.TabIndex = 34;
+            this.label4.Text = "Mês";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(10, 114);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(23, 13);
+            this.label5.TabIndex = 33;
+            this.label5.Text = "Dia";
+            // 
+            // comboBoxHora
+            // 
+            this.comboBoxHora.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxHora.Enabled = false;
+            this.comboBoxHora.Items.AddRange(new object[] {
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12"});
+            this.comboBoxHora.Location = new System.Drawing.Point(146, 130);
+            this.comboBoxHora.Name = "comboBoxHora";
+            this.comboBoxHora.Size = new System.Drawing.Size(33, 21);
+            this.comboBoxHora.TabIndex = 39;
+            // 
+            // comboBoxMinuto
+            // 
+            this.comboBoxMinuto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMinuto.Enabled = false;
+            this.comboBoxMinuto.Items.AddRange(new object[] {
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45",
+            "46",
+            "47",
+            "48",
+            "49",
+            "50",
+            "51",
+            "52",
+            "53",
+            "54",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59"});
+            this.comboBoxMinuto.Location = new System.Drawing.Point(185, 130);
+            this.comboBoxMinuto.Name = "comboBoxMinuto";
+            this.comboBoxMinuto.Size = new System.Drawing.Size(33, 21);
+            this.comboBoxMinuto.TabIndex = 40;
+            // 
             // Reserva_de_veículo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(435, 206);
+            this.Controls.Add(this.comboBoxMinuto);
+            this.Controls.Add(this.comboBoxHora);
+            this.Controls.Add(this.comboBoxAno);
+            this.Controls.Add(this.comboBoxMês);
+            this.Controls.Add(this.comboBoxDia);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.Button_Cancelar);
             this.Controls.Add(this.Button_Reservar);
             this.Controls.Add(this.label2);
@@ -195,14 +344,6 @@
             this.Controls.Add(this.ListBoxVeículo);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox_Mês);
-            this.Controls.Add(this.textBox_Minuto);
-            this.Controls.Add(this.textBox_Ano);
-            this.Controls.Add(this.textBox_Hora);
-            this.Controls.Add(this.textBox_Dia);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Reserva_de_veículo";
@@ -217,19 +358,19 @@
 
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox_Mês;
-        private System.Windows.Forms.TextBox textBox_Minuto;
-        private System.Windows.Forms.TextBox textBox_Ano;
-        private System.Windows.Forms.TextBox textBox_Hora;
-        private System.Windows.Forms.TextBox textBox_Dia;
         private System.Windows.Forms.ListBox ListBoxVeículo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox_Nome_Cliente;
         private System.Windows.Forms.Button Button_Reservar;
         private System.Windows.Forms.Button Button_Cancelar;
+        private System.Windows.Forms.ComboBox comboBoxAno;
+        private System.Windows.Forms.ComboBox comboBoxMês;
+        private System.Windows.Forms.ComboBox comboBoxDia;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox comboBoxHora;
+        private System.Windows.Forms.ComboBox comboBoxMinuto;
     }
 }

@@ -9,10 +9,10 @@ using System.Windows.Forms;
 
 namespace PBR_Rent_a_car
 {
-    public partial class Pesquisa_Veículo : Form
+    public partial class Pesquisa_Veículos : Form
     {
         public Veículo veículoPesquisado = new Veículo() ;
-        public Pesquisa_Veículo()
+        public Pesquisa_Veículos()
         {
             dataGridView_Veículos = new DataGridView();
             int CountVeículos = Program.veículos.Count;

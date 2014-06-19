@@ -15,7 +15,7 @@ namespace PBR_Rent_a_car
         Cadastro_Veículo cVeículo;
         Cadastro_Cliente cCliente;
         Reserva_de_veículo rVeículo;
-        Pesquisa_Veículo pVeículo;
+        Pesquisa_Veículos pVeículo;
         public Interface()
         {
             InitializeComponent();
@@ -47,7 +47,7 @@ namespace PBR_Rent_a_car
 
         private void Button_Pesquisar_Veículo_Click(object sender, EventArgs e)
         {
-            pVeículo = new Pesquisa_Veículo();
+            pVeículo = new Pesquisa_Veículos();
             pVeículo.ShowDialog();
         }
 
@@ -71,7 +71,7 @@ namespace PBR_Rent_a_car
 
         private void pesquisarVeículosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            pVeículo = new Pesquisa_Veículo();
+            pVeículo = new Pesquisa_Veículos();
             pVeículo.ShowDialog();
         }
 
@@ -84,6 +84,12 @@ namespace PBR_Rent_a_car
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void sobreAEmpresaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PBR_Rent_a_Car About = new PBR_Rent_a_Car();
+            About.ShowDialog();
         }
 
     }

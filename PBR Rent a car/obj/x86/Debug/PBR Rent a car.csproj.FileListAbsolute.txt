@@ -38,3 +38,17 @@ C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a
 C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.PesquisarCliente.resources
 C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.Redefinição_de_senha.resources
 C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.CadastroLogin.resources
+C:\Users\Inatan\Documents\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.Alterar_Dados.resources
+C:\Users\Inatan\Documents\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.Criar_Locação.resources
+C:\Users\Inatan\Documents\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.CadastroLogin.resources
+C:\Users\Inatan\Documents\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.Pesquisar_Locações.resources
+C:\Users\Inatan\Documents\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.PesquisarCliente.resources
+C:\Users\Inatan\Documents\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.Adicionar_funcionário.resources
+C:\Users\Inatan\Documents\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.Devolução_de_Veículo.resources
+C:\Users\Inatan\Documents\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.Editar_Funcionário.resources
+C:\Users\Inatan\Documents\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.Emissão_de_Relatório.resources
+C:\Users\Inatan\Documents\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.PBR_Rent_a_Car.resources
+C:\Users\Inatan\Documents\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.Pesquisa_Manutenção.resources
+C:\Users\Inatan\Documents\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.Pesquisa_Veículos.resources
+C:\Users\Inatan\Documents\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.Pesquisar_Funcionário.resources
+C:\Users\Inatan\Documents\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.InterfaceCliente.resources

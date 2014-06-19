@@ -1,6 +1,6 @@
 ﻿namespace PBR_Rent_a_car
 {
-    partial class Pesquisa_Veículo
+    partial class Pesquisa_Veículos
     {
         /// <summary>
         /// Required designer variable.
@@ -48,6 +48,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox_Quilometragem = new System.Windows.Forms.TextBox();
             this.button_Cancelar = new System.Windows.Forms.Button();
+            this.buttonMandarManutenção = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Veículos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,7 +61,7 @@
             this.Ano,
             this.Quilometragem,
             this.Estado});
-            this.dataGridView_Veículos.Location = new System.Drawing.Point(23, 13);
+            this.dataGridView_Veículos.Location = new System.Drawing.Point(12, 13);
             this.dataGridView_Veículos.Name = "dataGridView_Veículos";
             this.dataGridView_Veículos.Size = new System.Drawing.Size(545, 241);
             this.dataGridView_Veículos.TabIndex = 0;
@@ -93,7 +94,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(23, 260);
+            this.button1.Location = new System.Drawing.Point(12, 260);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
@@ -104,7 +105,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(278, 298);
+            this.label2.Location = new System.Drawing.Point(288, 295);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 13);
             this.label2.TabIndex = 16;
@@ -113,7 +114,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 298);
+            this.label1.Location = new System.Drawing.Point(12, 295);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 15;
@@ -121,14 +122,14 @@
             // 
             // textBox_Fornecedor
             // 
-            this.textBox_Fornecedor.Location = new System.Drawing.Point(278, 314);
+            this.textBox_Fornecedor.Location = new System.Drawing.Point(288, 311);
             this.textBox_Fornecedor.Name = "textBox_Fornecedor";
             this.textBox_Fornecedor.Size = new System.Drawing.Size(228, 20);
             this.textBox_Fornecedor.TabIndex = 14;
             // 
             // textBox_Nome
             // 
-            this.textBox_Nome.Location = new System.Drawing.Point(23, 314);
+            this.textBox_Nome.Location = new System.Drawing.Point(12, 311);
             this.textBox_Nome.Name = "textBox_Nome";
             this.textBox_Nome.Size = new System.Drawing.Size(201, 20);
             this.textBox_Nome.TabIndex = 13;
@@ -136,7 +137,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(280, 387);
+            this.label8.Location = new System.Drawing.Point(290, 384);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(23, 13);
             this.label8.TabIndex = 32;
@@ -145,7 +146,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(23, 387);
+            this.label6.Location = new System.Drawing.Point(12, 384);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(26, 13);
             this.label6.TabIndex = 30;
@@ -154,7 +155,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(280, 347);
+            this.label7.Location = new System.Drawing.Point(290, 344);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(52, 13);
             this.label7.TabIndex = 31;
@@ -162,21 +163,21 @@
             // 
             // textBox_Categoria
             // 
-            this.textBox_Categoria.Location = new System.Drawing.Point(281, 363);
+            this.textBox_Categoria.Location = new System.Drawing.Point(291, 360);
             this.textBox_Categoria.Name = "textBox_Categoria";
             this.textBox_Categoria.Size = new System.Drawing.Size(203, 20);
             this.textBox_Categoria.TabIndex = 29;
             // 
             // textBox_Cor
             // 
-            this.textBox_Cor.Location = new System.Drawing.Point(281, 403);
+            this.textBox_Cor.Location = new System.Drawing.Point(291, 400);
             this.textBox_Cor.Name = "textBox_Cor";
             this.textBox_Cor.Size = new System.Drawing.Size(183, 20);
             this.textBox_Cor.TabIndex = 28;
             // 
             // textBox_Ano
             // 
-            this.textBox_Ano.Location = new System.Drawing.Point(26, 403);
+            this.textBox_Ano.Location = new System.Drawing.Point(15, 400);
             this.textBox_Ano.Name = "textBox_Ano";
             this.textBox_Ano.Size = new System.Drawing.Size(48, 20);
             this.textBox_Ano.TabIndex = 27;
@@ -184,7 +185,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(21, 349);
+            this.label3.Location = new System.Drawing.Point(10, 346);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(130, 13);
             this.label3.TabIndex = 34;
@@ -192,14 +193,14 @@
             // 
             // textBox_Quilometragem
             // 
-            this.textBox_Quilometragem.Location = new System.Drawing.Point(23, 363);
+            this.textBox_Quilometragem.Location = new System.Drawing.Point(12, 360);
             this.textBox_Quilometragem.Name = "textBox_Quilometragem";
             this.textBox_Quilometragem.Size = new System.Drawing.Size(144, 20);
             this.textBox_Quilometragem.TabIndex = 33;
             // 
             // button_Cancelar
             // 
-            this.button_Cancelar.Location = new System.Drawing.Point(502, 428);
+            this.button_Cancelar.Location = new System.Drawing.Point(482, 428);
             this.button_Cancelar.Name = "button_Cancelar";
             this.button_Cancelar.Size = new System.Drawing.Size(75, 23);
             this.button_Cancelar.TabIndex = 35;
@@ -207,11 +208,21 @@
             this.button_Cancelar.UseVisualStyleBackColor = true;
             this.button_Cancelar.Click += new System.EventHandler(this.button2_Click);
             // 
-            // Pesquisa_Veículo
+            // buttonMandarManutenção
+            // 
+            this.buttonMandarManutenção.Location = new System.Drawing.Point(12, 428);
+            this.buttonMandarManutenção.Name = "buttonMandarManutenção";
+            this.buttonMandarManutenção.Size = new System.Drawing.Size(143, 23);
+            this.buttonMandarManutenção.TabIndex = 36;
+            this.buttonMandarManutenção.Text = "Mandar para Manutenção";
+            this.buttonMandarManutenção.UseVisualStyleBackColor = true;
+            // 
+            // Pesquisa_Veículos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(589, 463);
+            this.ClientSize = new System.Drawing.Size(568, 463);
+            this.Controls.Add(this.buttonMandarManutenção);
             this.Controls.Add(this.button_Cancelar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox_Quilometragem);
@@ -229,7 +240,7 @@
             this.Controls.Add(this.dataGridView_Veículos);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Pesquisa_Veículo";
+            this.Name = "Pesquisa_Veículos";
             this.ShowIcon = false;
             this.Text = "Pesquisa de Veículo";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Veículos)).EndInit();
@@ -260,6 +271,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox_Quilometragem;
         private System.Windows.Forms.Button button_Cancelar;
+        private System.Windows.Forms.Button buttonMandarManutenção;
 
     }
 }

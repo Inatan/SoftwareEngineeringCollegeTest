@@ -11,7 +11,7 @@ namespace PBR_Rent_a_car
 {
     public partial class Reserva_de_veículo : Form
     {
-        Pesquisa_Veículo pVeículo;
+        Pesquisa_Veículos pVeículo;
 
         public Reserva_de_veículo()
         {
@@ -27,7 +27,7 @@ namespace PBR_Rent_a_car
         {
             if (this.ListBoxVeículo.Items[0].ToString() == "Clique aqui para pesquisar o veículo")
             {
-                pVeículo = new Pesquisa_Veículo();
+                pVeículo = new Pesquisa_Veículos();
                 pVeículo.ShowDialog();
                 if (pVeículo.veículoPesquisado != null)
                 {

@@ -55,6 +55,7 @@
             this.Button_Cadastrar_Modelo = new System.Windows.Forms.Button();
             this.Button_Pesquisar_Veículo = new System.Windows.Forms.Button();
             this.Button_Reservar_Veículo = new System.Windows.Forms.Button();
+            this.logoffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -88,6 +89,7 @@
             // cadastrosToolStripMenuItem
             // 
             this.cadastrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.logoffToolStripMenuItem,
             this.sairToolStripMenuItem});
             this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
             this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
@@ -96,7 +98,7 @@
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
@@ -202,6 +204,7 @@
             this.sobreAEmpresaToolStripMenuItem.Name = "sobreAEmpresaToolStripMenuItem";
             this.sobreAEmpresaToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.sobreAEmpresaToolStripMenuItem.Text = "Sobre a empresa";
+            this.sobreAEmpresaToolStripMenuItem.Click += new System.EventHandler(this.sobreAEmpresaToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
@@ -283,6 +286,12 @@
             this.Button_Reservar_Veículo.UseVisualStyleBackColor = true;
             this.Button_Reservar_Veículo.Click += new System.EventHandler(this.Button_Reservar_Veículo_Click);
             // 
+            // logoffToolStripMenuItem
+            // 
+            this.logoffToolStripMenuItem.Name = "logoffToolStripMenuItem";
+            this.logoffToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.logoffToolStripMenuItem.Text = "Logoff";
+            // 
             // Interface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -342,6 +351,7 @@
         private System.Windows.Forms.Button Button_Cadastrar_Modelo;
         private System.Windows.Forms.Button Button_Pesquisar_Veículo;
         private System.Windows.Forms.Button Button_Reservar_Veículo;
+        private System.Windows.Forms.ToolStripMenuItem logoffToolStripMenuItem;
     }
 }
 
