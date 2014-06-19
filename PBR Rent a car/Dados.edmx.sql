@@ -2,23 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, and Azure
 -- --------------------------------------------------
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
--- Date Created: 06/19/2014 12:46:28
-=======
--- Date Created: 06/19/2014 17:35:29
->>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
-=======
--- Date Created: 06/19/2014 17:35:29
->>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
-=======
--- Date Created: 06/19/2014 12:46:28
->>>>>>> f4525a2cb45744424d6bb856ffc06eaa25e5f24b
-=======
--- Date Created: 06/19/2014 12:46:28
->>>>>>> f4525a2cb45744424d6bb856ffc06eaa25e5f24b
+-- Date Created: 06/19/2014 19:31:26
 -- Generated from EDMX file: C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a car\Dados.edmx
 -- --------------------------------------------------
 
@@ -76,10 +60,10 @@ IF OBJECT_ID(N'[dbo].[FK_ClienteEndereço]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[ClienteSet] DROP CONSTRAINT [FK_ClienteEndereço];
 GO
 IF OBJECT_ID(N'[dbo].[FK_LoginCliente]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[LoginSet] DROP CONSTRAINT [FK_LoginCliente];
+    ALTER TABLE [dbo].[ClienteSet] DROP CONSTRAINT [FK_LoginCliente];
 GO
 IF OBJECT_ID(N'[dbo].[FK_LoginFuncionário]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[LoginSet] DROP CONSTRAINT [FK_LoginFuncionário];
+    ALTER TABLE [dbo].[FuncionárioSet] DROP CONSTRAINT [FK_LoginFuncionário];
 GO
 
 -- --------------------------------------------------
@@ -166,23 +150,7 @@ CREATE TABLE [dbo].[FuncionárioSet] (
     [Nome] nvarchar(max)  NOT NULL,
     [CarteiraDeTrabalho] nvarchar(max)  NOT NULL,
     [Salário] float  NOT NULL,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    [Função] nvarchar(max)  NOT NULL,
-=======
     [Função] tinyint  NOT NULL,
->>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
-=======
-    [Função] tinyint  NOT NULL,
->>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
-=======
-    [Função] nvarchar(max)  NOT NULL,
->>>>>>> f4525a2cb45744424d6bb856ffc06eaa25e5f24b
-=======
-    [Função] nvarchar(max)  NOT NULL,
->>>>>>> f4525a2cb45744424d6bb856ffc06eaa25e5f24b
     [Login_Id] int  NOT NULL
 );
 GO
