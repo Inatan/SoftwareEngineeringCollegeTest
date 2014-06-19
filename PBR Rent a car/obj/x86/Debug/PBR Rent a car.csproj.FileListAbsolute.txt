@@ -52,3 +52,12 @@ C:\Users\Inatan\Documents\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a
 C:\Users\Inatan\Documents\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.Pesquisa_Veículos.resources
 C:\Users\Inatan\Documents\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.Pesquisar_Funcionário.resources
 C:\Users\Inatan\Documents\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.InterfaceCliente.resources
+C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.Adicionar_funcionário.resources
+C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.Devolução_de_Veículo.resources
+C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.Editar_Funcionário.resources
+C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.Emissão_de_Relatório.resources
+C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.InterfaceCliente.resources
+C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.PBR_Rent_a_Car.resources
+C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.Pesquisa_Manutenção.resources
+C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.Pesquisa_Veículos.resources
+C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.Pesquisar_Funcionário.resources

@@ -145,6 +145,7 @@
             this.Name = "Cadastro_Veículo";
             this.ShowIcon = false;
             this.Text = "Cadastro de veículo";
+            this.Load += new System.EventHandler(this.Cadastro_Veículo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

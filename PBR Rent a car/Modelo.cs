@@ -7,9 +7,6 @@ namespace PBR_Rent_a_car
 {
     public partial class Modelo
     {
-        //private string p;
-       // private string p_2;
-
         public Modelo() {}
 
         public Modelo(string nome, string fornecedor)
@@ -17,13 +14,6 @@ namespace PBR_Rent_a_car
             this.Nome = nome;
             this.Fornecedor = fornecedor;
         }
-
-       /* public Modelo(string p, string p_2)
-        {
-            // TODO: Complete member initialization
-            this.p = p;
-            this.p_2 = p_2;
-        }*/
 
         //Métodos responsáveis pela interação com o BD
         public void gravar()

@@ -104,6 +104,7 @@
             this.Name = "Cadastro_Modelo";
             this.ShowIcon = false;
             this.Text = "Cadastro de modelo de veiculo";
+            this.Load += new System.EventHandler(this.Cadastro_Modelo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
