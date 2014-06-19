@@ -12,6 +12,7 @@ namespace PBR_Rent_a_car
     public partial class Reserva_de_veículo : Form
     {
         Pesquisa_Veículos pVeículo;
+        PesquisarCliente pCliente;
 
         public Reserva_de_veículo()
         {
@@ -65,6 +66,29 @@ namespace PBR_Rent_a_car
         //        vProcurado.setLocado();   
             }        
             
+        }
+
+        private void listBoxCliente_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (this.listBoxCliente.Items[0].ToString() == "Clique aqui para pesquisar o Cliente")
+            {
+                pCliente = new PesquisarCliente();
+                pCliente.ShowDialog();
+           /*     if (pVeículo.veículoPesquisado != null)
+                {
+                    List<string> listaNomes = new List<string>();
+                    string dadosVeiculo;
+
+                    listaNomes.Add(pVeículo.veículoPesquisado.Modelo.Fornecedor);
+                    listaNomes.Add(pVeículo.veículoPesquisado.Modelo.Nome);
+                    listaNomes.Add(pVeículo.veículoPesquisado.Cor);
+                    listaNomes.Add(pVeículo.veículoPesquisado.Ano.ToString());
+                    listaNomes.Add(pVeículo.veículoPesquisado.Quilometragem.ToString() + " Km");
+                    dadosVeiculo = String.Join(" - ", listaNomes);
+                    ListBoxVeículo.Items.Remove("Clique aqui para pesquisar o veículo");
+                    ListBoxVeículo.Items.Add(dadosVeiculo);
+                }*/
+            }
         }
     }
 }

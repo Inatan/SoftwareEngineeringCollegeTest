@@ -15,5 +15,25 @@ namespace PBR_Rent_a_car
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void apenasLetras(KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+
+        private void textBoxQuilometragem_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            apenasLetras(e);
+        }
+
     }
 }

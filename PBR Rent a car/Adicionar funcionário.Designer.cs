@@ -52,9 +52,11 @@
             // textBox_CarteiraTrabalho
             // 
             this.textBox_CarteiraTrabalho.Location = new System.Drawing.Point(12, 65);
+            this.textBox_CarteiraTrabalho.MaxLength = 5;
             this.textBox_CarteiraTrabalho.Name = "textBox_CarteiraTrabalho";
             this.textBox_CarteiraTrabalho.Size = new System.Drawing.Size(206, 20);
             this.textBox_CarteiraTrabalho.TabIndex = 64;
+            this.textBox_CarteiraTrabalho.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_CarteiraTrabalho_KeyPress);
             // 
             // label7
             // 
@@ -71,15 +73,16 @@
             this.textBox_Função.Name = "textBox_Função";
             this.textBox_Função.Size = new System.Drawing.Size(206, 20);
             this.textBox_Função.TabIndex = 62;
+            this.textBox_Função.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Função_KeyPress);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 94);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 13);
+            this.label2.Size = new System.Drawing.Size(62, 13);
             this.label2.TabIndex = 61;
-            this.label2.Text = "Salário Maior que";
+            this.label2.Text = "Salário (R$)";
             // 
             // label1
             // 
@@ -96,6 +99,7 @@
             this.textBox_Salario.Name = "textBox_Salario";
             this.textBox_Salario.Size = new System.Drawing.Size(206, 20);
             this.textBox_Salario.TabIndex = 59;
+            this.textBox_Salario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Salario_KeyPress);
             // 
             // textBox_Nome
             // 
@@ -103,6 +107,7 @@
             this.textBox_Nome.Name = "textBox_Nome";
             this.textBox_Nome.Size = new System.Drawing.Size(207, 20);
             this.textBox_Nome.TabIndex = 58;
+            this.textBox_Nome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Nome_KeyPress);
             // 
             // buttonAdicionar
             // 

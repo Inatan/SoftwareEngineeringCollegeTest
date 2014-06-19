@@ -75,5 +75,53 @@ namespace PBR_Rent_a_car
             this.Close();
         }
 
+        private void apenasLetras(KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void apenasNumeros(KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+
+        private void textBox_Nome_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            apenasLetras(e);
+        }
+
+        private void textBox_Quilometragem_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            apenasNumeros(e);
+        }
+
+        private void textBox_Ano_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            apenasNumeros(e);
+        }
+
+        private void textBox_Fornecedor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            apenasLetras(e);
+        }
+
+        private void textBox_Categoria_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            apenasLetras(e);
+        }
+
+        private void textBox_Cor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            apenasLetras(e);
+        }
+
+
     }
 }

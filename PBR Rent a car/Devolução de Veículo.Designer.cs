@@ -34,6 +34,8 @@
             this.labelPreço = new System.Windows.Forms.Label();
             this.buttonPago = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBoxQuilometragem = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -74,7 +76,7 @@
             // 
             // buttonPago
             // 
-            this.buttonPago.Location = new System.Drawing.Point(12, 94);
+            this.buttonPago.Location = new System.Drawing.Point(12, 150);
             this.buttonPago.Name = "buttonPago";
             this.buttonPago.Size = new System.Drawing.Size(75, 23);
             this.buttonPago.TabIndex = 4;
@@ -83,18 +85,38 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(100, 94);
+            this.button1.Location = new System.Drawing.Point(114, 150);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 5;
             this.button1.Text = "Cancelar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 85);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(125, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Quilometragem retornada";
+            // 
+            // textBoxQuilometragem
+            // 
+            this.textBoxQuilometragem.Location = new System.Drawing.Point(15, 102);
+            this.textBoxQuilometragem.Name = "textBoxQuilometragem";
+            this.textBoxQuilometragem.Size = new System.Drawing.Size(160, 20);
+            this.textBoxQuilometragem.TabIndex = 7;
+            this.textBoxQuilometragem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxQuilometragem_KeyPress);
             // 
             // Devolução_de_Veículo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(187, 129);
+            this.ClientSize = new System.Drawing.Size(201, 185);
+            this.Controls.Add(this.textBoxQuilometragem);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonPago);
             this.Controls.Add(this.labelPreço);
@@ -119,5 +141,7 @@
         private System.Windows.Forms.Label labelPreço;
         private System.Windows.Forms.Button buttonPago;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBoxQuilometragem;
     }
 }

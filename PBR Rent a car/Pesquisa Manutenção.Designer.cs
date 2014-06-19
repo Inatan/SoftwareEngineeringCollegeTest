@@ -60,6 +60,7 @@
             this.button_Cancelar.TabIndex = 50;
             this.button_Cancelar.Text = "Cancelar";
             this.button_Cancelar.UseVisualStyleBackColor = true;
+            this.button_Cancelar.Click += new System.EventHandler(this.button_Cancelar_Click);
             // 
             // label3
             // 
@@ -76,6 +77,7 @@
             this.textBox_Quilometragem.Name = "textBox_Quilometragem";
             this.textBox_Quilometragem.Size = new System.Drawing.Size(144, 20);
             this.textBox_Quilometragem.TabIndex = 48;
+            this.textBox_Quilometragem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Quilometragem_KeyPress);
             // 
             // label8
             // 
@@ -110,6 +112,7 @@
             this.textBox_Categoria.Name = "textBox_Categoria";
             this.textBox_Categoria.Size = new System.Drawing.Size(203, 20);
             this.textBox_Categoria.TabIndex = 44;
+            this.textBox_Categoria.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Categoria_KeyPress);
             // 
             // textBox_Cor
             // 
@@ -117,6 +120,7 @@
             this.textBox_Cor.Name = "textBox_Cor";
             this.textBox_Cor.Size = new System.Drawing.Size(183, 20);
             this.textBox_Cor.TabIndex = 43;
+            this.textBox_Cor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Cor_KeyPress);
             // 
             // textBox_Ano
             // 
@@ -124,6 +128,7 @@
             this.textBox_Ano.Name = "textBox_Ano";
             this.textBox_Ano.Size = new System.Drawing.Size(48, 20);
             this.textBox_Ano.TabIndex = 42;
+            this.textBox_Ano.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Ano_KeyPress);
             // 
             // label2
             // 
@@ -149,6 +154,7 @@
             this.textBox_Fornecedor.Name = "textBox_Fornecedor";
             this.textBox_Fornecedor.Size = new System.Drawing.Size(228, 20);
             this.textBox_Fornecedor.TabIndex = 39;
+            this.textBox_Fornecedor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Fornecedor_KeyPress);
             // 
             // textBox_Nome
             // 
@@ -156,6 +162,7 @@
             this.textBox_Nome.Name = "textBox_Nome";
             this.textBox_Nome.Size = new System.Drawing.Size(201, 20);
             this.textBox_Nome.TabIndex = 38;
+            this.textBox_Nome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Nome_KeyPress);
             // 
             // button1
             // 

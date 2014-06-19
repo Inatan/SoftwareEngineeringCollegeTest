@@ -11,9 +11,64 @@ namespace PBR_Rent_a_car
 {
     public partial class Adicionar_funcionário : Form
     {
+        private bool comma = false;
+
         public Adicionar_funcionário()
         {
             InitializeComponent();
+        }
+        private void apenasLetras(KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void apenasNumeros(KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+        private void apenasDinheiro(KeyPressEventArgs e)
+        {
+            if (!comma)
+            {
+                if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && !(e.KeyChar == ','))
+                {
+                    e.Handled = true;
+                    comma = true;
+                }
+            }
+            else
+                 if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+                     e.Handled = true;
+        }
+
+
+
+        private void textBox_Nome_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            apenasLetras(e);
+        }
+
+        private void textBox_CarteiraTrabalho_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            apenasNumeros(e);
+        }
+
+        private void textBox_Salario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!textBox_Salario.Text.Contains(','))
+                comma = false;
+            apenasDinheiro(e);
+        }
+
+        private void textBox_Função_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            apenasLetras(e);
         }
     }
 }

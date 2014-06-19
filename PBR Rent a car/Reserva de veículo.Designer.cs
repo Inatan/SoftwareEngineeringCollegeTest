@@ -324,6 +324,7 @@
             this.listBoxCliente.Name = "listBoxCliente";
             this.listBoxCliente.Size = new System.Drawing.Size(414, 17);
             this.listBoxCliente.TabIndex = 41;
+            this.listBoxCliente.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listBoxCliente_MouseDoubleClick);
             // 
             // Reserva_de_veículo
             // 

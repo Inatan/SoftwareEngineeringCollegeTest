@@ -30,8 +30,8 @@
         {
             this.textBox_Nome = new System.Windows.Forms.TextBox();
             this.textBox_CPF_CNPJ = new System.Windows.Forms.TextBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButtonCPF = new System.Windows.Forms.RadioButton();
+            this.radioButtonCNPJ = new System.Windows.Forms.RadioButton();
             this.textBox_TelefoneMóvel = new System.Windows.Forms.TextBox();
             this.textBox_TelefoneFixo = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -67,35 +67,37 @@
             // textBox_CPF_CNPJ
             // 
             this.textBox_CPF_CNPJ.Location = new System.Drawing.Point(12, 98);
+            this.textBox_CPF_CNPJ.MaxLength = 11;
             this.textBox_CPF_CNPJ.Name = "textBox_CPF_CNPJ";
             this.textBox_CPF_CNPJ.Size = new System.Drawing.Size(160, 20);
             this.textBox_CPF_CNPJ.TabIndex = 1;
             // 
-            // radioButton1
+            // radioButtonCPF
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(12, 124);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(45, 17);
-            this.radioButton1.TabIndex = 2;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "CPF";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButtonCPF.AutoSize = true;
+            this.radioButtonCPF.Checked = true;
+            this.radioButtonCPF.Location = new System.Drawing.Point(12, 124);
+            this.radioButtonCPF.Name = "radioButtonCPF";
+            this.radioButtonCPF.Size = new System.Drawing.Size(45, 17);
+            this.radioButtonCPF.TabIndex = 2;
+            this.radioButtonCPF.TabStop = true;
+            this.radioButtonCPF.Text = "CPF";
+            this.radioButtonCPF.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // radioButtonCNPJ
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(63, 124);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(52, 17);
-            this.radioButton2.TabIndex = 3;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "CNPJ";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButtonCNPJ.AutoSize = true;
+            this.radioButtonCNPJ.Location = new System.Drawing.Point(63, 124);
+            this.radioButtonCNPJ.Name = "radioButtonCNPJ";
+            this.radioButtonCNPJ.Size = new System.Drawing.Size(52, 17);
+            this.radioButtonCNPJ.TabIndex = 3;
+            this.radioButtonCNPJ.Text = "CNPJ";
+            this.radioButtonCNPJ.UseVisualStyleBackColor = true;
             // 
             // textBox_TelefoneMóvel
             // 
             this.textBox_TelefoneMóvel.Location = new System.Drawing.Point(143, 182);
+            this.textBox_TelefoneMóvel.MaxLength = 10;
             this.textBox_TelefoneMóvel.Name = "textBox_TelefoneMóvel";
             this.textBox_TelefoneMóvel.Size = new System.Drawing.Size(112, 20);
             this.textBox_TelefoneMóvel.TabIndex = 4;
@@ -103,6 +105,7 @@
             // textBox_TelefoneFixo
             // 
             this.textBox_TelefoneFixo.Location = new System.Drawing.Point(12, 182);
+            this.textBox_TelefoneFixo.MaxLength = 10;
             this.textBox_TelefoneFixo.Name = "textBox_TelefoneFixo";
             this.textBox_TelefoneFixo.Size = new System.Drawing.Size(113, 20);
             this.textBox_TelefoneFixo.TabIndex = 5;
@@ -190,6 +193,7 @@
             // textBox_Número
             // 
             this.textBox_Número.Location = new System.Drawing.Point(16, 218);
+            this.textBox_Número.MaxLength = 5;
             this.textBox_Número.Name = "textBox_Número";
             this.textBox_Número.Size = new System.Drawing.Size(55, 20);
             this.textBox_Número.TabIndex = 4;
@@ -204,6 +208,7 @@
             // textBox_CEP
             // 
             this.textBox_CEP.Location = new System.Drawing.Point(16, 64);
+            this.textBox_CEP.MaxLength = 8;
             this.textBox_CEP.Name = "textBox_CEP";
             this.textBox_CEP.Size = new System.Drawing.Size(140, 20);
             this.textBox_CEP.TabIndex = 2;
@@ -218,6 +223,7 @@
             // textBox_UF
             // 
             this.textBox_UF.Location = new System.Drawing.Point(16, 21);
+            this.textBox_UF.MaxLength = 2;
             this.textBox_UF.Name = "textBox_UF";
             this.textBox_UF.Size = new System.Drawing.Size(27, 20);
             this.textBox_UF.TabIndex = 0;
@@ -302,8 +308,8 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBox_TelefoneFixo);
             this.Controls.Add(this.textBox_TelefoneMóvel);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.radioButtonCNPJ);
+            this.Controls.Add(this.radioButtonCPF);
             this.Controls.Add(this.textBox_CPF_CNPJ);
             this.Controls.Add(this.textBox_Nome);
             this.MaximizeBox = false;
@@ -322,8 +328,8 @@
 
         private System.Windows.Forms.TextBox textBox_Nome;
         private System.Windows.Forms.TextBox textBox_CPF_CNPJ;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButtonCPF;
+        private System.Windows.Forms.RadioButton radioButtonCNPJ;
         private System.Windows.Forms.TextBox textBox_TelefoneMóvel;
         private System.Windows.Forms.TextBox textBox_TelefoneFixo;
         private System.Windows.Forms.Panel panel1;

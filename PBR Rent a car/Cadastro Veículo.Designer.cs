@@ -73,6 +73,7 @@
             this.textBox_Categoria.Name = "textBox_Categoria";
             this.textBox_Categoria.Size = new System.Drawing.Size(183, 20);
             this.textBox_Categoria.TabIndex = 23;
+            this.textBox_Categoria.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Categoria_KeyPress);
             // 
             // textBox_Cor
             // 
@@ -80,13 +81,16 @@
             this.textBox_Cor.Name = "textBox_Cor";
             this.textBox_Cor.Size = new System.Drawing.Size(183, 20);
             this.textBox_Cor.TabIndex = 20;
+            this.textBox_Cor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Cor_KeyPress);
             // 
             // textBox_Ano
             // 
             this.textBox_Ano.Location = new System.Drawing.Point(12, 25);
+            this.textBox_Ano.MaxLength = 4;
             this.textBox_Ano.Name = "textBox_Ano";
             this.textBox_Ano.Size = new System.Drawing.Size(48, 20);
             this.textBox_Ano.TabIndex = 18;
+            this.textBox_Ano.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Ano_KeyPress);
             // 
             // label1
             // 

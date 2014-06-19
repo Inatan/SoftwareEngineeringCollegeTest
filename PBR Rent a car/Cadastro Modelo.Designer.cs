@@ -60,6 +60,7 @@
             this.textBox_Fornecedor.Name = "textBox_Fornecedor";
             this.textBox_Fornecedor.Size = new System.Drawing.Size(244, 20);
             this.textBox_Fornecedor.TabIndex = 10;
+            this.textBox_Fornecedor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Fornecedor_KeyPress);
             // 
             // textBox_Nome
             // 
@@ -67,6 +68,7 @@
             this.textBox_Nome.Name = "textBox_Nome";
             this.textBox_Nome.Size = new System.Drawing.Size(244, 20);
             this.textBox_Nome.TabIndex = 9;
+            this.textBox_Nome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Nome_KeyPress);
             // 
             // Button_Cancelar
             // 

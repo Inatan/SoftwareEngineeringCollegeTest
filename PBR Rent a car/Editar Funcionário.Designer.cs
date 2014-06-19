@@ -48,6 +48,7 @@
             this.buttonCancelar.TabIndex = 77;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // buttonAdicionar
             // 
@@ -95,9 +96,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 93);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 13);
+            this.label2.Size = new System.Drawing.Size(62, 13);
             this.label2.TabIndex = 71;
-            this.label2.Text = "Salário Maior que";
+            this.label2.Text = "Salário (R$)";
             // 
             // label1
             // 
