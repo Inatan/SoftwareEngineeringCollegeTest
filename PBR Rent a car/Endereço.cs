@@ -18,6 +18,15 @@ namespace PBR_Rent_a_car
             this.CEP = cep;
         }
 
+        public void gravar()
+        {
+            using (var ctx = new DadosContainer())
+            {
+                ctx.AddToEndereçoSet(this);
+                ctx.SaveChanges();
+            }
+        }
+
     }
 
     

@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, and Azure
 -- --------------------------------------------------
--- Date Created: 06/18/2014 19:45:17
+-- Date Created: 06/19/2014 15:14:34
 -- Generated from EDMX file: C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a car\Dados.edmx
 -- --------------------------------------------------
 
@@ -60,10 +60,10 @@ IF OBJECT_ID(N'[dbo].[FK_ClienteEndereço]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[ClienteSet] DROP CONSTRAINT [FK_ClienteEndereço];
 GO
 IF OBJECT_ID(N'[dbo].[FK_LoginCliente]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[LoginSet] DROP CONSTRAINT [FK_LoginCliente];
+    ALTER TABLE [dbo].[ClienteSet] DROP CONSTRAINT [FK_LoginCliente];
 GO
 IF OBJECT_ID(N'[dbo].[FK_LoginFuncionário]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[LoginSet] DROP CONSTRAINT [FK_LoginFuncionário];
+    ALTER TABLE [dbo].[FuncionárioSet] DROP CONSTRAINT [FK_LoginFuncionário];
 GO
 
 -- --------------------------------------------------
@@ -150,7 +150,8 @@ CREATE TABLE [dbo].[FuncionárioSet] (
     [Nome] nvarchar(max)  NOT NULL,
     [CarteiraDeTrabalho] nvarchar(max)  NOT NULL,
     [Salário] float  NOT NULL,
-    [Função] nvarchar(max)  NOT NULL
+    [Função] nvarchar(max)  NOT NULL,
+    [Login_Id] int  NOT NULL
 );
 GO
 
@@ -193,7 +194,8 @@ CREATE TABLE [dbo].[ClienteSet] (
     [CPF] nvarchar(max)  NOT NULL,
     [Telefone] nvarchar(max)  NOT NULL,
     [Notificação] nvarchar(max)  NOT NULL,
-    [Endereço_Id] int  NOT NULL
+    [Endereço_Id] int  NOT NULL,
+    [Login_Id] int  NOT NULL
 );
 GO
 
@@ -214,9 +216,7 @@ CREATE TABLE [dbo].[LoginSet] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [Usuário] nvarchar(max)  NOT NULL,
     [Senha] nvarchar(max)  NOT NULL,
-    [Permissão] tinyint  NOT NULL,
-    [Cliente_Id] int  NOT NULL,
-    [Funcionário_Id] int  NOT NULL
+    [Permissão] tinyint  NOT NULL
 );
 GO
 
@@ -490,32 +490,32 @@ ON [dbo].[ClienteSet]
     ([Endereço_Id]);
 GO
 
--- Creating foreign key on [Cliente_Id] in table 'LoginSet'
-ALTER TABLE [dbo].[LoginSet]
+-- Creating foreign key on [Login_Id] in table 'ClienteSet'
+ALTER TABLE [dbo].[ClienteSet]
 ADD CONSTRAINT [FK_LoginCliente]
-    FOREIGN KEY ([Cliente_Id])
-    REFERENCES [dbo].[ClienteSet]
+    FOREIGN KEY ([Login_Id])
+    REFERENCES [dbo].[LoginSet]
         ([Id])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_LoginCliente'
 CREATE INDEX [IX_FK_LoginCliente]
-ON [dbo].[LoginSet]
-    ([Cliente_Id]);
+ON [dbo].[ClienteSet]
+    ([Login_Id]);
 GO
 
--- Creating foreign key on [Funcionário_Id] in table 'LoginSet'
-ALTER TABLE [dbo].[LoginSet]
+-- Creating foreign key on [Login_Id] in table 'FuncionárioSet'
+ALTER TABLE [dbo].[FuncionárioSet]
 ADD CONSTRAINT [FK_LoginFuncionário]
-    FOREIGN KEY ([Funcionário_Id])
-    REFERENCES [dbo].[FuncionárioSet]
+    FOREIGN KEY ([Login_Id])
+    REFERENCES [dbo].[LoginSet]
         ([Id])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_LoginFuncionário'
 CREATE INDEX [IX_FK_LoginFuncionário]
-ON [dbo].[LoginSet]
-    ([Funcionário_Id]);
+ON [dbo].[FuncionárioSet]
+    ([Login_Id]);
 GO
 
 -- --------------------------------------------------

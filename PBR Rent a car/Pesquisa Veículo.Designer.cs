@@ -243,6 +243,7 @@
             this.Name = "Pesquisa_Veículos";
             this.ShowIcon = false;
             this.Text = "Pesquisa de Veículo";
+            this.Load += new System.EventHandler(this.Pesquisa_Veículos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Veículos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

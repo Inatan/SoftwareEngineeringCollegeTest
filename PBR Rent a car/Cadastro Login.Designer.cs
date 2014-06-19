@@ -33,7 +33,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox_Fornecedor = new System.Windows.Forms.TextBox();
+            this.textBox_Senha = new System.Windows.Forms.TextBox();
             this.textBox_Nome = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.buttonLogin = new System.Windows.Forms.Button();
@@ -81,13 +81,13 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Login";
             // 
-            // textBox_Fornecedor
+            // textBox_Senha
             // 
-            this.textBox_Fornecedor.Location = new System.Drawing.Point(12, 210);
-            this.textBox_Fornecedor.Name = "textBox_Fornecedor";
-            this.textBox_Fornecedor.PasswordChar = '*';
-            this.textBox_Fornecedor.Size = new System.Drawing.Size(208, 20);
-            this.textBox_Fornecedor.TabIndex = 14;
+            this.textBox_Senha.Location = new System.Drawing.Point(12, 210);
+            this.textBox_Senha.Name = "textBox_Senha";
+            this.textBox_Senha.PasswordChar = '*';
+            this.textBox_Senha.Size = new System.Drawing.Size(208, 20);
+            this.textBox_Senha.TabIndex = 14;
             // 
             // textBox_Nome
             // 
@@ -114,6 +114,7 @@
             this.buttonLogin.TabIndex = 18;
             this.buttonLogin.Text = "Login";
             this.buttonLogin.UseVisualStyleBackColor = true;
+            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
             // buttonRedefinirSenha
             // 
@@ -145,7 +146,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox_Fornecedor);
+            this.Controls.Add(this.textBox_Senha);
             this.Controls.Add(this.textBox_Nome);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.labelPBR);
@@ -167,7 +168,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox_Fornecedor;
+        private System.Windows.Forms.TextBox textBox_Senha;
         private System.Windows.Forms.TextBox textBox_Nome;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button buttonLogin;

@@ -33,8 +33,8 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("Dados", "ClienteLocação", "Cliente", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Cliente), "Locação", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PBR_Rent_a_car.Locação))]
 [assembly: EdmRelationshipAttribute("Dados", "ClienteReserva", "Cliente", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Cliente), "Reserva", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PBR_Rent_a_car.Reserva))]
 [assembly: EdmRelationshipAttribute("Dados", "ClienteEndereço", "Cliente", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Cliente), "Endereço", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Endereço))]
-[assembly: EdmRelationshipAttribute("Dados", "LoginCliente", "Login", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Login), "Cliente", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Cliente))]
-[assembly: EdmRelationshipAttribute("Dados", "LoginFuncionário", "Login", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Login), "Funcionário", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Funcionário))]
+[assembly: EdmRelationshipAttribute("Dados", "LoginCliente", "Login", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Login), "Cliente", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(PBR_Rent_a_car.Cliente))]
+[assembly: EdmRelationshipAttribute("Dados", "LoginFuncionário", "Login", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(PBR_Rent_a_car.Login), "Funcionário", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(PBR_Rent_a_car.Funcionário))]
 
 #endregion
 
