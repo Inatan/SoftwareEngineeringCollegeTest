@@ -24,10 +24,16 @@ namespace PBR_Rent_a_car
         Pesquisar_Funcionário pFuncionário;
         Emissão_de_Relatório eRelatório;
 
+        private Login usuárioAtual;
 
         public Interface()
         {
             InitializeComponent();
+        }
+
+        public void setUsuárioAtual(Login atual)
+        {
+            this.usuárioAtual = atual;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -151,17 +157,20 @@ namespace PBR_Rent_a_car
 
         private void cadastrarFuncionárioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //é adm?
-            cFuncionário = new Adicionar_funcionário();
-            cFuncionário.ShowDialog();
-
+            if (usuárioAtual.getPermissão() == Login.TipoDeUsuário.Gerente)
+            {
+                cFuncionário = new Adicionar_funcionário();
+                cFuncionário.ShowDialog();
+            }
         }
 
         private void emitirRelatórioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //é adm?
-            eRelatório = new Emissão_de_Relatório();
-            eRelatório.ShowDialog();
+            if (usuárioAtual.getPermissão() == Login.TipoDeUsuário.Gerente)
+            {
+                eRelatório = new Emissão_de_Relatório();
+                eRelatório.ShowDialog();
+            }
         }
 
         private void pesquisarFuncionárioToolStripMenuItem_Click(object sender, EventArgs e)
@@ -173,8 +182,13 @@ namespace PBR_Rent_a_car
         private void logoffToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CadastroLogin login = new CadastroLogin();
-            login.Show();
             this.Close();
+            login.ShowDialog();
+        }
+
+        private void Interface_Load(object sender, EventArgs e)
+        {
+
         }
 
 

@@ -38,10 +38,12 @@
             this.cadastrarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastrarModeloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastrarVeículoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pesquisarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pesquisasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pesquisarVeículosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.retornarVeículoDaManutençãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pesquisarLocaçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.locarVeículoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reservarVeículoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administradorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,8 +64,6 @@
             this.buttonPesquisarClientes = new System.Windows.Forms.Button();
             this.buttonPesquisarManutenções = new System.Windows.Forms.Button();
             this.buttonPesquisarLocação = new System.Windows.Forms.Button();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.pesquisarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonLocarVeículo = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -108,7 +108,7 @@
             // logoffToolStripMenuItem
             // 
             this.logoffToolStripMenuItem.Name = "logoffToolStripMenuItem";
-            this.logoffToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.logoffToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
             this.logoffToolStripMenuItem.Text = "Logoff";
             this.logoffToolStripMenuItem.Click += new System.EventHandler(this.logoffToolStripMenuItem_Click);
             // 
@@ -151,6 +151,13 @@
             this.cadastrarVeículoToolStripMenuItem.Text = "Cadastrar Veículo";
             this.cadastrarVeículoToolStripMenuItem.Click += new System.EventHandler(this.cadastrarVeículoToolStripMenuItem_Click);
             // 
+            // pesquisarClienteToolStripMenuItem
+            // 
+            this.pesquisarClienteToolStripMenuItem.Name = "pesquisarClienteToolStripMenuItem";
+            this.pesquisarClienteToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.pesquisarClienteToolStripMenuItem.Text = "Pesquisar Cliente";
+            this.pesquisarClienteToolStripMenuItem.Click += new System.EventHandler(this.pesquisarClienteToolStripMenuItem_Click);
+            // 
             // pesquisasToolStripMenuItem
             // 
             this.pesquisasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -184,6 +191,11 @@
             this.pesquisarLocaçõesToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.pesquisarLocaçõesToolStripMenuItem.Text = "Pesquisar Locações";
             this.pesquisarLocaçõesToolStripMenuItem.Click += new System.EventHandler(this.pesquisarLocaçõesToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(196, 6);
             // 
             // locarVeículoToolStripMenuItem
             // 
@@ -363,18 +375,6 @@
             this.buttonPesquisarLocação.UseVisualStyleBackColor = true;
             this.buttonPesquisarLocação.Click += new System.EventHandler(this.buttonPesquisarLocação_Click);
             // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(196, 6);
-            // 
-            // pesquisarClienteToolStripMenuItem
-            // 
-            this.pesquisarClienteToolStripMenuItem.Name = "pesquisarClienteToolStripMenuItem";
-            this.pesquisarClienteToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
-            this.pesquisarClienteToolStripMenuItem.Text = "Pesquisar Cliente";
-            this.pesquisarClienteToolStripMenuItem.Click += new System.EventHandler(this.pesquisarClienteToolStripMenuItem_Click);
-            // 
             // buttonLocarVeículo
             // 
             this.buttonLocarVeículo.Location = new System.Drawing.Point(735, 419);
@@ -410,6 +410,7 @@
             this.MaximizeBox = false;
             this.Name = "Interface";
             this.Text = "Sistema PBR Rent";
+            this.Load += new System.EventHandler(this.Interface_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

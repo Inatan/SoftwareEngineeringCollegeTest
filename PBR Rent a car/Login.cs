@@ -26,6 +26,7 @@ namespace PBR_Rent_a_car
 
         public TipoDeUsuário getPermissão()
         {
+            this.permissão = (TipoDeUsuário)Permissão;
             return this.permissão;
         }
 

@@ -46,12 +46,17 @@ namespace PBR_Rent_a_car
                 }
                 else if (atual.getPermissão() == Login.TipoDeUsuário.Funcionário)
                 {
-                    new Interface().ShowDialog();
+                    Interface i = new Interface();
+                    i.setUsuárioAtual(atual);
+                    i.ShowDialog();
                     this.Close();
                 }
                 else
                 {
-                    //Tela para gerentes?
+                    Interface i = new Interface();
+                    i.setUsuárioAtual(atual);
+                    i.ShowDialog();
+                    this.Close();
                 }
             } 
             else

@@ -16,7 +16,7 @@ namespace PBR_Rent_a_car
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Interface()); 
+            Application.Run(new CadastroLogin()); 
         }
     }
 }
