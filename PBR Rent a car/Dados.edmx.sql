@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, and Azure
 -- --------------------------------------------------
--- Date Created: 06/19/2014 15:14:34
+-- Date Created: 06/19/2014 17:35:29
 -- Generated from EDMX file: C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a car\Dados.edmx
 -- --------------------------------------------------
 
@@ -150,7 +150,7 @@ CREATE TABLE [dbo].[FuncionárioSet] (
     [Nome] nvarchar(max)  NOT NULL,
     [CarteiraDeTrabalho] nvarchar(max)  NOT NULL,
     [Salário] float  NOT NULL,
-    [Função] nvarchar(max)  NOT NULL,
+    [Função] tinyint  NOT NULL,
     [Login_Id] int  NOT NULL
 );
 GO

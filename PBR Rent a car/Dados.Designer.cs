@@ -920,7 +920,7 @@ namespace PBR_Rent_a_car
         /// <param name="carteiraDeTrabalho">Initial value of the CarteiraDeTrabalho property.</param>
         /// <param name="salário">Initial value of the Salário property.</param>
         /// <param name="função">Initial value of the Função property.</param>
-        public static Funcionário CreateFuncionário(global::System.Int32 id, global::System.String nome, global::System.String carteiraDeTrabalho, global::System.Double salário, global::System.String função)
+        public static Funcionário CreateFuncionário(global::System.Int32 id, global::System.String nome, global::System.String carteiraDeTrabalho, global::System.Double salário, global::System.Byte função)
         {
             Funcionário funcionário = new Funcionário();
             funcionário.Id = id;
@@ -1039,7 +1039,7 @@ namespace PBR_Rent_a_car
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String Função
+        public global::System.Byte Função
         {
             get
             {
@@ -1049,13 +1049,13 @@ namespace PBR_Rent_a_car
             {
                 OnFunçãoChanging(value);
                 ReportPropertyChanging("Função");
-                _Função = StructuralObject.SetValidValue(value, false);
+                _Função = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Função");
                 OnFunçãoChanged();
             }
         }
-        private global::System.String _Função;
-        partial void OnFunçãoChanging(global::System.String value);
+        private global::System.Byte _Função;
+        partial void OnFunçãoChanging(global::System.Byte value);
         partial void OnFunçãoChanged();
 
         #endregion

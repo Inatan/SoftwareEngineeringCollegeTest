@@ -12,6 +12,7 @@ namespace PBR_Rent_a_car
     public partial class Adicionar_funcionário : Form
     {
         private bool comma = false;
+        private Funcionário.TipoDeFuncionário função;
 
         public Adicionar_funcionário()
         {
@@ -81,9 +82,10 @@ namespace PBR_Rent_a_car
             float salário = float.Parse(textBox_Salario.Text);
             string usuário = textBox_Usuario.Text;
             string senha = textBox_Senha.Text;
-            Login novoFunc = new Login(usuário, senha, Login.TipoDeUsuário.Funcionário);
-            novoFunc.gravar();
-            Funcionário novo = new Funcionário(nome, carteira, salário, novoFunc);
+            Login.TipoDeUsuário tipo = função == Funcionário.TipoDeFuncionário.Funcionário ? Login.TipoDeUsuário.Funcionário : Login.TipoDeUsuário.Gerente;
+            Login novoFunc = new Login(usuário, senha, tipo);
+            //novoFunc.gravar();
+            Funcionário novo = new Funcionário(nome, carteira, salário, função, novoFunc);
             novo.gravar();
             this.Close();
         }
@@ -91,6 +93,22 @@ namespace PBR_Rent_a_car
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked)
+            {
+                função = Funcionário.TipoDeFuncionário.Funcionário;
+            }
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton2.Checked)
+            {
+                função = Funcionário.TipoDeFuncionário.Gerente;
+            }
         }
     }
 }
