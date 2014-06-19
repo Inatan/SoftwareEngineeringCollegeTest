@@ -50,7 +50,8 @@ namespace PBR_Rent_a_car
         {
             Cliente cProcurado = new Cliente();
             Veículo vProcurado= new Veículo();
-            int countReserva= Program.clientes.Count;
+            List<Cliente> clientes = Cliente.todosOsClientes();
+            int countReserva= clientes.Count;
             for (int i=0; i < countReserva; i++)
              //   if (Program.clientes[i].Nome == textBox_Nome_Cliente.Text.ToString())
               //      cProcurado = Program.clientes[i];

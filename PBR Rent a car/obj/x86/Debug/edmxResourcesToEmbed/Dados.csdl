@@ -287,10 +287,10 @@
   </EntityType>
   <Association Name="LoginCliente">
     <End Type="Dados.Login" Role="Login" Multiplicity="1" />
-    <End Type="Dados.Cliente" Role="Cliente" Multiplicity="1" />
+    <End Type="Dados.Cliente" Role="Cliente" Multiplicity="0..1" />
   </Association>
   <Association Name="LoginFuncionário">
     <End Type="Dados.Login" Role="Login" Multiplicity="1" />
-    <End Type="Dados.Funcionário" Role="Funcionário" Multiplicity="1" />
+    <End Type="Dados.Funcionário" Role="Funcionário" Multiplicity="0..1" />
   </Association>
 </Schema>
