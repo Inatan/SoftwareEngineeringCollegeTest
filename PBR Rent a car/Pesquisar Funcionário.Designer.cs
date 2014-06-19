@@ -60,6 +60,8 @@
             // 
             // dataGridView_Veículos
             // 
+            this.dataGridView_Veículos.AllowUserToAddRows = false;
+            this.dataGridView_Veículos.AllowUserToDeleteRows = false;
             this.dataGridView_Veículos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Veículos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nome,
@@ -106,6 +108,7 @@
             this.textBox_CarteiraTrabalho.Name = "textBox_CarteiraTrabalho";
             this.textBox_CarteiraTrabalho.Size = new System.Drawing.Size(144, 20);
             this.textBox_CarteiraTrabalho.TabIndex = 56;
+            this.textBox_CarteiraTrabalho.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_CarteiraTrabalho_KeyPress);
             // 
             // label7
             // 
@@ -122,6 +125,7 @@
             this.textBox_Função.Name = "textBox_Função";
             this.textBox_Função.Size = new System.Drawing.Size(203, 20);
             this.textBox_Função.TabIndex = 54;
+            this.textBox_Função.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Função_KeyPress);
             // 
             // label2
             // 
@@ -147,6 +151,7 @@
             this.textBox_Salario.Name = "textBox_Salario";
             this.textBox_Salario.Size = new System.Drawing.Size(228, 20);
             this.textBox_Salario.TabIndex = 51;
+            this.textBox_Salario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Salario_KeyPress);
             // 
             // textBox_Nome
             // 
@@ -154,6 +159,7 @@
             this.textBox_Nome.Name = "textBox_Nome";
             this.textBox_Nome.Size = new System.Drawing.Size(201, 20);
             this.textBox_Nome.TabIndex = 50;
+            this.textBox_Nome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Nome_KeyPress);
             // 
             // buttonCancelar
             // 
@@ -163,6 +169,7 @@
             this.buttonCancelar.TabIndex = 58;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // buttonAdicionar
             // 

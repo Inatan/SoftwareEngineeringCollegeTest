@@ -317,6 +317,7 @@
             this.Name = "Cadastro_Cliente";
             this.ShowIcon = false;
             this.Text = "Cadastro de cliente";
+            this.Load += new System.EventHandler(this.Cadastro_Cliente_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

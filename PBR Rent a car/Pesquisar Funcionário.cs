@@ -77,5 +77,10 @@ namespace PBR_Rent_a_car
         {
             apenasLetras(e);
         }
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

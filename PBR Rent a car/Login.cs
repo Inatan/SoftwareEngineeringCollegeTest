@@ -21,6 +21,7 @@ namespace PBR_Rent_a_car
             this.Usuário = usuário;
             this.Senha = senha;
             this.permissão = permissão;
+            this.Permissão = (byte)permissão;
         }
 
         public TipoDeUsuário getPermissão()
@@ -37,13 +38,19 @@ namespace PBR_Rent_a_car
         public void setDonoDaConta(Cliente cliente)
         {
             if (this.permissão == TipoDeUsuário.Cliente)
+            {
                 this.Cliente = cliente;
+                this.Cliente.Login = this;
+            }
         }
 
         public void setDonoDaConta(Funcionário funcionário)
         {
             if (this.permissão == TipoDeUsuário.Funcionário || this.permissão == TipoDeUsuário.Gerente)
+            {
                 this.Funcionário = funcionário;
+                this.Funcionário.Login = this;
+            }
         }
 
         public void gravar()

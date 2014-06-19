@@ -122,6 +122,7 @@
     <Property Name="CarteiraDeTrabalho" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Salário" Type="float" Nullable="false" />
     <Property Name="Função" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Login_Id" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="LocaçãoSet">
     <Key>
@@ -165,6 +166,7 @@
     <Property Name="Telefone" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Notificação" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Endereço_Id" Type="int" Nullable="false" />
+    <Property Name="Login_Id" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="EndereçoSet">
     <Key>
@@ -186,8 +188,6 @@
     <Property Name="Usuário" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Senha" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Permissão" Type="tinyint" Nullable="false" />
-    <Property Name="Cliente_Id" Type="int" Nullable="false" />
-    <Property Name="Funcionário_Id" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="VeículoHistórico">
     <End Role="Veículo" Type="Dados.Store.VeículoSet" Multiplicity="*" />
@@ -358,26 +358,26 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="LoginCliente">
-    <End Role="Login" Type="Dados.Store.LoginSet" Multiplicity="*" />
-    <End Role="Cliente" Type="Dados.Store.ClienteSet" Multiplicity="1" />
+    <End Role="Login" Type="Dados.Store.LoginSet" Multiplicity="1" />
+    <End Role="Cliente" Type="Dados.Store.ClienteSet" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Cliente">
+      <Principal Role="Login">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="Login">
-        <PropertyRef Name="Cliente_Id" />
+      <Dependent Role="Cliente">
+        <PropertyRef Name="Login_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="LoginFuncionário">
-    <End Role="Login" Type="Dados.Store.LoginSet" Multiplicity="*" />
-    <End Role="Funcionário" Type="Dados.Store.FuncionárioSet" Multiplicity="1" />
+    <End Role="Login" Type="Dados.Store.LoginSet" Multiplicity="1" />
+    <End Role="Funcionário" Type="Dados.Store.FuncionárioSet" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Funcionário">
+      <Principal Role="Login">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="Login">
-        <PropertyRef Name="Funcionário_Id" />
+      <Dependent Role="Funcionário">
+        <PropertyRef Name="Login_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

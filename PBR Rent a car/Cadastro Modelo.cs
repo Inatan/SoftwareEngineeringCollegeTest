@@ -23,7 +23,8 @@ namespace PBR_Rent_a_car
 
         private void Button_Cadastrar_Click(object sender, EventArgs e)
         {
-           // Program.modelos.Add(new Modelo(textBox_Nome.Text, textBox_Fornecedor.Text));
+            Modelo novo = new Modelo(textBox_Nome.Text, textBox_Fornecedor.Text);
+            novo.gravar();
             this.Close();
         }
 
@@ -50,6 +51,12 @@ namespace PBR_Rent_a_car
         private void textBox_Fornecedor_KeyPress(object sender, KeyPressEventArgs e)
         {
             apenasLetras(e);
+
+        }
+
+        private void Cadastro_Modelo_Load(object sender, EventArgs e)
+        {
+
         }
 
     }

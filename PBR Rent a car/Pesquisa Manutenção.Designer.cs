@@ -175,6 +175,8 @@
             // 
             // dataGridView_Veículos
             // 
+            this.dataGridView_Veículos.AllowUserToAddRows = false;
+            this.dataGridView_Veículos.AllowUserToDeleteRows = false;
             this.dataGridView_Veículos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Veículos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Modelo,

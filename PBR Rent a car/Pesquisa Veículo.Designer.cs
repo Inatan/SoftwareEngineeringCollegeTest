@@ -54,6 +54,8 @@
             // 
             // dataGridView_Veículos
             // 
+            this.dataGridView_Veículos.AllowUserToAddRows = false;
+            this.dataGridView_Veículos.AllowUserToDeleteRows = false;
             this.dataGridView_Veículos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Veículos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Modelo,
@@ -126,6 +128,7 @@
             this.textBox_Fornecedor.Name = "textBox_Fornecedor";
             this.textBox_Fornecedor.Size = new System.Drawing.Size(228, 20);
             this.textBox_Fornecedor.TabIndex = 14;
+            this.textBox_Fornecedor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Fornecedor_KeyPress);
             // 
             // textBox_Nome
             // 
@@ -133,6 +136,7 @@
             this.textBox_Nome.Name = "textBox_Nome";
             this.textBox_Nome.Size = new System.Drawing.Size(201, 20);
             this.textBox_Nome.TabIndex = 13;
+            this.textBox_Nome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Nome_KeyPress);
             // 
             // label8
             // 
@@ -167,6 +171,7 @@
             this.textBox_Categoria.Name = "textBox_Categoria";
             this.textBox_Categoria.Size = new System.Drawing.Size(203, 20);
             this.textBox_Categoria.TabIndex = 29;
+            this.textBox_Categoria.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Categoria_KeyPress);
             // 
             // textBox_Cor
             // 
@@ -174,6 +179,7 @@
             this.textBox_Cor.Name = "textBox_Cor";
             this.textBox_Cor.Size = new System.Drawing.Size(183, 20);
             this.textBox_Cor.TabIndex = 28;
+            this.textBox_Cor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Cor_KeyPress);
             // 
             // textBox_Ano
             // 
@@ -181,6 +187,7 @@
             this.textBox_Ano.Name = "textBox_Ano";
             this.textBox_Ano.Size = new System.Drawing.Size(48, 20);
             this.textBox_Ano.TabIndex = 27;
+            this.textBox_Ano.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Ano_KeyPress);
             // 
             // label3
             // 
@@ -197,6 +204,7 @@
             this.textBox_Quilometragem.Name = "textBox_Quilometragem";
             this.textBox_Quilometragem.Size = new System.Drawing.Size(144, 20);
             this.textBox_Quilometragem.TabIndex = 33;
+            this.textBox_Quilometragem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Quilometragem_KeyPress);
             // 
             // button_Cancelar
             // 
@@ -243,6 +251,7 @@
             this.Name = "Pesquisa_Veículos";
             this.ShowIcon = false;
             this.Text = "Pesquisa de Veículo";
+            this.Load += new System.EventHandler(this.Pesquisa_Veículos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Veículos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

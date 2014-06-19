@@ -31,7 +31,7 @@
             this.buttonAlterarDados = new System.Windows.Forms.Button();
             this.button_Cancelar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox_Quilometragem = new System.Windows.Forms.TextBox();
+            this.textBox_CPF_CNPJ = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox_Nome = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -67,6 +67,7 @@
             this.button_Cancelar.TabIndex = 60;
             this.button_Cancelar.Text = "Cancelar";
             this.button_Cancelar.UseVisualStyleBackColor = true;
+            this.button_Cancelar.Click += new System.EventHandler(this.button_Cancelar_Click);
             // 
             // label3
             // 
@@ -77,12 +78,14 @@
             this.label3.TabIndex = 59;
             this.label3.Text = "CPF/CNPJ";
             // 
-            // textBox_Quilometragem
+            // textBox_CPF_CNPJ
             // 
-            this.textBox_Quilometragem.Location = new System.Drawing.Point(12, 368);
-            this.textBox_Quilometragem.Name = "textBox_Quilometragem";
-            this.textBox_Quilometragem.Size = new System.Drawing.Size(144, 20);
-            this.textBox_Quilometragem.TabIndex = 58;
+            this.textBox_CPF_CNPJ.Location = new System.Drawing.Point(12, 368);
+            this.textBox_CPF_CNPJ.MaxLength = 14;
+            this.textBox_CPF_CNPJ.Name = "textBox_CPF_CNPJ";
+            this.textBox_CPF_CNPJ.Size = new System.Drawing.Size(144, 20);
+            this.textBox_CPF_CNPJ.TabIndex = 58;
+            this.textBox_CPF_CNPJ.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_CPF_CNPJ_KeyPress);
             // 
             // label1
             // 
@@ -99,6 +102,7 @@
             this.textBox_Nome.Name = "textBox_Nome";
             this.textBox_Nome.Size = new System.Drawing.Size(201, 20);
             this.textBox_Nome.TabIndex = 56;
+            this.textBox_Nome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Nome_KeyPress);
             // 
             // button1
             // 
@@ -112,6 +116,8 @@
             // 
             // dataGridView_Veículos
             // 
+            this.dataGridView_Veículos.AllowUserToAddRows = false;
+            this.dataGridView_Veículos.AllowUserToDeleteRows = false;
             this.dataGridView_Veículos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Veículos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nome,
@@ -174,6 +180,7 @@
             this.textBox_Categoria.Name = "textBox_Categoria";
             this.textBox_Categoria.Size = new System.Drawing.Size(203, 20);
             this.textBox_Categoria.TabIndex = 65;
+            this.textBox_Categoria.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Categoria_KeyPress);
             // 
             // textBox_Cor
             // 
@@ -181,6 +188,7 @@
             this.textBox_Cor.Name = "textBox_Cor";
             this.textBox_Cor.Size = new System.Drawing.Size(183, 20);
             this.textBox_Cor.TabIndex = 64;
+            this.textBox_Cor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Cor_KeyPress);
             // 
             // label2
             // 
@@ -197,6 +205,7 @@
             this.textBox_Fornecedor.Name = "textBox_Fornecedor";
             this.textBox_Fornecedor.Size = new System.Drawing.Size(228, 20);
             this.textBox_Fornecedor.TabIndex = 62;
+            this.textBox_Fornecedor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Fornecedor_KeyPress);
             // 
             // Pesquisar_Locações
             // 
@@ -212,7 +221,7 @@
             this.Controls.Add(this.buttonAlterarDados);
             this.Controls.Add(this.button_Cancelar);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox_Quilometragem);
+            this.Controls.Add(this.textBox_CPF_CNPJ);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox_Nome);
             this.Controls.Add(this.button1);
@@ -233,7 +242,7 @@
         private System.Windows.Forms.Button buttonAlterarDados;
         private System.Windows.Forms.Button button_Cancelar;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox_Quilometragem;
+        private System.Windows.Forms.TextBox textBox_CPF_CNPJ;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox_Nome;
         private System.Windows.Forms.Button button1;

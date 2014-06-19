@@ -16,6 +16,15 @@ namespace PBR_Rent_a_car
         Cadastro_Cliente cCliente;
         Reserva_de_veículo rVeículo;
         Pesquisa_Veículos pVeículo;
+        PesquisarCliente pClientes;
+        Pesquisa_Manutenção pManutenção;
+        Pesquisar_Locações pLocações;
+        Criar_Locação lVeículo;
+        Adicionar_funcionário cFuncionário;
+        Pesquisar_Funcionário pFuncionário;
+        Emissão_de_Relatório eRelatório;
+
+
         public Interface()
         {
             InitializeComponent();
@@ -91,6 +100,84 @@ namespace PBR_Rent_a_car
             PBR_Rent_a_Car About = new PBR_Rent_a_Car();
             About.ShowDialog();
         }
+
+        private void buttonPesquisarClientes_Click(object sender, EventArgs e)
+        {
+            pClientes = new PesquisarCliente();
+            pClientes.ShowDialog();
+        }
+
+        private void buttonPesquisarManutenções_Click(object sender, EventArgs e)
+        {
+            pManutenção = new Pesquisa_Manutenção();
+            pManutenção.ShowDialog();
+        }
+
+        private void retornarVeículoDaManutençãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pManutenção = new Pesquisa_Manutenção();
+            pManutenção.ShowDialog();
+        }
+
+        private void buttonPesquisarLocação_Click(object sender, EventArgs e)
+        {
+            pLocações = new Pesquisar_Locações();
+            pLocações.ShowDialog();
+        }
+
+        private void pesquisarLocaçõesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pLocações = new Pesquisar_Locações();
+            pLocações.ShowDialog();
+        }
+
+        private void pesquisarClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pClientes = new PesquisarCliente();
+            pClientes.ShowDialog();
+        }
+
+        private void locarVeículoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            lVeículo = new Criar_Locação();
+            lVeículo.ShowDialog();
+        }
+
+        private void buttonLocarVeículo_Click(object sender, EventArgs e)
+        {
+            lVeículo = new Criar_Locação();
+            lVeículo.ShowDialog();
+        }
+
+        private void cadastrarFuncionárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //é adm?
+            cFuncionário = new Adicionar_funcionário();
+            cFuncionário.ShowDialog();
+
+        }
+
+        private void emitirRelatórioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //é adm?
+            eRelatório = new Emissão_de_Relatório();
+            eRelatório.ShowDialog();
+        }
+
+        private void pesquisarFuncionárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pFuncionário = new Pesquisar_Funcionário();
+            pFuncionário.ShowDialog();
+        }
+
+        private void logoffToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CadastroLogin login = new CadastroLogin();
+            login.Show();
+            this.Close();
+        }
+
+
 
     }
 }

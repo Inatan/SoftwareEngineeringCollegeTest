@@ -127,7 +127,7 @@
             this.MinimizeBox = false;
             this.Name = "Devolução_de_Veículo";
             this.ShowIcon = false;
-            this.Text = "Devolução de Veículo";
+            this.Text = "p";
             this.ResumeLayout(false);
             this.PerformLayout();
 

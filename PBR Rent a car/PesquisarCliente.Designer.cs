@@ -30,6 +30,11 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView_Veículos = new System.Windows.Forms.DataGridView();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CPF_CNPJ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CEP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Endereço = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefones = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button_Cancelar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox_Quilometragem = new System.Windows.Forms.TextBox();
@@ -48,11 +53,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.Telefones = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Endereço = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CEP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CPF_CNPJ = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Veículos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,7 +67,8 @@
             // 
             // dataGridView_Veículos
             // 
-            this.dataGridView_Veículos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_Veículos.AllowUserToAddRows = false;
+            this.dataGridView_Veículos.AllowUserToDeleteRows = false;
             this.dataGridView_Veículos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nome,
             this.CPF_CNPJ,
@@ -79,6 +80,31 @@
             this.dataGridView_Veículos.Size = new System.Drawing.Size(549, 241);
             this.dataGridView_Veículos.TabIndex = 2;
             // 
+            // Nome
+            // 
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
+            // 
+            // CPF_CNPJ
+            // 
+            this.CPF_CNPJ.HeaderText = "CPF/CNPJ";
+            this.CPF_CNPJ.Name = "CPF_CNPJ";
+            // 
+            // CEP
+            // 
+            this.CEP.HeaderText = "CEP";
+            this.CEP.Name = "CEP";
+            // 
+            // Endereço
+            // 
+            this.Endereço.HeaderText = "Endereço";
+            this.Endereço.Name = "Endereço";
+            // 
+            // Telefones
+            // 
+            this.Telefones.HeaderText = "Telefones";
+            this.Telefones.Name = "Telefones";
+            // 
             // button_Cancelar
             // 
             this.button_Cancelar.Location = new System.Drawing.Point(488, 481);
@@ -87,6 +113,7 @@
             this.button_Cancelar.TabIndex = 48;
             this.button_Cancelar.Text = "Cancelar";
             this.button_Cancelar.UseVisualStyleBackColor = true;
+            this.button_Cancelar.Click += new System.EventHandler(this.button_Cancelar_Click);
             // 
             // label3
             // 
@@ -100,6 +127,7 @@
             // textBox_Quilometragem
             // 
             this.textBox_Quilometragem.Location = new System.Drawing.Point(10, 364);
+            this.textBox_Quilometragem.MaxLength = 14;
             this.textBox_Quilometragem.Name = "textBox_Quilometragem";
             this.textBox_Quilometragem.Size = new System.Drawing.Size(144, 20);
             this.textBox_Quilometragem.TabIndex = 46;
@@ -128,6 +156,7 @@
             this.buttonAlterarDados.TabIndex = 53;
             this.buttonAlterarDados.Text = "Alterar Dados";
             this.buttonAlterarDados.UseVisualStyleBackColor = true;
+            this.buttonAlterarDados.Click += new System.EventHandler(this.buttonAlterarDados_Click);
             // 
             // textBox_Fornecedor
             // 
@@ -148,6 +177,7 @@
             // textBox_Ano
             // 
             this.textBox_Ano.Location = new System.Drawing.Point(282, 315);
+            this.textBox_Ano.MaxLength = 2;
             this.textBox_Ano.Name = "textBox_Ano";
             this.textBox_Ano.Size = new System.Drawing.Size(29, 20);
             this.textBox_Ano.TabIndex = 40;
@@ -196,6 +226,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(284, 444);
+            this.textBox1.MaxLength = 5;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(32, 20);
             this.textBox1.TabIndex = 49;
@@ -221,34 +252,10 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(10, 416);
+            this.textBox2.MaxLength = 8;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(144, 20);
             this.textBox2.TabIndex = 51;
-            // 
-            // Telefones
-            // 
-            this.Telefones.HeaderText = "Telefones";
-            this.Telefones.Name = "Telefones";
-            // 
-            // Endereço
-            // 
-            this.Endereço.HeaderText = "Endereço";
-            this.Endereço.Name = "Endereço";
-            // 
-            // CEP
-            // 
-            this.CEP.HeaderText = "CEP";
-            this.CEP.Name = "CEP";
-            // 
-            // CPF_CNPJ
-            // 
-            this.CPF_CNPJ.HeaderText = "CPF/CNPJ";
-            this.CPF_CNPJ.Name = "CPF_CNPJ";
-            // 
-            // Nome
-            // 
-            this.Nome.HeaderText = "Nome";
-            this.Nome.Name = "Nome";
             // 
             // PesquisarCliente
             // 
@@ -280,6 +287,7 @@
             this.Name = "PesquisarCliente";
             this.ShowIcon = false;
             this.Text = "PesquisarCliente";
+            this.Load += new System.EventHandler(this.PesquisarCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Veículos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

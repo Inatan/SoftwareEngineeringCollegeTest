@@ -126,6 +126,7 @@
             this.buttonCancelar.TabIndex = 67;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // Adicionar_funcionário
             // 
