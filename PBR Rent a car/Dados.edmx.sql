@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 -- Date Created: 06/19/2014 12:46:28
 =======
 -- Date Created: 06/19/2014 17:35:29
@@ -12,6 +13,9 @@
 =======
 -- Date Created: 06/19/2014 17:35:29
 >>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
+=======
+-- Date Created: 06/19/2014 12:46:28
+>>>>>>> f4525a2cb45744424d6bb856ffc06eaa25e5f24b
 =======
 -- Date Created: 06/19/2014 12:46:28
 >>>>>>> f4525a2cb45744424d6bb856ffc06eaa25e5f24b
@@ -165,6 +169,7 @@ CREATE TABLE [dbo].[FuncionárioSet] (
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     [Função] nvarchar(max)  NOT NULL,
 =======
     [Função] tinyint  NOT NULL,
@@ -172,6 +177,9 @@ CREATE TABLE [dbo].[FuncionárioSet] (
 =======
     [Função] tinyint  NOT NULL,
 >>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
+=======
+    [Função] nvarchar(max)  NOT NULL,
+>>>>>>> f4525a2cb45744424d6bb856ffc06eaa25e5f24b
 =======
     [Função] nvarchar(max)  NOT NULL,
 >>>>>>> f4525a2cb45744424d6bb856ffc06eaa25e5f24b

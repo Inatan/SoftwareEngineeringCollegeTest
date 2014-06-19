@@ -74,6 +74,7 @@ namespace PBR_Rent_a_car
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
@@ -103,10 +104,13 @@ namespace PBR_Rent_a_car
 >>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
 =======
 >>>>>>> f4525a2cb45744424d6bb856ffc06eaa25e5f24b
+=======
+>>>>>>> f4525a2cb45744424d6bb856ffc06eaa25e5f24b
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -133,6 +137,8 @@ namespace PBR_Rent_a_car
 >>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
 =======
 >>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
+=======
+>>>>>>> f4525a2cb45744424d6bb856ffc06eaa25e5f24b
 =======
 >>>>>>> f4525a2cb45744424d6bb856ffc06eaa25e5f24b
     }

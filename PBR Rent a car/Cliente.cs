@@ -22,6 +22,9 @@ namespace PBR_Rent_a_car
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f4525a2cb45744424d6bb856ffc06eaa25e5f24b
 =======
 >>>>>>> f4525a2cb45744424d6bb856ffc06eaa25e5f24b
             this.Telefone = SerializarTelefones();
@@ -36,6 +39,7 @@ namespace PBR_Rent_a_car
         {
             return this.Telefone.Split('/').ToList<string>();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             this.Login = login;
             this.Login.setDonoDaConta(this);
@@ -44,6 +48,8 @@ namespace PBR_Rent_a_car
             this.Login = login;
             this.Login.setDonoDaConta(this);
 >>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
+=======
+>>>>>>> f4525a2cb45744424d6bb856ffc06eaa25e5f24b
 =======
 >>>>>>> f4525a2cb45744424d6bb856ffc06eaa25e5f24b
         }

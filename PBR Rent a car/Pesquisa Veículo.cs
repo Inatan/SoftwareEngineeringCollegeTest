@@ -20,6 +20,7 @@ namespace PBR_Rent_a_car
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             
 =======
 
@@ -27,6 +28,9 @@ namespace PBR_Rent_a_car
 =======
 
 >>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
+=======
+            
+>>>>>>> f4525a2cb45744424d6bb856ffc06eaa25e5f24b
 =======
             
 >>>>>>> f4525a2cb45744424d6bb856ffc06eaa25e5f24b
@@ -41,6 +45,7 @@ namespace PBR_Rent_a_car
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
              //   dataGridView_Veículos.Rows[i].Cells[4].Value = Program.veículos[i].status.ToString();
 =======
                 //   dataGridView_Veículos.Rows[i].Cells[4].Value = Program.veículos[i].status.ToString();
@@ -48,6 +53,9 @@ namespace PBR_Rent_a_car
 =======
                 //   dataGridView_Veículos.Rows[i].Cells[4].Value = Program.veículos[i].status.ToString();
 >>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
+=======
+             //   dataGridView_Veículos.Rows[i].Cells[4].Value = Program.veículos[i].status.ToString();
+>>>>>>> f4525a2cb45744424d6bb856ffc06eaa25e5f24b
 =======
              //   dataGridView_Veículos.Rows[i].Cells[4].Value = Program.veículos[i].status.ToString();
 >>>>>>> f4525a2cb45744424d6bb856ffc06eaa25e5f24b
@@ -80,6 +88,7 @@ namespace PBR_Rent_a_car
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 //    dataGridView_Veículos.Rows[i].Cells[4].Value = Program.veículos[i].status.ToString();
 =======
                     //    dataGridView_Veículos.Rows[i].Cells[4].Value = Program.veículos[i].status.ToString();
@@ -87,6 +96,9 @@ namespace PBR_Rent_a_car
 =======
                     //    dataGridView_Veículos.Rows[i].Cells[4].Value = Program.veículos[i].status.ToString();
 >>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
+=======
+                //    dataGridView_Veículos.Rows[i].Cells[4].Value = Program.veículos[i].status.ToString();
+>>>>>>> f4525a2cb45744424d6bb856ffc06eaa25e5f24b
 =======
                 //    dataGridView_Veículos.Rows[i].Cells[4].Value = Program.veículos[i].status.ToString();
 >>>>>>> f4525a2cb45744424d6bb856ffc06eaa25e5f24b
@@ -100,6 +112,7 @@ namespace PBR_Rent_a_car
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             int RowIndex=dataGridView_Veículos.CurrentRow.Index;
 =======
             int RowIndex = dataGridView_Veículos.CurrentRow.Index;
@@ -107,6 +120,9 @@ namespace PBR_Rent_a_car
 =======
             int RowIndex = dataGridView_Veículos.CurrentRow.Index;
 >>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
+=======
+            int RowIndex=dataGridView_Veículos.CurrentRow.Index;
+>>>>>>> f4525a2cb45744424d6bb856ffc06eaa25e5f24b
 =======
             int RowIndex=dataGridView_Veículos.CurrentRow.Index;
 >>>>>>> f4525a2cb45744424d6bb856ffc06eaa25e5f24b
@@ -121,6 +137,7 @@ namespace PBR_Rent_a_car
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                    
                 
@@ -128,6 +145,11 @@ namespace PBR_Rent_a_car
 >>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
 =======
 >>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
+=======
+
+                   
+                
+>>>>>>> f4525a2cb45744424d6bb856ffc06eaa25e5f24b
 =======
 
                    
@@ -192,12 +214,15 @@ namespace PBR_Rent_a_car
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
 =======
 
 >>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
+=======
+>>>>>>> f4525a2cb45744424d6bb856ffc06eaa25e5f24b
 =======
 >>>>>>> f4525a2cb45744424d6bb856ffc06eaa25e5f24b
 

@@ -19,6 +19,7 @@ namespace PBR_Rent_a_car
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             Application.Run(new Interface()); 
 =======
             Application.Run(new CadastroLogin()); 
@@ -26,6 +27,9 @@ namespace PBR_Rent_a_car
 =======
             Application.Run(new CadastroLogin()); 
 >>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
+=======
+            Application.Run(new Interface()); 
+>>>>>>> f4525a2cb45744424d6bb856ffc06eaa25e5f24b
 =======
             Application.Run(new Interface()); 
 >>>>>>> f4525a2cb45744424d6bb856ffc06eaa25e5f24b
