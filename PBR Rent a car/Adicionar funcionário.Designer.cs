@@ -38,6 +38,10 @@
             this.textBox_Nome = new System.Windows.Forms.TextBox();
             this.buttonAdicionar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox_Usuario = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox_Senha = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label3
@@ -111,27 +115,65 @@
             // 
             // buttonAdicionar
             // 
-            this.buttonAdicionar.Location = new System.Drawing.Point(13, 189);
+            this.buttonAdicionar.Location = new System.Drawing.Point(12, 259);
             this.buttonAdicionar.Name = "buttonAdicionar";
             this.buttonAdicionar.Size = new System.Drawing.Size(75, 23);
             this.buttonAdicionar.TabIndex = 66;
             this.buttonAdicionar.Text = "Adicionar";
             this.buttonAdicionar.UseVisualStyleBackColor = true;
+            this.buttonAdicionar.Click += new System.EventHandler(this.buttonAdicionar_Click);
             // 
             // buttonCancelar
             // 
-            this.buttonCancelar.Location = new System.Drawing.Point(144, 189);
+            this.buttonCancelar.Location = new System.Drawing.Point(143, 259);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(75, 23);
             this.buttonCancelar.TabIndex = 67;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 178);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(43, 13);
+            this.label4.TabIndex = 68;
+            this.label4.Text = "Usuário";
+            // 
+            // textBox_Usuario
+            // 
+            this.textBox_Usuario.Location = new System.Drawing.Point(12, 194);
+            this.textBox_Usuario.Name = "textBox_Usuario";
+            this.textBox_Usuario.Size = new System.Drawing.Size(206, 20);
+            this.textBox_Usuario.TabIndex = 69;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(11, 217);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(38, 13);
+            this.label5.TabIndex = 70;
+            this.label5.Text = "Senha";
+            // 
+            // textBox_Senha
+            // 
+            this.textBox_Senha.Location = new System.Drawing.Point(12, 233);
+            this.textBox_Senha.Name = "textBox_Senha";
+            this.textBox_Senha.Size = new System.Drawing.Size(206, 20);
+            this.textBox_Senha.TabIndex = 71;
             // 
             // Adicionar_funcionário
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(231, 224);
+            this.ClientSize = new System.Drawing.Size(231, 289);
+            this.Controls.Add(this.textBox_Senha);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.textBox_Usuario);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonAdicionar);
             this.Controls.Add(this.label3);
@@ -147,6 +189,7 @@
             this.Name = "Adicionar_funcionário";
             this.ShowIcon = false;
             this.Text = "Adicionar Funcionário";
+            this.Load += new System.EventHandler(this.Adicionar_funcionário_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -164,5 +207,9 @@
         private System.Windows.Forms.TextBox textBox_Nome;
         private System.Windows.Forms.Button buttonAdicionar;
         private System.Windows.Forms.Button buttonCancelar;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox_Usuario;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox_Senha;
     }
 }

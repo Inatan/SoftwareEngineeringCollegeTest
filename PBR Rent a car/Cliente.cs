@@ -10,7 +10,7 @@ namespace PBR_Rent_a_car
         public List<string> telefones { get; private set; } //Para a próxima etapa...
 
         public Cliente() { }
-        public Cliente(string nome, string cpfcnpj, string telefoneFixo, string telefoneMóvel, Endereço endereço)
+        public Cliente(string nome, string cpfcnpj, string telefoneFixo, string telefoneMóvel, Endereço endereço, Login login)
         {
             this.Nome=nome;
             this.CPF = cpfcnpj;
@@ -18,6 +18,8 @@ namespace PBR_Rent_a_car
             telefones= new List<string>();
             this.telefones.Add(telefoneFixo);
             this.telefones.Add(telefoneMóvel);
+            this.Login = login;
+            this.Login.setDonoDaConta(this);
         }
 
         public void gravar()

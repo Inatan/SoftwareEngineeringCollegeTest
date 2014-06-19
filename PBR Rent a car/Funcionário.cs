@@ -8,11 +8,13 @@ namespace PBR_Rent_a_car
     public partial class Funcionário
     {
         public Funcionário() { }
-        public Funcionário(string nome, string carteiraTrab, float salário)
+        public Funcionário(string nome, string carteiraTrab, float salário, Login login)
         {
             this.Nome = nome;
             this.CarteiraDeTrabalho = carteiraTrab;
             this.Salário = salário;
+            this.Login = login;
+            this.Login.setDonoDaConta(this);
         }
 
         public void gravar()

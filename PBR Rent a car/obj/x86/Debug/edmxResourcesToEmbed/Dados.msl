@@ -220,19 +220,19 @@
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="LoginCliente" TypeName="Dados.LoginCliente" StoreEntitySet="LoginSet">
-      <EndProperty Name="Cliente">
-        <ScalarProperty Name="Id" ColumnName="Cliente_Id" />
-      </EndProperty>
+    <AssociationSetMapping Name="LoginCliente" TypeName="Dados.LoginCliente" StoreEntitySet="ClienteSet">
       <EndProperty Name="Login">
+        <ScalarProperty Name="Id" ColumnName="Login_Id" />
+      </EndProperty>
+      <EndProperty Name="Cliente">
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="LoginFuncionário" TypeName="Dados.LoginFuncionário" StoreEntitySet="LoginSet">
-      <EndProperty Name="Funcionário">
-        <ScalarProperty Name="Id" ColumnName="Funcionário_Id" />
-      </EndProperty>
+    <AssociationSetMapping Name="LoginFuncionário" TypeName="Dados.LoginFuncionário" StoreEntitySet="FuncionárioSet">
       <EndProperty Name="Login">
+        <ScalarProperty Name="Id" ColumnName="Login_Id" />
+      </EndProperty>
+      <EndProperty Name="Funcionário">
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>

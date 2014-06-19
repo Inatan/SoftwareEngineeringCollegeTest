@@ -47,8 +47,6 @@ namespace PBR_Rent_a_car
                      e.Handled = true;
         }
 
-
-
         private void textBox_Nome_KeyPress(object sender, KeyPressEventArgs e)
         {
             apenasLetras(e);
@@ -69,6 +67,30 @@ namespace PBR_Rent_a_car
         private void textBox_Função_KeyPress(object sender, KeyPressEventArgs e)
         {
             apenasLetras(e);
+        }
+
+        private void Adicionar_funcionário_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonAdicionar_Click(object sender, EventArgs e)
+        {
+            string nome = textBox_Nome.Text;
+            string carteira = textBox_CarteiraTrabalho.Text;
+            float salário = float.Parse(textBox_Salario.Text);
+            string usuário = textBox_Usuario.Text;
+            string senha = textBox_Senha.Text;
+            Login novoFunc = new Login(usuário, senha, Login.TipoDeUsuário.Funcionário);
+            novoFunc.gravar();
+            Funcionário novo = new Funcionário(nome, carteira, salário, novoFunc);
+            novo.gravar();
+            this.Close();
+        }
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
