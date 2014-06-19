@@ -123,6 +123,7 @@
     <Property Name="Salário" Type="float" Nullable="false" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Property Name="Função" Type="nvarchar(max)" Nullable="false" />
 =======
     <Property Name="Função" Type="tinyint" Nullable="false" />
@@ -130,6 +131,9 @@
 =======
     <Property Name="Função" Type="tinyint" Nullable="false" />
 >>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
+=======
+    <Property Name="Função" Type="nvarchar(max)" Nullable="false" />
+>>>>>>> f4525a2cb45744424d6bb856ffc06eaa25e5f24b
     <Property Name="Login_Id" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="LocaçãoSet">

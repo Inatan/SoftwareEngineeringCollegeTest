@@ -12,7 +12,6 @@ namespace PBR_Rent_a_car
     public partial class Adicionar_funcionário : Form
     {
         private bool comma = false;
-        private Funcionário.TipoDeFuncionário função;
 
         public Adicionar_funcionário()
         {
@@ -48,6 +47,8 @@ namespace PBR_Rent_a_car
                      e.Handled = true;
         }
 
+
+
         private void textBox_Nome_KeyPress(object sender, KeyPressEventArgs e)
         {
             apenasLetras(e);
@@ -70,6 +71,7 @@ namespace PBR_Rent_a_car
             apenasLetras(e);
         }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -99,10 +101,13 @@ namespace PBR_Rent_a_car
 >>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
 =======
 >>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
+=======
+>>>>>>> f4525a2cb45744424d6bb856ffc06eaa25e5f24b
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -128,5 +133,7 @@ namespace PBR_Rent_a_car
 >>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
 =======
 >>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
+=======
+>>>>>>> f4525a2cb45744424d6bb856ffc06eaa25e5f24b
     }
 }

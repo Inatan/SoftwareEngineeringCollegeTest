@@ -19,6 +19,7 @@ namespace PBR_Rent_a_car
             int CountVeículos = veículos.Count;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             
 =======
 
@@ -26,6 +27,9 @@ namespace PBR_Rent_a_car
 =======
 
 >>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
+=======
+            
+>>>>>>> f4525a2cb45744424d6bb856ffc06eaa25e5f24b
             InitializeComponent();
             for (int i = 0; i < CountVeículos; i++)
             {
@@ -36,6 +40,7 @@ namespace PBR_Rent_a_car
                 dataGridView_Veículos.Rows[i].Cells[3].Value = veículos[i].Quilometragem.ToString();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
              //   dataGridView_Veículos.Rows[i].Cells[4].Value = Program.veículos[i].status.ToString();
 =======
                 //   dataGridView_Veículos.Rows[i].Cells[4].Value = Program.veículos[i].status.ToString();
@@ -43,9 +48,11 @@ namespace PBR_Rent_a_car
 =======
                 //   dataGridView_Veículos.Rows[i].Cells[4].Value = Program.veículos[i].status.ToString();
 >>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
+=======
+             //   dataGridView_Veículos.Rows[i].Cells[4].Value = Program.veículos[i].status.ToString();
+>>>>>>> f4525a2cb45744424d6bb856ffc06eaa25e5f24b
             }
         }
-
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -72,6 +79,7 @@ namespace PBR_Rent_a_car
                     dataGridView_Veículos.Rows[i].Cells[3].Value = veículos[i].Quilometragem.ToString();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 //    dataGridView_Veículos.Rows[i].Cells[4].Value = Program.veículos[i].status.ToString();
 =======
                     //    dataGridView_Veículos.Rows[i].Cells[4].Value = Program.veículos[i].status.ToString();
@@ -79,6 +87,9 @@ namespace PBR_Rent_a_car
 =======
                     //    dataGridView_Veículos.Rows[i].Cells[4].Value = Program.veículos[i].status.ToString();
 >>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
+=======
+                //    dataGridView_Veículos.Rows[i].Cells[4].Value = Program.veículos[i].status.ToString();
+>>>>>>> f4525a2cb45744424d6bb856ffc06eaa25e5f24b
                 }
             }
         }
@@ -88,6 +99,7 @@ namespace PBR_Rent_a_car
             List<Veículo> veículos = Veículo.todosOsVeículos();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             int RowIndex=dataGridView_Veículos.CurrentRow.Index;
 =======
             int RowIndex = dataGridView_Veículos.CurrentRow.Index;
@@ -95,6 +107,9 @@ namespace PBR_Rent_a_car
 =======
             int RowIndex = dataGridView_Veículos.CurrentRow.Index;
 >>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
+=======
+            int RowIndex=dataGridView_Veículos.CurrentRow.Index;
+>>>>>>> f4525a2cb45744424d6bb856ffc06eaa25e5f24b
             int CountVeículos = veículos.Count;
             for (int i = 0; i < CountVeículos; i++)
             {
@@ -105,6 +120,7 @@ namespace PBR_Rent_a_car
                     veículoPesquisado = veículos[i];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                    
                 
@@ -112,8 +128,13 @@ namespace PBR_Rent_a_car
 >>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
 =======
 >>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
+=======
+
+                   
+                
+>>>>>>> f4525a2cb45744424d6bb856ffc06eaa25e5f24b
             }
-            // MessageBox.Show(veículoPesquisado.Cor);
+           // MessageBox.Show(veículoPesquisado.Cor);
             this.Close();
         }
 
@@ -170,12 +191,15 @@ namespace PBR_Rent_a_car
         }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
 =======
 
 >>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
+=======
+>>>>>>> f4525a2cb45744424d6bb856ffc06eaa25e5f24b
 
     }
 }

@@ -136,7 +136,7 @@
     <Property Type="String" Name="Nome" Nullable="false" />
     <Property Type="String" Name="CarteiraDeTrabalho" Nullable="false" />
     <Property Type="Double" Name="Salário" Nullable="false" />
-    <Property Type="Byte" Name="Função" Nullable="false" />
+    <Property Type="String" Name="Função" Nullable="false" />
     <NavigationProperty Name="Login" Relationship="Dados.LoginFuncionário" FromRole="Funcionário" ToRole="Login" />
   </EntityType>
   <EntityType Name="Locação">

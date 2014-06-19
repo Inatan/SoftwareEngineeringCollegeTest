@@ -54,10 +54,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.Button_Cadastrar = new System.Windows.Forms.Button();
             this.Button_Cancelar = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.textBox_Usuario = new System.Windows.Forms.TextBox();
-            this.textBox_Senha = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -297,49 +293,11 @@
             this.Button_Cancelar.UseVisualStyleBackColor = true;
             this.Button_Cancelar.Click += new System.EventHandler(this.Button_Cancelar_Click);
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(12, 205);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(43, 13);
-            this.label12.TabIndex = 14;
-            this.label12.Text = "Usuário";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(140, 205);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(38, 13);
-            this.label13.TabIndex = 15;
-            this.label13.Text = "Senha";
-            // 
-            // textBox_Usuario
-            // 
-            this.textBox_Usuario.Location = new System.Drawing.Point(12, 221);
-            this.textBox_Usuario.MaxLength = 10;
-            this.textBox_Usuario.Name = "textBox_Usuario";
-            this.textBox_Usuario.Size = new System.Drawing.Size(112, 20);
-            this.textBox_Usuario.TabIndex = 16;
-            // 
-            // textBox_Senha
-            // 
-            this.textBox_Senha.Location = new System.Drawing.Point(143, 221);
-            this.textBox_Senha.MaxLength = 10;
-            this.textBox_Senha.Name = "textBox_Senha";
-            this.textBox_Senha.Size = new System.Drawing.Size(112, 20);
-            this.textBox_Senha.TabIndex = 17;
-            // 
             // Cadastro_Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(626, 288);
-            this.Controls.Add(this.textBox_Senha);
-            this.Controls.Add(this.textBox_Usuario);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
             this.Controls.Add(this.Button_Cancelar);
             this.Controls.Add(this.Button_Cadastrar);
             this.Controls.Add(this.label5);
@@ -395,9 +353,5 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button Button_Cadastrar;
         private System.Windows.Forms.Button Button_Cancelar;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox_Usuario;
-        private System.Windows.Forms.TextBox textBox_Senha;
     }
 }

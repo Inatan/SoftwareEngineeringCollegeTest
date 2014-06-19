@@ -59,6 +59,7 @@ namespace PBR_Rent_a_car
 
         }
 
+<<<<<<< HEAD
         private void Cadastro_Modelo_Load(object sender, EventArgs e)
         {
 
@@ -69,5 +70,7 @@ namespace PBR_Rent_a_car
 
         }
 
+=======
+>>>>>>> f4525a2cb45744424d6bb856ffc06eaa25e5f24b
     }
 }

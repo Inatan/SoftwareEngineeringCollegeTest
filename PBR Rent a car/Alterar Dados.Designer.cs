@@ -330,7 +330,6 @@
             this.Name = "Alterar_Dados";
             this.ShowIcon = false;
             this.Text = "Alterar Dados";
-            this.Load += new System.EventHandler(this.Alterar_Dados_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
