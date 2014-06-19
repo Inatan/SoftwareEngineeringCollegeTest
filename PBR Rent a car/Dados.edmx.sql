@@ -2,11 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, and Azure
 -- --------------------------------------------------
-<<<<<<< HEAD
--- Date Created: 06/07/2014 15:58:41
-=======
--- Date Created: 06/18/2014 13:51:05
->>>>>>> origin/Code_Generator_fix
+-- Date Created: 06/18/2014 19:45:17
 -- Generated from EDMX file: C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a car\Dados.edmx
 -- --------------------------------------------------
 
@@ -63,6 +59,12 @@ GO
 IF OBJECT_ID(N'[dbo].[FK_ClienteEndereço]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[ClienteSet] DROP CONSTRAINT [FK_ClienteEndereço];
 GO
+IF OBJECT_ID(N'[dbo].[FK_LoginCliente]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[LoginSet] DROP CONSTRAINT [FK_LoginCliente];
+GO
+IF OBJECT_ID(N'[dbo].[FK_LoginFuncionário]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[LoginSet] DROP CONSTRAINT [FK_LoginFuncionário];
+GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
@@ -97,6 +99,9 @@ IF OBJECT_ID(N'[dbo].[ClienteSet]', 'U') IS NOT NULL
 GO
 IF OBJECT_ID(N'[dbo].[EndereçoSet]', 'U') IS NOT NULL
     DROP TABLE [dbo].[EndereçoSet];
+GO
+IF OBJECT_ID(N'[dbo].[LoginSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[LoginSet];
 GO
 
 -- --------------------------------------------------
@@ -204,6 +209,17 @@ CREATE TABLE [dbo].[EndereçoSet] (
 );
 GO
 
+-- Creating table 'LoginSet'
+CREATE TABLE [dbo].[LoginSet] (
+    [Id] int IDENTITY(1,1) NOT NULL,
+    [Usuário] nvarchar(max)  NOT NULL,
+    [Senha] nvarchar(max)  NOT NULL,
+    [Permissão] tinyint  NOT NULL,
+    [Cliente_Id] int  NOT NULL,
+    [Funcionário_Id] int  NOT NULL
+);
+GO
+
 -- --------------------------------------------------
 -- Creating all PRIMARY KEY constraints
 -- --------------------------------------------------
@@ -265,6 +281,12 @@ GO
 -- Creating primary key on [Id] in table 'EndereçoSet'
 ALTER TABLE [dbo].[EndereçoSet]
 ADD CONSTRAINT [PK_EndereçoSet]
+    PRIMARY KEY CLUSTERED ([Id] ASC);
+GO
+
+-- Creating primary key on [Id] in table 'LoginSet'
+ALTER TABLE [dbo].[LoginSet]
+ADD CONSTRAINT [PK_LoginSet]
     PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 
@@ -466,6 +488,34 @@ ADD CONSTRAINT [FK_ClienteEndereço]
 CREATE INDEX [IX_FK_ClienteEndereço]
 ON [dbo].[ClienteSet]
     ([Endereço_Id]);
+GO
+
+-- Creating foreign key on [Cliente_Id] in table 'LoginSet'
+ALTER TABLE [dbo].[LoginSet]
+ADD CONSTRAINT [FK_LoginCliente]
+    FOREIGN KEY ([Cliente_Id])
+    REFERENCES [dbo].[ClienteSet]
+        ([Id])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_LoginCliente'
+CREATE INDEX [IX_FK_LoginCliente]
+ON [dbo].[LoginSet]
+    ([Cliente_Id]);
+GO
+
+-- Creating foreign key on [Funcionário_Id] in table 'LoginSet'
+ALTER TABLE [dbo].[LoginSet]
+ADD CONSTRAINT [FK_LoginFuncionário]
+    FOREIGN KEY ([Funcionário_Id])
+    REFERENCES [dbo].[FuncionárioSet]
+        ([Id])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_LoginFuncionário'
+CREATE INDEX [IX_FK_LoginFuncionário]
+ON [dbo].[LoginSet]
+    ([Funcionário_Id]);
 GO
 
 -- --------------------------------------------------

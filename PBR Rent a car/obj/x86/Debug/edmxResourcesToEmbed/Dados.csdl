@@ -67,6 +67,15 @@
       <End Role="Cliente" EntitySet="ClienteSet" />
       <End Role="Endereço" EntitySet="EndereçoSet" />
     </AssociationSet>
+    <EntitySet Name="LoginSet" EntityType="Dados.Login" />
+    <AssociationSet Name="LoginCliente" Association="Dados.LoginCliente">
+      <End Role="Login" EntitySet="LoginSet" />
+      <End Role="Cliente" EntitySet="ClienteSet" />
+    </AssociationSet>
+    <AssociationSet Name="LoginFuncionário" Association="Dados.LoginFuncionário">
+      <End Role="Login" EntitySet="LoginSet" />
+      <End Role="Funcionário" EntitySet="FuncionárioSet" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="Veículo" cg:TypeAccess="Public">
     <Key>
@@ -128,6 +137,7 @@
     <Property Type="String" Name="CarteiraDeTrabalho" Nullable="false" />
     <Property Type="Double" Name="Salário" Nullable="false" />
     <Property Type="String" Name="Função" Nullable="false" />
+    <NavigationProperty Name="Login" Relationship="Dados.LoginFuncionário" FromRole="Funcionário" ToRole="Login" />
   </EntityType>
   <EntityType Name="Locação">
     <Key>
@@ -193,6 +203,7 @@
     <Property Type="String" Name="CPF" Nullable="false" />
     <Property Type="String" Name="Telefone" Nullable="false" />
     <Property Type="String" Name="Notificação" Nullable="false" />
+    <NavigationProperty Name="Login" Relationship="Dados.LoginCliente" FromRole="Cliente" ToRole="Login" />
   </EntityType>
   <EntityType Name="Endereço">
     <Key>
@@ -262,5 +273,24 @@
   <Association Name="ClienteEndereço">
     <End Type="Dados.Cliente" Role="Cliente" Multiplicity="1" />
     <End Type="Dados.Endereço" Role="Endereço" Multiplicity="1" />
+  </Association>
+  <EntityType Name="Login">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Usuário" Nullable="false" />
+    <Property Type="String" Name="Senha" Nullable="false" />
+    <NavigationProperty Name="Cliente" Relationship="Dados.LoginCliente" FromRole="Login" ToRole="Cliente" />
+    <NavigationProperty Name="Funcionário" Relationship="Dados.LoginFuncionário" FromRole="Login" ToRole="Funcionário" />
+    <Property Type="Byte" Name="Permissão" Nullable="false" />
+  </EntityType>
+  <Association Name="LoginCliente">
+    <End Type="Dados.Login" Role="Login" Multiplicity="1" />
+    <End Type="Dados.Cliente" Role="Cliente" Multiplicity="1" />
+  </Association>
+  <Association Name="LoginFuncionário">
+    <End Type="Dados.Login" Role="Login" Multiplicity="1" />
+    <End Type="Dados.Funcionário" Role="Funcionário" Multiplicity="1" />
   </Association>
 </Schema>

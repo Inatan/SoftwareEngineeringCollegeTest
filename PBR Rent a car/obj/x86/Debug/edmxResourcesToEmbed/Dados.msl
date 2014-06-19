@@ -98,6 +98,16 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="LoginSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Dados.Login)">
+        <MappingFragment StoreEntitySet="LoginSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Usuário" ColumnName="Usuário" />
+          <ScalarProperty Name="Senha" ColumnName="Senha" />
+          <ScalarProperty Name="Permissão" ColumnName="Permissão" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <AssociationSetMapping Name="VeículoHistórico" TypeName="Dados.VeículoHistórico" StoreEntitySet="VeículoSet">
       <EndProperty Name="Histórico">
         <ScalarProperty Name="Id" ColumnName="Histórico_Id" />
@@ -207,6 +217,22 @@
         <ScalarProperty Name="Id" ColumnName="Endereço_Id" />
       </EndProperty>
       <EndProperty Name="Cliente">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="LoginCliente" TypeName="Dados.LoginCliente" StoreEntitySet="LoginSet">
+      <EndProperty Name="Cliente">
+        <ScalarProperty Name="Id" ColumnName="Cliente_Id" />
+      </EndProperty>
+      <EndProperty Name="Login">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="LoginFuncionário" TypeName="Dados.LoginFuncionário" StoreEntitySet="LoginSet">
+      <EndProperty Name="Funcionário">
+        <ScalarProperty Name="Id" ColumnName="Funcionário_Id" />
+      </EndProperty>
+      <EndProperty Name="Login">
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>

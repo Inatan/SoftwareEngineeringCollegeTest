@@ -11,6 +11,7 @@
     <EntitySet Name="ManutençãoSet" EntityType="Dados.Store.ManutençãoSet" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="ClienteSet" EntityType="Dados.Store.ClienteSet" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="EndereçoSet" EntityType="Dados.Store.EndereçoSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LoginSet" EntityType="Dados.Store.LoginSet" store:Type="Tables" Schema="dbo" />
     <AssociationSet Name="VeículoHistórico" Association="Dados.Store.VeículoHistórico">
       <End Role="Veículo" EntitySet="VeículoSet" />
       <End Role="Histórico" EntitySet="HistóricoSet" />
@@ -66,6 +67,14 @@
     <AssociationSet Name="ClienteEndereço" Association="Dados.Store.ClienteEndereço">
       <End Role="Cliente" EntitySet="ClienteSet" />
       <End Role="Endereço" EntitySet="EndereçoSet" />
+    </AssociationSet>
+    <AssociationSet Name="LoginCliente" Association="Dados.Store.LoginCliente">
+      <End Role="Login" EntitySet="LoginSet" />
+      <End Role="Cliente" EntitySet="ClienteSet" />
+    </AssociationSet>
+    <AssociationSet Name="LoginFuncionário" Association="Dados.Store.LoginFuncionário">
+      <End Role="Login" EntitySet="LoginSet" />
+      <End Role="Funcionário" EntitySet="FuncionárioSet" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="VeículoSet">
@@ -168,6 +177,17 @@
     <Property Name="Rua" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Número" Type="int" Nullable="false" />
     <Property Name="CEP" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LoginSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Usuário" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Senha" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Permissão" Type="tinyint" Nullable="false" />
+    <Property Name="Cliente_Id" Type="int" Nullable="false" />
+    <Property Name="Funcionário_Id" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="VeículoHistórico">
     <End Role="Veículo" Type="Dados.Store.VeículoSet" Multiplicity="*" />
@@ -334,6 +354,30 @@
       </Principal>
       <Dependent Role="Cliente">
         <PropertyRef Name="Endereço_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="LoginCliente">
+    <End Role="Login" Type="Dados.Store.LoginSet" Multiplicity="*" />
+    <End Role="Cliente" Type="Dados.Store.ClienteSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Login">
+        <PropertyRef Name="Cliente_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="LoginFuncionário">
+    <End Role="Login" Type="Dados.Store.LoginSet" Multiplicity="*" />
+    <End Role="Funcionário" Type="Dados.Store.FuncionárioSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Funcionário">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Login">
+        <PropertyRef Name="Funcionário_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
