@@ -71,7 +71,10 @@ namespace PBR_Rent_a_car
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
         private void Adicionar_funcionário_Load(object sender, EventArgs e)
         {
 
@@ -92,13 +95,19 @@ namespace PBR_Rent_a_car
             this.Close();
         }
 
+<<<<<<< HEAD
+>>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
+=======
 >>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
@@ -115,6 +124,9 @@ namespace PBR_Rent_a_car
                 função = Funcionário.TipoDeFuncionário.Gerente;
             }
         }
+<<<<<<< HEAD
+>>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
+=======
 >>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
     }
 }

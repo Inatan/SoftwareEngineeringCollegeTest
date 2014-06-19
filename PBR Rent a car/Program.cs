@@ -17,7 +17,11 @@ namespace PBR_Rent_a_car
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
             Application.Run(new Interface()); 
+=======
+            Application.Run(new CadastroLogin()); 
+>>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
 =======
             Application.Run(new CadastroLogin()); 
 >>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b

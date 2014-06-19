@@ -127,7 +127,11 @@
     <Property Name="CarteiraDeTrabalho" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Salário" Type="float" Nullable="false" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Property Name="Função" Type="nvarchar(max)" Nullable="false" />
+=======
+    <Property Name="Função" Type="tinyint" Nullable="false" />
+>>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
 =======
     <Property Name="Função" Type="tinyint" Nullable="false" />
 >>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b

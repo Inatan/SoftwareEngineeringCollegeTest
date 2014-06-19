@@ -53,7 +53,11 @@ namespace PBR_Rent_a_car
             Veículo vProcurado= new Veículo();
             List<Cliente> clientes = Cliente.todosOsClientes();
 <<<<<<< HEAD
+<<<<<<< HEAD
             int countReserva= clientes.Count;
+=======
+            int countReserva = clientes.Count;
+>>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
 =======
             int countReserva = clientes.Count;
 >>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b

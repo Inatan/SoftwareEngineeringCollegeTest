@@ -126,7 +126,10 @@
             this.buttonCancelar.UseVisualStyleBackColor = true;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
             // 
             // label4
             // 
@@ -183,6 +186,9 @@
             this.radioButton2.Text = "Gerente";
             this.radioButton2.UseVisualStyleBackColor = true;
             this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+<<<<<<< HEAD
+>>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
+=======
 >>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
             // 
             // Adicionar_funcionário

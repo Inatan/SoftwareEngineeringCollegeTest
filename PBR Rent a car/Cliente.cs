@@ -20,6 +20,7 @@ namespace PBR_Rent_a_car
             this.telefones.Add(telefoneFixo);
             this.telefones.Add(telefoneMóvel);
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.Telefone = SerializarTelefones();
         }
 
@@ -31,6 +32,10 @@ namespace PBR_Rent_a_car
         public List<string> getTelefones()
         {
             return this.Telefone.Split('/').ToList<string>();
+=======
+            this.Login = login;
+            this.Login.setDonoDaConta(this);
+>>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
 =======
             this.Login = login;
             this.Login.setDonoDaConta(this);

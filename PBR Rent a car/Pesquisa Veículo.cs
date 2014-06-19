@@ -18,7 +18,11 @@ namespace PBR_Rent_a_car
             dataGridView_Veículos = new DataGridView();
             int CountVeículos = veículos.Count;
 <<<<<<< HEAD
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
 =======
 
 >>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
@@ -31,7 +35,11 @@ namespace PBR_Rent_a_car
                 dataGridView_Veículos.Rows[i].Cells[2].Value = veículos[i].Ano.ToString();
                 dataGridView_Veículos.Rows[i].Cells[3].Value = veículos[i].Quilometragem.ToString();
 <<<<<<< HEAD
+<<<<<<< HEAD
              //   dataGridView_Veículos.Rows[i].Cells[4].Value = Program.veículos[i].status.ToString();
+=======
+                //   dataGridView_Veículos.Rows[i].Cells[4].Value = Program.veículos[i].status.ToString();
+>>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
 =======
                 //   dataGridView_Veículos.Rows[i].Cells[4].Value = Program.veículos[i].status.ToString();
 >>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
@@ -63,7 +71,11 @@ namespace PBR_Rent_a_car
                     dataGridView_Veículos.Rows[i].Cells[2].Value = veículos[i].Ano.ToString();
                     dataGridView_Veículos.Rows[i].Cells[3].Value = veículos[i].Quilometragem.ToString();
 <<<<<<< HEAD
+<<<<<<< HEAD
                 //    dataGridView_Veículos.Rows[i].Cells[4].Value = Program.veículos[i].status.ToString();
+=======
+                    //    dataGridView_Veículos.Rows[i].Cells[4].Value = Program.veículos[i].status.ToString();
+>>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
 =======
                     //    dataGridView_Veículos.Rows[i].Cells[4].Value = Program.veículos[i].status.ToString();
 >>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
@@ -75,7 +87,11 @@ namespace PBR_Rent_a_car
         {
             List<Veículo> veículos = Veículo.todosOsVeículos();
 <<<<<<< HEAD
+<<<<<<< HEAD
             int RowIndex=dataGridView_Veículos.CurrentRow.Index;
+=======
+            int RowIndex = dataGridView_Veículos.CurrentRow.Index;
+>>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
 =======
             int RowIndex = dataGridView_Veículos.CurrentRow.Index;
 >>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
@@ -88,9 +104,12 @@ namespace PBR_Rent_a_car
                     dataGridView_Veículos.Rows[RowIndex].Cells[3].Value.ToString() == veículos[i].Quilometragem.ToString())
                     veículoPesquisado = veículos[i];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                    
                 
+=======
+>>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
 =======
 >>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
             }
@@ -150,6 +169,10 @@ namespace PBR_Rent_a_car
 
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
 =======
 
 >>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b

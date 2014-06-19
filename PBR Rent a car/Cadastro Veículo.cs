@@ -18,7 +18,11 @@ namespace PBR_Rent_a_car
             List<Modelo> modelos = Modelo.todosOsModelos();
             int CountModelo = modelos.Count;
 <<<<<<< HEAD
+<<<<<<< HEAD
            
+=======
+
+>>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
 =======
 
 >>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
@@ -43,7 +47,11 @@ namespace PBR_Rent_a_car
             string[] modelo = new string[2];
             modelo = comboBox_Modelo.Text.Split('/');
 <<<<<<< HEAD
+<<<<<<< HEAD
             Veículo novo = new Veículo(textBox_Cor.Text,Convert.ToInt32(textBox_Ano.Text),textBox_Categoria.Text,0,new Modelo(modelo[1],modelo[0]));
+=======
+            Veículo novo = new Veículo(textBox_Cor.Text, Convert.ToInt32(textBox_Ano.Text), textBox_Categoria.Text, 0, new Modelo(modelo[1], modelo[0]));
+>>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
 =======
             Veículo novo = new Veículo(textBox_Cor.Text, Convert.ToInt32(textBox_Ano.Text), textBox_Categoria.Text, 0, new Modelo(modelo[1], modelo[0]));
 >>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
@@ -81,6 +89,11 @@ namespace PBR_Rent_a_car
         {
             apenasLetras(e);
         }
+        private void Cadastro_Veículo_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void Cadastro_Veículo_Load(object sender, EventArgs e)
         {
 

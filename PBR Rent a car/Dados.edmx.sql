@@ -3,7 +3,11 @@
 -- Entity Designer DDL Script for SQL Server 2005, 2008, and Azure
 -- --------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 -- Date Created: 06/19/2014 12:46:28
+=======
+-- Date Created: 06/19/2014 17:35:29
+>>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
 =======
 -- Date Created: 06/19/2014 17:35:29
 >>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
@@ -155,7 +159,11 @@ CREATE TABLE [dbo].[FuncionárioSet] (
     [CarteiraDeTrabalho] nvarchar(max)  NOT NULL,
     [Salário] float  NOT NULL,
 <<<<<<< HEAD
+<<<<<<< HEAD
     [Função] nvarchar(max)  NOT NULL,
+=======
+    [Função] tinyint  NOT NULL,
+>>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
 =======
     [Função] tinyint  NOT NULL,
 >>>>>>> 85802f8c8151e268285bbbb67c44f7ad88b3384b
