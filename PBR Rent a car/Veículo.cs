@@ -60,6 +60,7 @@ namespace PBR_Rent_a_car
         {
             using (var ctx = new DadosContainer())
             {
+                ctx.AttachTo("ModeloSet", this.Modelo);
                 ctx.AddToVeículoSet(this);
                 ctx.SaveChanges();
             }

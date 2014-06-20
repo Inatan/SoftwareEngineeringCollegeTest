@@ -16,6 +16,10 @@ namespace PBR_Rent_a_car
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            using (var ctx = new DadosContainer())
+            {
+                Console.WriteLine(ctx.VeículoSet.Count());
+            }
             Application.Run(new CadastroLogin()); 
         }
     }
