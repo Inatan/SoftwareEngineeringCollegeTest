@@ -28,14 +28,6 @@
       <End Role="Veículo" EntitySet="VeículoSet" />
       <End Role="Modelo" EntitySet="ModeloSet" />
     </AssociationSet>
-    <AssociationSet Name="FuncionárioRelatório" Association="Dados.Store.FuncionárioRelatório">
-      <End Role="Funcionário" EntitySet="FuncionárioSet" />
-      <End Role="Relatório" EntitySet="RelatórioSet" />
-    </AssociationSet>
-    <AssociationSet Name="FuncionárioVeículo" Association="Dados.Store.FuncionárioVeículo">
-      <End Role="Funcionário" EntitySet="FuncionárioSet" />
-      <End Role="Veículo" EntitySet="VeículoSet" />
-    </AssociationSet>
     <AssociationSet Name="HistóricoManutenção" Association="Dados.Store.HistóricoManutenção">
       <End Role="Histórico" EntitySet="HistóricoSet" />
       <End Role="Manutenção" EntitySet="ManutençãoSet" />
@@ -89,7 +81,6 @@
     <Property Name="Estado" Type="tinyint" Nullable="false" />
     <Property Name="Histórico_Id" Type="int" Nullable="false" />
     <Property Name="Modelo_Id" Type="int" Nullable="false" />
-    <Property Name="Funcionário_Id" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="HistóricoSet">
     <Key>
@@ -103,7 +94,6 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Funcionário_Id" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="ModeloSet">
     <Key>
@@ -234,30 +224,6 @@
       </Principal>
       <Dependent Role="Veículo">
         <PropertyRef Name="Modelo_Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FuncionárioRelatório">
-    <End Role="Funcionário" Type="Dados.Store.FuncionárioSet" Multiplicity="1" />
-    <End Role="Relatório" Type="Dados.Store.RelatórioSet" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Funcionário">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="Relatório">
-        <PropertyRef Name="Funcionário_Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FuncionárioVeículo">
-    <End Role="Funcionário" Type="Dados.Store.FuncionárioSet" Multiplicity="1" />
-    <End Role="Veículo" Type="Dados.Store.VeículoSet" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Funcionário">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="Veículo">
-        <PropertyRef Name="Funcionário_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

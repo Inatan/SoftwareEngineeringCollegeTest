@@ -11,7 +11,6 @@ namespace PBR_Rent_a_car
 {
     public partial class Cadastro_Veículo : Form
     {
-        
         public Cadastro_Veículo()
         {
             comboBox_Modelo = new ComboBox();
@@ -39,7 +38,6 @@ namespace PBR_Rent_a_car
             modelo = comboBox_Modelo.Text.Split('/');
             Veículo novo = new Veículo(textBox_Cor.Text,Convert.ToInt32(textBox_Ano.Text),textBox_Categoria.Text,0,new Modelo(modelo[1],modelo[0]));
             novo.gravar();
-            this.Close();
         }
 
         private void apenasLetras(KeyPressEventArgs e)

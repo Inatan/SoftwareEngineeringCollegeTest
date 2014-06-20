@@ -10,7 +10,7 @@ namespace PBR_Rent_a_car
         public List<Histórico> históricos {get;private set;}
 
         public Relatório() { }
-        Relatório(List<Histórico> históricos)
+        public Relatório(List<Histórico> históricos)
         {
             this.históricos = históricos;
         }

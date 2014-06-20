@@ -14,7 +14,7 @@ namespace PBR_Rent_a_car
         public Histórico(Veículo veiculo, List<Manutenção> manutenções, List<Locação> locações)
         {
             this.Veículo = veiculo;
-            this.manutenções=manutenções;
+            this.manutenções = manutenções;
             this.locações = locações;
         }
     }

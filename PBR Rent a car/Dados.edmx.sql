@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, and Azure
 -- --------------------------------------------------
--- Date Created: 06/19/2014 19:31:26
+-- Date Created: 06/19/2014 21:45:36
 -- Generated from EDMX file: C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a car\Dados.edmx
 -- --------------------------------------------------
 
@@ -31,9 +31,6 @@ IF OBJECT_ID(N'[dbo].[FK_VeículoModelo]', 'F') IS NOT NULL
 GO
 IF OBJECT_ID(N'[dbo].[FK_FuncionárioRelatório]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[RelatórioSet] DROP CONSTRAINT [FK_FuncionárioRelatório];
-GO
-IF OBJECT_ID(N'[dbo].[FK_FuncionárioVeículo]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[VeículoSet] DROP CONSTRAINT [FK_FuncionárioVeículo];
 GO
 IF OBJECT_ID(N'[dbo].[FK_HistóricoManutenção]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[ManutençãoSet] DROP CONSTRAINT [FK_HistóricoManutenção];
@@ -117,8 +114,7 @@ CREATE TABLE [dbo].[VeículoSet] (
     [Quilometragem] int  NOT NULL,
     [Estado] tinyint  NOT NULL,
     [Histórico_Id] int  NOT NULL,
-    [Modelo_Id] int  NOT NULL,
-    [Funcionário_Id] int  NOT NULL
+    [Modelo_Id] int  NOT NULL
 );
 GO
 
@@ -131,8 +127,7 @@ GO
 
 -- Creating table 'RelatórioSet'
 CREATE TABLE [dbo].[RelatórioSet] (
-    [Id] int IDENTITY(1,1) NOT NULL,
-    [Funcionário_Id] int  NOT NULL
+    [Id] int IDENTITY(1,1) NOT NULL
 );
 GO
 
@@ -348,34 +343,6 @@ ADD CONSTRAINT [FK_VeículoModelo]
 CREATE INDEX [IX_FK_VeículoModelo]
 ON [dbo].[VeículoSet]
     ([Modelo_Id]);
-GO
-
--- Creating foreign key on [Funcionário_Id] in table 'RelatórioSet'
-ALTER TABLE [dbo].[RelatórioSet]
-ADD CONSTRAINT [FK_FuncionárioRelatório]
-    FOREIGN KEY ([Funcionário_Id])
-    REFERENCES [dbo].[FuncionárioSet]
-        ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-
--- Creating non-clustered index for FOREIGN KEY 'FK_FuncionárioRelatório'
-CREATE INDEX [IX_FK_FuncionárioRelatório]
-ON [dbo].[RelatórioSet]
-    ([Funcionário_Id]);
-GO
-
--- Creating foreign key on [Funcionário_Id] in table 'VeículoSet'
-ALTER TABLE [dbo].[VeículoSet]
-ADD CONSTRAINT [FK_FuncionárioVeículo]
-    FOREIGN KEY ([Funcionário_Id])
-    REFERENCES [dbo].[FuncionárioSet]
-        ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-
--- Creating non-clustered index for FOREIGN KEY 'FK_FuncionárioVeículo'
-CREATE INDEX [IX_FK_FuncionárioVeículo]
-ON [dbo].[VeículoSet]
-    ([Funcionário_Id]);
 GO
 
 -- Creating foreign key on [Histórico_Id] in table 'ManutençãoSet'

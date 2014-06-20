@@ -33,14 +33,6 @@
       <End Role="Veículo" EntitySet="VeículoSet" />
       <End Role="Modelo" EntitySet="ModeloSet" />
     </AssociationSet>
-    <AssociationSet Name="FuncionárioRelatório" Association="Dados.Store.FuncionárioRelatório">
-      <End Role="Funcionário" EntitySet="FuncionárioSet" />
-      <End Role="Relatório" EntitySet="RelatórioSet" />
-    </AssociationSet>
-    <AssociationSet Name="FuncionárioVeículo" Association="Dados.Store.FuncionárioVeículo">
-      <End Role="Funcionário" EntitySet="FuncionárioSet" />
-      <End Role="Veículo" EntitySet="VeículoSet" />
-    </AssociationSet>
     <AssociationSet Name="HistóricoManutenção" Association="Dados.Store.HistóricoManutenção">
       <End Role="Histórico" EntitySet="HistóricoSet" />
       <End Role="Manutenção" EntitySet="ManutençãoSet" />
@@ -94,7 +86,6 @@
     <Property Name="Estado" Type="tinyint" Nullable="false" />
     <Property Name="Histórico_Id" Type="int" Nullable="false" />
     <Property Name="Modelo_Id" Type="int" Nullable="false" />
-    <Property Name="Funcionário_Id" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="HistóricoSet">
     <Key>
@@ -108,7 +99,6 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Funcionário_Id" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="ModeloSet">
     <Key>
@@ -239,30 +229,6 @@
       </Principal>
       <Dependent Role="Veículo">
         <PropertyRef Name="Modelo_Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FuncionárioRelatório">
-    <End Role="Funcionário" Type="Dados.Store.FuncionárioSet" Multiplicity="1" />
-    <End Role="Relatório" Type="Dados.Store.RelatórioSet" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Funcionário">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="Relatório">
-        <PropertyRef Name="Funcionário_Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FuncionárioVeículo">
-    <End Role="Funcionário" Type="Dados.Store.FuncionárioSet" Multiplicity="1" />
-    <End Role="Veículo" Type="Dados.Store.VeículoSet" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Funcionário">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="Veículo">
-        <PropertyRef Name="Funcionário_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -417,14 +383,6 @@
             <End Role="Veículo" EntitySet="VeículoSet" />
             <End Role="Modelo" EntitySet="ModeloSet" />
           </AssociationSet>
-          <AssociationSet Name="FuncionárioRelatório" Association="Dados.FuncionárioRelatório">
-            <End Role="Funcionário" EntitySet="FuncionárioSet" />
-            <End Role="Relatório" EntitySet="RelatórioSet" />
-          </AssociationSet>
-          <AssociationSet Name="FuncionárioVeículo" Association="Dados.FuncionárioVeículo">
-            <End Role="Funcionário" EntitySet="FuncionárioSet" />
-            <End Role="Veículo" EntitySet="VeículoSet" />
-          </AssociationSet>
           <AssociationSet Name="HistóricoManutenção" Association="Dados.HistóricoManutenção">
             <End Role="Histórico" EntitySet="HistóricoSet" />
             <End Role="Manutenção" EntitySet="ManutençãoSet" />
@@ -475,7 +433,6 @@
           <NavigationProperty Name="Histórico" Relationship="Dados.VeículoHistórico" FromRole="Veículo" ToRole="Histórico" />
           <NavigationProperty Name="Reserva" Relationship="Dados.ReservaVeículo" FromRole="Veículo" ToRole="Reserva" />
           <NavigationProperty Name="Modelo" Relationship="Dados.VeículoModelo" FromRole="Veículo" ToRole="Modelo" />
-          <NavigationProperty Name="Funcionário" Relationship="Dados.FuncionárioVeículo" FromRole="Veículo" ToRole="Funcionário" />
           <Property Type="String" Name="Cor" Nullable="false" />
           <Property Type="Int32" Name="Ano" Nullable="false" />
           <Property Type="String" Name="Categoria" Nullable="false" />
@@ -502,7 +459,6 @@
           </Key>
           <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <NavigationProperty Name="Histórico" Relationship="Dados.HistóricoRelatório" FromRole="Relatório" ToRole="Histórico" />
-          <NavigationProperty Name="Funcionário" Relationship="Dados.FuncionárioRelatório" FromRole="Relatório" ToRole="Funcionário" />
         </EntityType>
         <EntityType Name="Modelo">
           <Key>
@@ -518,8 +474,6 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="Relatório" Relationship="Dados.FuncionárioRelatório" FromRole="Funcionário" ToRole="Relatório" />
-          <NavigationProperty Name="Veículo" Relationship="Dados.FuncionárioVeículo" FromRole="Funcionário" ToRole="Veículo" />
           <NavigationProperty Name="Manutenção" Relationship="Dados.FuncionárioManutenção" FromRole="Funcionário" ToRole="Manutenção" />
           <NavigationProperty Name="Reserva" Relationship="Dados.FuncionárioReserva" FromRole="Funcionário" ToRole="Reserva" />
           <NavigationProperty Name="Locação" Relationship="Dados.FuncionárioLocação" FromRole="Funcionário" ToRole="Locação" />
@@ -623,14 +577,6 @@
         <Association Name="VeículoModelo">
           <End Type="Dados.Veículo" Role="Veículo" Multiplicity="*" />
           <End Type="Dados.Modelo" Role="Modelo" Multiplicity="1" />
-        </Association>
-        <Association Name="FuncionárioRelatório">
-          <End Type="Dados.Funcionário" Role="Funcionário" Multiplicity="1" />
-          <End Type="Dados.Relatório" Role="Relatório" Multiplicity="*" />
-        </Association>
-        <Association Name="FuncionárioVeículo">
-          <End Type="Dados.Funcionário" Role="Funcionário" Multiplicity="1" />
-          <End Type="Dados.Veículo" Role="Veículo" Multiplicity="*" />
         </Association>
         <Association Name="HistóricoManutenção">
           <End Type="Dados.Histórico" Role="Histórico" Multiplicity="1" />
@@ -828,22 +774,6 @@
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="FuncionárioRelatório" TypeName="Dados.FuncionárioRelatório" StoreEntitySet="RelatórioSet">
-      <EndProperty Name="Funcionário">
-        <ScalarProperty Name="Id" ColumnName="Funcionário_Id" />
-      </EndProperty>
-      <EndProperty Name="Relatório">
-        <ScalarProperty Name="Id" ColumnName="Id" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="FuncionárioVeículo" TypeName="Dados.FuncionárioVeículo" StoreEntitySet="VeículoSet">
-      <EndProperty Name="Funcionário">
-        <ScalarProperty Name="Id" ColumnName="Funcionário_Id" />
-      </EndProperty>
-      <EndProperty Name="Veículo">
-        <ScalarProperty Name="Id" ColumnName="Id" />
-      </EndProperty>
-    </AssociationSetMapping>
     <AssociationSetMapping Name="HistóricoManutenção" TypeName="Dados.HistóricoManutenção" StoreEntitySet="ManutençãoSet">
       <EndProperty Name="Histórico">
         <ScalarProperty Name="Id" ColumnName="Histórico_Id" />
@@ -971,21 +901,6 @@
           <ConnectorPoint PointX="2" PointY="1.6439925130208337" />
           <ConnectorPoint PointX="2.875" PointY="1.6439925130208337" />
         </AssociationConnector>
-        <AssociationConnector Association="Dados.FuncionárioRelatório">
-          <ConnectorPoint PointX="6" PointY="6.2833968098958328" />
-          <ConnectorPoint PointX="4.625" PointY="6.2833968098958328" />
-        </AssociationConnector>
-        <AssociationConnector Association="Dados.FuncionárioVeículo">
-          <ConnectorPoint PointX="7.5742219375" PointY="4" />
-          <ConnectorPoint PointX="7.5742219375" PointY="2.8939925130208337" />
-          <ConnectorPoint PointX="7.2200530208333324" PointY="2.8939925130208333" />
-          <ConnectorPoint PointX="7.0533863541666664" PointY="2.8939925130208337" />
-          <ConnectorPoint PointX="6.7825507708333328" PointY="2.8939925130208333" />
-          <ConnectorPoint PointX="6.6158841041666667" PointY="2.8939925130208337" />
-          <ConnectorPoint PointX="5.427083333333333" PointY="2.8939925130208333" />
-          <ConnectorPoint PointX="5.260416666666667" PointY="2.8939925130208337" />
-          <ConnectorPoint PointX="2" PointY="2.8939925130208337" />
-        </AssociationConnector>
         <AssociationConnector Association="Dados.HistóricoManutenção">
           <ConnectorPoint PointX="2" PointY="4.9612939453125" />
           <ConnectorPoint PointX="3.125" PointY="4.9612939453125" />
@@ -995,9 +910,9 @@
           <ConnectorPoint PointX="4.625" PointY="4.7112939453125" />
         </AssociationConnector>
         <AssociationConnector Association="Dados.FuncionárioReserva">
-          <ConnectorPoint PointX="6.7812505000000005" PointY="4" />
-          <ConnectorPoint PointX="6.7812505000000005" PointY="2.25193359375" />
-          <ConnectorPoint PointX="6.25" PointY="2.25193359375" />
+          <ConnectorPoint PointX="6.674805546875" PointY="4" />
+          <ConnectorPoint PointX="6.674805546875" PointY="1.4901432291666668" />
+          <ConnectorPoint PointX="6.25" PointY="1.4901432291666668" />
         </AssociationConnector>
         <AssociationConnector Association="Dados.HistóricoLocação">
           <ConnectorPoint PointX="1.25" PointY="6.4802864583333335" />
@@ -1018,14 +933,12 @@
           <ConnectorPoint PointX="2" PointY="7.8868949726562487" />
         </AssociationConnector>
         <AssociationConnector Association="Dados.ClienteReserva">
-          <ConnectorPoint PointX="8.5" PointY="3.4831721419270827" />
-          <ConnectorPoint PointX="7.657555270833333" PointY="3.4831721419270822" />
-          <ConnectorPoint PointX="7.4908886041666669" PointY="3.4831721419270827" />
-          <ConnectorPoint PointX="7.2200530208333324" PointY="3.4831721419270822" />
-          <ConnectorPoint PointX="7.0533863541666664" PointY="3.4831721419270827" />
-          <ConnectorPoint PointX="6.7825507708333328" PointY="3.4831721419270822" />
-          <ConnectorPoint PointX="6.6158841041666667" PointY="3.4831721419270827" />
-          <ConnectorPoint PointX="5.34375" PointY="3.4831721419270827" />
+          <ConnectorPoint PointX="8.5" PointY="3.53125" />
+          <ConnectorPoint PointX="7.3894886067708327" PointY="3.5312499999999996" />
+          <ConnectorPoint PointX="7.2228219401041667" PointY="3.53125" />
+          <ConnectorPoint PointX="6.7581388802083326" PointY="3.5312499999999996" />
+          <ConnectorPoint PointX="6.5914722135416666" PointY="3.53125" />
+          <ConnectorPoint PointX="5.34375" PointY="3.53125" />
           <ConnectorPoint PointX="5.34375" PointY="2.4802864583333331" />
         </AssociationConnector>
         <AssociationConnector Association="Dados.ClienteEndereço">
@@ -1038,9 +951,9 @@
           <ConnectorPoint PointX="9.25" PointY="3.125" />
         </AssociationConnector>
         <AssociationConnector Association="Dados.LoginFuncionário">
-          <ConnectorPoint PointX="8.5" PointY="2.6076871744791665" />
-          <ConnectorPoint PointX="7.1367196874999994" PointY="2.6076871744791665" />
-          <ConnectorPoint PointX="7.1367196874999994" PointY="4" />
+          <ConnectorPoint PointX="8.5" PointY="2.607687174479167" />
+          <ConnectorPoint PointX="7.3061552734375" PointY="2.607687174479167" />
+          <ConnectorPoint PointX="7.3061552734375" PointY="4" />
         </AssociationConnector>
       </Diagram>
     </edmx:Diagrams>

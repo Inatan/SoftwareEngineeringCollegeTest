@@ -27,14 +27,6 @@
       <End Role="Veículo" EntitySet="VeículoSet" />
       <End Role="Modelo" EntitySet="ModeloSet" />
     </AssociationSet>
-    <AssociationSet Name="FuncionárioRelatório" Association="Dados.FuncionárioRelatório">
-      <End Role="Funcionário" EntitySet="FuncionárioSet" />
-      <End Role="Relatório" EntitySet="RelatórioSet" />
-    </AssociationSet>
-    <AssociationSet Name="FuncionárioVeículo" Association="Dados.FuncionárioVeículo">
-      <End Role="Funcionário" EntitySet="FuncionárioSet" />
-      <End Role="Veículo" EntitySet="VeículoSet" />
-    </AssociationSet>
     <AssociationSet Name="HistóricoManutenção" Association="Dados.HistóricoManutenção">
       <End Role="Histórico" EntitySet="HistóricoSet" />
       <End Role="Manutenção" EntitySet="ManutençãoSet" />
@@ -85,7 +77,6 @@
     <NavigationProperty Name="Histórico" Relationship="Dados.VeículoHistórico" FromRole="Veículo" ToRole="Histórico" />
     <NavigationProperty Name="Reserva" Relationship="Dados.ReservaVeículo" FromRole="Veículo" ToRole="Reserva" />
     <NavigationProperty Name="Modelo" Relationship="Dados.VeículoModelo" FromRole="Veículo" ToRole="Modelo" />
-    <NavigationProperty Name="Funcionário" Relationship="Dados.FuncionárioVeículo" FromRole="Veículo" ToRole="Funcionário" />
     <Property Type="String" Name="Cor" Nullable="false" />
     <Property Type="Int32" Name="Ano" Nullable="false" />
     <Property Type="String" Name="Categoria" Nullable="false" />
@@ -112,7 +103,6 @@
     </Key>
     <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <NavigationProperty Name="Histórico" Relationship="Dados.HistóricoRelatório" FromRole="Relatório" ToRole="Histórico" />
-    <NavigationProperty Name="Funcionário" Relationship="Dados.FuncionárioRelatório" FromRole="Relatório" ToRole="Funcionário" />
   </EntityType>
   <EntityType Name="Modelo">
     <Key>
@@ -128,8 +118,6 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <NavigationProperty Name="Relatório" Relationship="Dados.FuncionárioRelatório" FromRole="Funcionário" ToRole="Relatório" />
-    <NavigationProperty Name="Veículo" Relationship="Dados.FuncionárioVeículo" FromRole="Funcionário" ToRole="Veículo" />
     <NavigationProperty Name="Manutenção" Relationship="Dados.FuncionárioManutenção" FromRole="Funcionário" ToRole="Manutenção" />
     <NavigationProperty Name="Reserva" Relationship="Dados.FuncionárioReserva" FromRole="Funcionário" ToRole="Reserva" />
     <NavigationProperty Name="Locação" Relationship="Dados.FuncionárioLocação" FromRole="Funcionário" ToRole="Locação" />
@@ -233,14 +221,6 @@
   <Association Name="VeículoModelo">
     <End Type="Dados.Veículo" Role="Veículo" Multiplicity="*" />
     <End Type="Dados.Modelo" Role="Modelo" Multiplicity="1" />
-  </Association>
-  <Association Name="FuncionárioRelatório">
-    <End Type="Dados.Funcionário" Role="Funcionário" Multiplicity="1" />
-    <End Type="Dados.Relatório" Role="Relatório" Multiplicity="*" />
-  </Association>
-  <Association Name="FuncionárioVeículo">
-    <End Type="Dados.Funcionário" Role="Funcionário" Multiplicity="1" />
-    <End Type="Dados.Veículo" Role="Veículo" Multiplicity="*" />
   </Association>
   <Association Name="HistóricoManutenção">
     <End Type="Dados.Histórico" Role="Histórico" Multiplicity="1" />

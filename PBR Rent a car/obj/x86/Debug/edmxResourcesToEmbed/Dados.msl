@@ -140,22 +140,6 @@
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="FuncionárioRelatório" TypeName="Dados.FuncionárioRelatório" StoreEntitySet="RelatórioSet">
-      <EndProperty Name="Funcionário">
-        <ScalarProperty Name="Id" ColumnName="Funcionário_Id" />
-      </EndProperty>
-      <EndProperty Name="Relatório">
-        <ScalarProperty Name="Id" ColumnName="Id" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="FuncionárioVeículo" TypeName="Dados.FuncionárioVeículo" StoreEntitySet="VeículoSet">
-      <EndProperty Name="Funcionário">
-        <ScalarProperty Name="Id" ColumnName="Funcionário_Id" />
-      </EndProperty>
-      <EndProperty Name="Veículo">
-        <ScalarProperty Name="Id" ColumnName="Id" />
-      </EndProperty>
-    </AssociationSetMapping>
     <AssociationSetMapping Name="HistóricoManutenção" TypeName="Dados.HistóricoManutenção" StoreEntitySet="ManutençãoSet">
       <EndProperty Name="Histórico">
         <ScalarProperty Name="Id" ColumnName="Histórico_Id" />
