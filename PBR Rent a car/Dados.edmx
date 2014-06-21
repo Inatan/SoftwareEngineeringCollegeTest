@@ -124,8 +124,8 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Inicio" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Fim" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Inicio" Type="bigint" Nullable="false" />
+    <Property Name="Fim" Type="bigint" Nullable="true" />
     <Property Name="Histórico_Id" Type="int" Nullable="false" />
     <Property Name="Funcionário_Id" Type="int" Nullable="false" />
     <Property Name="Cliente_Id" Type="int" Nullable="false" />
@@ -135,7 +135,7 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Data" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Data" Type="bigint" Nullable="false" />
     <Property Name="Veículo_Id" Type="int" Nullable="false" />
     <Property Name="Funcionário_Id" Type="int" Nullable="false" />
     <Property Name="Cliente_Id" Type="int" Nullable="false" />
@@ -145,8 +145,8 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Inicio" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Fim" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Inicio" Type="bigint" Nullable="false" />
+    <Property Name="Fim" Type="bigint" Nullable="true" />
     <Property Name="Motivo" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Histórico_Id" Type="int" Nullable="false" />
     <Property Name="Funcionário_Id" Type="int" Nullable="false" />
@@ -491,12 +491,12 @@
           <NavigationProperty Name="Histórico" Relationship="Dados.HistóricoLocação" FromRole="Locação" ToRole="Histórico" />
           <NavigationProperty Name="Funcionário" Relationship="Dados.FuncionárioLocação" FromRole="Locação" ToRole="Funcionário" />
           <NavigationProperty Name="Cliente" Relationship="Dados.ClienteLocação" FromRole="Locação" ToRole="Cliente" />
-          <Property Type="String" Name="Inicio" Nullable="false" >
+          <Property Type="Int64" Name="Inicio" Nullable="false" >
             <Documentation>
               <Summary>Inicio é uma data. Fazer conversão na classe</Summary>
             </Documentation>
           </Property>
-          <Property Type="String" Name="Fim" Nullable="false" >
+          <Property Type="Int64" Name="Fim" Nullable="true" >
             <Documentation>
               <Summary>Fim é uma data. Fazer conversão na classe</Summary>
             </Documentation>
@@ -510,7 +510,7 @@
           <NavigationProperty Name="Veículo" Relationship="Dados.ReservaVeículo" FromRole="Reserva" ToRole="Veículo" />
           <NavigationProperty Name="Funcionário" Relationship="Dados.FuncionárioReserva" FromRole="Reserva" ToRole="Funcionário" />
           <NavigationProperty Name="Cliente" Relationship="Dados.ClienteReserva" FromRole="Reserva" ToRole="Cliente" />
-          <Property Type="String" Name="Data" Nullable="false" >
+          <Property Type="Int64" Name="Data" Nullable="false" >
             <Documentation>
               <Summary>Representação de Data como string. Fazer conversão na classe para algo mais alto nível (DateTime, por exemplo)</Summary>
             </Documentation>
@@ -523,12 +523,12 @@
           <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <NavigationProperty Name="Histórico" Relationship="Dados.HistóricoManutenção" FromRole="Manutenção" ToRole="Histórico" />
           <NavigationProperty Name="Funcionário" Relationship="Dados.FuncionárioManutenção" FromRole="Manutenção" ToRole="Funcionário" />
-          <Property Type="String" Name="Inicio" Nullable="false" >
+          <Property Type="Int64" Name="Inicio" Nullable="false" >
             <Documentation>
               <Summary>Inicio é uma data. Usar conversão na classe</Summary>
             </Documentation>
           </Property>
-          <Property Type="String" Name="Fim" Nullable="false" >
+          <Property Type="Int64" Name="Fim" Nullable="true" >
             <Documentation>
               <Summary>Fim é uma Data. Usar conversão na classe</Summary>
             </Documentation>
