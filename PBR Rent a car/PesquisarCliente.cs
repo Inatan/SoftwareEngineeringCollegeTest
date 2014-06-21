@@ -140,9 +140,9 @@ namespace PBR_Rent_a_car
                 for (int i=0; i < clientes.Count; i++)
                     if (dataGridView_Clientes.Rows[RowIndex].Cells[0].Value.ToString().Contains(clientes[i].Nome) && dataGridView_Clientes.Rows[RowIndex].Cells[1].Value.ToString().Contains(clientes[i].CPF.ToString()) && dataGridView_Clientes.Rows[RowIndex].Cells[2].Value.ToString().Contains(clientes[i].Endereço.CEP.ToString()))
                     {
-                        
-                        Alterar_Dados aDados = new Alterar_Dados();
+                        Alterar_Dados aDados = new Alterar_Dados(clientes[i]);
                         aDados.ShowDialog();
+                        button1_Click(sender, e);
                     }
                 
             }

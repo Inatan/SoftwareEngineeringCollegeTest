@@ -132,6 +132,7 @@
             this.textBox_CPF_CNPJ.Name = "textBox_CPF_CNPJ";
             this.textBox_CPF_CNPJ.Size = new System.Drawing.Size(144, 20);
             this.textBox_CPF_CNPJ.TabIndex = 46;
+            this.textBox_CPF_CNPJ.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_CPF_CNPJ_KeyPress);
             // 
             // label1
             // 
@@ -148,6 +149,7 @@
             this.textBox_Nome.Name = "textBox_Nome";
             this.textBox_Nome.Size = new System.Drawing.Size(201, 20);
             this.textBox_Nome.TabIndex = 36;
+            this.textBox_Nome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Nome_KeyPress);
             // 
             // buttonAlterarDados
             // 
@@ -165,6 +167,7 @@
             this.textBox_Cidade.Name = "textBox_Cidade";
             this.textBox_Cidade.Size = new System.Drawing.Size(239, 20);
             this.textBox_Cidade.TabIndex = 37;
+            this.textBox_Cidade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Cidade_KeyPress);
             // 
             // label2
             // 
@@ -182,6 +185,7 @@
             this.textBox_UF.Name = "textBox_UF";
             this.textBox_UF.Size = new System.Drawing.Size(29, 20);
             this.textBox_UF.TabIndex = 40;
+            this.textBox_UF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_UF_KeyPress);
             // 
             // textBox_Rua
             // 
@@ -189,6 +193,7 @@
             this.textBox_Rua.Name = "textBox_Rua";
             this.textBox_Rua.Size = new System.Drawing.Size(270, 20);
             this.textBox_Rua.TabIndex = 41;
+            this.textBox_Rua.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Rua_KeyPress);
             // 
             // textBox_Bairro
             // 
@@ -196,6 +201,7 @@
             this.textBox_Bairro.Name = "textBox_Bairro";
             this.textBox_Bairro.Size = new System.Drawing.Size(270, 20);
             this.textBox_Bairro.TabIndex = 42;
+            this.textBox_Bairro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Bairro_KeyPress);
             // 
             // label7
             // 
@@ -231,6 +237,7 @@
             this.textBox_Número.Name = "textBox_Número";
             this.textBox_Número.Size = new System.Drawing.Size(32, 20);
             this.textBox_Número.TabIndex = 49;
+            this.textBox_Número.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Número_KeyPress);
             // 
             // label4
             // 
@@ -257,6 +264,7 @@
             this.textBox_CEP.Name = "textBox_CEP";
             this.textBox_CEP.Size = new System.Drawing.Size(144, 20);
             this.textBox_CEP.TabIndex = 51;
+            this.textBox_CEP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_CEP_KeyPress);
             // 
             // PesquisarCliente
             // 
