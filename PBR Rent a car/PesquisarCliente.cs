@@ -31,6 +31,36 @@ namespace PBR_Rent_a_car
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dataGridView_Clientes.Rows.Clear();
+            using (var ctx = new DadosContainer())
+            {
+                var clientes = ctx.ClienteSet.ToList();
+                int CountClientes = clientes.Count;
+                for (int i = 0; i < CountClientes; i++)
+                {
+                    if( clientes[i].Nome.Contains(textBox_Nome.Text) &&
+                        clientes[i].CPF.Contains(textBox_CPF_CNPJ.Text) &&
+                        clientes[i].Endereço.CEP.ToString().Contains(textBox_CEP.Text) &&
+                        clientes[i].Endereço.Bairro.Contains(textBox_Bairro.Text) &&
+                        clientes[i].Endereço.Rua.Contains(textBox_Rua.Text) &&
+                        clientes[i].Endereço.Número.ToString().Contains(textBox_Número.Text) &&
+                        clientes[i].Endereço.Cidade.Contains(textBox_Cidade.Text) &&
+                        clientes[i].Endereço.UF.Contains(textBox_UF.Text)
+                        )
+                    {
+                        dataGridView_Clientes.Rows.Add();
+                        dataGridView_Clientes.Rows[i].Cells[0].Value = clientes[i].Nome;
+                        dataGridView_Clientes.Rows[i].Cells[1].Value = clientes[i].CPF;
+                        dataGridView_Clientes.Rows[i].Cells[2].Value = clientes[i].Endereço.CEP;
+                        dataGridView_Clientes.Rows[i].Cells[3].Value = clientes[i].Endereço.ToString();
+                        dataGridView_Clientes.Rows[i].Cells[4].Value = clientes[i].Telefone;
+                    }
+                }
+            }
+        }
+
         private void PesquisarCliente_Load(object sender, EventArgs e)
         {
 
@@ -48,6 +78,7 @@ namespace PBR_Rent_a_car
                 e.Handled = true;
             }
         }
+
         private void apenasNumeros(KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
@@ -104,7 +135,5 @@ namespace PBR_Rent_a_car
             Alterar_Dados aDados = new Alterar_Dados();
             aDados.ShowDialog();
         }
-
-
     }
 }

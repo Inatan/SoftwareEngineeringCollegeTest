@@ -37,22 +37,22 @@
             this.Telefones = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button_Cancelar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox_Quilometragem = new System.Windows.Forms.TextBox();
+            this.textBox_CPF_CNPJ = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox_Nome = new System.Windows.Forms.TextBox();
             this.buttonAlterarDados = new System.Windows.Forms.Button();
-            this.textBox_Fornecedor = new System.Windows.Forms.TextBox();
+            this.textBox_Cidade = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox_Ano = new System.Windows.Forms.TextBox();
-            this.textBox_Cor = new System.Windows.Forms.TextBox();
-            this.textBox_Categoria = new System.Windows.Forms.TextBox();
+            this.textBox_UF = new System.Windows.Forms.TextBox();
+            this.textBox_Rua = new System.Windows.Forms.TextBox();
+            this.textBox_Bairro = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox_Número = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox_CEP = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Clientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,6 +64,7 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "Atualizar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView_Clientes
             // 
@@ -124,13 +125,13 @@
             this.label3.TabIndex = 47;
             this.label3.Text = "CPF/CNPJ";
             // 
-            // textBox_Quilometragem
+            // textBox_CPF_CNPJ
             // 
-            this.textBox_Quilometragem.Location = new System.Drawing.Point(10, 364);
-            this.textBox_Quilometragem.MaxLength = 14;
-            this.textBox_Quilometragem.Name = "textBox_Quilometragem";
-            this.textBox_Quilometragem.Size = new System.Drawing.Size(144, 20);
-            this.textBox_Quilometragem.TabIndex = 46;
+            this.textBox_CPF_CNPJ.Location = new System.Drawing.Point(10, 364);
+            this.textBox_CPF_CNPJ.MaxLength = 14;
+            this.textBox_CPF_CNPJ.Name = "textBox_CPF_CNPJ";
+            this.textBox_CPF_CNPJ.Size = new System.Drawing.Size(144, 20);
+            this.textBox_CPF_CNPJ.TabIndex = 46;
             // 
             // label1
             // 
@@ -158,12 +159,12 @@
             this.buttonAlterarDados.UseVisualStyleBackColor = true;
             this.buttonAlterarDados.Click += new System.EventHandler(this.buttonAlterarDados_Click);
             // 
-            // textBox_Fornecedor
+            // textBox_Cidade
             // 
-            this.textBox_Fornecedor.Location = new System.Drawing.Point(324, 315);
-            this.textBox_Fornecedor.Name = "textBox_Fornecedor";
-            this.textBox_Fornecedor.Size = new System.Drawing.Size(239, 20);
-            this.textBox_Fornecedor.TabIndex = 37;
+            this.textBox_Cidade.Location = new System.Drawing.Point(324, 315);
+            this.textBox_Cidade.Name = "textBox_Cidade";
+            this.textBox_Cidade.Size = new System.Drawing.Size(239, 20);
+            this.textBox_Cidade.TabIndex = 37;
             // 
             // label2
             // 
@@ -174,27 +175,27 @@
             this.label2.TabIndex = 39;
             this.label2.Text = "Cidade";
             // 
-            // textBox_Ano
+            // textBox_UF
             // 
-            this.textBox_Ano.Location = new System.Drawing.Point(282, 315);
-            this.textBox_Ano.MaxLength = 2;
-            this.textBox_Ano.Name = "textBox_Ano";
-            this.textBox_Ano.Size = new System.Drawing.Size(29, 20);
-            this.textBox_Ano.TabIndex = 40;
+            this.textBox_UF.Location = new System.Drawing.Point(282, 315);
+            this.textBox_UF.MaxLength = 2;
+            this.textBox_UF.Name = "textBox_UF";
+            this.textBox_UF.Size = new System.Drawing.Size(29, 20);
+            this.textBox_UF.TabIndex = 40;
             // 
-            // textBox_Cor
+            // textBox_Rua
             // 
-            this.textBox_Cor.Location = new System.Drawing.Point(282, 404);
-            this.textBox_Cor.Name = "textBox_Cor";
-            this.textBox_Cor.Size = new System.Drawing.Size(270, 20);
-            this.textBox_Cor.TabIndex = 41;
+            this.textBox_Rua.Location = new System.Drawing.Point(282, 404);
+            this.textBox_Rua.Name = "textBox_Rua";
+            this.textBox_Rua.Size = new System.Drawing.Size(270, 20);
+            this.textBox_Rua.TabIndex = 41;
             // 
-            // textBox_Categoria
+            // textBox_Bairro
             // 
-            this.textBox_Categoria.Location = new System.Drawing.Point(282, 364);
-            this.textBox_Categoria.Name = "textBox_Categoria";
-            this.textBox_Categoria.Size = new System.Drawing.Size(270, 20);
-            this.textBox_Categoria.TabIndex = 42;
+            this.textBox_Bairro.Location = new System.Drawing.Point(282, 364);
+            this.textBox_Bairro.Name = "textBox_Bairro";
+            this.textBox_Bairro.Size = new System.Drawing.Size(270, 20);
+            this.textBox_Bairro.TabIndex = 42;
             // 
             // label7
             // 
@@ -223,13 +224,13 @@
             this.label8.TabIndex = 45;
             this.label8.Text = "Rua";
             // 
-            // textBox1
+            // textBox_Número
             // 
-            this.textBox1.Location = new System.Drawing.Point(284, 444);
-            this.textBox1.MaxLength = 5;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(32, 20);
-            this.textBox1.TabIndex = 49;
+            this.textBox_Número.Location = new System.Drawing.Point(284, 444);
+            this.textBox_Número.MaxLength = 5;
+            this.textBox_Número.Name = "textBox_Número";
+            this.textBox_Número.Size = new System.Drawing.Size(32, 20);
+            this.textBox_Número.TabIndex = 49;
             // 
             // label4
             // 
@@ -238,7 +239,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 13);
             this.label4.TabIndex = 50;
-            this.label4.Text = "Numero";
+            this.label4.Text = "Número";
             // 
             // label5
             // 
@@ -249,13 +250,13 @@
             this.label5.TabIndex = 52;
             this.label5.Text = "CEP";
             // 
-            // textBox2
+            // textBox_CEP
             // 
-            this.textBox2.Location = new System.Drawing.Point(10, 416);
-            this.textBox2.MaxLength = 8;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(144, 20);
-            this.textBox2.TabIndex = 51;
+            this.textBox_CEP.Location = new System.Drawing.Point(10, 416);
+            this.textBox_CEP.MaxLength = 8;
+            this.textBox_CEP.Name = "textBox_CEP";
+            this.textBox_CEP.Size = new System.Drawing.Size(144, 20);
+            this.textBox_CEP.TabIndex = 51;
             // 
             // PesquisarCliente
             // 
@@ -264,21 +265,21 @@
             this.ClientSize = new System.Drawing.Size(575, 516);
             this.Controls.Add(this.buttonAlterarDados);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox_CEP);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox_Número);
             this.Controls.Add(this.button_Cancelar);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox_Quilometragem);
+            this.Controls.Add(this.textBox_CPF_CNPJ);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox_Categoria);
-            this.Controls.Add(this.textBox_Cor);
-            this.Controls.Add(this.textBox_Ano);
+            this.Controls.Add(this.textBox_Bairro);
+            this.Controls.Add(this.textBox_Rua);
+            this.Controls.Add(this.textBox_UF);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox_Fornecedor);
+            this.Controls.Add(this.textBox_Cidade);
             this.Controls.Add(this.textBox_Nome);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView_Clientes);
@@ -300,7 +301,7 @@
         private System.Windows.Forms.DataGridView dataGridView_Clientes;
         private System.Windows.Forms.Button button_Cancelar;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox_Quilometragem;
+        private System.Windows.Forms.TextBox textBox_CPF_CNPJ;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox_Nome;
         private System.Windows.Forms.Button buttonAlterarDados;
@@ -309,17 +310,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CEP;
         private System.Windows.Forms.DataGridViewTextBoxColumn Endereço;
         private System.Windows.Forms.DataGridViewTextBoxColumn Telefones;
-        private System.Windows.Forms.TextBox textBox_Fornecedor;
+        private System.Windows.Forms.TextBox textBox_Cidade;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox_Ano;
-        private System.Windows.Forms.TextBox textBox_Cor;
-        private System.Windows.Forms.TextBox textBox_Categoria;
+        private System.Windows.Forms.TextBox textBox_UF;
+        private System.Windows.Forms.TextBox textBox_Rua;
+        private System.Windows.Forms.TextBox textBox_Bairro;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_Número;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox_CEP;
     }
 }
