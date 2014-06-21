@@ -49,7 +49,8 @@ namespace PBR_Rent_a_car
 
         private void alterarDadosToolStripMenuAlterar_Click(object sender, EventArgs e)
         {
-            aDados = new Alterar_Dados();
+            Cliente cliente = new Cliente();
+            aDados = new Alterar_Dados(cliente);
             aDados.ShowDialog();
         }
 
@@ -73,7 +74,8 @@ namespace PBR_Rent_a_car
 
         private void buttonAlterar_Click(object sender, EventArgs e)
         {
-            aDados = new Alterar_Dados();
+            Cliente cliente = new Cliente();
+            aDados = new Alterar_Dados(cliente);
             aDados.ShowDialog();
         }
 
