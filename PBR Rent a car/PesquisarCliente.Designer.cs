@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonAtualizar = new System.Windows.Forms.Button();
             this.dataGridView_Clientes = new System.Windows.Forms.DataGridView();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CPF_CNPJ = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,15 +56,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Clientes)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // buttonAtualizar
             // 
-            this.button1.Location = new System.Drawing.Point(12, 259);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Atualizar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonAtualizar.Location = new System.Drawing.Point(12, 259);
+            this.buttonAtualizar.Name = "buttonAtualizar";
+            this.buttonAtualizar.Size = new System.Drawing.Size(75, 23);
+            this.buttonAtualizar.TabIndex = 3;
+            this.buttonAtualizar.Text = "Atualizar";
+            this.buttonAtualizar.UseVisualStyleBackColor = true;
+            this.buttonAtualizar.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView_Clientes
             // 
@@ -281,7 +281,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox_Cidade);
             this.Controls.Add(this.textBox_Nome);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonAtualizar);
             this.Controls.Add(this.dataGridView_Clientes);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -297,7 +297,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonAtualizar;
         private System.Windows.Forms.DataGridView dataGridView_Clientes;
         private System.Windows.Forms.Button button_Cancelar;
         private System.Windows.Forms.Label label3;
