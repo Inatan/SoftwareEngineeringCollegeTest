@@ -33,14 +33,5 @@ namespace PBR_Rent_a_car
             históricos.Add(h);
             Histórico.Add(h);
         }
-
-        public void gravar()
-        {
-            using (var ctx = new DadosContainer())
-            {
-                ctx.AddToRelatórioSet(this);
-                ctx.SaveChanges();
-            }
-        }
     }
 }

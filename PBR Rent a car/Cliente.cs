@@ -7,7 +7,7 @@ namespace PBR_Rent_a_car
 {
     public partial class Cliente
     {
-        public List<string> telefones { get; private set; } //Para a próxima etapa...
+        public List<string> telefones { get; private set; }
 
         public Cliente() { }
         public Cliente(string nome, string cpfcnpj, string telefoneFixo, string telefoneMóvel, Endereço endereço, Login login)
@@ -18,17 +18,15 @@ namespace PBR_Rent_a_car
             telefones= new List<string>();
             this.telefones.Add(telefoneFixo);
             this.telefones.Add(telefoneMóvel);
+            this.Telefone = SerializarTelefones();
+            this.Notificação = "";
             this.Login = login;
             this.Login.setDonoDaConta(this);
         }
 
-        public void gravar()
+        private string SerializarTelefones()
         {
-            using (var ctx = new DadosContainer())
-            {
-                ctx.AddToClienteSet(this);
-                ctx.SaveChanges();
-            }
+            return String.Join("/", telefones);
         }
 
         public static List<Cliente> todosOsClientes()

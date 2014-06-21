@@ -23,12 +23,14 @@ namespace PBR_Rent_a_car
 
         private void Button_Cadastrar_Click(object sender, EventArgs e)
         {
-            Login novoCliente = new Login(textBox_Usuario.Text, textBox_Senha.Text, Login.TipoDeUsuário.Cliente);
-            //novoCliente.gravar();
-            Endereço moraAqui = new Endereço(textBox_UF.Text, textBox_Cidade.Text, textBox_Bairro.Text, textBox_Rua.Text, Convert.ToInt32(textBox_Número.Text), Convert.ToInt32(textBox_CEP.Text));
-            Cliente novo = new Cliente(textBox_Nome.Text, textBox_CPF_CNPJ.Text, textBox_TelefoneFixo.Text, textBox_TelefoneMóvel.Text, moraAqui, novoCliente);
-            //novo.gravar();
-            moraAqui.gravar();
+            using (var ctx = new DadosContainer())
+            {
+                var novoLogin = new Login(textBox_Usuario.Text, textBox_Senha.Text, Login.TipoDeUsuário.Cliente);
+                var moraAqui = new Endereço(textBox_UF.Text, textBox_Cidade.Text, textBox_Bairro.Text, textBox_Rua.Text, Convert.ToInt32(textBox_Número.Text), Convert.ToInt32(textBox_CEP.Text));
+                var novo = new Cliente(textBox_Nome.Text, textBox_CPF_CNPJ.Text, textBox_TelefoneFixo.Text, textBox_TelefoneMóvel.Text, moraAqui, novoLogin);
+                ctx.AddToClienteSet(novo);
+                ctx.SaveChanges();
+            }
             this.Close();
         }
 

@@ -7,9 +7,9 @@ namespace PBR_Rent_a_car
 {
     public partial class Login
     {
-        public enum TipoDeUsuário
+        public enum TipoDeUsuário : byte
         {
-            Cliente,
+            Cliente = 0,
             Funcionário,
             Gerente
         };

@@ -13,7 +13,22 @@ namespace PBR_Rent_a_car
     {
         public PesquisarCliente()
         {
+            dataGridView_Clientes = new DataGridView();
             InitializeComponent();
+            using (var ctx = new DadosContainer())
+            {
+                var clientes = ctx.ClienteSet.ToList();
+                int CountClientes = clientes.Count;
+                for (int i = 0; i < CountClientes; i++)
+                {
+                    dataGridView_Clientes.Rows.Add();
+                    dataGridView_Clientes.Rows[i].Cells[0].Value = clientes[i].Nome;
+                    dataGridView_Clientes.Rows[i].Cells[1].Value = clientes[i].CPF;
+                    dataGridView_Clientes.Rows[i].Cells[2].Value = clientes[i].Endereço.CEP;
+                    dataGridView_Clientes.Rows[i].Cells[3].Value = clientes[i].Endereço.ToString();
+                    dataGridView_Clientes.Rows[i].Cells[4].Value = clientes[i].Telefone;
+                }
+            }
         }
 
         private void PesquisarCliente_Load(object sender, EventArgs e)

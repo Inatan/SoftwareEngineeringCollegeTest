@@ -18,16 +18,9 @@ namespace PBR_Rent_a_car
             this.CEP = cep;
         }
 
-        public void gravar()
+        public override string ToString()
         {
-            using (var ctx = new DadosContainer())
-            {
-                ctx.AddToEndereçoSet(this);
-                ctx.SaveChanges();
-            }
+            return "Rua " + this.Rua + ", " + this.Número;
         }
-
     }
-
-    
 }

@@ -7,9 +7,9 @@ namespace PBR_Rent_a_car
 {
     public partial class Veículo
     {
-        public enum estado
+        public enum estado : byte
         {
-            Disponivel,
+            Disponivel = 0,
             Locado,
             Manutenção
         };
@@ -53,15 +53,6 @@ namespace PBR_Rent_a_car
         private byte SerializarEstado() //Transforma status em formato armazenável pelo BD
         {
             return (byte)status;
-        }
-
-        //Métodos responsáveis pela interação com o BD
-        public void gravar()
-        {
-            using (var ctx = new DadosContainer())
-            {
-                ctx.SaveChanges();
-            }
         }
 
         private void atualizarEstado()

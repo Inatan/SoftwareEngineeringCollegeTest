@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView_Veículos = new System.Windows.Forms.DataGridView();
+            this.dataGridView_Clientes = new System.Windows.Forms.DataGridView();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CPF_CNPJ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CEP = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,7 +53,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Veículos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Clientes)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -65,20 +65,20 @@
             this.button1.Text = "Atualizar";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // dataGridView_Veículos
+            // dataGridView_Clientes
             // 
-            this.dataGridView_Veículos.AllowUserToAddRows = false;
-            this.dataGridView_Veículos.AllowUserToDeleteRows = false;
-            this.dataGridView_Veículos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridView_Clientes.AllowUserToAddRows = false;
+            this.dataGridView_Clientes.AllowUserToDeleteRows = false;
+            this.dataGridView_Clientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nome,
             this.CPF_CNPJ,
             this.CEP,
             this.Endereço,
             this.Telefones});
-            this.dataGridView_Veículos.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView_Veículos.Name = "dataGridView_Veículos";
-            this.dataGridView_Veículos.Size = new System.Drawing.Size(549, 241);
-            this.dataGridView_Veículos.TabIndex = 2;
+            this.dataGridView_Clientes.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView_Clientes.Name = "dataGridView_Clientes";
+            this.dataGridView_Clientes.Size = new System.Drawing.Size(549, 241);
+            this.dataGridView_Clientes.TabIndex = 2;
             // 
             // Nome
             // 
@@ -281,14 +281,14 @@
             this.Controls.Add(this.textBox_Fornecedor);
             this.Controls.Add(this.textBox_Nome);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView_Veículos);
+            this.Controls.Add(this.dataGridView_Clientes);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "PesquisarCliente";
             this.ShowIcon = false;
             this.Text = "PesquisarCliente";
             this.Load += new System.EventHandler(this.PesquisarCliente_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Veículos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Clientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -297,7 +297,7 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView_Veículos;
+        private System.Windows.Forms.DataGridView dataGridView_Clientes;
         private System.Windows.Forms.Button button_Cancelar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox_Quilometragem;

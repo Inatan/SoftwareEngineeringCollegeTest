@@ -56,6 +56,7 @@ namespace PBR_Rent_a_car
                 e.Handled = true;
             }
         }
+
         private void apenasNumeros(KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
@@ -63,7 +64,6 @@ namespace PBR_Rent_a_car
                 e.Handled = true;
             }
         }
-
 
         private void textBox_Ano_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -79,6 +79,7 @@ namespace PBR_Rent_a_car
         {
             apenasLetras(e);
         }
+        
         private void Cadastro_Veículo_Load(object sender, EventArgs e)
         {
 
