@@ -74,9 +74,15 @@ namespace PBR_Rent_a_car
 
         private void buttonAlterar_Click(object sender, EventArgs e)
         {
-            Cliente cliente = new Cliente();
-            aDados = new Alterar_Dados(cliente);
-            aDados.ShowDialog();
+            using (var ctx = new DadosContainer())
+            {
+                for(int i=0;i<ctx.ClienteSet.ToList().Count;i++)
+                    if (ctx.ClienteSet.ToList()[i].Login.Usuário == this.usuárioAtual.Usuário)
+                    {
+                        aDados = new Alterar_Dados(ctx.ClienteSet.ToList()[i]);
+                        aDados.ShowDialog();
+                    }
+            }
         }
 
         private void buttonLocar_Click(object sender, EventArgs e)
