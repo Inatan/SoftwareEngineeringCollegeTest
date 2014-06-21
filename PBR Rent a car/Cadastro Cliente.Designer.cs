@@ -67,6 +67,7 @@
             this.textBox_Nome.Name = "textBox_Nome";
             this.textBox_Nome.Size = new System.Drawing.Size(238, 20);
             this.textBox_Nome.TabIndex = 0;
+            this.textBox_Nome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Nome_KeyPress);
             // 
             // textBox_CPF_CNPJ
             // 
@@ -75,6 +76,7 @@
             this.textBox_CPF_CNPJ.Name = "textBox_CPF_CNPJ";
             this.textBox_CPF_CNPJ.Size = new System.Drawing.Size(160, 20);
             this.textBox_CPF_CNPJ.TabIndex = 1;
+            this.textBox_CPF_CNPJ.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_CPF_CNPJ_KeyPress);
             // 
             // radioButtonCPF
             // 
@@ -105,6 +107,7 @@
             this.textBox_TelefoneMóvel.Name = "textBox_TelefoneMóvel";
             this.textBox_TelefoneMóvel.Size = new System.Drawing.Size(112, 20);
             this.textBox_TelefoneMóvel.TabIndex = 4;
+            this.textBox_TelefoneMóvel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_TelefoneMóvel_KeyPress);
             // 
             // textBox_TelefoneFixo
             // 
@@ -113,6 +116,7 @@
             this.textBox_TelefoneFixo.Name = "textBox_TelefoneFixo";
             this.textBox_TelefoneFixo.Size = new System.Drawing.Size(113, 20);
             this.textBox_TelefoneFixo.TabIndex = 5;
+            this.textBox_TelefoneFixo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_TelefoneFixo_KeyPress);
             // 
             // panel1
             // 
@@ -193,6 +197,7 @@
             this.textBox_Cidade.Name = "textBox_Cidade";
             this.textBox_Cidade.Size = new System.Drawing.Size(146, 20);
             this.textBox_Cidade.TabIndex = 5;
+            this.textBox_Cidade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Cidade_KeyPress);
             // 
             // textBox_Número
             // 
@@ -201,6 +206,7 @@
             this.textBox_Número.Name = "textBox_Número";
             this.textBox_Número.Size = new System.Drawing.Size(55, 20);
             this.textBox_Número.TabIndex = 4;
+            this.textBox_Número.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Número_KeyPress);
             // 
             // textBox_Rua
             // 
@@ -208,6 +214,7 @@
             this.textBox_Rua.Name = "textBox_Rua";
             this.textBox_Rua.Size = new System.Drawing.Size(288, 20);
             this.textBox_Rua.TabIndex = 3;
+            this.textBox_Rua.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Rua_KeyPress);
             // 
             // textBox_CEP
             // 
@@ -216,6 +223,7 @@
             this.textBox_CEP.Name = "textBox_CEP";
             this.textBox_CEP.Size = new System.Drawing.Size(140, 20);
             this.textBox_CEP.TabIndex = 2;
+            this.textBox_CEP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_CEP_KeyPress);
             // 
             // textBox_Bairro
             // 
@@ -223,6 +231,7 @@
             this.textBox_Bairro.Name = "textBox_Bairro";
             this.textBox_Bairro.Size = new System.Drawing.Size(133, 20);
             this.textBox_Bairro.TabIndex = 1;
+            this.textBox_Bairro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Bairro_KeyPress);
             // 
             // textBox_UF
             // 
@@ -231,6 +240,7 @@
             this.textBox_UF.Name = "textBox_UF";
             this.textBox_UF.Size = new System.Drawing.Size(27, 20);
             this.textBox_UF.TabIndex = 0;
+            this.textBox_UF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_UF_KeyPress);
             // 
             // label1
             // 

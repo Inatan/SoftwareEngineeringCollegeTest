@@ -138,27 +138,35 @@ namespace PBR_Rent_a_car
 
         private void Button_Editar_Click(object sender, EventArgs e)
         {
-            using (var ctx = new DadosContainer())
+            DialogResult dialogResult = MessageBox.Show("Ao encerrar esse processo os dados serão editados. Você tem certeza que quer editar os dados?", "Aviso", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
             {
-                for (int i = 0; i < ctx.ClienteSet.ToList().Count; i++)
+                using (var ctx = new DadosContainer())
                 {
-                    if (ctx.ClienteSet.ToList()[i].Id == this.idCliente)
+                    for (int i = 0; i < ctx.ClienteSet.ToList().Count; i++)
                     {
-                        ctx.ClienteSet.ToList()[i].Nome = textBox_Nome.Text;
-                        ctx.ClienteSet.ToList()[i].CPF = textBox_CPF_CNPJ.Text;
-                        ctx.ClienteSet.ToList()[i].Telefone = textBox_TelefoneFixo.Text + '/' + textBox_TelefoneMóvel.Text;
-                        ctx.ClienteSet.ToList()[i].Endereço.UF = textBox_UF.Text;
-                        ctx.ClienteSet.ToList()[i].Endereço.Cidade = textBox_Cidade.Text;
-                        ctx.ClienteSet.ToList()[i].Endereço.Bairro = textBox_Bairro.Text;
-                        ctx.ClienteSet.ToList()[i].Endereço.Rua = textBox_Rua.Text;
-                        ctx.ClienteSet.ToList()[i].Endereço.CEP = Convert.ToInt32(textBox_CEP.Text);
-                        ctx.ClienteSet.ToList()[i].Endereço.Número = Convert.ToInt32(textBox_Número.Text);
+                        if (ctx.ClienteSet.ToList()[i].Id == this.idCliente)
+                        {
+                            ctx.ClienteSet.ToList()[i].Nome = textBox_Nome.Text;
+                            ctx.ClienteSet.ToList()[i].CPF = textBox_CPF_CNPJ.Text;
+                            ctx.ClienteSet.ToList()[i].Telefone = textBox_TelefoneFixo.Text + '/' + textBox_TelefoneMóvel.Text;
+                            ctx.ClienteSet.ToList()[i].Endereço.UF = textBox_UF.Text;
+                            ctx.ClienteSet.ToList()[i].Endereço.Cidade = textBox_Cidade.Text;
+                            ctx.ClienteSet.ToList()[i].Endereço.Bairro = textBox_Bairro.Text;
+                            ctx.ClienteSet.ToList()[i].Endereço.Rua = textBox_Rua.Text;
+                            ctx.ClienteSet.ToList()[i].Endereço.CEP = Convert.ToInt32(textBox_CEP.Text);
+                            ctx.ClienteSet.ToList()[i].Endereço.Número = Convert.ToInt32(textBox_Número.Text);
+                        }
                     }
+                    ctx.SaveChanges();
                 }
-                
-                ctx.SaveChanges();
+                this.Close();
             }
-            this.Close();
+            else if (dialogResult == DialogResult.No)
+            {
+
+            }
+            
         }
 
 
