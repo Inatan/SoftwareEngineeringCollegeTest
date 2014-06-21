@@ -328,6 +328,7 @@
             this.textBox_Senha.Location = new System.Drawing.Point(143, 221);
             this.textBox_Senha.MaxLength = 10;
             this.textBox_Senha.Name = "textBox_Senha";
+            this.textBox_Senha.PasswordChar = '*';
             this.textBox_Senha.Size = new System.Drawing.Size(112, 20);
             this.textBox_Senha.TabIndex = 17;
             // 

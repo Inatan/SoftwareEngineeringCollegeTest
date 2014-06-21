@@ -62,3 +62,4 @@ C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a
 C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.Pesquisa_Veículos.resources
 C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.Pesquisar_Funcionário.resources
 C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.SemPermissão.resources
+C:\Users\Inatan\Documents\pbr-rent-a-car\PBR Rent a car\obj\x86\Debug\PBR_Rent_a_car.SemPermissão.resources

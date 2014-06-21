@@ -6,6 +6,7 @@
 -- Generated from EDMX file: C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a car\Dados.edmx
 -- --------------------------------------------------
 
+
 SET QUOTED_IDENTIFIER OFF;
 GO
 USE [PBR.Dados];
