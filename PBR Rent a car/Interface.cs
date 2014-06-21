@@ -118,12 +118,14 @@ namespace PBR_Rent_a_car
         private void buttonPesquisarManutenções_Click(object sender, EventArgs e)
         {
             pManutenção = new Pesquisa_Manutenção();
+            pManutenção.setUsuárioAtual(this.usuárioAtual);
             pManutenção.ShowDialog();
         }
 
         private void retornarVeículoDaManutençãoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             pManutenção = new Pesquisa_Manutenção();
+            pManutenção.setUsuárioAtual(this.usuárioAtual);
             pManutenção.ShowDialog();
         }
 

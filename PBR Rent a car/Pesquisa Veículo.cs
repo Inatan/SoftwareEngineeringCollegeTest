@@ -25,7 +25,7 @@ namespace PBR_Rent_a_car
             InitializeComponent();
             using (var ctx = new DadosContainer())
             {
-                var veículos = ctx.VeículoSet.ToList();
+                var veículos = ctx.VeículoSet.Where(v => (Veículo.estado)v.Estado == Veículo.estado.Disponível).ToList();
                 int CountVeículos = veículos.Count;
                 for (int i = 0; i < CountVeículos; i++)
                 {
@@ -50,14 +50,14 @@ namespace PBR_Rent_a_car
             dataGridView_Veículos.Rows.Clear();
             using (var ctx = new DadosContainer())
             {
-                var veículos = ctx.VeículoSet.ToList();
+                var veículos = ctx.VeículoSet.Where(v => (Veículo.estado)v.Estado == Veículo.estado.Disponível).ToList();
                 int CountVeículos = veículos.Count;
                 for (int i = 0; i < CountVeículos; i++)
                 {
                     if (veículos[i].Modelo.Nome.Contains(textBox_Nome.Text) &&
                         veículos[i].Cor.Contains(textBox_Cor.Text) &&
                         veículos[i].Ano.ToString().Contains(textBox_Ano.Text) &&
-                        (textBox_Ano.Text == "" ||
+                        (textBox_Quilometragem.Text == "" ||
                         veículos[i].Quilometragem <= (int.Parse(textBox_Quilometragem.Text)))
                         )
                     {
@@ -155,7 +155,7 @@ namespace PBR_Rent_a_car
                     {
                         int id = int.Parse(row.Cells[5].Value.ToString());
                         var veículo = ctx.VeículoSet.Where(v => v.Id == id).First();
-                        veículo.setManutenção();
+                        veículo.setManutenção(usuárioAtual);
                     }
                     ctx.SaveChanges();
                 }

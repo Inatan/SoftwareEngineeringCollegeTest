@@ -43,12 +43,13 @@
             this.textBox_Nome = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView_Veículos = new System.Windows.Forms.DataGridView();
+            this.buttonRetornarManutenção = new System.Windows.Forms.Button();
             this.Modelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ano = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quilometragem = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Data = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.buttonRetornarManutenção = new System.Windows.Forms.Button();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Veículos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -172,6 +173,7 @@
             this.button1.TabIndex = 37;
             this.button1.Text = "Atualizar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView_Veículos
             // 
@@ -183,11 +185,22 @@
             this.Cor,
             this.Ano,
             this.Quilometragem,
-            this.Data});
+            this.Data,
+            this.Id});
             this.dataGridView_Veículos.Location = new System.Drawing.Point(12, 12);
             this.dataGridView_Veículos.Name = "dataGridView_Veículos";
-            this.dataGridView_Veículos.Size = new System.Drawing.Size(545, 241);
+            this.dataGridView_Veículos.Size = new System.Drawing.Size(652, 241);
             this.dataGridView_Veículos.TabIndex = 36;
+            // 
+            // buttonRetornarManutenção
+            // 
+            this.buttonRetornarManutenção.Location = new System.Drawing.Point(12, 450);
+            this.buttonRetornarManutenção.Name = "buttonRetornarManutenção";
+            this.buttonRetornarManutenção.Size = new System.Drawing.Size(128, 22);
+            this.buttonRetornarManutenção.TabIndex = 51;
+            this.buttonRetornarManutenção.Text = "Retornar Veículo";
+            this.buttonRetornarManutenção.UseVisualStyleBackColor = true;
+            this.buttonRetornarManutenção.Click += new System.EventHandler(this.buttonRetornarManutenção_Click);
             // 
             // Modelo
             // 
@@ -211,23 +224,20 @@
             // 
             // Data
             // 
-            this.Data.HeaderText = "Data de Saída";
+            this.Data.HeaderText = "Data de Entrada";
             this.Data.Name = "Data";
             // 
-            // buttonRetornarManutenção
+            // Id
             // 
-            this.buttonRetornarManutenção.Location = new System.Drawing.Point(12, 450);
-            this.buttonRetornarManutenção.Name = "buttonRetornarManutenção";
-            this.buttonRetornarManutenção.Size = new System.Drawing.Size(128, 22);
-            this.buttonRetornarManutenção.TabIndex = 51;
-            this.buttonRetornarManutenção.Text = "Retornar Veículo";
-            this.buttonRetornarManutenção.UseVisualStyleBackColor = true;
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
             // 
             // Pesquisa_Manutenção
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(569, 484);
+            this.ClientSize = new System.Drawing.Size(676, 484);
             this.Controls.Add(this.buttonRetornarManutenção);
             this.Controls.Add(this.button_Cancelar);
             this.Controls.Add(this.label3);
@@ -273,11 +283,12 @@
         private System.Windows.Forms.TextBox textBox_Nome;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView_Veículos;
+        private System.Windows.Forms.Button buttonRetornarManutenção;
         private System.Windows.Forms.DataGridViewTextBoxColumn Modelo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ano;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quilometragem;
         private System.Windows.Forms.DataGridViewTextBoxColumn Data;
-        private System.Windows.Forms.Button buttonRetornarManutenção;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
     }
 }

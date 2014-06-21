@@ -2,10 +2,9 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, and Azure
 -- --------------------------------------------------
--- Date Created: 06/19/2014 21:45:36
+-- Date Created: 06/21/2014 17:43:47
 -- Generated from EDMX file: C:\Users\Gabriel\Documents\Visual Studio 2010\Projects\pbr-rent-a-car\PBR Rent a car\Dados.edmx
 -- --------------------------------------------------
-
 
 SET QUOTED_IDENTIFIER OFF;
 GO
@@ -29,9 +28,6 @@ IF OBJECT_ID(N'[dbo].[FK_HistóricoRelatório]', 'F') IS NOT NULL
 GO
 IF OBJECT_ID(N'[dbo].[FK_VeículoModelo]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[VeículoSet] DROP CONSTRAINT [FK_VeículoModelo];
-GO
-IF OBJECT_ID(N'[dbo].[FK_FuncionárioRelatório]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[RelatórioSet] DROP CONSTRAINT [FK_FuncionárioRelatório];
 GO
 IF OBJECT_ID(N'[dbo].[FK_HistóricoManutenção]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[ManutençãoSet] DROP CONSTRAINT [FK_HistóricoManutenção];
@@ -154,8 +150,8 @@ GO
 -- Creating table 'LocaçãoSet'
 CREATE TABLE [dbo].[LocaçãoSet] (
     [Id] int IDENTITY(1,1) NOT NULL,
-    [Inicio] nvarchar(max)  NOT NULL,
-    [Fim] nvarchar(max)  NOT NULL,
+    [Inicio] bigint  NOT NULL,
+    [Fim] bigint  NULL,
     [Histórico_Id] int  NOT NULL,
     [Funcionário_Id] int  NOT NULL,
     [Cliente_Id] int  NOT NULL
@@ -165,7 +161,7 @@ GO
 -- Creating table 'ReservaSet'
 CREATE TABLE [dbo].[ReservaSet] (
     [Id] int IDENTITY(1,1) NOT NULL,
-    [Data] nvarchar(max)  NOT NULL,
+    [Data] bigint  NOT NULL,
     [Veículo_Id] int  NOT NULL,
     [Funcionário_Id] int  NOT NULL,
     [Cliente_Id] int  NOT NULL
@@ -175,8 +171,8 @@ GO
 -- Creating table 'ManutençãoSet'
 CREATE TABLE [dbo].[ManutençãoSet] (
     [Id] int IDENTITY(1,1) NOT NULL,
-    [Inicio] nvarchar(max)  NOT NULL,
-    [Fim] nvarchar(max)  NOT NULL,
+    [Inicio] bigint  NOT NULL,
+    [Fim] bigint  NULL,
     [Motivo] nvarchar(max)  NOT NULL,
     [Histórico_Id] int  NOT NULL,
     [Funcionário_Id] int  NOT NULL

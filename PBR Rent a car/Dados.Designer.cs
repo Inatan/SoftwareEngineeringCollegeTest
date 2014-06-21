@@ -1365,13 +1365,11 @@ namespace PBR_Rent_a_car
         /// </summary>
         /// <param name="id">Initial value of the Id property.</param>
         /// <param name="inicio">Initial value of the Inicio property.</param>
-        /// <param name="fim">Initial value of the Fim property.</param>
-        public static Locação CreateLocação(global::System.Int32 id, global::System.String inicio, global::System.String fim)
+        public static Locação CreateLocação(global::System.Int32 id, global::System.Int64 inicio)
         {
             Locação locação = new Locação();
             locação.Id = id;
             locação.Inicio = inicio;
-            locação.Fim = fim;
             return locação;
         }
 
@@ -1411,7 +1409,7 @@ namespace PBR_Rent_a_car
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String Inicio
+        public global::System.Int64 Inicio
         {
             get
             {
@@ -1421,21 +1419,21 @@ namespace PBR_Rent_a_car
             {
                 OnInicioChanging(value);
                 ReportPropertyChanging("Inicio");
-                _Inicio = StructuralObject.SetValidValue(value, false);
+                _Inicio = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Inicio");
                 OnInicioChanged();
             }
         }
-        private global::System.String _Inicio;
-        partial void OnInicioChanging(global::System.String value);
+        private global::System.Int64 _Inicio;
+        partial void OnInicioChanging(global::System.Int64 value);
         partial void OnInicioChanged();
     
         /// <summary>
         /// Fim é uma data. Fazer conversão na classe
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.String Fim
+        public Nullable<global::System.Int64> Fim
         {
             get
             {
@@ -1445,13 +1443,13 @@ namespace PBR_Rent_a_car
             {
                 OnFimChanging(value);
                 ReportPropertyChanging("Fim");
-                _Fim = StructuralObject.SetValidValue(value, false);
+                _Fim = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Fim");
                 OnFimChanged();
             }
         }
-        private global::System.String _Fim;
-        partial void OnFimChanging(global::System.String value);
+        private Nullable<global::System.Int64> _Fim;
+        partial void OnFimChanging(Nullable<global::System.Int64> value);
         partial void OnFimChanged();
 
         #endregion
@@ -1807,14 +1805,12 @@ namespace PBR_Rent_a_car
         /// </summary>
         /// <param name="id">Initial value of the Id property.</param>
         /// <param name="inicio">Initial value of the Inicio property.</param>
-        /// <param name="fim">Initial value of the Fim property.</param>
         /// <param name="motivo">Initial value of the Motivo property.</param>
-        public static Manutenção CreateManutenção(global::System.Int32 id, global::System.String inicio, global::System.String fim, global::System.String motivo)
+        public static Manutenção CreateManutenção(global::System.Int32 id, global::System.Int64 inicio, global::System.String motivo)
         {
             Manutenção manutenção = new Manutenção();
             manutenção.Id = id;
             manutenção.Inicio = inicio;
-            manutenção.Fim = fim;
             manutenção.Motivo = motivo;
             return manutenção;
         }
@@ -1855,7 +1851,7 @@ namespace PBR_Rent_a_car
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String Inicio
+        public global::System.Int64 Inicio
         {
             get
             {
@@ -1865,21 +1861,21 @@ namespace PBR_Rent_a_car
             {
                 OnInicioChanging(value);
                 ReportPropertyChanging("Inicio");
-                _Inicio = StructuralObject.SetValidValue(value, false);
+                _Inicio = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Inicio");
                 OnInicioChanged();
             }
         }
-        private global::System.String _Inicio;
-        partial void OnInicioChanging(global::System.String value);
+        private global::System.Int64 _Inicio;
+        partial void OnInicioChanging(global::System.Int64 value);
         partial void OnInicioChanged();
     
         /// <summary>
         /// Fim é uma Data. Usar conversão na classe
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.String Fim
+        public Nullable<global::System.Int64> Fim
         {
             get
             {
@@ -1889,13 +1885,13 @@ namespace PBR_Rent_a_car
             {
                 OnFimChanging(value);
                 ReportPropertyChanging("Fim");
-                _Fim = StructuralObject.SetValidValue(value, false);
+                _Fim = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Fim");
                 OnFimChanged();
             }
         }
-        private global::System.String _Fim;
-        partial void OnFimChanging(global::System.String value);
+        private Nullable<global::System.Int64> _Fim;
+        partial void OnFimChanging(Nullable<global::System.Int64> value);
         partial void OnFimChanged();
     
         /// <summary>
@@ -2240,7 +2236,7 @@ namespace PBR_Rent_a_car
         /// </summary>
         /// <param name="id">Initial value of the Id property.</param>
         /// <param name="data">Initial value of the Data property.</param>
-        public static Reserva CreateReserva(global::System.Int32 id, global::System.String data)
+        public static Reserva CreateReserva(global::System.Int32 id, global::System.Int64 data)
         {
             Reserva reserva = new Reserva();
             reserva.Id = id;
@@ -2284,7 +2280,7 @@ namespace PBR_Rent_a_car
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String Data
+        public global::System.Int64 Data
         {
             get
             {
@@ -2294,13 +2290,13 @@ namespace PBR_Rent_a_car
             {
                 OnDataChanging(value);
                 ReportPropertyChanging("Data");
-                _Data = StructuralObject.SetValidValue(value, false);
+                _Data = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Data");
                 OnDataChanged();
             }
         }
-        private global::System.String _Data;
-        partial void OnDataChanging(global::System.String value);
+        private global::System.Int64 _Data;
+        partial void OnDataChanging(global::System.Int64 value);
         partial void OnDataChanged();
 
         #endregion

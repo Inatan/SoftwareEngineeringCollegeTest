@@ -29,14 +29,37 @@ namespace PBR_Rent_a_car
 
         public void setDisponivel()
         {
+            using (var ctx = new DadosContainer())
+            {
+                if (this.status == estado.Manutenção)
+                {
+                    if (!this.Histórico.últimaManutenção().acabou())
+                        this.Histórico.últimaManutenção().setFim(DateTime.Now);
+                }
+                else if (this.status == estado.Locado)
+                {
+
+                }
+                ctx.SaveChanges();
+            }
             this.status = estado.Disponível;
             this.Estado = SerializarEstado();
         }
 
-        public void setManutenção()
+        public void setManutenção(Login funcionárioQueMandou)
         {
-            this.status = estado.Manutenção;
-            this.Estado = SerializarEstado();
+            if (this.status == estado.Disponível)
+            {
+                this.status = estado.Manutenção;
+                this.Estado = SerializarEstado();
+                using (var ctx = new DadosContainer())
+                {
+                    ctx.Attach(funcionárioQueMandou);
+                    var hist = ctx.HistóricoSet.Where(h => h.Id == this.Histórico.Id).First();
+                    Manutenção m = new Manutenção(DateTime.Now, "", funcionárioQueMandou.Funcionário, hist);
+                    ctx.SaveChanges();
+                }
+            }
         }
 
         public Veículo() { }

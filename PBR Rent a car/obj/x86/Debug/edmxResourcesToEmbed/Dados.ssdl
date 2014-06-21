@@ -119,8 +119,8 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Inicio" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Fim" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Inicio" Type="bigint" Nullable="false" />
+    <Property Name="Fim" Type="bigint" Nullable="true" />
     <Property Name="Histórico_Id" Type="int" Nullable="false" />
     <Property Name="Funcionário_Id" Type="int" Nullable="false" />
     <Property Name="Cliente_Id" Type="int" Nullable="false" />
@@ -130,7 +130,7 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Data" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Data" Type="bigint" Nullable="false" />
     <Property Name="Veículo_Id" Type="int" Nullable="false" />
     <Property Name="Funcionário_Id" Type="int" Nullable="false" />
     <Property Name="Cliente_Id" Type="int" Nullable="false" />
@@ -140,8 +140,8 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Inicio" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Fim" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Inicio" Type="bigint" Nullable="false" />
+    <Property Name="Fim" Type="bigint" Nullable="true" />
     <Property Name="Motivo" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Histórico_Id" Type="int" Nullable="false" />
     <Property Name="Funcionário_Id" Type="int" Nullable="false" />
