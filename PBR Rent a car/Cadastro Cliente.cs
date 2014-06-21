@@ -25,17 +25,26 @@ namespace PBR_Rent_a_car
         {
             DialogResult dialogResult = MessageBox.Show("Ao encerrar esse processo os dados serão editados. Você tem certeza que quer editar os dados?", "Aviso", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
-            {
-                using (var ctx = new DadosContainer())
+                if (textBox_Usuario.Text == "" || textBox_Senha.Text == "" || textBox_UF.Text == "" || textBox_Bairro.Text == "" || textBox_Rua.Text == "" || textBox_Número.Text == "" || textBox_CEP.Text == "" || textBox_Nome.Text=="" || textBox_CPF_CNPJ.Text=="" )
+                    MessageBox.Show("Por favor digite todos os campos importantes", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else if(textBox_CEP.Text.Length!=textBox_CEP.MaxLength)
+                    MessageBox.Show("Por favor digite o CEP completo", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else if (textBox_CPF_CNPJ.Text.Length != textBox_CPF_CNPJ.MaxLength)
+                    MessageBox.Show("Por favor digite o CPF ou CNPJ completo", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
                 {
-                    var novoLogin = new Login(textBox_Usuario.Text, textBox_Senha.Text, Login.TipoDeUsuário.Cliente);
-                    var moraAqui = new Endereço(textBox_UF.Text, textBox_Cidade.Text, textBox_Bairro.Text, textBox_Rua.Text, Convert.ToInt32(textBox_Número.Text), Convert.ToInt32(textBox_CEP.Text));
-                    var novo = new Cliente(textBox_Nome.Text, textBox_CPF_CNPJ.Text, textBox_TelefoneFixo.Text, textBox_TelefoneMóvel.Text, moraAqui, novoLogin);
-                    ctx.AddToClienteSet(novo);
-                    ctx.SaveChanges();
+
+                    using (var ctx = new DadosContainer())
+                    {
+                        var novoLogin = new Login(textBox_Usuario.Text, textBox_Senha.Text, Login.TipoDeUsuário.Cliente);
+                        var moraAqui = new Endereço(textBox_UF.Text, textBox_Cidade.Text, textBox_Bairro.Text, textBox_Rua.Text, Convert.ToInt32(textBox_Número.Text), Convert.ToInt32(textBox_CEP.Text));
+                        var novo = new Cliente(textBox_Nome.Text, textBox_CPF_CNPJ.Text, textBox_TelefoneFixo.Text, textBox_TelefoneMóvel.Text, moraAqui, novoLogin);
+                        ctx.AddToClienteSet(novo);
+                        ctx.SaveChanges();
+                    }
+                    this.Close();
+
                 }
-                this.Close();
-            }
         }
 
         private void apenasLetras(KeyPressEventArgs e)
