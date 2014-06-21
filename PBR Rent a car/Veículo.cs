@@ -60,8 +60,6 @@ namespace PBR_Rent_a_car
         {
             using (var ctx = new DadosContainer())
             {
-                if (this.EntityState != System.Data.EntityState.Added)
-                    ctx.AddToVeículoSet(this);
                 ctx.SaveChanges();
             }
         }
