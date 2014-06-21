@@ -186,6 +186,12 @@
       <DependentUpon>Reserva de veículo.cs</DependentUpon>
     </Compile>
     <Compile Include="Reserva.cs" />
+    <Compile Include="SemPermissão.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SemPermissão.Designer.cs">
+      <DependentUpon>SemPermissão.cs</DependentUpon>
+    </Compile>
     <Compile Include="Veículo.cs" />
     <EmbeddedResource Include="Adicionar funcionário.resx">
       <DependentUpon>Adicionar funcionário.cs</DependentUpon>
@@ -258,6 +264,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reserva de veículo.resx">
       <DependentUpon>Reserva de veículo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SemPermissão.resx">
+      <DependentUpon>SemPermissão.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Dados.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

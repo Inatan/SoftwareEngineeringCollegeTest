@@ -9,31 +9,34 @@ namespace PBR_Rent_a_car
     {
         public enum estado : byte
         {
-            Disponivel = 0,
-            Locado,
-            Manutenção
+            Disponível = 0,
+            Manutenção,
+            Locado
         };
-        public estado status;
+        private estado status;
+
+        public estado getEstado()
+        {
+            this.status = (estado)Estado;
+            return this.status;
+        }
 
         public void setLocado()
         {
             this.status = estado.Locado;
             this.Estado = SerializarEstado();
-            atualizarEstado();
         }
 
         public void setDisponivel()
         {
-            this.status = estado.Disponivel;
+            this.status = estado.Disponível;
             this.Estado = SerializarEstado();
-            atualizarEstado();
         }
 
         public void setManutenção()
         {
             this.status = estado.Manutenção;
             this.Estado = SerializarEstado();
-            atualizarEstado();
         }
 
         public Veículo() { }
@@ -44,7 +47,7 @@ namespace PBR_Rent_a_car
             this.Categoria = categoria;
             this.Quilometragem = quilometragem;
             this.Modelo = modelo;
-            this.status = estado.Disponivel;
+            this.status = estado.Disponível;
             this.Estado = SerializarEstado();
             this.Histórico = new Histórico(this, new List<Manutenção>(), new List<Locação>());
             this.Modelo.Veículo.Add(this);
@@ -53,22 +56,6 @@ namespace PBR_Rent_a_car
         private byte SerializarEstado() //Transforma status em formato armazenável pelo BD
         {
             return (byte)status;
-        }
-
-        private void atualizarEstado()
-        {
-            using (var ctx = new DadosContainer())
-            {
-                foreach (var v in ctx.VeículoSet)
-                {
-                    if (v.Id == this.Id)
-                    {
-                        v.Estado = SerializarEstado();
-                        break;
-                    }
-                }
-                ctx.SaveChanges();
-            }
         }
 
         public override string ToString()

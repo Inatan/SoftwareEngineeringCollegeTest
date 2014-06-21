@@ -34,7 +34,8 @@ namespace PBR_Rent_a_car
                     dataGridView_Veículos.Rows[i].Cells[1].Value = veículos[i].Cor;
                     dataGridView_Veículos.Rows[i].Cells[2].Value = veículos[i].Ano.ToString();
                     dataGridView_Veículos.Rows[i].Cells[3].Value = veículos[i].Quilometragem.ToString();
-                    dataGridView_Veículos.Rows[i].Cells[4].Value = veículos[i].status;
+                    dataGridView_Veículos.Rows[i].Cells[4].Value = veículos[i].getEstado();
+                    dataGridView_Veículos.Rows[i].Cells[5].Value = veículos[i].Id;
                 }
             }
         }
@@ -65,7 +66,8 @@ namespace PBR_Rent_a_car
                         dataGridView_Veículos.Rows[i].Cells[1].Value = veículos[i].Cor;
                         dataGridView_Veículos.Rows[i].Cells[2].Value = veículos[i].Ano.ToString();
                         dataGridView_Veículos.Rows[i].Cells[3].Value = veículos[i].Quilometragem.ToString();
-                        dataGridView_Veículos.Rows[i].Cells[4].Value = veículos[i].status;
+                        dataGridView_Veículos.Rows[i].Cells[4].Value = veículos[i].getEstado();
+                        dataGridView_Veículos.Rows[i].Cells[5].Value = veículos[i].Id;
                     }
                 }
             }
@@ -146,7 +148,17 @@ namespace PBR_Rent_a_car
             if (usuárioAtual.getPermissão() == Login.TipoDeUsuário.Cliente) new SemPermissão().ShowDialog();
             else
             {
-                //Fazer o que tem que ser feito...
+                using (var ctx = new DadosContainer())
+                {
+                    DataGridViewSelectedRowCollection rows = dataGridView_Veículos.SelectedRows;
+                    foreach (DataGridViewRow row in rows)
+                    {
+                        int id = int.Parse(row.Cells[5].Value.ToString());
+                        var veículo = ctx.VeículoSet.Where(v => v.Id == id).First();
+                        veículo.setManutenção();
+                    }
+                    ctx.SaveChanges();
+                }
             }
         }
     }

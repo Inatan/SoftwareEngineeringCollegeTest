@@ -16,6 +16,13 @@ namespace PBR_Rent_a_car
         Alterar_Dados aDados;
         Criar_Locação locação;
 
+        private Login usuárioAtual;
+
+        public void setUsuárioAtual(Login atual)
+        {
+            this.usuárioAtual = atual;
+        }
+
         public InterfaceCliente()
         {
             InitializeComponent();
@@ -30,6 +37,7 @@ namespace PBR_Rent_a_car
         private void pesquisarVeículosToolStripPesquisa_Click(object sender, EventArgs e)
         {
             pVeículo = new Pesquisa_Veículos();
+            pVeículo.setUsuárioAtual(this.usuárioAtual);
             pVeículo.ShowDialog();
         }
 

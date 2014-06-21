@@ -67,5 +67,10 @@ namespace PBR_Rent_a_car
         {
             this.Close();
         }
+
+        private void Pesquisa_Manutenção_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

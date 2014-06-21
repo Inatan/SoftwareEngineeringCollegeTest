@@ -49,6 +49,7 @@
             this.textBox_Quilometragem = new System.Windows.Forms.TextBox();
             this.button_Cancelar = new System.Windows.Forms.Button();
             this.buttonMandarManutenção = new System.Windows.Forms.Button();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Veículos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,10 +63,11 @@
             this.Cor,
             this.Ano,
             this.Quilometragem,
-            this.Estado});
+            this.Estado,
+            this.Id});
             this.dataGridView_Veículos.Location = new System.Drawing.Point(12, 13);
             this.dataGridView_Veículos.Name = "dataGridView_Veículos";
-            this.dataGridView_Veículos.Size = new System.Drawing.Size(545, 241);
+            this.dataGridView_Veículos.Size = new System.Drawing.Size(650, 241);
             this.dataGridView_Veículos.TabIndex = 0;
             this.dataGridView_Veículos.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView_Veículos_RowHeaderMouseDoubleClick);
             // 
@@ -226,11 +228,17 @@
             this.buttonMandarManutenção.UseVisualStyleBackColor = true;
             this.buttonMandarManutenção.Click += new System.EventHandler(this.buttonMandarManutenção_Click);
             // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            // 
             // Pesquisa_Veículos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(568, 463);
+            this.ClientSize = new System.Drawing.Size(674, 463);
             this.Controls.Add(this.buttonMandarManutenção);
             this.Controls.Add(this.button_Cancelar);
             this.Controls.Add(this.label3);
@@ -282,6 +290,7 @@
         private System.Windows.Forms.TextBox textBox_Quilometragem;
         private System.Windows.Forms.Button button_Cancelar;
         private System.Windows.Forms.Button buttonMandarManutenção;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
 
     }
 }

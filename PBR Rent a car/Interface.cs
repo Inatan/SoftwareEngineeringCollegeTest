@@ -63,6 +63,7 @@ namespace PBR_Rent_a_car
         private void Button_Pesquisar_Veículo_Click(object sender, EventArgs e)
         {
             pVeículo = new Pesquisa_Veículos();
+            pVeículo.setUsuárioAtual(this.usuárioAtual);
             pVeículo.ShowDialog();
         }
 
@@ -87,6 +88,7 @@ namespace PBR_Rent_a_car
         private void pesquisarVeículosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             pVeículo = new Pesquisa_Veículos();
+            pVeículo.setUsuárioAtual(this.usuárioAtual);
             pVeículo.ShowDialog();
         }
 

@@ -41,7 +41,9 @@ namespace PBR_Rent_a_car
             {
                 if (atual.getPermissão() == Login.TipoDeUsuário.Cliente)
                 {
-                    new InterfaceCliente().ShowDialog();
+                    InterfaceCliente i = new InterfaceCliente();
+                    i.setUsuárioAtual(atual);
+                    i.ShowDialog();
                     this.Close();
                 }
                 else if (atual.getPermissão() == Login.TipoDeUsuário.Funcionário)
@@ -61,7 +63,7 @@ namespace PBR_Rent_a_car
             } 
             else
             {
-                //Colocar alguma tela dizendo que login/senha são inválidos!!!
+                new ErrorProvider().SetError(buttonLogin, "Login ou senha inválidos");
             }
         }
 
