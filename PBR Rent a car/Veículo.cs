@@ -9,9 +9,9 @@ namespace PBR_Rent_a_car
     {
         public enum estado
         {
+            Disponivel,
             Locado,
-            Manutenção,
-            Disponivel
+            Manutenção
         };
         public estado status;
 
@@ -60,8 +60,8 @@ namespace PBR_Rent_a_car
         {
             using (var ctx = new DadosContainer())
             {
-                ctx.AttachTo("ModeloSet", this.Modelo);
-                ctx.AddToVeículoSet(this);
+                if (this.EntityState != System.Data.EntityState.Added)
+                    ctx.AddToVeículoSet(this);
                 ctx.SaveChanges();
             }
         }
@@ -82,14 +82,9 @@ namespace PBR_Rent_a_car
             }
         }
 
-        public static List<Veículo> todosOsVeículos()
+        public override string ToString()
         {
-            List<Veículo> todos = new List<Veículo>();
-            using (var ctx = new DadosContainer())
-            {
-                foreach (var v in ctx.VeículoSet) todos.Add(v);
-            }
-            return todos;
+            return "Veículo com ID " + this.Id;
         }
     }
 }

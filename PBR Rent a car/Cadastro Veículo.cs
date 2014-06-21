@@ -36,8 +36,16 @@ namespace PBR_Rent_a_car
         {
             string[] modelo = new string[2];
             modelo = comboBox_Modelo.Text.Split('/');
-            Veículo novo = new Veículo(textBox_Cor.Text,Convert.ToInt32(textBox_Ano.Text),textBox_Categoria.Text,0,new Modelo(modelo[1],modelo[0]));
+            Modelo selecionado;
+            using(var ctx = new DadosContainer())
+            {
+                var mnome = modelo[1];
+                var mfornecedor = modelo[0];
+                selecionado = ctx.ModeloSet.Where(m => m.Nome == mnome && m.Fornecedor == mfornecedor).FirstOrDefault();
+            }
+            Veículo novo = new Veículo(textBox_Cor.Text,Convert.ToInt32(textBox_Ano.Text),textBox_Categoria.Text,0, selecionado);
             novo.gravar();
+            this.Close();
         }
 
         private void apenasLetras(KeyPressEventArgs e)
