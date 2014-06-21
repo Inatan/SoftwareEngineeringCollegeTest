@@ -11,6 +11,13 @@ namespace PBR_Rent_a_car
 {
     public partial class Pesquisa_Veículos : Form
     {
+        private Login usuárioAtual;
+
+        public void setUsuárioAtual(Login atual)
+        {
+            this.usuárioAtual = atual;
+        }
+
         public Veículo veículoPesquisado = new Veículo() ;
         public Pesquisa_Veículos()
         {
@@ -99,7 +106,6 @@ namespace PBR_Rent_a_car
             }
         }
 
-
         private void textBox_Nome_KeyPress(object sender, KeyPressEventArgs e)
         {
             apenasLetras(e);
@@ -133,6 +139,15 @@ namespace PBR_Rent_a_car
         private void Pesquisa_Veículos_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonMandarManutenção_Click(object sender, EventArgs e)
+        {
+            if (usuárioAtual.getPermissão() == Login.TipoDeUsuário.Cliente) new SemPermissão().ShowDialog();
+            else
+            {
+                //Fazer o que tem que ser feito...
+            }
         }
     }
 }

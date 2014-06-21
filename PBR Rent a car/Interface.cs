@@ -162,6 +162,7 @@ namespace PBR_Rent_a_car
                 cFuncionário = new Adicionar_funcionário();
                 cFuncionário.ShowDialog();
             }
+            else new SemPermissão().ShowDialog();
         }
 
         private void emitirRelatórioToolStripMenuItem_Click(object sender, EventArgs e)
@@ -171,6 +172,7 @@ namespace PBR_Rent_a_car
                 eRelatório = new Emissão_de_Relatório();
                 eRelatório.ShowDialog();
             }
+            else new SemPermissão().ShowDialog();
         }
 
         private void pesquisarFuncionárioToolStripMenuItem_Click(object sender, EventArgs e)
@@ -190,8 +192,5 @@ namespace PBR_Rent_a_car
         {
 
         }
-
-
-
     }
 }

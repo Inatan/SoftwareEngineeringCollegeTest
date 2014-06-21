@@ -224,6 +224,7 @@
             this.buttonMandarManutenção.TabIndex = 36;
             this.buttonMandarManutenção.Text = "Mandar para Manutenção";
             this.buttonMandarManutenção.UseVisualStyleBackColor = true;
+            this.buttonMandarManutenção.Click += new System.EventHandler(this.buttonMandarManutenção_Click);
             // 
             // Pesquisa_Veículos
             // 
