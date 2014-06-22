@@ -21,10 +21,18 @@ namespace PBR_Rent_a_car
             return this.status;
         }
 
-        public void setLocado()
+        public void setLocado(Cliente locador)
         {
-            this.status = estado.Locado;
-            this.Estado = SerializarEstado();
+            if (this.status == estado.Disponível)
+            {
+                this.status = estado.Locado;
+                this.Estado = SerializarEstado();
+                using (var ctx = new DadosContainer())
+                {
+                    //Locação l = new Locação(DateTime.Now, this.Histórico, locador);
+                    ctx.SaveChanges();
+                }
+            }
         }
 
         public void setDisponivel()
@@ -38,7 +46,8 @@ namespace PBR_Rent_a_car
                 }
                 else if (this.status == estado.Locado)
                 {
-
+                    if (!this.Histórico.últimaLocação().acabou())
+                        this.Histórico.últimaManutenção().setFim(DateTime.Now);
                 }
                 ctx.SaveChanges();
             }
