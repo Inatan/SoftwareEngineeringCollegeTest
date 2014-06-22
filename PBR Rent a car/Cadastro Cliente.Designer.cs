@@ -89,6 +89,7 @@
             this.radioButtonCPF.TabStop = true;
             this.radioButtonCPF.Text = "CPF";
             this.radioButtonCPF.UseVisualStyleBackColor = true;
+            this.radioButtonCPF.CheckedChanged += new System.EventHandler(this.radioButtonCNPJ_CheckedChanged);
             // 
             // radioButtonCNPJ
             // 
@@ -99,6 +100,7 @@
             this.radioButtonCNPJ.TabIndex = 3;
             this.radioButtonCNPJ.Text = "CNPJ";
             this.radioButtonCNPJ.UseVisualStyleBackColor = true;
+            this.radioButtonCNPJ.CheckedChanged += new System.EventHandler(this.radioButtonCNPJ_CheckedChanged);
             // 
             // textBox_TelefoneMóvel
             // 
