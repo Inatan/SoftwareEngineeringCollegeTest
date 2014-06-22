@@ -87,21 +87,21 @@
             this.textBox_Senha.Name = "textBox_Senha";
             this.textBox_Senha.PasswordChar = '*';
             this.textBox_Senha.Size = new System.Drawing.Size(208, 20);
-            this.textBox_Senha.TabIndex = 14;
+            this.textBox_Senha.TabIndex = 1;
             // 
             // textBox_Nome
             // 
             this.textBox_Nome.Location = new System.Drawing.Point(12, 164);
             this.textBox_Nome.Name = "textBox_Nome";
             this.textBox_Nome.Size = new System.Drawing.Size(208, 20);
-            this.textBox_Nome.TabIndex = 13;
+            this.textBox_Nome.TabIndex = 0;
             // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(12, 365);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(208, 32);
-            this.button1.TabIndex = 17;
+            this.button1.TabIndex = 5;
             this.button1.Text = "Fechar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -111,7 +111,7 @@
             this.buttonLogin.Location = new System.Drawing.Point(12, 248);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(208, 32);
-            this.buttonLogin.TabIndex = 18;
+            this.buttonLogin.TabIndex = 2;
             this.buttonLogin.Text = "Login";
             this.buttonLogin.UseVisualStyleBackColor = true;
             this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
@@ -121,7 +121,7 @@
             this.buttonRedefinirSenha.Location = new System.Drawing.Point(12, 286);
             this.buttonRedefinirSenha.Name = "buttonRedefinirSenha";
             this.buttonRedefinirSenha.Size = new System.Drawing.Size(208, 35);
-            this.buttonRedefinirSenha.TabIndex = 19;
+            this.buttonRedefinirSenha.TabIndex = 3;
             this.buttonRedefinirSenha.Text = "Redefinir Senha";
             this.buttonRedefinirSenha.UseVisualStyleBackColor = true;
             this.buttonRedefinirSenha.Click += new System.EventHandler(this.buttonRedefinirSenha_Click);
@@ -131,7 +131,7 @@
             this.buttonCadastrar.Location = new System.Drawing.Point(12, 326);
             this.buttonCadastrar.Name = "buttonCadastrar";
             this.buttonCadastrar.Size = new System.Drawing.Size(208, 33);
-            this.buttonCadastrar.TabIndex = 20;
+            this.buttonCadastrar.TabIndex = 4;
             this.buttonCadastrar.Text = "Cadastrar-se";
             this.buttonCadastrar.UseVisualStyleBackColor = true;
             this.buttonCadastrar.Click += new System.EventHandler(this.buttonCadastrar_Click);

@@ -300,7 +300,7 @@
             this.Button_Cadastrar_Cliente.Location = new System.Drawing.Point(155, 453);
             this.Button_Cadastrar_Cliente.Name = "Button_Cadastrar_Cliente";
             this.Button_Cadastrar_Cliente.Size = new System.Drawing.Size(122, 28);
-            this.Button_Cadastrar_Cliente.TabIndex = 5;
+            this.Button_Cadastrar_Cliente.TabIndex = 2;
             this.Button_Cadastrar_Cliente.Text = "Cadastrar Cliente";
             this.Button_Cadastrar_Cliente.UseVisualStyleBackColor = true;
             this.Button_Cadastrar_Cliente.Click += new System.EventHandler(this.Button_Cadastrar_Cliente_Click);
@@ -310,7 +310,7 @@
             this.Button_Cadastrar_Veículo.Location = new System.Drawing.Point(27, 415);
             this.Button_Cadastrar_Veículo.Name = "Button_Cadastrar_Veículo";
             this.Button_Cadastrar_Veículo.Size = new System.Drawing.Size(122, 28);
-            this.Button_Cadastrar_Veículo.TabIndex = 6;
+            this.Button_Cadastrar_Veículo.TabIndex = 0;
             this.Button_Cadastrar_Veículo.Text = "Cadastrar Veículo";
             this.Button_Cadastrar_Veículo.UseVisualStyleBackColor = true;
             this.Button_Cadastrar_Veículo.Click += new System.EventHandler(this.Button_Cadastrar_Veículo_Click);
@@ -320,7 +320,7 @@
             this.Button_Cadastrar_Modelo.Location = new System.Drawing.Point(27, 453);
             this.Button_Cadastrar_Modelo.Name = "Button_Cadastrar_Modelo";
             this.Button_Cadastrar_Modelo.Size = new System.Drawing.Size(122, 28);
-            this.Button_Cadastrar_Modelo.TabIndex = 7;
+            this.Button_Cadastrar_Modelo.TabIndex = 1;
             this.Button_Cadastrar_Modelo.Text = "Cadastrar Modelo";
             this.Button_Cadastrar_Modelo.UseVisualStyleBackColor = true;
             this.Button_Cadastrar_Modelo.Click += new System.EventHandler(this.button3_Click);
@@ -330,7 +330,7 @@
             this.Button_Pesquisar_Veículo.Location = new System.Drawing.Point(600, 453);
             this.Button_Pesquisar_Veículo.Name = "Button_Pesquisar_Veículo";
             this.Button_Pesquisar_Veículo.Size = new System.Drawing.Size(129, 28);
-            this.Button_Pesquisar_Veículo.TabIndex = 8;
+            this.Button_Pesquisar_Veículo.TabIndex = 6;
             this.Button_Pesquisar_Veículo.Text = "Pesquisar Veículo";
             this.Button_Pesquisar_Veículo.UseVisualStyleBackColor = true;
             this.Button_Pesquisar_Veículo.Click += new System.EventHandler(this.Button_Pesquisar_Veículo_Click);
@@ -340,7 +340,7 @@
             this.Button_Reservar_Veículo.Location = new System.Drawing.Point(735, 453);
             this.Button_Reservar_Veículo.Name = "Button_Reservar_Veículo";
             this.Button_Reservar_Veículo.Size = new System.Drawing.Size(122, 28);
-            this.Button_Reservar_Veículo.TabIndex = 9;
+            this.Button_Reservar_Veículo.TabIndex = 8;
             this.Button_Reservar_Veículo.Text = "Reservar Veículo";
             this.Button_Reservar_Veículo.UseVisualStyleBackColor = true;
             this.Button_Reservar_Veículo.Click += new System.EventHandler(this.Button_Reservar_Veículo_Click);
@@ -350,7 +350,7 @@
             this.buttonPesquisarClientes.Location = new System.Drawing.Point(465, 419);
             this.buttonPesquisarClientes.Name = "buttonPesquisarClientes";
             this.buttonPesquisarClientes.Size = new System.Drawing.Size(129, 28);
-            this.buttonPesquisarClientes.TabIndex = 10;
+            this.buttonPesquisarClientes.TabIndex = 3;
             this.buttonPesquisarClientes.Text = "Pesquisar Clientes";
             this.buttonPesquisarClientes.UseVisualStyleBackColor = true;
             this.buttonPesquisarClientes.Click += new System.EventHandler(this.buttonPesquisarClientes_Click);
@@ -360,7 +360,7 @@
             this.buttonPesquisarManutenções.Location = new System.Drawing.Point(465, 453);
             this.buttonPesquisarManutenções.Name = "buttonPesquisarManutenções";
             this.buttonPesquisarManutenções.Size = new System.Drawing.Size(129, 28);
-            this.buttonPesquisarManutenções.TabIndex = 11;
+            this.buttonPesquisarManutenções.TabIndex = 4;
             this.buttonPesquisarManutenções.Text = "Pesquisar Manutenções";
             this.buttonPesquisarManutenções.UseVisualStyleBackColor = true;
             this.buttonPesquisarManutenções.Click += new System.EventHandler(this.buttonPesquisarManutenções_Click);
@@ -370,7 +370,7 @@
             this.buttonPesquisarLocação.Location = new System.Drawing.Point(600, 419);
             this.buttonPesquisarLocação.Name = "buttonPesquisarLocação";
             this.buttonPesquisarLocação.Size = new System.Drawing.Size(129, 28);
-            this.buttonPesquisarLocação.TabIndex = 12;
+            this.buttonPesquisarLocação.TabIndex = 5;
             this.buttonPesquisarLocação.Text = "Pesquisar Locação";
             this.buttonPesquisarLocação.UseVisualStyleBackColor = true;
             this.buttonPesquisarLocação.Click += new System.EventHandler(this.buttonPesquisarLocação_Click);
@@ -380,7 +380,7 @@
             this.buttonLocarVeículo.Location = new System.Drawing.Point(735, 419);
             this.buttonLocarVeículo.Name = "buttonLocarVeículo";
             this.buttonLocarVeículo.Size = new System.Drawing.Size(122, 28);
-            this.buttonLocarVeículo.TabIndex = 13;
+            this.buttonLocarVeículo.TabIndex = 7;
             this.buttonLocarVeículo.Text = "Locar Veículo";
             this.buttonLocarVeículo.UseVisualStyleBackColor = true;
             this.buttonLocarVeículo.Click += new System.EventHandler(this.buttonLocarVeículo_Click);
