@@ -8,7 +8,6 @@ namespace PBR_Rent_a_car
 {
     public static class Program
     {
-        public static List<Reserva> reservas= new List<Reserva>();
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

@@ -82,6 +82,7 @@
             this.buttonPago.TabIndex = 4;
             this.buttonPago.Text = "Concluir";
             this.buttonPago.UseVisualStyleBackColor = true;
+            this.buttonPago.Click += new System.EventHandler(this.buttonPago_Click);
             // 
             // button1
             // 
@@ -127,7 +128,8 @@
             this.MinimizeBox = false;
             this.Name = "Devolução_de_Veículo";
             this.ShowIcon = false;
-            this.Text = "p";
+            this.Text = "Devolução de veículo";
+            this.Load += new System.EventHandler(this.Devolução_de_Veículo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

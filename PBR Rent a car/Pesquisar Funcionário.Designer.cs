@@ -233,6 +233,7 @@
             this.Name = "Pesquisar_Funcionário";
             this.ShowIcon = false;
             this.Text = "Pesquisar Funcionário";
+            this.Load += new System.EventHandler(this.Pesquisar_Funcionário_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Funcionários)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

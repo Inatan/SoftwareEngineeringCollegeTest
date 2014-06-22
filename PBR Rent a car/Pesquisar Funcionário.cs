@@ -173,6 +173,11 @@ namespace PBR_Rent_a_car
             }
         }
 
+        private void Pesquisar_Funcionário_Load(object sender, EventArgs e)
+        {
+
+        }
+
 
     }
 }

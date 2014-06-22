@@ -88,6 +88,11 @@ namespace PBR_Rent_a_car
             }
         }
 
+        public void incrementarQuilometragem(int incremento)
+        {
+            this.Quilometragem += incremento;
+        }
+
         public Veículo() { }
         public Veículo(string cor, int ano, string categoria,int quilometragem, Modelo modelo)
         {

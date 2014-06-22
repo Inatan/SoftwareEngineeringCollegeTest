@@ -11,6 +11,9 @@ namespace PBR_Rent_a_car
 {
     public partial class Devolução_de_Veículo : Form
     {
+        public int quilometragem = 0;
+        public bool lida = false;
+
         public Devolução_de_Veículo()
         {
             InitializeComponent();
@@ -21,9 +24,9 @@ namespace PBR_Rent_a_car
             this.Close();
         }
 
-        private void apenasLetras(KeyPressEventArgs e)
+        private void apenasNumeros(KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -32,7 +35,19 @@ namespace PBR_Rent_a_car
 
         private void textBoxQuilometragem_KeyPress(object sender, KeyPressEventArgs e)
         {
-            apenasLetras(e);
+            apenasNumeros(e);
+        }
+
+        private void Devolução_de_Veículo_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonPago_Click(object sender, EventArgs e)
+        {
+            quilometragem = int.Parse(textBoxQuilometragem.Text);
+            lida = true;
+            this.Close();
         }
 
     }

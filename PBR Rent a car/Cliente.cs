@@ -28,16 +28,5 @@ namespace PBR_Rent_a_car
         {
             return String.Join("/", telefones);
         }
-
-        public static List<Cliente> todosOsClientes()
-        {
-            List<Cliente> clientes = new List<Cliente>();
-            using (var ctx = new DadosContainer())
-            {
-                foreach (var cliente in ctx.ClienteSet)
-                    clientes.Add(cliente);
-            }
-            return clientes;
-        }
     }
 }

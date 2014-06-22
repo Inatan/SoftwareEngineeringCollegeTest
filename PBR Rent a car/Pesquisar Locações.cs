@@ -67,9 +67,13 @@ namespace PBR_Rent_a_car
                 DataGridViewSelectedRowCollection rows = dataGridView_Veículos.SelectedRows;
                 foreach (DataGridViewRow row in rows)
                 {
+                    Devolução_de_Veículo dev = new Devolução_de_Veículo();
+                    dev.ShowDialog();
                     int id = int.Parse(row.Cells[5].Value.ToString());
                     var veículo = ctx.VeículoSet.Where(v => v.Id == id).First();
                     veículo.setDisponivel();
+                    while (!dev.lida) { }
+                    veículo.incrementarQuilometragem(dev.quilometragem);
                 }
                 ctx.SaveChanges();
             }
