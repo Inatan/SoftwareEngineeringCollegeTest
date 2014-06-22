@@ -61,7 +61,7 @@
             this.textBox_Fornecedor.Location = new System.Drawing.Point(11, 70);
             this.textBox_Fornecedor.Name = "textBox_Fornecedor";
             this.textBox_Fornecedor.Size = new System.Drawing.Size(244, 20);
-            this.textBox_Fornecedor.TabIndex = 10;
+            this.textBox_Fornecedor.TabIndex = 1;
             this.textBox_Fornecedor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Fornecedor_KeyPress);
             // 
             // textBox_Nome
@@ -69,7 +69,7 @@
             this.textBox_Nome.Location = new System.Drawing.Point(11, 24);
             this.textBox_Nome.Name = "textBox_Nome";
             this.textBox_Nome.Size = new System.Drawing.Size(244, 20);
-            this.textBox_Nome.TabIndex = 9;
+            this.textBox_Nome.TabIndex = 0;
             this.textBox_Nome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Nome_KeyPress);
             // 
             // Button_Cancelar
@@ -77,7 +77,7 @@
             this.Button_Cancelar.Location = new System.Drawing.Point(180, 110);
             this.Button_Cancelar.Name = "Button_Cancelar";
             this.Button_Cancelar.Size = new System.Drawing.Size(75, 23);
-            this.Button_Cancelar.TabIndex = 15;
+            this.Button_Cancelar.TabIndex = 3;
             this.Button_Cancelar.Text = "Cancelar";
             this.Button_Cancelar.UseVisualStyleBackColor = true;
             this.Button_Cancelar.Click += new System.EventHandler(this.Button_Cancelar_Click);
@@ -87,7 +87,7 @@
             this.Button_Cadastrar.Location = new System.Drawing.Point(11, 110);
             this.Button_Cadastrar.Name = "Button_Cadastrar";
             this.Button_Cadastrar.Size = new System.Drawing.Size(75, 23);
-            this.Button_Cadastrar.TabIndex = 14;
+            this.Button_Cadastrar.TabIndex = 2;
             this.Button_Cadastrar.Text = "Cadastrar";
             this.Button_Cadastrar.UseVisualStyleBackColor = true;
             this.Button_Cadastrar.Click += new System.EventHandler(this.Button_Cadastrar_Click);
