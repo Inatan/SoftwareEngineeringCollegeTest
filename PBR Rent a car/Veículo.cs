@@ -63,7 +63,7 @@ namespace PBR_Rent_a_car
                 else if (getEstado() == estado.Locado)
                 {
                     if (!this.Histórico.últimaLocação().acabou())
-                        this.Histórico.últimaManutenção().setFim(DateTime.Now);
+                        this.Histórico.últimaLocação().setFim(DateTime.Now);
                 }
                 ctx.SaveChanges();
             }

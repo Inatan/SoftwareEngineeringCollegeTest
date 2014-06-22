@@ -16,20 +16,6 @@ namespace PBR_Rent_a_car
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Relatório.singleton().teste();
-            using (var ctx = new DadosContainer())
-            {
-                var histSet = ctx.VeículoSet.Select(v => v.Histórico).ToList();
-                foreach (Histórico h in histSet)
-                {
-                    Console.WriteLine("Histórico");
-                    Console.WriteLine(h.Id);
-                    var locs = h.Locação.ToList();
-                    var mans = h.Manutenção.ToList();
-                    foreach (Locação l in locs) Console.WriteLine(l.ToString());
-                    foreach (Manutenção m in mans) Console.WriteLine(m.ToString());    
-                }
-            }
             Application.Run(new CadastroLogin());
         }
     }
