@@ -15,6 +15,7 @@ namespace PBR_Rent_a_car
         Reserva_de_veículo rVeículo;
         Alterar_Dados aDados;
         Criar_Locação locação;
+        public bool logoff = false;
 
         private Login usuárioAtual;
 
@@ -103,6 +104,12 @@ namespace PBR_Rent_a_car
         private void InterfaceCliente_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void logoffToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            logoff = true;
+            this.Close();
         }
     }
 }

@@ -43,22 +43,34 @@ namespace PBR_Rent_a_car
                 {
                     InterfaceCliente i = new InterfaceCliente();
                     i.setUsuárioAtual(atual);
+                    this.Hide();
                     i.ShowDialog();
-                    this.Close();
+                    this.Show();
+                    
                 }
                 else if (atual.getPermissão() == Login.TipoDeUsuário.Funcionário)
                 {
                     Interface i = new Interface();
                     i.setUsuárioAtual(atual);
+                    this.Hide();
                     i.ShowDialog();
-                    this.Close();
+                    if (i.logoff)
+                        this.Show();
+                    else
+                        this.Close();
+                    
                 }
                 else
                 {
                     Interface i = new Interface();
                     i.setUsuárioAtual(atual);
+                    this.Hide();
                     i.ShowDialog();
-                    this.Close();
+                    if (i.logoff)
+                        this.Show();
+                    else
+                        this.Close();
+                    
                 }
             } 
             else

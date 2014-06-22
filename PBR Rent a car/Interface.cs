@@ -23,6 +23,8 @@ namespace PBR_Rent_a_car
         Adicionar_funcionário cFuncionário;
         Pesquisar_Funcionário pFuncionário;
         Emissão_de_Relatório eRelatório;
+        public bool logoff = false;
+
 
         private Login usuárioAtual;
 
@@ -191,9 +193,8 @@ namespace PBR_Rent_a_car
 
         private void logoffToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CadastroLogin login = new CadastroLogin();
+            logoff = true;
             this.Close();
-            login.ShowDialog();
         }
 
         private void Interface_Load(object sender, EventArgs e)
