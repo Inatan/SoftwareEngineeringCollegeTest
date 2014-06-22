@@ -55,12 +55,12 @@ namespace PBR_Rent_a_car
         {
             using (var ctx = new DadosContainer())
             {
-                if (this.status == estado.Manutenção)
+                if (getEstado() == estado.Manutenção)
                 {
                     if (!this.Histórico.últimaManutenção().acabou())
                         this.Histórico.últimaManutenção().setFim(DateTime.Now);
                 }
-                else if (this.status == estado.Locado)
+                else if (getEstado() == estado.Locado)
                 {
                     if (!this.Histórico.últimaLocação().acabou())
                         this.Histórico.últimaManutenção().setFim(DateTime.Now);

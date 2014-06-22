@@ -39,6 +39,12 @@ namespace PBR_Rent_a_car
             if (this.Fim.HasValue) this.fim = DateTime.FromBinary(this.Fim.Value);
         }
 
+        public override string ToString()
+        {
+            return "Data de início: " + getInicio().ToString() + "\n"
+                + "Data de fim: " + (this.Fim.HasValue ? getFim().ToString() : "Ainda não ocorreu");
+        }
+
         public Manutenção() { }
         public Manutenção(DateTime inicio, string motivo, Funcionário func, Histórico hist)
         {
