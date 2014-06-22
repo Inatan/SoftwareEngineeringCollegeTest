@@ -43,7 +43,6 @@
             this.textBox_Nome = new System.Windows.Forms.TextBox();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonAdicionar = new System.Windows.Forms.Button();
-            this.buttonRemover = new System.Windows.Forms.Button();
             this.buttonEditar = new System.Windows.Forms.Button();
             this.checkBoxGerente = new System.Windows.Forms.CheckBox();
             this.checkBoxFuncionário = new System.Windows.Forms.CheckBox();
@@ -176,15 +175,6 @@
             this.buttonAdicionar.UseVisualStyleBackColor = true;
             this.buttonAdicionar.Click += new System.EventHandler(this.buttonAdicionar_Click);
             // 
-            // buttonRemover
-            // 
-            this.buttonRemover.Location = new System.Drawing.Point(105, 391);
-            this.buttonRemover.Name = "buttonRemover";
-            this.buttonRemover.Size = new System.Drawing.Size(75, 23);
-            this.buttonRemover.TabIndex = 7;
-            this.buttonRemover.Text = "Remover";
-            this.buttonRemover.UseVisualStyleBackColor = true;
-            // 
             // buttonEditar
             // 
             this.buttonEditar.Location = new System.Drawing.Point(283, 391);
@@ -227,7 +217,6 @@
             this.Controls.Add(this.checkBoxFuncionário);
             this.Controls.Add(this.checkBoxGerente);
             this.Controls.Add(this.buttonEditar);
-            this.Controls.Add(this.buttonRemover);
             this.Controls.Add(this.buttonAdicionar);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.label3);
@@ -267,7 +256,6 @@
         private System.Windows.Forms.TextBox textBox_Nome;
         private System.Windows.Forms.Button buttonCancelar;
         private System.Windows.Forms.Button buttonAdicionar;
-        private System.Windows.Forms.Button buttonRemover;
         private System.Windows.Forms.Button buttonEditar;
         private System.Windows.Forms.CheckBox checkBoxGerente;
         private System.Windows.Forms.CheckBox checkBoxFuncionário;

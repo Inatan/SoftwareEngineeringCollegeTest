@@ -75,7 +75,7 @@
             this.textBox_Categoria.Location = new System.Drawing.Point(12, 112);
             this.textBox_Categoria.Name = "textBox_Categoria";
             this.textBox_Categoria.Size = new System.Drawing.Size(183, 20);
-            this.textBox_Categoria.TabIndex = 23;
+            this.textBox_Categoria.TabIndex = 2;
             this.textBox_Categoria.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Categoria_KeyPress);
             // 
             // textBox_Cor
@@ -83,7 +83,7 @@
             this.textBox_Cor.Location = new System.Drawing.Point(12, 64);
             this.textBox_Cor.Name = "textBox_Cor";
             this.textBox_Cor.Size = new System.Drawing.Size(183, 20);
-            this.textBox_Cor.TabIndex = 20;
+            this.textBox_Cor.TabIndex = 1;
             this.textBox_Cor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Cor_KeyPress);
             // 
             // textBox_Ano
@@ -92,7 +92,7 @@
             this.textBox_Ano.MaxLength = 4;
             this.textBox_Ano.Name = "textBox_Ano";
             this.textBox_Ano.Size = new System.Drawing.Size(48, 20);
-            this.textBox_Ano.TabIndex = 18;
+            this.textBox_Ano.TabIndex = 0;
             this.textBox_Ano.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Ano_KeyPress);
             // 
             // label1
@@ -112,14 +112,14 @@
             this.comboBox_Modelo.Location = new System.Drawing.Point(12, 151);
             this.comboBox_Modelo.Name = "comboBox_Modelo";
             this.comboBox_Modelo.Size = new System.Drawing.Size(183, 21);
-            this.comboBox_Modelo.TabIndex = 28;
+            this.comboBox_Modelo.TabIndex = 3;
             // 
             // Button_Cancelar
             // 
             this.Button_Cancelar.Location = new System.Drawing.Point(126, 193);
             this.Button_Cancelar.Name = "Button_Cancelar";
             this.Button_Cancelar.Size = new System.Drawing.Size(75, 23);
-            this.Button_Cancelar.TabIndex = 30;
+            this.Button_Cancelar.TabIndex = 5;
             this.Button_Cancelar.Text = "Cancelar";
             this.Button_Cancelar.UseVisualStyleBackColor = true;
             this.Button_Cancelar.Click += new System.EventHandler(this.Button_Cancelar_Click);
@@ -129,7 +129,7 @@
             this.Button_Cadastrar.Location = new System.Drawing.Point(12, 193);
             this.Button_Cadastrar.Name = "Button_Cadastrar";
             this.Button_Cadastrar.Size = new System.Drawing.Size(75, 23);
-            this.Button_Cadastrar.TabIndex = 29;
+            this.Button_Cadastrar.TabIndex = 4;
             this.Button_Cadastrar.Text = "Cadastrar";
             this.Button_Cadastrar.UseVisualStyleBackColor = true;
             this.Button_Cadastrar.Click += new System.EventHandler(this.Button_Cadastrar_Click);

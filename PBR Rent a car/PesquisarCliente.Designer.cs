@@ -117,7 +117,7 @@
             // 
             // button_Cancelar
             // 
-            this.button_Cancelar.Location = new System.Drawing.Point(488, 481);
+            this.button_Cancelar.Location = new System.Drawing.Point(581, 481);
             this.button_Cancelar.Name = "button_Cancelar";
             this.button_Cancelar.Size = new System.Drawing.Size(75, 23);
             this.button_Cancelar.TabIndex = 10;
@@ -172,7 +172,7 @@
             // 
             // textBox_Cidade
             // 
-            this.textBox_Cidade.Location = new System.Drawing.Point(324, 315);
+            this.textBox_Cidade.Location = new System.Drawing.Point(417, 315);
             this.textBox_Cidade.Name = "textBox_Cidade";
             this.textBox_Cidade.Size = new System.Drawing.Size(239, 20);
             this.textBox_Cidade.TabIndex = 5;
@@ -181,7 +181,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(334, 298);
+            this.label2.Location = new System.Drawing.Point(427, 298);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 13);
             this.label2.TabIndex = 39;
@@ -189,7 +189,7 @@
             // 
             // textBox_UF
             // 
-            this.textBox_UF.Location = new System.Drawing.Point(282, 315);
+            this.textBox_UF.Location = new System.Drawing.Point(375, 315);
             this.textBox_UF.MaxLength = 2;
             this.textBox_UF.Name = "textBox_UF";
             this.textBox_UF.Size = new System.Drawing.Size(29, 20);
@@ -198,24 +198,24 @@
             // 
             // textBox_Rua
             // 
-            this.textBox_Rua.Location = new System.Drawing.Point(282, 404);
+            this.textBox_Rua.Location = new System.Drawing.Point(375, 404);
             this.textBox_Rua.Name = "textBox_Rua";
-            this.textBox_Rua.Size = new System.Drawing.Size(270, 20);
+            this.textBox_Rua.Size = new System.Drawing.Size(281, 20);
             this.textBox_Rua.TabIndex = 7;
             this.textBox_Rua.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Rua_KeyPress);
             // 
             // textBox_Bairro
             // 
-            this.textBox_Bairro.Location = new System.Drawing.Point(282, 364);
+            this.textBox_Bairro.Location = new System.Drawing.Point(375, 364);
             this.textBox_Bairro.Name = "textBox_Bairro";
-            this.textBox_Bairro.Size = new System.Drawing.Size(270, 20);
+            this.textBox_Bairro.Size = new System.Drawing.Size(281, 20);
             this.textBox_Bairro.TabIndex = 6;
             this.textBox_Bairro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Bairro_KeyPress);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(281, 348);
+            this.label7.Location = new System.Drawing.Point(374, 348);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(34, 13);
             this.label7.TabIndex = 44;
@@ -224,7 +224,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(279, 299);
+            this.label6.Location = new System.Drawing.Point(372, 299);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(21, 13);
             this.label6.TabIndex = 43;
@@ -233,7 +233,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(281, 388);
+            this.label8.Location = new System.Drawing.Point(374, 388);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(27, 13);
             this.label8.TabIndex = 45;
@@ -241,7 +241,7 @@
             // 
             // textBox_Número
             // 
-            this.textBox_Número.Location = new System.Drawing.Point(284, 444);
+            this.textBox_Número.Location = new System.Drawing.Point(377, 444);
             this.textBox_Número.MaxLength = 5;
             this.textBox_Número.Name = "textBox_Número";
             this.textBox_Número.Size = new System.Drawing.Size(32, 20);
@@ -251,7 +251,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(281, 427);
+            this.label4.Location = new System.Drawing.Point(374, 427);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 13);
             this.label4.TabIndex = 50;

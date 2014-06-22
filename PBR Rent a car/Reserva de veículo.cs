@@ -24,9 +24,34 @@ namespace PBR_Rent_a_car
         int idCliente;
         int idVeículo;
 
-        public Reserva_de_veículo()
+        public Reserva_de_veículo(Login atual)
         {
+            setUsuárioAtual(atual);
             InitializeComponent();
+            if (usuárioAtual.getPermissão() == Login.TipoDeUsuário.Cliente)
+            {
+                List<string> listaNomes = new List<string>();
+                string dadosCliente;
+                Cliente usuárioCliente;
+                using (var ctx = new DadosContainer())
+                {
+                    ctx.Attach(usuárioAtual);
+                    ctx.Attach(usuárioAtual.Cliente);
+                    usuárioCliente = usuárioAtual.Cliente;
+                    listaNomes.Add(usuárioCliente.Nome);
+                    if (usuárioAtual.Cliente.CPF.Length == 14)
+                        listaNomes.Add("CNPJ: " + usuárioCliente.CPF);
+                    else
+                        listaNomes.Add("CPF: " + usuárioCliente.CPF);
+                    listaNomes.Add("Telefones: " + usuárioCliente.Telefone);
+                    listaNomes.Add("CEP: " + usuárioCliente.Endereço.CEP);
+                    listaNomes.Add(usuárioCliente.Endereço.Cidade);
+                    dadosCliente = String.Join(" - ", listaNomes);
+                    listBoxCliente.Items.Add(dadosCliente);
+                    listBoxCliente.Items.Remove("Clique aqui para pesquisar o Cliente");
+                    idCliente = usuárioCliente.Id;
+                }
+            }
         }
 
         private void Button_Cancelar_Click(object sender, EventArgs e)
@@ -38,9 +63,9 @@ namespace PBR_Rent_a_car
         {
             if (this.ListBoxVeículo.Items[0].ToString() == "Clique aqui para pesquisar o veículo")
             {
-                pVeículo = new Pesquisa_Veículos();
+                pVeículo = new Pesquisa_Veículos(usuárioAtual);
                 pVeículo.ShowDialog();
-                if (pVeículo.veículoPesquisado != null)
+                if (pVeículo.veículoPesquisado.Cor != null)
                 {
                     List<string> listaNomes= new List<string>();
                     string dadosVeiculo;

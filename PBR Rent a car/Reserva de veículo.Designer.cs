@@ -49,7 +49,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(185, 114);
+            this.label10.Location = new System.Drawing.Point(188, 114);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(39, 13);
             this.label10.TabIndex = 26;
@@ -58,7 +58,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(149, 114);
+            this.label9.Location = new System.Drawing.Point(152, 114);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(30, 13);
             this.label9.TabIndex = 25;
@@ -129,7 +129,7 @@
             "2016",
             "2015",
             "2014"});
-            this.comboBoxAno.Location = new System.Drawing.Point(87, 130);
+            this.comboBoxAno.Location = new System.Drawing.Point(90, 130);
             this.comboBoxAno.Name = "comboBoxAno";
             this.comboBoxAno.Size = new System.Drawing.Size(53, 21);
             this.comboBoxAno.TabIndex = 38;
@@ -151,7 +151,7 @@
             "10",
             "11",
             "12"});
-            this.comboBoxMês.Location = new System.Drawing.Point(48, 130);
+            this.comboBoxMês.Location = new System.Drawing.Point(51, 130);
             this.comboBoxMês.Name = "comboBoxMês";
             this.comboBoxMês.Size = new System.Drawing.Size(33, 21);
             this.comboBoxMês.TabIndex = 37;
@@ -193,13 +193,13 @@
             "31"});
             this.comboBoxDia.Location = new System.Drawing.Point(9, 130);
             this.comboBoxDia.Name = "comboBoxDia";
-            this.comboBoxDia.Size = new System.Drawing.Size(33, 21);
+            this.comboBoxDia.Size = new System.Drawing.Size(36, 21);
             this.comboBoxDia.TabIndex = 36;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(84, 114);
+            this.label3.Location = new System.Drawing.Point(87, 114);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(26, 13);
             this.label3.TabIndex = 35;
@@ -208,7 +208,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(50, 114);
+            this.label4.Location = new System.Drawing.Point(53, 114);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(27, 13);
             this.label4.TabIndex = 34;
@@ -239,10 +239,21 @@
             "09",
             "10",
             "11",
-            "12"});
-            this.comboBoxHora.Location = new System.Drawing.Point(146, 130);
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23"});
+            this.comboBoxHora.Location = new System.Drawing.Point(149, 130);
             this.comboBoxHora.Name = "comboBoxHora";
-            this.comboBoxHora.Size = new System.Drawing.Size(33, 21);
+            this.comboBoxHora.Size = new System.Drawing.Size(36, 21);
             this.comboBoxHora.TabIndex = 39;
             // 
             // comboBoxMinuto
@@ -310,9 +321,9 @@
             "57",
             "58",
             "59"});
-            this.comboBoxMinuto.Location = new System.Drawing.Point(185, 130);
+            this.comboBoxMinuto.Location = new System.Drawing.Point(191, 130);
             this.comboBoxMinuto.Name = "comboBoxMinuto";
-            this.comboBoxMinuto.Size = new System.Drawing.Size(33, 21);
+            this.comboBoxMinuto.Size = new System.Drawing.Size(39, 21);
             this.comboBoxMinuto.TabIndex = 40;
             // 
             // listBoxCliente

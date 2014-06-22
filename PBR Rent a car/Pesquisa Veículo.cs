@@ -19,10 +19,12 @@ namespace PBR_Rent_a_car
         }
 
         public Veículo veículoPesquisado = new Veículo() ;
-        public Pesquisa_Veículos()
+        public Pesquisa_Veículos(Login atual)
         {
             dataGridView_Veículos = new DataGridView();
             InitializeComponent();
+            if (atual.getPermissão() == Login.TipoDeUsuário.Cliente)
+                buttonMandarManutenção.Hide();
             using (var ctx = new DadosContainer())
             {
                 var veículos = ctx.VeículoSet.Where(v => (Veículo.estado)v.Estado == Veículo.estado.Disponível).ToList();
@@ -138,7 +140,7 @@ namespace PBR_Rent_a_car
 
         private void buttonMandarManutenção_Click(object sender, EventArgs e)
         {
-            if (usuárioAtual.getPermissão() == Login.TipoDeUsuário.Cliente) new SemPermissão().ShowDialog();
+            if (usuárioAtual.getPermissão() == Login.TipoDeUsuário.Cliente) MessageBox.Show("Por favor digite todos os campos importantes", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
                 using (var ctx = new DadosContainer())

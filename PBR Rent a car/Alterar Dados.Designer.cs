@@ -233,7 +233,7 @@
             // textBox_CEP
             // 
             this.textBox_CEP.Location = new System.Drawing.Point(16, 64);
-            this.textBox_CEP.MaxLength = 9;
+            this.textBox_CEP.MaxLength = 8;
             this.textBox_CEP.Name = "textBox_CEP";
             this.textBox_CEP.Size = new System.Drawing.Size(140, 20);
             this.textBox_CEP.TabIndex = 2;

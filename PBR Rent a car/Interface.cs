@@ -58,14 +58,13 @@ namespace PBR_Rent_a_car
 
         private void Button_Reservar_Veículo_Click(object sender, EventArgs e)
         {
-            rVeículo = new Reserva_de_veículo();
-            rVeículo.setUsuárioAtual(this.usuárioAtual);
+            rVeículo = new Reserva_de_veículo(this.usuárioAtual);
             rVeículo.ShowDialog();
         }
 
         private void Button_Pesquisar_Veículo_Click(object sender, EventArgs e)
         {
-            pVeículo = new Pesquisa_Veículos();
+            pVeículo = new Pesquisa_Veículos(usuárioAtual);
             pVeículo.setUsuárioAtual(this.usuárioAtual);
             pVeículo.ShowDialog();
         }
@@ -90,15 +89,13 @@ namespace PBR_Rent_a_car
 
         private void pesquisarVeículosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            pVeículo = new Pesquisa_Veículos();
-            pVeículo.setUsuárioAtual(this.usuárioAtual);
+            pVeículo = new Pesquisa_Veículos(usuárioAtual);
             pVeículo.ShowDialog();
         }
 
         private void reservarVeículoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            rVeículo = new Reserva_de_veículo();
-            rVeículo.setUsuárioAtual(this.usuárioAtual);
+            rVeículo = new Reserva_de_veículo(this.usuárioAtual);
             rVeículo.ShowDialog();
         }
 
@@ -170,7 +167,7 @@ namespace PBR_Rent_a_car
                 cFuncionário = new Adicionar_funcionário();
                 cFuncionário.ShowDialog();
             }
-            else new SemPermissão().ShowDialog();
+            else MessageBox.Show("Você não tem permissão para essa função", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void emitirRelatórioToolStripMenuItem_Click(object sender, EventArgs e)
@@ -180,7 +177,7 @@ namespace PBR_Rent_a_car
                 eRelatório = new Emissão_de_Relatório();
                 eRelatório.ShowDialog();
             }
-            else new SemPermissão().ShowDialog();
+            else MessageBox.Show("Você não tem permissão para essa função", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void pesquisarFuncionárioToolStripMenuItem_Click(object sender, EventArgs e)
