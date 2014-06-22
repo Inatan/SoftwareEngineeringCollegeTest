@@ -23,9 +23,16 @@ namespace PBR_Rent_a_car
 
         private void Button_Cadastrar_Click(object sender, EventArgs e)
         {
-            Modelo novo = new Modelo(textBox_Nome.Text, textBox_Fornecedor.Text);
-            novo.gravar();
-            this.Close();
+            DialogResult dialogResult = MessageBox.Show("Ao encerrar esse processo os dados serão cadastrados. Você tem certeza que quer editar os dados?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+                if (textBox_Nome.Text == "" || textBox_Fornecedor.Text == "")
+                    MessageBox.Show("Por favor digite todos os campos importantes", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                {
+                    Modelo novo = new Modelo(textBox_Nome.Text, textBox_Fornecedor.Text);
+                    novo.gravar();
+                    this.Close();
+                }
         }
 
         private void apenasLetras(KeyPressEventArgs e)

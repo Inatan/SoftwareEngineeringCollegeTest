@@ -38,15 +38,26 @@ namespace PBR_Rent_a_car
             modelo = comboBox_Modelo.Text.Split('/');
             Modelo selecionado;
             Veículo novo;
-            using (var ctx = new DadosContainer())
-            {
-                var mnome = modelo[1];
-                var mfornecedor = modelo[0];
-                selecionado = ctx.ModeloSet.Where(m => m.Nome == mnome && m.Fornecedor == mfornecedor).FirstOrDefault();
-                novo = new Veículo(textBox_Cor.Text, Convert.ToInt32(textBox_Ano.Text), textBox_Categoria.Text, 0, selecionado);
-                ctx.SaveChanges();
-            }
-            this.Close();
+            DialogResult dialogResult = MessageBox.Show("Ao encerrar esse processo os dados serão cadastrados. Você tem certeza que quer editar os dados?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+                if (textBox_Cor.Text == "" || textBox_Ano.Text == "" || textBox_Categoria.Text == "")
+                    MessageBox.Show("Por favor digite todos os campos importantes", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else if (Convert.ToInt32(textBox_Ano.Text) > DateTime.Now.Year )
+                    MessageBox.Show("Por favor saia do futuro, digite um ano coerente", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else if (Convert.ToInt32(textBox_Ano.Text) < 1807)
+                    MessageBox.Show("O carro nem foi inventado nessa época. Por favor digite um ano coerete,", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                {
+                    using (var ctx = new DadosContainer())
+                    {
+                        var mnome = modelo[1];
+                        var mfornecedor = modelo[0];
+                        selecionado = ctx.ModeloSet.Where(m => m.Nome == mnome && m.Fornecedor == mfornecedor).FirstOrDefault();
+                        novo = new Veículo(textBox_Cor.Text, Convert.ToInt32(textBox_Ano.Text), textBox_Categoria.Text, 0, selecionado);
+                        ctx.SaveChanges();
+                    }
+                    this.Close();
+                }
         }
 
         private void apenasLetras(KeyPressEventArgs e)
@@ -84,5 +95,7 @@ namespace PBR_Rent_a_car
         {
 
         }
+
+        public int DataTime { get; set; }
     }
 }

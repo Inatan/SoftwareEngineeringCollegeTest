@@ -45,7 +45,13 @@ namespace PBR_Rent_a_car
                     i.setUsuárioAtual(atual);
                     this.Hide();
                     i.ShowDialog();
-                    this.Show();
+                    if (i.logoff)
+                    {
+                        textBox_Senha.Text = "";
+                        this.Show();
+                    }
+                    else
+                        this.Close();
                     
                 }
                 else if (atual.getPermissão() == Login.TipoDeUsuário.Funcionário)
@@ -55,7 +61,10 @@ namespace PBR_Rent_a_car
                     this.Hide();
                     i.ShowDialog();
                     if (i.logoff)
+                    {
+                        textBox_Senha.Text = "";
                         this.Show();
+                    }
                     else
                         this.Close();
                     
@@ -67,7 +76,10 @@ namespace PBR_Rent_a_car
                     this.Hide();
                     i.ShowDialog();
                     if (i.logoff)
+                    {
+                        textBox_Senha.Text = "";
                         this.Show();
+                    }
                     else
                         this.Close();
                     

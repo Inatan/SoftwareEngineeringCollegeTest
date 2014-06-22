@@ -138,7 +138,7 @@ namespace PBR_Rent_a_car
 
         private void Button_Editar_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Ao encerrar esse processo os dados serão editados. Você tem certeza que quer editar os dados?", "Aviso", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("Ao encerrar esse processo os dados serão editados. Você tem certeza que quer editar os dados?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             
             if (dialogResult == DialogResult.Yes)
             {

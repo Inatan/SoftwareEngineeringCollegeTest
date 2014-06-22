@@ -126,6 +126,7 @@
             this.buttonRedefinir.TabIndex = 26;
             this.buttonRedefinir.Text = "Redefinir";
             this.buttonRedefinir.UseVisualStyleBackColor = true;
+            this.buttonRedefinir.Click += new System.EventHandler(this.buttonRedefinir_Click);
             // 
             // Redefinição_de_senha
             // 
