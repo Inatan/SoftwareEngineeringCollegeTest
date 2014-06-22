@@ -138,7 +138,7 @@ namespace PBR_Rent_a_car
 
         private void buttonMandarManutenção_Click(object sender, EventArgs e)
         {
-            if (usuárioAtual.getPermissão() == Login.TipoDeUsuário.Cliente) new SemPermissão().ShowDialog();
+            if (usuárioAtual.getPermissão() == Login.TipoDeUsuário.Cliente) MessageBox.Show("Por favor digite todos os campos importantes", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
                 using (var ctx = new DadosContainer())
