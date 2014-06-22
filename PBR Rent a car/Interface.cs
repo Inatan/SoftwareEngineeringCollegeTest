@@ -170,7 +170,7 @@ namespace PBR_Rent_a_car
                 cFuncionário = new Adicionar_funcionário();
                 cFuncionário.ShowDialog();
             }
-            else MessageBox.Show("Por favor digite todos os campos importantes", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else MessageBox.Show("Você não tem permissão para essa função", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void emitirRelatórioToolStripMenuItem_Click(object sender, EventArgs e)
@@ -180,7 +180,7 @@ namespace PBR_Rent_a_car
                 eRelatório = new Emissão_de_Relatório();
                 eRelatório.ShowDialog();
             }
-            else MessageBox.Show("Por favor digite todos os campos importantes", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else MessageBox.Show("Você não tem permissão para essa função", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void pesquisarFuncionárioToolStripMenuItem_Click(object sender, EventArgs e)
