@@ -54,6 +54,8 @@ namespace PBR_Rent_a_car
                         var mfornecedor = modelo[0];
                         selecionado = ctx.ModeloSet.Where(m => m.Nome == mnome && m.Fornecedor == mfornecedor).FirstOrDefault();
                         novo = new Veículo(textBox_Cor.Text, Convert.ToInt32(textBox_Ano.Text), textBox_Categoria.Text, 0, selecionado);
+                        ctx.Attach(Relatório.singleton());
+                        novo.Histórico.Relatório = Relatório.singleton();
                         ctx.SaveChanges();
                     }
                     this.Close();

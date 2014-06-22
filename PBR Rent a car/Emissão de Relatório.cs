@@ -69,6 +69,7 @@ namespace PBR_Rent_a_car
             }
             Relatório.singleton().gerarRelatório(option, data);
             MessageBox.Show("O documento relatório.pdf com as informações desejadas foi gerado no diretório atual.");
+            this.Close();
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
