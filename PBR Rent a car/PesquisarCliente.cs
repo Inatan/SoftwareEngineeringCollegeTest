@@ -131,7 +131,9 @@ namespace PBR_Rent_a_car
 
         private void buttonAlterarDados_Click(object sender, EventArgs e)
         {
+            
             int RowIndex=dataGridView_Clientes.CurrentRow.Index;
+            
             using (var ctx = new DadosContainer())
             {
                 var clientes = ctx.ClienteSet.ToList();

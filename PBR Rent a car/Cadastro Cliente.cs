@@ -23,15 +23,19 @@ namespace PBR_Rent_a_car
 
         private void Button_Cadastrar_Click(object sender, EventArgs e)
         {
-            using (var ctx = new DadosContainer())
+            DialogResult dialogResult = MessageBox.Show("Ao encerrar esse processo os dados serão editados. Você tem certeza que quer editar os dados?", "Aviso", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
             {
-                var novoLogin = new Login(textBox_Usuario.Text, textBox_Senha.Text, Login.TipoDeUsuário.Cliente);
-                var moraAqui = new Endereço(textBox_UF.Text, textBox_Cidade.Text, textBox_Bairro.Text, textBox_Rua.Text, Convert.ToInt32(textBox_Número.Text), Convert.ToInt32(textBox_CEP.Text));
-                var novo = new Cliente(textBox_Nome.Text, textBox_CPF_CNPJ.Text, textBox_TelefoneFixo.Text, textBox_TelefoneMóvel.Text, moraAqui, novoLogin);
-                ctx.AddToClienteSet(novo);
-                ctx.SaveChanges();
+                using (var ctx = new DadosContainer())
+                {
+                    var novoLogin = new Login(textBox_Usuario.Text, textBox_Senha.Text, Login.TipoDeUsuário.Cliente);
+                    var moraAqui = new Endereço(textBox_UF.Text, textBox_Cidade.Text, textBox_Bairro.Text, textBox_Rua.Text, Convert.ToInt32(textBox_Número.Text), Convert.ToInt32(textBox_CEP.Text));
+                    var novo = new Cliente(textBox_Nome.Text, textBox_CPF_CNPJ.Text, textBox_TelefoneFixo.Text, textBox_TelefoneMóvel.Text, moraAqui, novoLogin);
+                    ctx.AddToClienteSet(novo);
+                    ctx.SaveChanges();
+                }
+                this.Close();
             }
-            this.Close();
         }
 
         private void apenasLetras(KeyPressEventArgs e)
