@@ -56,7 +56,7 @@
             this.buttonDevolver.Location = new System.Drawing.Point(15, 416);
             this.buttonDevolver.Name = "buttonDevolver";
             this.buttonDevolver.Size = new System.Drawing.Size(114, 23);
-            this.buttonDevolver.TabIndex = 61;
+            this.buttonDevolver.TabIndex = 6;
             this.buttonDevolver.Text = "Devolver Veículo";
             this.buttonDevolver.UseVisualStyleBackColor = true;
             this.buttonDevolver.Click += new System.EventHandler(this.buttonAlterarDados_Click);
@@ -66,7 +66,7 @@
             this.button_Cancelar.Location = new System.Drawing.Point(532, 417);
             this.button_Cancelar.Name = "button_Cancelar";
             this.button_Cancelar.Size = new System.Drawing.Size(75, 23);
-            this.button_Cancelar.TabIndex = 60;
+            this.button_Cancelar.TabIndex = 7;
             this.button_Cancelar.Text = "Cancelar";
             this.button_Cancelar.UseVisualStyleBackColor = true;
             this.button_Cancelar.Click += new System.EventHandler(this.button_Cancelar_Click);
@@ -86,7 +86,7 @@
             this.textBox_CPF_CNPJ.MaxLength = 14;
             this.textBox_CPF_CNPJ.Name = "textBox_CPF_CNPJ";
             this.textBox_CPF_CNPJ.Size = new System.Drawing.Size(144, 20);
-            this.textBox_CPF_CNPJ.TabIndex = 58;
+            this.textBox_CPF_CNPJ.TabIndex = 2;
             this.textBox_CPF_CNPJ.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_CPF_CNPJ_KeyPress);
             // 
             // label1
@@ -103,7 +103,7 @@
             this.textBox_Nome.Location = new System.Drawing.Point(12, 318);
             this.textBox_Nome.Name = "textBox_Nome";
             this.textBox_Nome.Size = new System.Drawing.Size(201, 20);
-            this.textBox_Nome.TabIndex = 56;
+            this.textBox_Nome.TabIndex = 1;
             this.textBox_Nome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Nome_KeyPress);
             // 
             // button1
@@ -111,7 +111,7 @@
             this.button1.Location = new System.Drawing.Point(15, 262);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 55;
+            this.button1.TabIndex = 0;
             this.button1.Text = "Atualizar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -131,7 +131,7 @@
             this.dataGridView_Veículos.Location = new System.Drawing.Point(12, 12);
             this.dataGridView_Veículos.Name = "dataGridView_Veículos";
             this.dataGridView_Veículos.Size = new System.Drawing.Size(695, 241);
-            this.dataGridView_Veículos.TabIndex = 54;
+            this.dataGridView_Veículos.TabIndex = 8;
             // 
             // Nome
             // 
@@ -188,7 +188,7 @@
             this.textBox_Categoria.Location = new System.Drawing.Point(300, 329);
             this.textBox_Categoria.Name = "textBox_Categoria";
             this.textBox_Categoria.Size = new System.Drawing.Size(203, 20);
-            this.textBox_Categoria.TabIndex = 65;
+            this.textBox_Categoria.TabIndex = 4;
             this.textBox_Categoria.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Categoria_KeyPress);
             // 
             // textBox_Cor
@@ -196,7 +196,7 @@
             this.textBox_Cor.Location = new System.Drawing.Point(300, 369);
             this.textBox_Cor.Name = "textBox_Cor";
             this.textBox_Cor.Size = new System.Drawing.Size(183, 20);
-            this.textBox_Cor.TabIndex = 64;
+            this.textBox_Cor.TabIndex = 5;
             this.textBox_Cor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Cor_KeyPress);
             // 
             // label2
@@ -213,7 +213,7 @@
             this.textBox_Fornecedor.Location = new System.Drawing.Point(297, 280);
             this.textBox_Fornecedor.Name = "textBox_Fornecedor";
             this.textBox_Fornecedor.Size = new System.Drawing.Size(228, 20);
-            this.textBox_Fornecedor.TabIndex = 62;
+            this.textBox_Fornecedor.TabIndex = 3;
             this.textBox_Fornecedor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Fornecedor_KeyPress);
             // 
             // Pesquisar_Locações

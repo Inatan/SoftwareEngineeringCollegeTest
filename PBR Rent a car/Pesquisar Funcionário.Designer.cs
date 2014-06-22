@@ -55,7 +55,7 @@
             this.buttonAtualizar.Location = new System.Drawing.Point(12, 263);
             this.buttonAtualizar.Name = "buttonAtualizar";
             this.buttonAtualizar.Size = new System.Drawing.Size(75, 23);
-            this.buttonAtualizar.TabIndex = 39;
+            this.buttonAtualizar.TabIndex = 0;
             this.buttonAtualizar.Text = "Atualizar";
             this.buttonAtualizar.UseVisualStyleBackColor = true;
             this.buttonAtualizar.Click += new System.EventHandler(this.buttonAtualizar_Click);
@@ -73,7 +73,7 @@
             this.dataGridView_Funcionários.Location = new System.Drawing.Point(12, 12);
             this.dataGridView_Funcionários.Name = "dataGridView_Funcionários";
             this.dataGridView_Funcionários.Size = new System.Drawing.Size(445, 241);
-            this.dataGridView_Funcionários.TabIndex = 38;
+            this.dataGridView_Funcionários.TabIndex = 10;
             // 
             // Nome
             // 
@@ -110,7 +110,7 @@
             this.textBox_CarteiraTrabalho.MaxLength = 5;
             this.textBox_CarteiraTrabalho.Name = "textBox_CarteiraTrabalho";
             this.textBox_CarteiraTrabalho.Size = new System.Drawing.Size(144, 20);
-            this.textBox_CarteiraTrabalho.TabIndex = 56;
+            this.textBox_CarteiraTrabalho.TabIndex = 3;
             this.textBox_CarteiraTrabalho.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_CarteiraTrabalho_KeyPress);
             // 
             // label7
@@ -145,7 +145,7 @@
             this.textBox_Salario.Location = new System.Drawing.Point(229, 305);
             this.textBox_Salario.Name = "textBox_Salario";
             this.textBox_Salario.Size = new System.Drawing.Size(228, 20);
-            this.textBox_Salario.TabIndex = 51;
+            this.textBox_Salario.TabIndex = 2;
             this.textBox_Salario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Salario_KeyPress);
             // 
             // textBox_Nome
@@ -153,7 +153,7 @@
             this.textBox_Nome.Location = new System.Drawing.Point(12, 305);
             this.textBox_Nome.Name = "textBox_Nome";
             this.textBox_Nome.Size = new System.Drawing.Size(201, 20);
-            this.textBox_Nome.TabIndex = 50;
+            this.textBox_Nome.TabIndex = 1;
             this.textBox_Nome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Nome_KeyPress);
             // 
             // buttonCancelar
@@ -161,7 +161,7 @@
             this.buttonCancelar.Location = new System.Drawing.Point(382, 391);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(75, 23);
-            this.buttonCancelar.TabIndex = 58;
+            this.buttonCancelar.TabIndex = 9;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
@@ -171,7 +171,7 @@
             this.buttonAdicionar.Location = new System.Drawing.Point(12, 391);
             this.buttonAdicionar.Name = "buttonAdicionar";
             this.buttonAdicionar.Size = new System.Drawing.Size(75, 23);
-            this.buttonAdicionar.TabIndex = 59;
+            this.buttonAdicionar.TabIndex = 6;
             this.buttonAdicionar.Text = "Adicionar";
             this.buttonAdicionar.UseVisualStyleBackColor = true;
             this.buttonAdicionar.Click += new System.EventHandler(this.buttonAdicionar_Click);
@@ -181,7 +181,7 @@
             this.buttonRemover.Location = new System.Drawing.Point(105, 391);
             this.buttonRemover.Name = "buttonRemover";
             this.buttonRemover.Size = new System.Drawing.Size(75, 23);
-            this.buttonRemover.TabIndex = 60;
+            this.buttonRemover.TabIndex = 7;
             this.buttonRemover.Text = "Remover";
             this.buttonRemover.UseVisualStyleBackColor = true;
             // 
@@ -190,7 +190,7 @@
             this.buttonEditar.Location = new System.Drawing.Point(283, 391);
             this.buttonEditar.Name = "buttonEditar";
             this.buttonEditar.Size = new System.Drawing.Size(75, 23);
-            this.buttonEditar.TabIndex = 61;
+            this.buttonEditar.TabIndex = 8;
             this.buttonEditar.Text = "Editar";
             this.buttonEditar.UseVisualStyleBackColor = true;
             this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
@@ -203,7 +203,7 @@
             this.checkBoxGerente.Location = new System.Drawing.Point(234, 357);
             this.checkBoxGerente.Name = "checkBoxGerente";
             this.checkBoxGerente.Size = new System.Drawing.Size(64, 17);
-            this.checkBoxGerente.TabIndex = 62;
+            this.checkBoxGerente.TabIndex = 4;
             this.checkBoxGerente.Text = "Gerente";
             this.checkBoxGerente.UseVisualStyleBackColor = true;
             // 
@@ -215,7 +215,7 @@
             this.checkBoxFuncionário.Location = new System.Drawing.Point(329, 357);
             this.checkBoxFuncionário.Name = "checkBoxFuncionário";
             this.checkBoxFuncionário.Size = new System.Drawing.Size(81, 17);
-            this.checkBoxFuncionário.TabIndex = 63;
+            this.checkBoxFuncionário.TabIndex = 5;
             this.checkBoxFuncionário.Text = "Funcionário";
             this.checkBoxFuncionário.UseVisualStyleBackColor = true;
             // 

@@ -43,22 +43,22 @@
             this.textBox_Nome = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView_Veículos = new System.Windows.Forms.DataGridView();
-            this.buttonRetornarManutenção = new System.Windows.Forms.Button();
             this.Modelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ano = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quilometragem = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Data = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonRetornarManutenção = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Veículos)).BeginInit();
             this.SuspendLayout();
             // 
             // button_Cancelar
             // 
-            this.button_Cancelar.Location = new System.Drawing.Point(482, 449);
+            this.button_Cancelar.Location = new System.Drawing.Point(585, 449);
             this.button_Cancelar.Name = "button_Cancelar";
             this.button_Cancelar.Size = new System.Drawing.Size(75, 23);
-            this.button_Cancelar.TabIndex = 50;
+            this.button_Cancelar.TabIndex = 8;
             this.button_Cancelar.Text = "Cancelar";
             this.button_Cancelar.UseVisualStyleBackColor = true;
             this.button_Cancelar.Click += new System.EventHandler(this.button_Cancelar_Click);
@@ -77,13 +77,13 @@
             this.textBox_Quilometragem.Location = new System.Drawing.Point(12, 372);
             this.textBox_Quilometragem.Name = "textBox_Quilometragem";
             this.textBox_Quilometragem.Size = new System.Drawing.Size(144, 20);
-            this.textBox_Quilometragem.TabIndex = 48;
+            this.textBox_Quilometragem.TabIndex = 2;
             this.textBox_Quilometragem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Quilometragem_KeyPress);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(322, 396);
+            this.label8.Location = new System.Drawing.Point(425, 396);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(23, 13);
             this.label8.TabIndex = 47;
@@ -101,7 +101,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(322, 356);
+            this.label7.Location = new System.Drawing.Point(425, 356);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(52, 13);
             this.label7.TabIndex = 46;
@@ -109,18 +109,18 @@
             // 
             // textBox_Categoria
             // 
-            this.textBox_Categoria.Location = new System.Drawing.Point(323, 372);
+            this.textBox_Categoria.Location = new System.Drawing.Point(426, 372);
             this.textBox_Categoria.Name = "textBox_Categoria";
-            this.textBox_Categoria.Size = new System.Drawing.Size(203, 20);
-            this.textBox_Categoria.TabIndex = 44;
+            this.textBox_Categoria.Size = new System.Drawing.Size(225, 20);
+            this.textBox_Categoria.TabIndex = 5;
             this.textBox_Categoria.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Categoria_KeyPress);
             // 
             // textBox_Cor
             // 
-            this.textBox_Cor.Location = new System.Drawing.Point(323, 412);
+            this.textBox_Cor.Location = new System.Drawing.Point(426, 412);
             this.textBox_Cor.Name = "textBox_Cor";
-            this.textBox_Cor.Size = new System.Drawing.Size(183, 20);
-            this.textBox_Cor.TabIndex = 43;
+            this.textBox_Cor.Size = new System.Drawing.Size(225, 20);
+            this.textBox_Cor.TabIndex = 6;
             this.textBox_Cor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Cor_KeyPress);
             // 
             // textBox_Ano
@@ -128,13 +128,13 @@
             this.textBox_Ano.Location = new System.Drawing.Point(15, 412);
             this.textBox_Ano.Name = "textBox_Ano";
             this.textBox_Ano.Size = new System.Drawing.Size(48, 20);
-            this.textBox_Ano.TabIndex = 42;
+            this.textBox_Ano.TabIndex = 3;
             this.textBox_Ano.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Ano_KeyPress);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(320, 307);
+            this.label2.Location = new System.Drawing.Point(423, 307);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 13);
             this.label2.TabIndex = 41;
@@ -151,10 +151,10 @@
             // 
             // textBox_Fornecedor
             // 
-            this.textBox_Fornecedor.Location = new System.Drawing.Point(320, 323);
+            this.textBox_Fornecedor.Location = new System.Drawing.Point(423, 323);
             this.textBox_Fornecedor.Name = "textBox_Fornecedor";
             this.textBox_Fornecedor.Size = new System.Drawing.Size(228, 20);
-            this.textBox_Fornecedor.TabIndex = 39;
+            this.textBox_Fornecedor.TabIndex = 4;
             this.textBox_Fornecedor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Fornecedor_KeyPress);
             // 
             // textBox_Nome
@@ -162,7 +162,7 @@
             this.textBox_Nome.Location = new System.Drawing.Point(12, 323);
             this.textBox_Nome.Name = "textBox_Nome";
             this.textBox_Nome.Size = new System.Drawing.Size(201, 20);
-            this.textBox_Nome.TabIndex = 38;
+            this.textBox_Nome.TabIndex = 1;
             this.textBox_Nome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Nome_KeyPress);
             // 
             // button1
@@ -170,7 +170,7 @@
             this.button1.Location = new System.Drawing.Point(12, 269);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 37;
+            this.button1.TabIndex = 0;
             this.button1.Text = "Atualizar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -190,17 +190,7 @@
             this.dataGridView_Veículos.Location = new System.Drawing.Point(12, 12);
             this.dataGridView_Veículos.Name = "dataGridView_Veículos";
             this.dataGridView_Veículos.Size = new System.Drawing.Size(652, 241);
-            this.dataGridView_Veículos.TabIndex = 36;
-            // 
-            // buttonRetornarManutenção
-            // 
-            this.buttonRetornarManutenção.Location = new System.Drawing.Point(12, 450);
-            this.buttonRetornarManutenção.Name = "buttonRetornarManutenção";
-            this.buttonRetornarManutenção.Size = new System.Drawing.Size(128, 22);
-            this.buttonRetornarManutenção.TabIndex = 51;
-            this.buttonRetornarManutenção.Text = "Retornar Veículo";
-            this.buttonRetornarManutenção.UseVisualStyleBackColor = true;
-            this.buttonRetornarManutenção.Click += new System.EventHandler(this.buttonRetornarManutenção_Click);
+            this.dataGridView_Veículos.TabIndex = 9;
             // 
             // Modelo
             // 
@@ -232,6 +222,16 @@
             this.Id.HeaderText = "Id";
             this.Id.Name = "Id";
             this.Id.ReadOnly = true;
+            // 
+            // buttonRetornarManutenção
+            // 
+            this.buttonRetornarManutenção.Location = new System.Drawing.Point(12, 450);
+            this.buttonRetornarManutenção.Name = "buttonRetornarManutenção";
+            this.buttonRetornarManutenção.Size = new System.Drawing.Size(128, 22);
+            this.buttonRetornarManutenção.TabIndex = 7;
+            this.buttonRetornarManutenção.Text = "Retornar Veículo";
+            this.buttonRetornarManutenção.UseVisualStyleBackColor = true;
+            this.buttonRetornarManutenção.Click += new System.EventHandler(this.buttonRetornarManutenção_Click);
             // 
             // Pesquisa_Manutenção
             // 

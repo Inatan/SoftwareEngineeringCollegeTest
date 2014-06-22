@@ -24,9 +24,34 @@ namespace PBR_Rent_a_car
         int idVeículo;
         int idCliente;
 
-        public Criar_Locação()
+        public Criar_Locação(Login atual)
         {
+            setUsuárioAtual(atual);
             InitializeComponent();
+            if (usuárioAtual.getPermissão() == Login.TipoDeUsuário.Cliente)
+            {
+                List<string> listaNomes = new List<string>();
+                string dadosCliente;
+                Cliente usuárioCliente;
+                using (var ctx = new DadosContainer())
+                {
+                    ctx.Attach(usuárioAtual);
+                    ctx.Attach(usuárioAtual.Cliente);
+                    usuárioCliente = usuárioAtual.Cliente;
+                    listaNomes.Add(usuárioCliente.Nome);
+                    if (usuárioAtual.Cliente.CPF.Length == 14)
+                        listaNomes.Add("CNPJ: " + usuárioCliente.CPF);
+                    else
+                        listaNomes.Add("CPF: " + usuárioCliente.CPF);
+                    listaNomes.Add("Telefones: " + usuárioCliente.Telefone);
+                    listaNomes.Add("CEP: " + usuárioCliente.Endereço.CEP);
+                    listaNomes.Add(usuárioCliente.Endereço.Cidade);
+                    dadosCliente = String.Join(" - ", listaNomes);
+                    listBoxCliente.Items.Add(dadosCliente);
+                    listBoxCliente.Items.Remove("Clique aqui para pesquisar o Cliente");
+                    idCliente = usuárioCliente.Id;
+                }
+            }
         }
 
         private void buttonCancelar_Click(object sender, EventArgs e)
@@ -117,7 +142,7 @@ namespace PBR_Rent_a_car
 
         private void Criar_Locação_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

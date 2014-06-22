@@ -122,6 +122,7 @@
             // 
             // panel1
             // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label9);
@@ -243,6 +244,7 @@
             // 
             // textBox_UF
             // 
+            this.textBox_UF.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox_UF.Location = new System.Drawing.Point(16, 21);
             this.textBox_UF.MaxLength = 2;
             this.textBox_UF.Name = "textBox_UF";
