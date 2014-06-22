@@ -34,6 +34,7 @@
             this.Ano = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quilometragem = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,7 +50,6 @@
             this.textBox_Quilometragem = new System.Windows.Forms.TextBox();
             this.button_Cancelar = new System.Windows.Forms.Button();
             this.buttonMandarManutenção = new System.Windows.Forms.Button();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Veículos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,7 +68,7 @@
             this.dataGridView_Veículos.Location = new System.Drawing.Point(12, 13);
             this.dataGridView_Veículos.Name = "dataGridView_Veículos";
             this.dataGridView_Veículos.Size = new System.Drawing.Size(650, 241);
-            this.dataGridView_Veículos.TabIndex = 0;
+            this.dataGridView_Veículos.TabIndex = 9;
             this.dataGridView_Veículos.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView_Veículos_RowHeaderMouseDoubleClick);
             // 
             // Modelo
@@ -96,12 +96,18 @@
             this.Estado.HeaderText = "Estado";
             this.Estado.Name = "Estado";
             // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(12, 260);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
+            this.button1.TabIndex = 0;
             this.button1.Text = "Atualizar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -109,7 +115,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(288, 295);
+            this.label2.Location = new System.Drawing.Point(407, 295);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 13);
             this.label2.TabIndex = 16;
@@ -126,10 +132,10 @@
             // 
             // textBox_Fornecedor
             // 
-            this.textBox_Fornecedor.Location = new System.Drawing.Point(288, 311);
+            this.textBox_Fornecedor.Location = new System.Drawing.Point(407, 311);
             this.textBox_Fornecedor.Name = "textBox_Fornecedor";
             this.textBox_Fornecedor.Size = new System.Drawing.Size(228, 20);
-            this.textBox_Fornecedor.TabIndex = 14;
+            this.textBox_Fornecedor.TabIndex = 4;
             this.textBox_Fornecedor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Fornecedor_KeyPress);
             // 
             // textBox_Nome
@@ -137,13 +143,13 @@
             this.textBox_Nome.Location = new System.Drawing.Point(12, 311);
             this.textBox_Nome.Name = "textBox_Nome";
             this.textBox_Nome.Size = new System.Drawing.Size(201, 20);
-            this.textBox_Nome.TabIndex = 13;
+            this.textBox_Nome.TabIndex = 1;
             this.textBox_Nome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Nome_KeyPress);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(290, 384);
+            this.label8.Location = new System.Drawing.Point(409, 384);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(23, 13);
             this.label8.TabIndex = 32;
@@ -161,7 +167,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(290, 344);
+            this.label7.Location = new System.Drawing.Point(409, 344);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(52, 13);
             this.label7.TabIndex = 31;
@@ -169,18 +175,18 @@
             // 
             // textBox_Categoria
             // 
-            this.textBox_Categoria.Location = new System.Drawing.Point(291, 360);
+            this.textBox_Categoria.Location = new System.Drawing.Point(410, 360);
             this.textBox_Categoria.Name = "textBox_Categoria";
-            this.textBox_Categoria.Size = new System.Drawing.Size(203, 20);
-            this.textBox_Categoria.TabIndex = 29;
+            this.textBox_Categoria.Size = new System.Drawing.Size(225, 20);
+            this.textBox_Categoria.TabIndex = 5;
             this.textBox_Categoria.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Categoria_KeyPress);
             // 
             // textBox_Cor
             // 
-            this.textBox_Cor.Location = new System.Drawing.Point(291, 400);
+            this.textBox_Cor.Location = new System.Drawing.Point(410, 400);
             this.textBox_Cor.Name = "textBox_Cor";
-            this.textBox_Cor.Size = new System.Drawing.Size(183, 20);
-            this.textBox_Cor.TabIndex = 28;
+            this.textBox_Cor.Size = new System.Drawing.Size(225, 20);
+            this.textBox_Cor.TabIndex = 6;
             this.textBox_Cor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Cor_KeyPress);
             // 
             // textBox_Ano
@@ -188,7 +194,7 @@
             this.textBox_Ano.Location = new System.Drawing.Point(15, 400);
             this.textBox_Ano.Name = "textBox_Ano";
             this.textBox_Ano.Size = new System.Drawing.Size(48, 20);
-            this.textBox_Ano.TabIndex = 27;
+            this.textBox_Ano.TabIndex = 3;
             this.textBox_Ano.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Ano_KeyPress);
             // 
             // label3
@@ -205,15 +211,15 @@
             this.textBox_Quilometragem.Location = new System.Drawing.Point(12, 360);
             this.textBox_Quilometragem.Name = "textBox_Quilometragem";
             this.textBox_Quilometragem.Size = new System.Drawing.Size(144, 20);
-            this.textBox_Quilometragem.TabIndex = 33;
+            this.textBox_Quilometragem.TabIndex = 2;
             this.textBox_Quilometragem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Quilometragem_KeyPress);
             // 
             // button_Cancelar
             // 
-            this.button_Cancelar.Location = new System.Drawing.Point(482, 428);
+            this.button_Cancelar.Location = new System.Drawing.Point(587, 428);
             this.button_Cancelar.Name = "button_Cancelar";
             this.button_Cancelar.Size = new System.Drawing.Size(75, 23);
-            this.button_Cancelar.TabIndex = 35;
+            this.button_Cancelar.TabIndex = 8;
             this.button_Cancelar.Text = "Cancelar";
             this.button_Cancelar.UseVisualStyleBackColor = true;
             this.button_Cancelar.Click += new System.EventHandler(this.button2_Click);
@@ -223,16 +229,10 @@
             this.buttonMandarManutenção.Location = new System.Drawing.Point(12, 428);
             this.buttonMandarManutenção.Name = "buttonMandarManutenção";
             this.buttonMandarManutenção.Size = new System.Drawing.Size(143, 23);
-            this.buttonMandarManutenção.TabIndex = 36;
+            this.buttonMandarManutenção.TabIndex = 7;
             this.buttonMandarManutenção.Text = "Mandar para Manutenção";
             this.buttonMandarManutenção.UseVisualStyleBackColor = true;
             this.buttonMandarManutenção.Click += new System.EventHandler(this.buttonMandarManutenção_Click);
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
             // 
             // Pesquisa_Veículos
             // 

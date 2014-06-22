@@ -35,6 +35,7 @@
             this.CEP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Endereço = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telefones = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button_Cancelar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox_CPF_CNPJ = new System.Windows.Forms.TextBox();
@@ -53,7 +54,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox_CEP = new System.Windows.Forms.TextBox();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Clientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,7 +62,7 @@
             this.buttonAtualizar.Location = new System.Drawing.Point(12, 259);
             this.buttonAtualizar.Name = "buttonAtualizar";
             this.buttonAtualizar.Size = new System.Drawing.Size(75, 23);
-            this.buttonAtualizar.TabIndex = 3;
+            this.buttonAtualizar.TabIndex = 0;
             this.buttonAtualizar.Text = "Atualizar";
             this.buttonAtualizar.UseVisualStyleBackColor = true;
             this.buttonAtualizar.Click += new System.EventHandler(this.button1_Click);
@@ -81,7 +81,7 @@
             this.dataGridView_Clientes.Location = new System.Drawing.Point(12, 12);
             this.dataGridView_Clientes.Name = "dataGridView_Clientes";
             this.dataGridView_Clientes.Size = new System.Drawing.Size(644, 241);
-            this.dataGridView_Clientes.TabIndex = 2;
+            this.dataGridView_Clientes.TabIndex = 12;
             this.dataGridView_Clientes.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView_Clientes_RowHeaderMouseDoubleClick);
             // 
             // Nome
@@ -109,12 +109,18 @@
             this.Telefones.HeaderText = "Telefones";
             this.Telefones.Name = "Telefones";
             // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            // 
             // button_Cancelar
             // 
             this.button_Cancelar.Location = new System.Drawing.Point(488, 481);
             this.button_Cancelar.Name = "button_Cancelar";
             this.button_Cancelar.Size = new System.Drawing.Size(75, 23);
-            this.button_Cancelar.TabIndex = 48;
+            this.button_Cancelar.TabIndex = 10;
             this.button_Cancelar.Text = "Cancelar";
             this.button_Cancelar.UseVisualStyleBackColor = true;
             this.button_Cancelar.Click += new System.EventHandler(this.button_Cancelar_Click);
@@ -134,7 +140,7 @@
             this.textBox_CPF_CNPJ.MaxLength = 14;
             this.textBox_CPF_CNPJ.Name = "textBox_CPF_CNPJ";
             this.textBox_CPF_CNPJ.Size = new System.Drawing.Size(144, 20);
-            this.textBox_CPF_CNPJ.TabIndex = 46;
+            this.textBox_CPF_CNPJ.TabIndex = 2;
             this.textBox_CPF_CNPJ.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_CPF_CNPJ_KeyPress);
             // 
             // label1
@@ -151,7 +157,7 @@
             this.textBox_Nome.Location = new System.Drawing.Point(10, 315);
             this.textBox_Nome.Name = "textBox_Nome";
             this.textBox_Nome.Size = new System.Drawing.Size(201, 20);
-            this.textBox_Nome.TabIndex = 36;
+            this.textBox_Nome.TabIndex = 1;
             this.textBox_Nome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Nome_KeyPress);
             // 
             // buttonAlterarDados
@@ -159,7 +165,7 @@
             this.buttonAlterarDados.Location = new System.Drawing.Point(10, 481);
             this.buttonAlterarDados.Name = "buttonAlterarDados";
             this.buttonAlterarDados.Size = new System.Drawing.Size(94, 23);
-            this.buttonAlterarDados.TabIndex = 53;
+            this.buttonAlterarDados.TabIndex = 9;
             this.buttonAlterarDados.Text = "Alterar Dados";
             this.buttonAlterarDados.UseVisualStyleBackColor = true;
             this.buttonAlterarDados.Click += new System.EventHandler(this.buttonAlterarDados_Click);
@@ -169,7 +175,7 @@
             this.textBox_Cidade.Location = new System.Drawing.Point(324, 315);
             this.textBox_Cidade.Name = "textBox_Cidade";
             this.textBox_Cidade.Size = new System.Drawing.Size(239, 20);
-            this.textBox_Cidade.TabIndex = 37;
+            this.textBox_Cidade.TabIndex = 5;
             this.textBox_Cidade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Cidade_KeyPress);
             // 
             // label2
@@ -187,7 +193,7 @@
             this.textBox_UF.MaxLength = 2;
             this.textBox_UF.Name = "textBox_UF";
             this.textBox_UF.Size = new System.Drawing.Size(29, 20);
-            this.textBox_UF.TabIndex = 40;
+            this.textBox_UF.TabIndex = 4;
             this.textBox_UF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_UF_KeyPress);
             // 
             // textBox_Rua
@@ -195,7 +201,7 @@
             this.textBox_Rua.Location = new System.Drawing.Point(282, 404);
             this.textBox_Rua.Name = "textBox_Rua";
             this.textBox_Rua.Size = new System.Drawing.Size(270, 20);
-            this.textBox_Rua.TabIndex = 41;
+            this.textBox_Rua.TabIndex = 7;
             this.textBox_Rua.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Rua_KeyPress);
             // 
             // textBox_Bairro
@@ -203,7 +209,7 @@
             this.textBox_Bairro.Location = new System.Drawing.Point(282, 364);
             this.textBox_Bairro.Name = "textBox_Bairro";
             this.textBox_Bairro.Size = new System.Drawing.Size(270, 20);
-            this.textBox_Bairro.TabIndex = 42;
+            this.textBox_Bairro.TabIndex = 6;
             this.textBox_Bairro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Bairro_KeyPress);
             // 
             // label7
@@ -239,7 +245,7 @@
             this.textBox_Número.MaxLength = 5;
             this.textBox_Número.Name = "textBox_Número";
             this.textBox_Número.Size = new System.Drawing.Size(32, 20);
-            this.textBox_Número.TabIndex = 49;
+            this.textBox_Número.TabIndex = 8;
             this.textBox_Número.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Número_KeyPress);
             // 
             // label4
@@ -266,14 +272,8 @@
             this.textBox_CEP.MaxLength = 8;
             this.textBox_CEP.Name = "textBox_CEP";
             this.textBox_CEP.Size = new System.Drawing.Size(144, 20);
-            this.textBox_CEP.TabIndex = 51;
+            this.textBox_CEP.TabIndex = 3;
             this.textBox_CEP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_CEP_KeyPress);
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
             // 
             // PesquisarCliente
             // 
