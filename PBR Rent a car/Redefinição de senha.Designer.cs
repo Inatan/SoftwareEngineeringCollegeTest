@@ -66,14 +66,14 @@
             this.textBox_SenhaVelha.Name = "textBox_SenhaVelha";
             this.textBox_SenhaVelha.PasswordChar = '*';
             this.textBox_SenhaVelha.Size = new System.Drawing.Size(208, 20);
-            this.textBox_SenhaVelha.TabIndex = 18;
+            this.textBox_SenhaVelha.TabIndex = 1;
             // 
             // textBox_Nome
             // 
             this.textBox_Nome.Location = new System.Drawing.Point(8, 28);
             this.textBox_Nome.Name = "textBox_Nome";
             this.textBox_Nome.Size = new System.Drawing.Size(208, 20);
-            this.textBox_Nome.TabIndex = 17;
+            this.textBox_Nome.TabIndex = 0;
             // 
             // label3
             // 
@@ -100,7 +100,7 @@
             this.textBoxSenhaNova.Name = "textBoxSenhaNova";
             this.textBoxSenhaNova.PasswordChar = '*';
             this.textBoxSenhaNova.Size = new System.Drawing.Size(208, 20);
-            this.textBoxSenhaNova.TabIndex = 22;
+            this.textBoxSenhaNova.TabIndex = 2;
             // 
             // textBoxSenhaNovaConvirmação
             // 
@@ -109,24 +109,24 @@
             this.textBoxSenhaNovaConvirmação.Name = "textBoxSenhaNovaConvirmação";
             this.textBoxSenhaNovaConvirmação.PasswordChar = '*';
             this.textBoxSenhaNovaConvirmação.Size = new System.Drawing.Size(208, 20);
-            this.textBoxSenhaNovaConvirmação.TabIndex = 21;
+            this.textBoxSenhaNovaConvirmação.TabIndex = 3;
             // 
             // buttonCancelar
             // 
-            this.buttonCancelar.Location = new System.Drawing.Point(12, 218);
+            this.buttonCancelar.Location = new System.Drawing.Point(156, 218);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(61, 32);
-            this.buttonCancelar.TabIndex = 25;
+            this.buttonCancelar.TabIndex = 5;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // buttonRedefinir
             // 
-            this.buttonRedefinir.Location = new System.Drawing.Point(156, 218);
+            this.buttonRedefinir.Location = new System.Drawing.Point(8, 218);
             this.buttonRedefinir.Name = "buttonRedefinir";
             this.buttonRedefinir.Size = new System.Drawing.Size(61, 32);
-            this.buttonRedefinir.TabIndex = 26;
+            this.buttonRedefinir.TabIndex = 4;
             this.buttonRedefinir.Text = "Redefinir";
             this.buttonRedefinir.UseVisualStyleBackColor = true;
             this.buttonRedefinir.Click += new System.EventHandler(this.buttonRedefinir_Click);

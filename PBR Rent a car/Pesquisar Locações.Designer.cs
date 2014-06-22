@@ -63,7 +63,7 @@
             // 
             // button_Cancelar
             // 
-            this.button_Cancelar.Location = new System.Drawing.Point(532, 417);
+            this.button_Cancelar.Location = new System.Drawing.Point(632, 417);
             this.button_Cancelar.Name = "button_Cancelar";
             this.button_Cancelar.Size = new System.Drawing.Size(75, 23);
             this.button_Cancelar.TabIndex = 7;
@@ -168,7 +168,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(299, 353);
+            this.label8.Location = new System.Drawing.Point(415, 356);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(23, 13);
             this.label8.TabIndex = 67;
@@ -177,7 +177,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(299, 313);
+            this.label7.Location = new System.Drawing.Point(415, 316);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(52, 13);
             this.label7.TabIndex = 66;
@@ -185,24 +185,24 @@
             // 
             // textBox_Categoria
             // 
-            this.textBox_Categoria.Location = new System.Drawing.Point(300, 329);
+            this.textBox_Categoria.Location = new System.Drawing.Point(416, 332);
             this.textBox_Categoria.Name = "textBox_Categoria";
-            this.textBox_Categoria.Size = new System.Drawing.Size(203, 20);
+            this.textBox_Categoria.Size = new System.Drawing.Size(259, 20);
             this.textBox_Categoria.TabIndex = 4;
             this.textBox_Categoria.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Categoria_KeyPress);
             // 
             // textBox_Cor
             // 
-            this.textBox_Cor.Location = new System.Drawing.Point(300, 369);
+            this.textBox_Cor.Location = new System.Drawing.Point(416, 372);
             this.textBox_Cor.Name = "textBox_Cor";
-            this.textBox_Cor.Size = new System.Drawing.Size(183, 20);
+            this.textBox_Cor.Size = new System.Drawing.Size(259, 20);
             this.textBox_Cor.TabIndex = 5;
             this.textBox_Cor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Cor_KeyPress);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(297, 264);
+            this.label2.Location = new System.Drawing.Point(413, 267);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 13);
             this.label2.TabIndex = 63;
@@ -210,9 +210,9 @@
             // 
             // textBox_Fornecedor
             // 
-            this.textBox_Fornecedor.Location = new System.Drawing.Point(297, 280);
+            this.textBox_Fornecedor.Location = new System.Drawing.Point(413, 283);
             this.textBox_Fornecedor.Name = "textBox_Fornecedor";
-            this.textBox_Fornecedor.Size = new System.Drawing.Size(228, 20);
+            this.textBox_Fornecedor.Size = new System.Drawing.Size(262, 20);
             this.textBox_Fornecedor.TabIndex = 3;
             this.textBox_Fornecedor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Fornecedor_KeyPress);
             // 

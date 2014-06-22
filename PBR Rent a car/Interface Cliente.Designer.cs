@@ -60,7 +60,7 @@
             this.Button_Reservar_Veículo.Location = new System.Drawing.Point(12, 436);
             this.Button_Reservar_Veículo.Name = "Button_Reservar_Veículo";
             this.Button_Reservar_Veículo.Size = new System.Drawing.Size(122, 28);
-            this.Button_Reservar_Veículo.TabIndex = 19;
+            this.Button_Reservar_Veículo.TabIndex = 0;
             this.Button_Reservar_Veículo.Text = "Reservar Veículo";
             this.Button_Reservar_Veículo.UseVisualStyleBackColor = true;
             this.Button_Reservar_Veículo.Click += new System.EventHandler(this.Button_Reservar_Veículo_Click);
@@ -70,7 +70,7 @@
             this.Button_Pesquisar_Veículo.Location = new System.Drawing.Point(140, 436);
             this.Button_Pesquisar_Veículo.Name = "Button_Pesquisar_Veículo";
             this.Button_Pesquisar_Veículo.Size = new System.Drawing.Size(122, 28);
-            this.Button_Pesquisar_Veículo.TabIndex = 18;
+            this.Button_Pesquisar_Veículo.TabIndex = 1;
             this.Button_Pesquisar_Veículo.Text = "Pesquisar Veículo";
             this.Button_Pesquisar_Veículo.UseVisualStyleBackColor = true;
             this.Button_Pesquisar_Veículo.Click += new System.EventHandler(this.Button_Pesquisar_Veículo_Click);
@@ -140,14 +140,14 @@
             // logoffToolStripMenuItem
             // 
             this.logoffToolStripMenuItem.Name = "logoffToolStripMenuItem";
-            this.logoffToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.logoffToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
             this.logoffToolStripMenuItem.Text = "Logoff";
             this.logoffToolStripMenuItem.Click += new System.EventHandler(this.logoffToolStripMenuItem_Click);
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
@@ -217,7 +217,7 @@
             this.buttonAlterar.Location = new System.Drawing.Point(571, 436);
             this.buttonAlterar.Name = "buttonAlterar";
             this.buttonAlterar.Size = new System.Drawing.Size(122, 28);
-            this.buttonAlterar.TabIndex = 20;
+            this.buttonAlterar.TabIndex = 2;
             this.buttonAlterar.Text = "Alterar Dados";
             this.buttonAlterar.UseVisualStyleBackColor = true;
             this.buttonAlterar.Click += new System.EventHandler(this.buttonAlterar_Click);
@@ -227,7 +227,7 @@
             this.buttonLocar.Location = new System.Drawing.Point(699, 436);
             this.buttonLocar.Name = "buttonLocar";
             this.buttonLocar.Size = new System.Drawing.Size(122, 28);
-            this.buttonLocar.TabIndex = 22;
+            this.buttonLocar.TabIndex = 3;
             this.buttonLocar.Text = "Locar Veículo";
             this.buttonLocar.UseVisualStyleBackColor = true;
             this.buttonLocar.Click += new System.EventHandler(this.buttonLocar_Click);
