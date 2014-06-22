@@ -31,12 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Redefinição_de_senha));
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox_Fornecedor = new System.Windows.Forms.TextBox();
+            this.textBox_SenhaVelha = new System.Windows.Forms.TextBox();
             this.textBox_Nome = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxSenhaNova = new System.Windows.Forms.TextBox();
+            this.textBoxSenhaNovaConvirmação = new System.Windows.Forms.TextBox();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonRedefinir = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -59,13 +59,14 @@
             this.label1.TabIndex = 19;
             this.label1.Text = "Login";
             // 
-            // textBox_Fornecedor
+            // textBox_SenhaVelha
             // 
-            this.textBox_Fornecedor.Location = new System.Drawing.Point(9, 74);
-            this.textBox_Fornecedor.Name = "textBox_Fornecedor";
-            this.textBox_Fornecedor.PasswordChar = '*';
-            this.textBox_Fornecedor.Size = new System.Drawing.Size(208, 20);
-            this.textBox_Fornecedor.TabIndex = 18;
+            this.textBox_SenhaVelha.Location = new System.Drawing.Point(9, 74);
+            this.textBox_SenhaVelha.MaxLength = 10;
+            this.textBox_SenhaVelha.Name = "textBox_SenhaVelha";
+            this.textBox_SenhaVelha.PasswordChar = '*';
+            this.textBox_SenhaVelha.Size = new System.Drawing.Size(208, 20);
+            this.textBox_SenhaVelha.TabIndex = 18;
             // 
             // textBox_Nome
             // 
@@ -92,21 +93,23 @@
             this.label4.TabIndex = 23;
             this.label4.Text = "Senha Nova";
             // 
-            // textBox1
+            // textBoxSenhaNova
             // 
-            this.textBox1.Location = new System.Drawing.Point(8, 166);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(208, 20);
-            this.textBox1.TabIndex = 22;
+            this.textBoxSenhaNova.Location = new System.Drawing.Point(8, 120);
+            this.textBoxSenhaNova.MaxLength = 10;
+            this.textBoxSenhaNova.Name = "textBoxSenhaNova";
+            this.textBoxSenhaNova.PasswordChar = '*';
+            this.textBoxSenhaNova.Size = new System.Drawing.Size(208, 20);
+            this.textBoxSenhaNova.TabIndex = 22;
             // 
-            // textBox2
+            // textBoxSenhaNovaConvirmação
             // 
-            this.textBox2.Location = new System.Drawing.Point(9, 120);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(208, 20);
-            this.textBox2.TabIndex = 21;
+            this.textBoxSenhaNovaConvirmação.Location = new System.Drawing.Point(8, 166);
+            this.textBoxSenhaNovaConvirmação.MaxLength = 10;
+            this.textBoxSenhaNovaConvirmação.Name = "textBoxSenhaNovaConvirmação";
+            this.textBoxSenhaNovaConvirmação.PasswordChar = '*';
+            this.textBoxSenhaNovaConvirmação.Size = new System.Drawing.Size(208, 20);
+            this.textBoxSenhaNovaConvirmação.TabIndex = 21;
             // 
             // buttonCancelar
             // 
@@ -137,11 +140,11 @@
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBoxSenhaNova);
+            this.Controls.Add(this.textBoxSenhaNovaConvirmação);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox_Fornecedor);
+            this.Controls.Add(this.textBox_SenhaVelha);
             this.Controls.Add(this.textBox_Nome);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -157,12 +160,12 @@
 
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox_Fornecedor;
+        private System.Windows.Forms.TextBox textBox_SenhaVelha;
         private System.Windows.Forms.TextBox textBox_Nome;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxSenhaNova;
+        private System.Windows.Forms.TextBox textBoxSenhaNovaConvirmação;
         private System.Windows.Forms.Button buttonCancelar;
         private System.Windows.Forms.Button buttonRedefinir;
     }
