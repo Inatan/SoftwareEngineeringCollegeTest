@@ -10,6 +10,38 @@ namespace PBR_Rent_a_car
         public List<Manutenção> manutenções { get; private set; }
         public List<Locação> locações { get; private set; }
 
+        public List<Manutenção> getManutenções()
+        {
+            if (manutenções == null) manutenções = Manutenção.ToList();
+            return manutenções;
+        }
+
+        public List<Locação> getLocações()
+        {
+            if (locações == null) locações = Locação.ToList();
+            return locações;
+        }
+
+        public string stringManutenções()
+        {
+            string res = "";
+            foreach (Manutenção m in getManutenções())
+            {
+                res = res + m.ToString() + "\n";
+            }
+            return res;
+        }
+
+        public string stringLocações()
+        {
+            string res = "";
+            foreach (Locação l in getLocações())
+            {
+                res = res + l.ToString() + "\n";
+            }
+            return res;
+        }
+
         public void addManutenção(Manutenção m)
         {
             if (manutenções == null) manutenções = Manutenção.ToList();
@@ -36,6 +68,13 @@ namespace PBR_Rent_a_car
             return locações.Last();
         }
 
+        public override string ToString()
+        {
+            return "Histórico com ID " + this.Id + "\n"
+                + "Manutenções " + stringManutenções() + "\n"
+                + "Locações " + stringLocações() + "\n";
+        }
+
         public Histórico() { }
         public Histórico(Veículo veiculo, List<Manutenção> manutenções, List<Locação> locações)
         {
@@ -43,7 +82,6 @@ namespace PBR_Rent_a_car
             this.manutenções = manutenções;
             this.locações = locações;
             this.Relatório = Relatório.singleton();
-            Relatório.singleton().adicionarHistórico(this);
         }
     }
 }

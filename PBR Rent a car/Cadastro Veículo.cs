@@ -45,7 +45,7 @@ namespace PBR_Rent_a_car
                 else if (Convert.ToInt32(textBox_Ano.Text) > DateTime.Now.Year )
                     MessageBox.Show("Por favor saia do futuro, digite um ano coerente", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else if (Convert.ToInt32(textBox_Ano.Text) < 1807)
-                    MessageBox.Show("O carro nem foi inventado nessa época. Por favor digite um ano coerete,", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("O carro nem foi inventado nessa época. Por favor digite um ano coerente,", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
                 {
                     using (var ctx = new DadosContainer())
