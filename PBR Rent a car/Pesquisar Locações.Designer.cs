@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonAlterarDados = new System.Windows.Forms.Button();
+            this.buttonDevolver = new System.Windows.Forms.Button();
             this.button_Cancelar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox_CPF_CNPJ = new System.Windows.Forms.TextBox();
@@ -41,6 +41,7 @@
             this.Modelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Data = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox_Categoria = new System.Windows.Forms.TextBox();
@@ -50,14 +51,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Veículos)).BeginInit();
             this.SuspendLayout();
             // 
-            // buttonAlterarDados
+            // buttonDevolver
             // 
-            this.buttonAlterarDados.Location = new System.Drawing.Point(15, 416);
-            this.buttonAlterarDados.Name = "buttonAlterarDados";
-            this.buttonAlterarDados.Size = new System.Drawing.Size(114, 23);
-            this.buttonAlterarDados.TabIndex = 61;
-            this.buttonAlterarDados.Text = "Devolver Veículo";
-            this.buttonAlterarDados.UseVisualStyleBackColor = true;
+            this.buttonDevolver.Location = new System.Drawing.Point(15, 416);
+            this.buttonDevolver.Name = "buttonDevolver";
+            this.buttonDevolver.Size = new System.Drawing.Size(114, 23);
+            this.buttonDevolver.TabIndex = 61;
+            this.buttonDevolver.Text = "Devolver Veículo";
+            this.buttonDevolver.UseVisualStyleBackColor = true;
+            this.buttonDevolver.Click += new System.EventHandler(this.buttonAlterarDados_Click);
             // 
             // button_Cancelar
             // 
@@ -92,9 +94,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 302);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(42, 13);
             this.label1.TabIndex = 57;
-            this.label1.Text = "Nome";
+            this.label1.Text = "Modelo";
             // 
             // textBox_Nome
             // 
@@ -124,10 +126,11 @@
             this.CPF_CNPJ,
             this.Modelo,
             this.Cor,
-            this.Data});
+            this.Data,
+            this.Id});
             this.dataGridView_Veículos.Location = new System.Drawing.Point(12, 12);
             this.dataGridView_Veículos.Name = "dataGridView_Veículos";
-            this.dataGridView_Veículos.Size = new System.Drawing.Size(595, 241);
+            this.dataGridView_Veículos.Size = new System.Drawing.Size(695, 241);
             this.dataGridView_Veículos.TabIndex = 54;
             // 
             // Nome
@@ -155,6 +158,12 @@
             this.Data.HeaderText = "Data de Locação";
             this.Data.Name = "Data";
             this.Data.Width = 150;
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
             // 
             // label8
             // 
@@ -211,14 +220,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(619, 452);
+            this.ClientSize = new System.Drawing.Size(717, 452);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBox_Categoria);
             this.Controls.Add(this.textBox_Cor);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox_Fornecedor);
-            this.Controls.Add(this.buttonAlterarDados);
+            this.Controls.Add(this.buttonDevolver);
             this.Controls.Add(this.button_Cancelar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox_CPF_CNPJ);
@@ -231,6 +240,7 @@
             this.Name = "Pesquisar_Locações";
             this.ShowIcon = false;
             this.Text = "Pesquisar Locações";
+            this.Load += new System.EventHandler(this.Pesquisar_Locações_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Veículos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -239,7 +249,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button buttonAlterarDados;
+        private System.Windows.Forms.Button buttonDevolver;
         private System.Windows.Forms.Button button_Cancelar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox_CPF_CNPJ;
@@ -258,6 +268,7 @@
         private System.Windows.Forms.TextBox textBox_Cor;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox_Fornecedor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
 
     }
 }
