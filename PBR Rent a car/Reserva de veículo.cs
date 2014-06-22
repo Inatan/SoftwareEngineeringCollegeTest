@@ -79,7 +79,9 @@ namespace PBR_Rent_a_car
                         Reserva reserva = new Reserva(aSerReservado, int.Parse(comboBoxDia.Text), int.Parse(comboBoxMês.Text),
                             int.Parse(comboBoxAno.Text), int.Parse(comboBoxHora.Text), int.Parse(comboBoxMinuto.Text),
                             reservador, usuárioAtual.Funcionário);
-                        ctx.AddToReservaSet(reserva);
+                        aSerReservado.setLocado(usuárioAtual.Funcionário, reservador,
+                            new DateTime(int.Parse(comboBoxAno.Text), int.Parse(comboBoxMês.Text), int.Parse(comboBoxDia.Text), 
+                             int.Parse(comboBoxHora.Text), int.Parse(comboBoxMinuto.Text), 0));
                         MessageBox.Show("A reserva foi realizada com sucesso");
                     }
                     catch
@@ -103,6 +105,11 @@ namespace PBR_Rent_a_car
                     idCliente = pCliente.clientePesquisado.Id;
                 }
             }
+        }
+
+        private void Reserva_de_veículo_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

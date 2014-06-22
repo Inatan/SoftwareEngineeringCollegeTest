@@ -28,6 +28,16 @@ namespace PBR_Rent_a_car
             return this.históricos;
         }
 
+        public void teste()
+        {
+            Console.WriteLine("Oi, sou um relatorio");
+            using (var ctx = new DadosContainer())
+            {
+                var hs = Histórico.ToList();
+                foreach (var h in hs) Console.WriteLine("tem coisa aqui");
+            }
+        }
+
         public void adicionarHistórico(Histórico h)
         {
             históricos.Add(h);

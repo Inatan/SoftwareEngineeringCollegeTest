@@ -352,6 +352,7 @@
             this.Name = "Reserva_de_veículo";
             this.ShowIcon = false;
             this.Text = "Reserva de veículo";
+            this.Load += new System.EventHandler(this.Reserva_de_veículo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

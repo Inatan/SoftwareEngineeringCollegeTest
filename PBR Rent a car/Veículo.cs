@@ -36,6 +36,21 @@ namespace PBR_Rent_a_car
             }
         }
 
+        public void setLocado(Funcionário permitidor, Cliente locador, DateTime horario)
+        {
+            if (this.status == estado.Disponível)
+            {
+                this.status = estado.Locado;
+                this.Estado = SerializarEstado();
+                using (var ctx = new DadosContainer())
+                {
+                    Locação l = new Locação(horario, this.Histórico, permitidor, locador);
+                    //ctx.AddToLocaçãoSet(l);
+                    ctx.SaveChanges();
+                }
+            }
+        }
+
         public void setDisponivel()
         {
             using (var ctx = new DadosContainer())
