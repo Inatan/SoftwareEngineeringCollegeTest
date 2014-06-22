@@ -53,6 +53,7 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Dia";
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // radioButton2
             // 
@@ -64,6 +65,7 @@
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Semana";
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // radioButton3
             // 
@@ -75,6 +77,7 @@
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Mês";
             this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
             // radioButton4
             // 
@@ -86,6 +89,7 @@
             this.radioButton4.TabStop = true;
             this.radioButton4.Text = "Ano";
             this.radioButton4.UseVisualStyleBackColor = true;
+            this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
             // radioButtonPeriodo
             // 
@@ -218,6 +222,7 @@
             this.buttonEmitir.TabIndex = 11;
             this.buttonEmitir.Text = "Emitir";
             this.buttonEmitir.UseVisualStyleBackColor = true;
+            this.buttonEmitir.Click += new System.EventHandler(this.buttonEmitir_Click);
             // 
             // buttonCancelar
             // 
@@ -252,6 +257,7 @@
             this.Name = "Emissão_de_Relatório";
             this.ShowIcon = false;
             this.Text = "Emissão de Relatório";
+            this.Load += new System.EventHandler(this.Emissão_de_Relatório_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -22,20 +22,20 @@ namespace PBR_Rent_a_car
             return locações;
         }
 
-        public string stringManutenções()
+        public static string stringManutenções(List<Manutenção> ms)
         {
             string res = "";
-            foreach (Manutenção m in getManutenções())
+            foreach (Manutenção m in ms)
             {
                 res = res + m.ToString() + "\n";
             }
             return res;
         }
 
-        public string stringLocações()
+        public static string stringLocações(List<Locação> ls)
         {
             string res = "";
-            foreach (Locação l in getLocações())
+            foreach (Locação l in ls)
             {
                 res = res + l.ToString() + "\n";
             }
@@ -71,8 +71,8 @@ namespace PBR_Rent_a_car
         public override string ToString()
         {
             return "Histórico com ID " + this.Id + "\n"
-                + "Manutenções " + stringManutenções() + "\n"
-                + "Locações " + stringLocações() + "\n";
+                + "Manutenções " + Histórico.stringManutenções(getManutenções()) + "\n"
+                + "Locações " + Histórico.stringLocações(getLocações()) + "\n";
         }
 
         public Histórico() { }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using GemBox.Document;
 
 namespace PBR_Rent_a_car
 {
@@ -14,6 +15,7 @@ namespace PBR_Rent_a_car
         [STAThread]
         static void Main()
         {
+            ComponentInfo.SetLicense("FREE-LIMITED-KEY");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new CadastroLogin());

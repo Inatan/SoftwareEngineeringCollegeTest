@@ -11,6 +11,8 @@ namespace PBR_Rent_a_car
 {
     public partial class Emissão_de_Relatório : Form
     {
+        private string option = "";
+
         public Emissão_de_Relatório()
         {
             InitializeComponent();
@@ -35,7 +37,58 @@ namespace PBR_Rent_a_car
                 this.comboBoxMês.Enabled = false;
                 this.comboBoxAno.Enabled = false;
             }
+            if (radioButtonPeriodo.Checked) option = "período";
+        }
 
+        private void Emissão_de_Relatório_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonEmitir_Click(object sender, EventArgs e)
+        {
+            DateTime data = new DateTime();
+            switch (option)
+            {
+                case "dia":
+                    data = DateTime.Today;
+                    break;
+                case "semana":
+                    data = DateTime.Today;
+                    break;
+                case "mes":
+                    data = DateTime.Today;
+                    break;
+                case "ano":
+                    data = DateTime.Today;
+                    break;
+                case "período":
+                    data = new DateTime(int.Parse(comboBoxAno.SelectedItem.ToString()), int.Parse(comboBoxMês.SelectedItem.ToString()),
+                        int.Parse(comboBoxDia.SelectedItem.ToString()));
+                    break;
+            }
+            Relatório.singleton().gerarRelatório(option, data);
+            MessageBox.Show("O documento relatório.pdf com as informações desejadas foi gerado no diretório atual.");
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked) option = "dia";
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton2.Checked) option = "semana";
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton3.Checked) option = "mes";
+        }
+
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton4.Checked) option = "ano";
         }
 
     }
