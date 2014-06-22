@@ -14,6 +14,16 @@ namespace PBR_Rent_a_car
         Pesquisa_Veículos pVeículo;
         PesquisarCliente pCliente;
 
+        private Login usuárioAtual;
+
+        public void setUsuárioAtual(Login atual)
+        {
+            this.usuárioAtual = atual;
+        }
+
+        int idCliente;
+        int idVeículo;
+
         public Reserva_de_veículo()
         {
             InitializeComponent();
@@ -34,39 +44,51 @@ namespace PBR_Rent_a_car
                 {
                     List<string> listaNomes= new List<string>();
                     string dadosVeiculo;
-
-                    listaNomes.Add(pVeículo.veículoPesquisado.Modelo.Fornecedor);
-                    listaNomes.Add(pVeículo.veículoPesquisado.Modelo.Nome);
-                    listaNomes.Add(pVeículo.veículoPesquisado.Cor);
-                    listaNomes.Add(pVeículo.veículoPesquisado.Ano.ToString());
-                    listaNomes.Add(pVeículo.veículoPesquisado.Quilometragem.ToString() + " Km");
-                    dadosVeiculo= String.Join(" - ",listaNomes);
-                    ListBoxVeículo.Items.Remove("Clique aqui para pesquisar o veículo");
-                    ListBoxVeículo.Items.Add(dadosVeiculo);
+                    using (var ctx = new DadosContainer())
+                    {
+                        ctx.Attach(pVeículo.veículoPesquisado);
+                        listaNomes.Add(pVeículo.veículoPesquisado.Modelo.Fornecedor);
+                        listaNomes.Add(pVeículo.veículoPesquisado.Modelo.Nome);
+                        listaNomes.Add(pVeículo.veículoPesquisado.Cor);
+                        listaNomes.Add(pVeículo.veículoPesquisado.Ano.ToString());
+                        listaNomes.Add(pVeículo.veículoPesquisado.Quilometragem.ToString() + " Km");
+                        dadosVeiculo = String.Join(" - ", listaNomes);
+                        ListBoxVeículo.Items.Remove("Clique aqui para pesquisar o veículo");
+                        ListBoxVeículo.Items.Add(dadosVeiculo);
+                        idVeículo = pVeículo.veículoPesquisado.Id;
+                    }
                 }
             }
         }
 
         private void Button_Reservar_Click(object sender, EventArgs e)
         {
-            Cliente cProcurado = new Cliente();
-            Veículo vProcurado= new Veículo();
-            List<Cliente> clientes = Cliente.todosOsClientes();
-            int countReserva= clientes.Count;
-            for (int i=0; i < countReserva; i++)
-             //   if (Program.clientes[i].Nome == textBox_Nome_Cliente.Text.ToString())
-              //      cProcurado = Program.clientes[i];
-            if(pVeículo !=null)
-                vProcurado = pVeículo.veículoPesquisado;
-            if (cProcurado.Nome == null || vProcurado== null)
-                MessageBox.Show("Cliente ou Veículo não encontrado(s) tente novamente");
-            else
+            using (var ctx = new DadosContainer())
             {
-        //        Program.reservas.Add(new Reserva(vProcurado, Convert.ToInt32(textBox_Dia.Text), Convert.ToInt32(textBox_Mês.Text), Convert.ToInt32(textBox_Ano.Text), Convert.ToInt32(textBox_Hora.Text), Convert.ToInt32(textBox_Minuto.Text), cProcurado));
-                MessageBox.Show("Sua reserva foi realizada com sucesso, espere a permissão do administrador");
-        //        vProcurado.setLocado();   
-            }        
-            
+                if ((Login.TipoDeUsuário)usuárioAtual.Permissão == Login.TipoDeUsuário.Cliente)
+                {
+                    //Lógica do cliente aqui
+                }
+                else
+                {
+                    try
+                    {
+                        Veículo aSerReservado = ctx.VeículoSet.Where(v => v.Id == idVeículo).First();
+                        Cliente reservador = ctx.ClienteSet.Where(c => c.Id == idCliente).First();
+                        ctx.Attach(usuárioAtual);
+                        Reserva reserva = new Reserva(aSerReservado, int.Parse(comboBoxDia.Text), int.Parse(comboBoxMês.Text),
+                            int.Parse(comboBoxAno.Text), int.Parse(comboBoxHora.Text), int.Parse(comboBoxMinuto.Text),
+                            reservador, usuárioAtual.Funcionário);
+                        ctx.AddToReservaSet(reserva);
+                        MessageBox.Show("A reserva foi realizada com sucesso");
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Cliente ou Veículo não encontrado(s) tente novamente");
+                    }
+                }
+                ctx.SaveChanges();
+            }
         }
 
         private void listBoxCliente_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -75,20 +97,11 @@ namespace PBR_Rent_a_car
             {
                 pCliente = new PesquisarCliente();
                 pCliente.ShowDialog();
-           /*     if (pVeículo.veículoPesquisado != null)
+                if (pCliente.clientePesquisado != null)
                 {
-                    List<string> listaNomes = new List<string>();
-                    string dadosVeiculo;
-
-                    listaNomes.Add(pVeículo.veículoPesquisado.Modelo.Fornecedor);
-                    listaNomes.Add(pVeículo.veículoPesquisado.Modelo.Nome);
-                    listaNomes.Add(pVeículo.veículoPesquisado.Cor);
-                    listaNomes.Add(pVeículo.veículoPesquisado.Ano.ToString());
-                    listaNomes.Add(pVeículo.veículoPesquisado.Quilometragem.ToString() + " Km");
-                    dadosVeiculo = String.Join(" - ", listaNomes);
-                    ListBoxVeículo.Items.Remove("Clique aqui para pesquisar o veículo");
-                    ListBoxVeículo.Items.Add(dadosVeiculo);
-                }*/
+                    //Interface bonita aqui.
+                    idCliente = pCliente.clientePesquisado.Id;
+                }
             }
         }
     }
