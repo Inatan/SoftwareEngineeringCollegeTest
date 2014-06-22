@@ -43,6 +43,7 @@ namespace PBR_Rent_a_car
             this.manutenções = manutenções;
             this.locações = locações;
             this.Relatório = Relatório.singleton();
+            Relatório.singleton().adicionarHistórico(this);
         }
     }
 }

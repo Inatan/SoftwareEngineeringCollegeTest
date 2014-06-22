@@ -44,6 +44,7 @@ namespace PBR_Rent_a_car
         private void reservarVeículoToolStripMenuReserve_Click(object sender, EventArgs e)
         {
             rVeículo = new Reserva_de_veículo();
+            rVeículo.setUsuárioAtual(this.usuárioAtual);
             rVeículo.ShowDialog();
         }
 
@@ -57,12 +58,14 @@ namespace PBR_Rent_a_car
         private void locarVeículoToolStripMenuLocar_Click(object sender, EventArgs e)
         {
             locação = new Criar_Locação();
+            locação.setUsuárioAtual(this.usuárioAtual);
             locação.ShowDialog();
         }
 
         private void Button_Reservar_Veículo_Click(object sender, EventArgs e)
         {
             rVeículo = new Reserva_de_veículo();
+            rVeículo.setUsuárioAtual(this.usuárioAtual);
             rVeículo.ShowDialog();
         }
 
@@ -88,6 +91,7 @@ namespace PBR_Rent_a_car
         private void buttonLocar_Click(object sender, EventArgs e)
         {
             locação = new Criar_Locação();
+            locação.setUsuárioAtual(this.usuárioAtual);
             locação.ShowDialog();
         }
 

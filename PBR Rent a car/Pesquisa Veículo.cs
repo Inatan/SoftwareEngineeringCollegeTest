@@ -75,19 +75,12 @@ namespace PBR_Rent_a_car
 
         private void dataGridView_Veículos_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            int RowIndex=dataGridView_Veículos.CurrentRow.Index;
+            int RowIndex = dataGridView_Veículos.CurrentRow.Index;
+            int id = int.Parse(dataGridView_Veículos.Rows[RowIndex].Cells[5].Value.ToString());
             using (var ctx = new DadosContainer())
             {
-                var veículos = ctx.VeículoSet.ToList();
-                int CountVeículos = veículos.Count;
-                for (int i = 0; i < CountVeículos; i++)
-                {
-                    if (dataGridView_Veículos.Rows[RowIndex].Cells[0].Value.ToString() == veículos[i].Modelo.Nome &&
-                        dataGridView_Veículos.Rows[RowIndex].Cells[1].Value.ToString() == veículos[i].Cor &&
-                        dataGridView_Veículos.Rows[RowIndex].Cells[2].Value.ToString() == veículos[i].Ano.ToString() &&
-                        dataGridView_Veículos.Rows[RowIndex].Cells[3].Value.ToString() == veículos[i].Quilometragem.ToString())
-                        veículoPesquisado = veículos[i];
-                }
+                var selecionado = ctx.VeículoSet.Where(c => c.Id == id).First();
+                veículoPesquisado = selecionado;
             }
             this.Close();
         }

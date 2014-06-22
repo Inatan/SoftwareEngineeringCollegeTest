@@ -54,6 +54,7 @@
             this.ListBoxVeículo.Name = "ListBoxVeículo";
             this.ListBoxVeículo.Size = new System.Drawing.Size(286, 17);
             this.ListBoxVeículo.TabIndex = 28;
+            this.ListBoxVeículo.SelectedIndexChanged += new System.EventHandler(this.ListBoxVeículo_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -73,6 +74,7 @@
             this.listBoxCliente.Name = "listBoxCliente";
             this.listBoxCliente.Size = new System.Drawing.Size(286, 17);
             this.listBoxCliente.TabIndex = 30;
+            this.listBoxCliente.SelectedIndexChanged += new System.EventHandler(this.listBoxCliente_SelectedIndexChanged);
             // 
             // buttonLocar
             // 
@@ -82,6 +84,7 @@
             this.buttonLocar.TabIndex = 31;
             this.buttonLocar.Text = "Locar";
             this.buttonLocar.UseVisualStyleBackColor = true;
+            this.buttonLocar.Click += new System.EventHandler(this.buttonLocar_Click);
             // 
             // buttonCancelar
             // 
@@ -109,6 +112,7 @@
             this.Name = "Criar_Locação";
             this.ShowIcon = false;
             this.Text = "Criar Locação";
+            this.Load += new System.EventHandler(this.Criar_Locação_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

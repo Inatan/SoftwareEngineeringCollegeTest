@@ -11,6 +11,8 @@ namespace PBR_Rent_a_car
 {
     public partial class PesquisarCliente : Form
     {
+        public Cliente clientePesquisado;
+
         public PesquisarCliente()
         {
             dataGridView_Clientes = new DataGridView();
@@ -27,6 +29,7 @@ namespace PBR_Rent_a_car
                     dataGridView_Clientes.Rows[i].Cells[2].Value = clientes[i].Endereço.CEP;
                     dataGridView_Clientes.Rows[i].Cells[3].Value = clientes[i].Endereço.ToString();
                     dataGridView_Clientes.Rows[i].Cells[4].Value = clientes[i].Telefone;
+                    dataGridView_Clientes.Rows[i].Cells[5].Value = clientes[i].Id;
                 }
             }
         }
@@ -56,6 +59,7 @@ namespace PBR_Rent_a_car
                         dataGridView_Clientes.Rows[i].Cells[2].Value = clientes[i].Endereço.CEP;
                         dataGridView_Clientes.Rows[i].Cells[3].Value = clientes[i].Endereço.ToString();
                         dataGridView_Clientes.Rows[i].Cells[4].Value = clientes[i].Telefone;
+                        dataGridView_Clientes.Rows[i].Cells[5].Value = clientes[i].Id;
                     }
                 }
             }
@@ -148,6 +152,18 @@ namespace PBR_Rent_a_car
                     }
                 
             }
+        }
+
+        private void dataGridView_Clientes_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int RowIndex = dataGridView_Clientes.CurrentRow.Index;
+            int id = int.Parse(dataGridView_Clientes.Rows[RowIndex].Cells[5].Value.ToString());
+            using (var ctx = new DadosContainer())
+            {
+                var selecionado = ctx.ClienteSet.Where(c => c.Id == id).First();
+                clientePesquisado = selecionado;
+            }
+            this.Close();
         }
     }
 }

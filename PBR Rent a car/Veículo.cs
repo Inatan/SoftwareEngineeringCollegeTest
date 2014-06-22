@@ -21,10 +21,34 @@ namespace PBR_Rent_a_car
             return this.status;
         }
 
-        public void setLocado()
+        public void setLocado(Funcionário permitidor, Cliente locador)
         {
-            this.status = estado.Locado;
-            this.Estado = SerializarEstado();
+            if (this.status == estado.Disponível)
+            {
+                this.status = estado.Locado;
+                this.Estado = SerializarEstado();
+                using (var ctx = new DadosContainer())
+                {
+                    Locação l = new Locação(DateTime.Now, this.Histórico, permitidor, locador);
+                    //ctx.AddToLocaçãoSet(l);
+                    ctx.SaveChanges();
+                }
+            }
+        }
+
+        public void setLocado(Funcionário permitidor, Cliente locador, DateTime horario)
+        {
+            if (this.status == estado.Disponível)
+            {
+                this.status = estado.Locado;
+                this.Estado = SerializarEstado();
+                using (var ctx = new DadosContainer())
+                {
+                    Locação l = new Locação(horario, this.Histórico, permitidor, locador);
+                    //ctx.AddToLocaçãoSet(l);
+                    ctx.SaveChanges();
+                }
+            }
         }
 
         public void setDisponivel()
@@ -38,7 +62,8 @@ namespace PBR_Rent_a_car
                 }
                 else if (this.status == estado.Locado)
                 {
-
+                    if (!this.Histórico.últimaLocação().acabou())
+                        this.Histórico.últimaManutenção().setFim(DateTime.Now);
                 }
                 ctx.SaveChanges();
             }
@@ -57,6 +82,7 @@ namespace PBR_Rent_a_car
                     ctx.Attach(funcionárioQueMandou);
                     var hist = ctx.HistóricoSet.Where(h => h.Id == this.Histórico.Id).First();
                     Manutenção m = new Manutenção(DateTime.Now, "", funcionárioQueMandou.Funcionário, hist);
+                    //ctx.AddToManutençãoSet(m);
                     ctx.SaveChanges();
                 }
             }
