@@ -91,5 +91,11 @@ namespace PBR_Rent_a_car
             }
         }
 
+        private void buttonCadastrar_Click(object sender, EventArgs e)
+        {
+            Cadastro_Cliente cCliente = new Cadastro_Cliente();
+            cCliente.ShowDialog();
+        }
+
     }
 }
