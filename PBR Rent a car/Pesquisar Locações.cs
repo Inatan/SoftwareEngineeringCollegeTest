@@ -73,6 +73,7 @@ namespace PBR_Rent_a_car
                 }
                 ctx.SaveChanges();
             }
+            button1_Click(sender, e);
         }
 
         private void button_Cancelar_Click(object sender, EventArgs e)
