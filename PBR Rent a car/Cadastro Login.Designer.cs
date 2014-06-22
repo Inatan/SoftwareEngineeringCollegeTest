@@ -38,7 +38,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.buttonLogin = new System.Windows.Forms.Button();
             this.buttonRedefinirSenha = new System.Windows.Forms.Button();
-            this.buttonNãoConsigoLogar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,9 +97,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 290);
+            this.button1.Location = new System.Drawing.Point(12, 326);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(56, 32);
+            this.button1.Size = new System.Drawing.Size(208, 32);
             this.button1.TabIndex = 17;
             this.button1.Text = "Fechar";
             this.button1.UseVisualStyleBackColor = true;
@@ -108,9 +107,9 @@
             // 
             // buttonLogin
             // 
-            this.buttonLogin.Location = new System.Drawing.Point(164, 290);
+            this.buttonLogin.Location = new System.Drawing.Point(12, 290);
             this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(56, 32);
+            this.buttonLogin.Size = new System.Drawing.Size(208, 32);
             this.buttonLogin.TabIndex = 18;
             this.buttonLogin.Text = "Login";
             this.buttonLogin.UseVisualStyleBackColor = true;
@@ -120,27 +119,17 @@
             // 
             this.buttonRedefinirSenha.Location = new System.Drawing.Point(12, 249);
             this.buttonRedefinirSenha.Name = "buttonRedefinirSenha";
-            this.buttonRedefinirSenha.Size = new System.Drawing.Size(91, 35);
+            this.buttonRedefinirSenha.Size = new System.Drawing.Size(208, 35);
             this.buttonRedefinirSenha.TabIndex = 19;
             this.buttonRedefinirSenha.Text = "Redefinir Senha";
             this.buttonRedefinirSenha.UseVisualStyleBackColor = true;
             this.buttonRedefinirSenha.Click += new System.EventHandler(this.buttonRedefinirSenha_Click);
             // 
-            // buttonNãoConsigoLogar
-            // 
-            this.buttonNãoConsigoLogar.Location = new System.Drawing.Point(109, 249);
-            this.buttonNãoConsigoLogar.Name = "buttonNãoConsigoLogar";
-            this.buttonNãoConsigoLogar.Size = new System.Drawing.Size(111, 35);
-            this.buttonNãoConsigoLogar.TabIndex = 20;
-            this.buttonNãoConsigoLogar.Text = "Não consigo logar";
-            this.buttonNãoConsigoLogar.UseVisualStyleBackColor = true;
-            // 
             // CadastroLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(232, 334);
-            this.Controls.Add(this.buttonNãoConsigoLogar);
+            this.ClientSize = new System.Drawing.Size(232, 370);
             this.Controls.Add(this.buttonRedefinirSenha);
             this.Controls.Add(this.buttonLogin);
             this.Controls.Add(this.button1);
@@ -173,6 +162,5 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button buttonLogin;
         private System.Windows.Forms.Button buttonRedefinirSenha;
-        private System.Windows.Forms.Button buttonNãoConsigoLogar;
     }
 }
