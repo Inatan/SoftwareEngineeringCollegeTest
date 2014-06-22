@@ -63,9 +63,9 @@ namespace PBR_Rent_a_car
         {
             if (this.ListBoxVeículo.Items[0].ToString() == "Clique aqui para pesquisar o veículo")
             {
-                pVeículo = new Pesquisa_Veículos();
+                pVeículo = new Pesquisa_Veículos(usuárioAtual);
                 pVeículo.ShowDialog();
-                if (pVeículo.veículoPesquisado != null)
+                if (pVeículo.veículoPesquisado.Cor != null)
                 {
                     List<string> listaNomes= new List<string>();
                     string dadosVeiculo;

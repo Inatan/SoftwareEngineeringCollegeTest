@@ -19,10 +19,12 @@ namespace PBR_Rent_a_car
         }
 
         public Veículo veículoPesquisado = new Veículo() ;
-        public Pesquisa_Veículos()
+        public Pesquisa_Veículos(Login atual)
         {
             dataGridView_Veículos = new DataGridView();
             InitializeComponent();
+            if (atual.getPermissão() == Login.TipoDeUsuário.Cliente)
+                buttonMandarManutenção.Hide();
             using (var ctx = new DadosContainer())
             {
                 var veículos = ctx.VeículoSet.Where(v => (Veículo.estado)v.Estado == Veículo.estado.Disponível).ToList();
