@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView_Veículos = new System.Windows.Forms.DataGridView();
+            this.buttonAtualizar = new System.Windows.Forms.Button();
+            this.dataGridView_Funcionários = new System.Windows.Forms.DataGridView();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CarteriaTrabalho = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Função = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -37,7 +37,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox_CarteiraTrabalho = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox_Função = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox_Salario = new System.Windows.Forms.TextBox();
@@ -46,32 +45,35 @@
             this.buttonAdicionar = new System.Windows.Forms.Button();
             this.buttonRemover = new System.Windows.Forms.Button();
             this.buttonEditar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Veículos)).BeginInit();
+            this.checkBoxGerente = new System.Windows.Forms.CheckBox();
+            this.checkBoxFuncionário = new System.Windows.Forms.CheckBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Funcionários)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // buttonAtualizar
             // 
-            this.button1.Location = new System.Drawing.Point(12, 263);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 39;
-            this.button1.Text = "Atualizar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonAtualizar.Location = new System.Drawing.Point(12, 263);
+            this.buttonAtualizar.Name = "buttonAtualizar";
+            this.buttonAtualizar.Size = new System.Drawing.Size(75, 23);
+            this.buttonAtualizar.TabIndex = 39;
+            this.buttonAtualizar.Text = "Atualizar";
+            this.buttonAtualizar.UseVisualStyleBackColor = true;
+            this.buttonAtualizar.Click += new System.EventHandler(this.buttonAtualizar_Click);
             // 
-            // dataGridView_Veículos
+            // dataGridView_Funcionários
             // 
-            this.dataGridView_Veículos.AllowUserToAddRows = false;
-            this.dataGridView_Veículos.AllowUserToDeleteRows = false;
-            this.dataGridView_Veículos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_Veículos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridView_Funcionários.AllowUserToAddRows = false;
+            this.dataGridView_Funcionários.AllowUserToDeleteRows = false;
+            this.dataGridView_Funcionários.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_Funcionários.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nome,
             this.CarteriaTrabalho,
             this.Função,
             this.Salário});
-            this.dataGridView_Veículos.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView_Veículos.Name = "dataGridView_Veículos";
-            this.dataGridView_Veículos.Size = new System.Drawing.Size(445, 241);
-            this.dataGridView_Veículos.TabIndex = 38;
+            this.dataGridView_Funcionários.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView_Funcionários.Name = "dataGridView_Funcionários";
+            this.dataGridView_Funcionários.Size = new System.Drawing.Size(445, 241);
+            this.dataGridView_Funcionários.TabIndex = 38;
             // 
             // Nome
             // 
@@ -105,6 +107,7 @@
             // textBox_CarteiraTrabalho
             // 
             this.textBox_CarteiraTrabalho.Location = new System.Drawing.Point(12, 354);
+            this.textBox_CarteiraTrabalho.MaxLength = 5;
             this.textBox_CarteiraTrabalho.Name = "textBox_CarteiraTrabalho";
             this.textBox_CarteiraTrabalho.Size = new System.Drawing.Size(144, 20);
             this.textBox_CarteiraTrabalho.TabIndex = 56;
@@ -118,14 +121,6 @@
             this.label7.Size = new System.Drawing.Size(43, 13);
             this.label7.TabIndex = 55;
             this.label7.Text = "Função";
-            // 
-            // textBox_Função
-            // 
-            this.textBox_Função.Location = new System.Drawing.Point(232, 354);
-            this.textBox_Função.Name = "textBox_Função";
-            this.textBox_Função.Size = new System.Drawing.Size(203, 20);
-            this.textBox_Função.TabIndex = 54;
-            this.textBox_Função.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Função_KeyPress);
             // 
             // label2
             // 
@@ -198,12 +193,39 @@
             this.buttonEditar.TabIndex = 61;
             this.buttonEditar.Text = "Editar";
             this.buttonEditar.UseVisualStyleBackColor = true;
+            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
+            // 
+            // checkBoxGerente
+            // 
+            this.checkBoxGerente.AutoSize = true;
+            this.checkBoxGerente.Checked = true;
+            this.checkBoxGerente.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxGerente.Location = new System.Drawing.Point(234, 357);
+            this.checkBoxGerente.Name = "checkBoxGerente";
+            this.checkBoxGerente.Size = new System.Drawing.Size(64, 17);
+            this.checkBoxGerente.TabIndex = 62;
+            this.checkBoxGerente.Text = "Gerente";
+            this.checkBoxGerente.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxFuncionário
+            // 
+            this.checkBoxFuncionário.AutoSize = true;
+            this.checkBoxFuncionário.Checked = true;
+            this.checkBoxFuncionário.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxFuncionário.Location = new System.Drawing.Point(329, 357);
+            this.checkBoxFuncionário.Name = "checkBoxFuncionário";
+            this.checkBoxFuncionário.Size = new System.Drawing.Size(81, 17);
+            this.checkBoxFuncionário.TabIndex = 63;
+            this.checkBoxFuncionário.Text = "Funcionário";
+            this.checkBoxFuncionário.UseVisualStyleBackColor = true;
             // 
             // Pesquisar_Funcionário
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(469, 426);
+            this.Controls.Add(this.checkBoxFuncionário);
+            this.Controls.Add(this.checkBoxGerente);
             this.Controls.Add(this.buttonEditar);
             this.Controls.Add(this.buttonRemover);
             this.Controls.Add(this.buttonAdicionar);
@@ -211,19 +233,18 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox_CarteiraTrabalho);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox_Função);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox_Salario);
             this.Controls.Add(this.textBox_Nome);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView_Veículos);
+            this.Controls.Add(this.buttonAtualizar);
+            this.Controls.Add(this.dataGridView_Funcionários);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Pesquisar_Funcionário";
             this.ShowIcon = false;
             this.Text = "Pesquisar Funcionário";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Veículos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Funcionários)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,8 +252,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView_Veículos;
+        private System.Windows.Forms.Button buttonAtualizar;
+        private System.Windows.Forms.DataGridView dataGridView_Funcionários;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn CarteriaTrabalho;
         private System.Windows.Forms.DataGridViewTextBoxColumn Função;
@@ -240,7 +261,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox_CarteiraTrabalho;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox_Função;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox_Salario;
@@ -249,5 +269,7 @@
         private System.Windows.Forms.Button buttonAdicionar;
         private System.Windows.Forms.Button buttonRemover;
         private System.Windows.Forms.Button buttonEditar;
+        private System.Windows.Forms.CheckBox checkBoxGerente;
+        private System.Windows.Forms.CheckBox checkBoxFuncionário;
     }
 }
