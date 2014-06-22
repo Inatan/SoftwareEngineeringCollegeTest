@@ -12,11 +12,13 @@ namespace PBR_Rent_a_car
 
         public DateTime getInicio()
         {
+            this.inicio = DateTime.FromBinary(this.Inicio);
             return this.inicio;
         }
 
         public DateTime getFim()
         {
+            if (this.Fim.HasValue) this.fim = DateTime.FromBinary(this.Fim.Value);
             return this.fim;
         }
 
