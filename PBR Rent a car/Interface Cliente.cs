@@ -57,6 +57,7 @@ namespace PBR_Rent_a_car
         private void locarVeículoToolStripMenuLocar_Click(object sender, EventArgs e)
         {
             locação = new Criar_Locação();
+            locação.setUsuárioAtual(this.usuárioAtual);
             locação.ShowDialog();
         }
 
@@ -88,6 +89,7 @@ namespace PBR_Rent_a_car
         private void buttonLocar_Click(object sender, EventArgs e)
         {
             locação = new Criar_Locação();
+            locação.setUsuárioAtual(this.usuárioAtual);
             locação.ShowDialog();
         }
 

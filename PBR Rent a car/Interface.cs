@@ -150,12 +150,14 @@ namespace PBR_Rent_a_car
         private void locarVeículoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             lVeículo = new Criar_Locação();
+            lVeículo.setUsuárioAtual(this.usuárioAtual);
             lVeículo.ShowDialog();
         }
 
         private void buttonLocarVeículo_Click(object sender, EventArgs e)
         {
             lVeículo = new Criar_Locação();
+            lVeículo.setUsuárioAtual(this.usuárioAtual);
             lVeículo.ShowDialog();
         }
 

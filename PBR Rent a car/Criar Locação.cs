@@ -14,6 +14,13 @@ namespace PBR_Rent_a_car
         Pesquisa_Veículos pVeículo;
         PesquisarCliente pCliente;
 
+        private Login usuárioAtual;
+
+        public void setUsuárioAtual(Login atual)
+        {
+            this.usuárioAtual = atual;
+        }
+
         int idVeículo;
         int idCliente;
 
@@ -33,6 +40,11 @@ namespace PBR_Rent_a_car
             {
                 pCliente = new PesquisarCliente();
                 pCliente.ShowDialog();
+                if(pCliente.clientePesquisado != null)
+                {
+                    //Interface bonita aqui.
+                    idCliente = pCliente.clientePesquisado.Id;
+                }
             }
         }
 
@@ -46,28 +58,46 @@ namespace PBR_Rent_a_car
                 {
                     List<string> listaNomes = new List<string>();
                     string dadosVeiculo;
-
-                    listaNomes.Add(pVeículo.veículoPesquisado.Modelo.Fornecedor);
-                    listaNomes.Add(pVeículo.veículoPesquisado.Modelo.Nome);
-                    listaNomes.Add(pVeículo.veículoPesquisado.Cor);
-                    listaNomes.Add(pVeículo.veículoPesquisado.Ano.ToString());
-                    listaNomes.Add(pVeículo.veículoPesquisado.Quilometragem.ToString() + " Km");
-                    dadosVeiculo = String.Join(" - ", listaNomes);
-                    ListBoxVeículo.Items.Remove("Clique aqui para pesquisar o veículo");
-                    ListBoxVeículo.Items.Add(dadosVeiculo);
-                    idVeículo = pVeículo.veículoPesquisado.Id;
+                    using (var ctx = new DadosContainer())
+                    {
+                        ctx.Attach(pVeículo.veículoPesquisado);
+                        listaNomes.Add(pVeículo.veículoPesquisado.Modelo.Fornecedor);
+                        listaNomes.Add(pVeículo.veículoPesquisado.Modelo.Nome);
+                        listaNomes.Add(pVeículo.veículoPesquisado.Cor);
+                        listaNomes.Add(pVeículo.veículoPesquisado.Ano.ToString());
+                        listaNomes.Add(pVeículo.veículoPesquisado.Quilometragem.ToString() + " Km");
+                        dadosVeiculo = String.Join(" - ", listaNomes);
+                        ListBoxVeículo.Items.Remove("Clique aqui para pesquisar o veículo");
+                        ListBoxVeículo.Items.Add(dadosVeiculo);
+                        idVeículo = pVeículo.veículoPesquisado.Id;
+                    }
                 }
             }
         }
 
         private void buttonLocar_Click(object sender, EventArgs e)
         {
-            using (var ctx = new DadosContainer())
+            if ((Login.TipoDeUsuário)this.usuárioAtual.Permissão == Login.TipoDeUsuário.Cliente)
             {
-                Veículo aSerLocado = ctx.VeículoSet.Where(v => v.Id == idVeículo).First();
-                Cliente locador = ctx.ClienteSet.Where(c => c.Id == idCliente).First();
-                aSerLocado.setLocado(locador);
+                //Colocar lógica do cliente aqui
             }
+            else
+            {
+                using (var ctx = new DadosContainer())
+                {
+                    Veículo aSerLocado = ctx.VeículoSet.Where(v => v.Id == idVeículo).First();
+                    Cliente locador = ctx.ClienteSet.Where(c => c.Id == idCliente).First();
+                    ctx.Attach(usuárioAtual);
+                    aSerLocado.setLocado(usuárioAtual.Funcionário, locador);
+                    ctx.SaveChanges();
+                }
+                this.Close();
+            }
+        }
+
+        private void Criar_Locação_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

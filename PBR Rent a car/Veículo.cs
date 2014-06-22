@@ -21,7 +21,7 @@ namespace PBR_Rent_a_car
             return this.status;
         }
 
-        public void setLocado(Cliente locador)
+        public void setLocado(Funcionário permitidor, Cliente locador)
         {
             if (this.status == estado.Disponível)
             {
@@ -29,7 +29,8 @@ namespace PBR_Rent_a_car
                 this.Estado = SerializarEstado();
                 using (var ctx = new DadosContainer())
                 {
-                    //Locação l = new Locação(DateTime.Now, this.Histórico, locador);
+                    Locação l = new Locação(DateTime.Now, this.Histórico, permitidor, locador);
+                    //ctx.AddToLocaçãoSet(l);
                     ctx.SaveChanges();
                 }
             }
@@ -66,6 +67,7 @@ namespace PBR_Rent_a_car
                     ctx.Attach(funcionárioQueMandou);
                     var hist = ctx.HistóricoSet.Where(h => h.Id == this.Histórico.Id).First();
                     Manutenção m = new Manutenção(DateTime.Now, "", funcionárioQueMandou.Funcionário, hist);
+                    //ctx.AddToManutençãoSet(m);
                     ctx.SaveChanges();
                 }
             }

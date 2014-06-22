@@ -53,6 +53,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox_CEP = new System.Windows.Forms.TextBox();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Clientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,11 +76,13 @@
             this.CPF_CNPJ,
             this.CEP,
             this.Endereço,
-            this.Telefones});
+            this.Telefones,
+            this.Id});
             this.dataGridView_Clientes.Location = new System.Drawing.Point(12, 12);
             this.dataGridView_Clientes.Name = "dataGridView_Clientes";
-            this.dataGridView_Clientes.Size = new System.Drawing.Size(549, 241);
+            this.dataGridView_Clientes.Size = new System.Drawing.Size(644, 241);
             this.dataGridView_Clientes.TabIndex = 2;
+            this.dataGridView_Clientes.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView_Clientes_RowHeaderMouseDoubleClick);
             // 
             // Nome
             // 
@@ -266,11 +269,17 @@
             this.textBox_CEP.TabIndex = 51;
             this.textBox_CEP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_CEP_KeyPress);
             // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            // 
             // PesquisarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(575, 516);
+            this.ClientSize = new System.Drawing.Size(669, 516);
             this.Controls.Add(this.buttonAlterarDados);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox_CEP);
@@ -330,5 +339,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox_CEP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
     }
 }

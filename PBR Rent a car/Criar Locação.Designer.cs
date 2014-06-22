@@ -112,6 +112,7 @@
             this.Name = "Criar_Locação";
             this.ShowIcon = false;
             this.Text = "Criar Locação";
+            this.Load += new System.EventHandler(this.Criar_Locação_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
